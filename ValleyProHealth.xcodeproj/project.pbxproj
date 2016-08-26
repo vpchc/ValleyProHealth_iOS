@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
+		DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73348D1D40FCBC008A9023 /* AppDelegate.swift */; };
+		DD7334901D40FCBC008A9023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73348F1D40FCBC008A9023 /* ViewController.swift */; };
+		DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7334911D40FCBC008A9023 /* Main.storyboard */; };
+		DD7334951D40FCBC008A9023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7334941D40FCBC008A9023 /* Assets.xcassets */; };
+		DD7334981D40FCBC008A9023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */; };
+		DD7334A31D40FCBC008A9023 /* ValleyProHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */; };
+		DD7334AE1D40FCBC008A9023 /* ValleyProHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD73349F1D40FCBC008A9023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD7334821D40FCBC008A9023 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD7334891D40FCBC008A9023;
+			remoteInfo = ValleyProHealth;
+		};
+		DD7334AA1D40FCBC008A9023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD7334821D40FCBC008A9023 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD7334891D40FCBC008A9023;
+			remoteInfo = ValleyProHealth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
+		DD73348A1D40FCBC008A9023 /* ValleyProHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValleyProHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD73348D1D40FCBC008A9023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD73348F1D40FCBC008A9023 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD7334921D40FCBC008A9023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD7334941D40FCBC008A9023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD7334971D40FCBC008A9023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD7334991D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD73349E1D40FCBC008A9023 /* ValleyProHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyProHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyProHealthTests.swift; sourceTree = "<group>"; };
+		DD7334A41D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7334A91D40FCBC008A9023 /* ValleyProHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyProHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyProHealthUITests.swift; sourceTree = "<group>"; };
+		DD7334AF1D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD7334871D40FCBC008A9023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD73349B1D40FCBC008A9023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7334A61D40FCBC008A9023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD397D2B1D4157C90002232E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DD7334811D40FCBC008A9023 = {
+			isa = PBXGroup;
+			children = (
+				DD397D2B1D4157C90002232E /* Resources */,
+				DD73348C1D40FCBC008A9023 /* ValleyProHealth */,
+				DD7334A11D40FCBC008A9023 /* ValleyProHealthTests */,
+				DD7334AC1D40FCBC008A9023 /* ValleyProHealthUITests */,
+				DD73348B1D40FCBC008A9023 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD73348B1D40FCBC008A9023 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD73348A1D40FCBC008A9023 /* ValleyProHealth.app */,
+				DD73349E1D40FCBC008A9023 /* ValleyProHealthTests.xctest */,
+				DD7334A91D40FCBC008A9023 /* ValleyProHealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD73348C1D40FCBC008A9023 /* ValleyProHealth */ = {
+			isa = PBXGroup;
+			children = (
+				DD73348D1D40FCBC008A9023 /* AppDelegate.swift */,
+				DD73348F1D40FCBC008A9023 /* ViewController.swift */,
+				DD7334911D40FCBC008A9023 /* Main.storyboard */,
+				DD7334941D40FCBC008A9023 /* Assets.xcassets */,
+				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
+				DD7334991D40FCBC008A9023 /* Info.plist */,
+			);
+			path = ValleyProHealth;
+			sourceTree = "<group>";
+		};
+		DD7334A11D40FCBC008A9023 /* ValleyProHealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */,
+				DD7334A41D40FCBC008A9023 /* Info.plist */,
+			);
+			path = ValleyProHealthTests;
+			sourceTree = "<group>";
+		};
+		DD7334AC1D40FCBC008A9023 /* ValleyProHealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */,
+				DD7334AF1D40FCBC008A9023 /* Info.plist */,
+			);
+			path = ValleyProHealthUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD7334891D40FCBC008A9023 /* ValleyProHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7334B21D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealth" */;
+			buildPhases = (
+				DD7334861D40FCBC008A9023 /* Sources */,
+				DD7334871D40FCBC008A9023 /* Frameworks */,
+				DD7334881D40FCBC008A9023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValleyProHealth;
+			productName = ValleyProHealth;
+			productReference = DD73348A1D40FCBC008A9023 /* ValleyProHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD73349D1D40FCBC008A9023 /* ValleyProHealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7334B51D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthTests" */;
+			buildPhases = (
+				DD73349A1D40FCBC008A9023 /* Sources */,
+				DD73349B1D40FCBC008A9023 /* Frameworks */,
+				DD73349C1D40FCBC008A9023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD7334A01D40FCBC008A9023 /* PBXTargetDependency */,
+			);
+			name = ValleyProHealthTests;
+			productName = ValleyProHealthTests;
+			productReference = DD73349E1D40FCBC008A9023 /* ValleyProHealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD7334A81D40FCBC008A9023 /* ValleyProHealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7334B81D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthUITests" */;
+			buildPhases = (
+				DD7334A51D40FCBC008A9023 /* Sources */,
+				DD7334A61D40FCBC008A9023 /* Frameworks */,
+				DD7334A71D40FCBC008A9023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD7334AB1D40FCBC008A9023 /* PBXTargetDependency */,
+			);
+			name = ValleyProHealthUITests;
+			productName = ValleyProHealthUITests;
+			productReference = DD7334A91D40FCBC008A9023 /* ValleyProHealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD7334821D40FCBC008A9023 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Valley Professionals Community Health Center";
+				TargetAttributes = {
+					DD7334891D40FCBC008A9023 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XZ8WZZTXA7;
+					};
+					DD73349D1D40FCBC008A9023 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD7334891D40FCBC008A9023;
+					};
+					DD7334A81D40FCBC008A9023 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD7334891D40FCBC008A9023;
+					};
+				};
+			};
+			buildConfigurationList = DD7334851D40FCBC008A9023 /* Build configuration list for PBXProject "ValleyProHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD7334811D40FCBC008A9023;
+			productRefGroup = DD73348B1D40FCBC008A9023 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD7334891D40FCBC008A9023 /* ValleyProHealth */,
+				DD73349D1D40FCBC008A9023 /* ValleyProHealthTests */,
+				DD7334A81D40FCBC008A9023 /* ValleyProHealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD7334881D40FCBC008A9023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7334981D40FCBC008A9023 /* LaunchScreen.storyboard in Resources */,
+				DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */,
+				DD7334951D40FCBC008A9023 /* Assets.xcassets in Resources */,
+				DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD73349C1D40FCBC008A9023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7334A71D40FCBC008A9023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD7334861D40FCBC008A9023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7334901D40FCBC008A9023 /* ViewController.swift in Sources */,
+				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD73349A1D40FCBC008A9023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7334A31D40FCBC008A9023 /* ValleyProHealthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7334A51D40FCBC008A9023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7334AE1D40FCBC008A9023 /* ValleyProHealthUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD7334A01D40FCBC008A9023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD7334891D40FCBC008A9023 /* ValleyProHealth */;
+			targetProxy = DD73349F1D40FCBC008A9023 /* PBXContainerItemProxy */;
+		};
+		DD7334AB1D40FCBC008A9023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD7334891D40FCBC008A9023 /* ValleyProHealth */;
+			targetProxy = DD7334AA1D40FCBC008A9023 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD7334911D40FCBC008A9023 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD7334921D40FCBC008A9023 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD7334971D40FCBC008A9023 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD7334B01D40FCBC008A9023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD7334B11D40FCBC008A9023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD7334B31D40FCBC008A9023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ValleyProHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD7334B41D40FCBC008A9023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ValleyProHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD7334B61D40FCBC008A9023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ValleyProHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValleyProHealth.app/ValleyProHealth";
+			};
+			name = Debug;
+		};
+		DD7334B71D40FCBC008A9023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ValleyProHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValleyProHealth.app/ValleyProHealth";
+			};
+			name = Release;
+		};
+		DD7334B91D40FCBC008A9023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ValleyProHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ValleyProHealth;
+			};
+			name = Debug;
+		};
+		DD7334BA1D40FCBC008A9023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ValleyProHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ValleyProHealth;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD7334851D40FCBC008A9023 /* Build configuration list for PBXProject "ValleyProHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7334B01D40FCBC008A9023 /* Debug */,
+				DD7334B11D40FCBC008A9023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7334B21D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7334B31D40FCBC008A9023 /* Debug */,
+				DD7334B41D40FCBC008A9023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7334B51D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7334B61D40FCBC008A9023 /* Debug */,
+				DD7334B71D40FCBC008A9023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7334B81D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7334B91D40FCBC008A9023 /* Debug */,
+				DD7334BA1D40FCBC008A9023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD7334821D40FCBC008A9023 /* Project object */;
+}
