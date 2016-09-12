@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22EC291D74922E00E0518F /* MainPageViewController.swift */; };
 		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
 		DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73348D1D40FCBC008A9023 /* AppDelegate.swift */; };
-		DD7334901D40FCBC008A9023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73348F1D40FCBC008A9023 /* ViewController.swift */; };
+		DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73348F1D40FCBC008A9023 /* MainViewController.swift */; };
 		DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7334911D40FCBC008A9023 /* Main.storyboard */; };
 		DD7334951D40FCBC008A9023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7334941D40FCBC008A9023 /* Assets.xcassets */; };
 		DD7334981D40FCBC008A9023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */; };
 		DD7334A31D40FCBC008A9023 /* ValleyProHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */; };
 		DD7334AE1D40FCBC008A9023 /* ValleyProHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */; };
+		DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9A9C21D819882000924E8 /* PageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
 		DD73348A1D40FCBC008A9023 /* ValleyProHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValleyProHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73348D1D40FCBC008A9023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD73348F1D40FCBC008A9023 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD73348F1D40FCBC008A9023 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DD7334921D40FCBC008A9023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD7334941D40FCBC008A9023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD7334971D40FCBC008A9023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		DD7334A91D40FCBC008A9023 /* ValleyProHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyProHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyProHealthUITests.swift; sourceTree = "<group>"; };
 		DD7334AF1D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				DD73348D1D40FCBC008A9023 /* AppDelegate.swift */,
-				DD73348F1D40FCBC008A9023 /* ViewController.swift */,
+				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
 				DD7334911D40FCBC008A9023 /* Main.storyboard */,
+				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
 				DD7334941D40FCBC008A9023 /* Assets.xcassets */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
+				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7334901D40FCBC008A9023 /* ViewController.swift in Sources */,
+				DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */,
+				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
+				DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */,
 				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +425,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +441,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
