@@ -41,6 +41,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Franklin Gothic Heavy Regular.ttf</string>
+		<string>Franklin Gothic Medium.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

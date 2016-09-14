@@ -1,0 +1,117 @@
+
+/* Class = "UILabel"; text = "Providers"; ObjectID = "0jx-Qa-O8R"; */
+"0jx-Qa-O8R.text" = "Providers";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3N2-3v-Bgy"; */
+"3N2-3v-Bgy.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Bloomingdale"; ObjectID = "5Yx-Oq-zGr"; */
+"5Yx-Oq-zGr.text" = "Bloomingdale";
+
+/* Class = "UILabel"; text = "Valley Professionals Community Health Center"; ObjectID = "5n6-3A-aW8"; */
+"5n6-3A-aW8.text" = "Valley Professionals Community Health Center";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5ze-u5-fKW"; */
+"5ze-u5-fKW.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6Va-mS-4my"; */
+"6Va-mS-4my.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Locations"; ObjectID = "92L-ZO-N4T"; */
+"92L-ZO-N4T.text" = "Locations";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EaH-p2-M9C"; */
+"EaH-p2-M9C.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Fwa-MG-ZEx"; */
+"Fwa-MG-ZEx.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Gh9-ch-7eb"; */
+"Gh9-ch-7eb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Clinton"; ObjectID = "Gx7-5y-GM7"; */
+"Gx7-5y-GM7.text" = "Clinton";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IsS-Ve-F3B"; */
+"IsS-Ve-F3B.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LHA-hv-DaF"; */
+"LHA-hv-DaF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Portal"; ObjectID = "Mry-4G-6aG"; */
+"Mry-4G-6aG.text" = "Portal";
+
+/* Class = "UILabel"; text = "FAQs"; ObjectID = "PPr-LQ-cEC"; */
+"PPr-LQ-cEC.text" = "FAQs";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "QuU-SB-7Zf"; */
+"QuU-SB-7Zf.text" = "Services";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SWQ-uw-70V"; */
+"SWQ-uw-70V.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UIF-sI-UkH"; */
+"UIF-sI-UkH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZaL-hO-AxX"; */
+"ZaL-hO-AxX.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ahy-Th-iFF"; */
+"ahy-Th-iFF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Call a Location"; ObjectID = "ayc-s5-lLH"; */
+"ayc-s5-lLH.text" = "Call a Location";
+
+/* Class = "UILabel"; text = "Website"; ObjectID = "c7z-0D-Bd0"; */
+"c7z-0D-Bd0.text" = "Website";
+
+/* Class = "UILabel"; text = "MSBHC\nTracker"; ObjectID = "cZz-qf-IO6"; */
+"cZz-qf-IO6.text" = "MSBHC\nTracker";
+
+/* Class = "UILabel"; text = "Facebook"; ObjectID = "erc-iO-C72"; */
+"erc-iO-C72.text" = "Facebook";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "f68-mz-yP5"; */
+"f68-mz-yP5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Forms"; ObjectID = "gwf-6p-rsh"; */
+"gwf-6p-rsh.text" = "Forms";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i2v-hS-dpB"; */
+"i2v-hS-dpB.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Call"; ObjectID = "k55-dO-fHS"; */
+"k55-dO-fHS.text" = "Call";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kE9-Rx-Bxe"; */
+"kE9-Rx-Bxe.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kO7-KZ-zvc"; */
+"kO7-KZ-zvc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Cayuga"; ObjectID = "khH-kV-Myi"; */
+"khH-kV-Myi.text" = "Cayuga";
+
+/* Class = "UILabel"; text = "Terre Haute"; ObjectID = "mjg-qH-Rcv"; */
+"mjg-qH-Rcv.text" = "Terre Haute";
+
+/* Class = "UILabel"; text = "Patient \nResources"; ObjectID = "o2B-qo-nsl"; */
+"o2B-qo-nsl.text" = "Patient \nResources";
+
+/* Class = "UILabel"; text = "Crawfordsville"; ObjectID = "rhh-hY-cbF"; */
+"rhh-hY-cbF.text" = "Crawfordsville";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tNv-yt-tqn"; */
+"tNv-yt-tqn.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "MSBHC"; ObjectID = "unA-q2-cE9"; */
+"unA-q2-cE9.text" = "MSBHC";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "utp-jT-o7b"; */
+"utp-jT-o7b.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Providers"; ObjectID = "wOG-Gu-uKg"; */
+"wOG-Gu-uKg.text" = "Providers";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xql-37-J81"; */
+"xql-37-J81.normalTitle" = "Button";
