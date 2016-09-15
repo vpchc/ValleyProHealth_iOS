@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B878ACFA1D8A1E940098DD10 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */; };
+		B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */; };
+		B878AD001D8A22250098DD10 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */; };
+		B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878AD011D8A24A60098DD10 /* FAQsViewController.swift */; };
+		B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */; };
 		DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22EC291D74922E00E0518F /* MainPageViewController.swift */; };
 		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
 		DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormsViewController.swift; sourceTree = "<group>"; };
+		B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		B878AD011D8A24A60098DD10 /* FAQsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsViewController.swift; sourceTree = "<group>"; };
+		B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesViewController.swift; sourceTree = "<group>"; };
 		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
 		DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDialogViewController.swift; sourceTree = "<group>"; };
@@ -129,14 +139,19 @@
 				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
 				DD7334911D40FCBC008A9023 /* Main.storyboard */,
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
-				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
-				DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */,
-				DD6C440C1D86EE6400ADABA1 /* CustomColors.swift */,
-				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
+				DD6C440C1D86EE6400ADABA1 /* CustomColors.swift */,
+				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
+				DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */,
+				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
 				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
 				DD6C44191D89C7E100ADABA1 /* ProvidersFormViewController.swift */,
+				B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */,
+				B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */,
+				B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */,
+				B878AD011D8A24A60098DD10 /* FAQsViewController.swift */,
+				B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -294,12 +309,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */,
+				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
 				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
+				B878ACFA1D8A1E940098DD10 /* LocationsViewController.swift in Sources */,
 				DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */,
+				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
+				B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */,
 				DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */,
 				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,
 				DD6C440D1D86EE6400ADABA1 /* CustomColors.swift in Sources */,
 				DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */,
+				B878AD001D8A22250098DD10 /* ServicesViewController.swift in Sources */,
 				DD6C441A1D89C7E100ADABA1 /* ProvidersFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
