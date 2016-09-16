@@ -15,7 +15,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var locations = [String]()
     var providerTypes = [String]()
-    var dataToSegue = ["", ""]
+    var dataToSegue = ["", "", "" , ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,9 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.providerTypePicker.dataSource = self
         
         locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
-        providerTypes = ["Select a Type of Provider", "Dental", "Behavioral Health", "Medical"]
+        providerTypes = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
+        
+
     }
 
     //When the user taps the back button
@@ -70,6 +72,8 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             if let destination = segue.destinationViewController as? ProvidersFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])
+                destination.dataSegue[2] = (dataToSegue[2])
+                destination.dataSegue[3] = (dataToSegue[3])
             }
         }
     }
@@ -80,12 +84,15 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if( pickerView == locationPicker && row != 0){
             providerTypePicker.hidden = false;
             dataToSegue[0] = locations[row]
+            dataToSegue[2] = String(row)
         }else if (pickerView == locationPicker && row == 0){
             providerTypePicker.hidden = true;
         }
         
         if( pickerView == providerTypePicker && row != 0){
             dataToSegue[1] = providerTypes[row]
+            dataToSegue[3] = String(row)
+            providerTypePicker.selectRow(0, inComponent: 0, animated: true)
             self.performSegueWithIdentifier("ProvidersDataSegue", sender: self)
         }
     }
