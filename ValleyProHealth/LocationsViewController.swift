@@ -74,11 +74,17 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProvidersDataSegue" {
-            if let destination = segue.destinationViewController as? ProvidersFormViewController{
+            if let destination = segue.destinationViewController as? ClinicHoursFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])
             }
+        }else{
+            if let destination = segue.destinationViewController as? ContactInfoFormViewController{
+            destination.dataSegue[0] = (dataToSegue[0])
+            destination.dataSegue[1] = (dataToSegue[1])
+            }
         }
+        
     }
     
     // When a selection is made by the user
@@ -95,9 +101,14 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if( pickerView == optionPicker && row != 0){
             optionPicker.selectRow(0, inComponent: 0, animated: true)
             if(row == 1){
-              self.performSegueWithIdentifier("ClinicHoursDataSegue", sender: self)
+                if(dataToSegue[1] == "3"){
+                    self.performSegueWithIdentifier("ClinicHoursDataSegue2", sender: self)
+                }else{
+                    self.performSegueWithIdentifier("ClinicHoursDataSegue1", sender: self)
+                }
+                
             }else if(row == 2){
-                self.performSegueWithIdentifier("ContacInfoDataSegue", sender: self)
+                self.performSegueWithIdentifier("ContactInfoDataSegue", sender: self)
             }else{
                 var directionsURL = String()
                 if(dataToSegue[1] == "1"){
@@ -117,17 +128,5 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
         }
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

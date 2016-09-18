@@ -53,8 +53,7 @@ class ProvidersFormViewController: UIViewController {
         var number: CGFloat = 0
         
         var providerLength = 0
-        print(dataSegue[2])
-        print(dataSegue[3])
+      
         if(dataSegue[3] == "1"){
             if(dataSegue[2] == "1"){
                 providersList = bh_bloom
