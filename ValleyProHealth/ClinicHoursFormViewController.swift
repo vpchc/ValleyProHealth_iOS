@@ -30,17 +30,17 @@ class ClinicHoursFormViewController: UIViewController {
         if(dataSegue[1] != "3"){
             locationLabel.text = dataSegue[0]
             if(dataSegue[1] == "5"){
-                mondayHours.text = terreHours[0]
-                tuesdayHours.text = terreHours[1]
+                mondayHours.text    = terreHours[0]
+                tuesdayHours.text   = terreHours[1]
                 wednesdayHours.text = terreHours[2]
-                thursdayHours.text = terreHours[3]
-                fridayHours.text = terreHours[4]
+                thursdayHours.text  = terreHours[3]
+                fridayHours.text    = terreHours[4]
             }else{
-                mondayHours.text = bloomcaycrawHours[0]
-                tuesdayHours.text = bloomcaycrawHours[1]
+                mondayHours.text    = bloomcaycrawHours[0]
+                tuesdayHours.text   = bloomcaycrawHours[1]
                 wednesdayHours.text = bloomcaycrawHours[2]
-                thursdayHours.text = bloomcaycrawHours[3]
-                fridayHours.text = bloomcaycrawHours[4]
+                thursdayHours.text  = bloomcaycrawHours[3]
+                fridayHours.text    = bloomcaycrawHours[4]
            
             }
         }

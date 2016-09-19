@@ -52,13 +52,11 @@ class ServicesFormViewController: UIViewController {
         
         for i in 0..<servicesLength
         {
-            let label = UILabel(frame: CGRectMake(-10, number, servicesScroll.bounds.size.width - 42, 25))
-            
-            
-            label.textAlignment = .Center
+            let label = UILabel(frame: CGRectMake(0, number, servicesScroll.bounds.size.width - 42, 25))
+            label.lineBreakMode = .ByWordWrapping
+            label.numberOfLines = 0
             label.font = UIFont(name: label.font.fontName, size: 25)
             label.text = servicesList[i]
-            label.numberOfLines = 2
             self.servicesScroll.addSubview(label)
             number = number + 50
             

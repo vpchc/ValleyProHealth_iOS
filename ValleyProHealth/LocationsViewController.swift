@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -16,12 +17,11 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var locations = [String]()
     var options = [String]()
+    var locationIndex = 0
     var dataToSegue = ["", "", "" , ""]
-    let bloomdirect = "201 W. Academy St.Bloomingdale, IN 47832"
-    let caydirect = "703 W. Park Street Cayuga, IN 47928"
-    let clintdirect = "777 S. Main Street, Suite 100 Clinton, IN 47842"
-    let crawdirect = "1810 Lafayette Rd Crawfordsville, IN 47933"
-    let terredirect = "1530 N 7th Street, Suite 201 Terre Haute, IN 47807"
+    let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
+    let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.407648"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.optionPicker.dataSource = self
         
         locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-        options = ["Select an option", "Clinic Hours", "Contact Info", "Get Direction"]
+        options = ["Select an option", "Clinic Hours", "Contact Info", "Get Directions"]
 
         // Do any additional setup after loading the view.
     }
@@ -73,7 +73,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ProvidersDataSegue" {
+        if segue.identifier == "ClinicHoursDataSegue1" || segue.identifier == "ClinicHoursDataSegue2"{
             if let destination = segue.destinationViewController as? ClinicHoursFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])
@@ -90,15 +90,16 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // When a selection is made by the user
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if( pickerView == locationPicker && row != 0){
-            optionPicker.hidden = false;
-            dataToSegue[0] = locations[row]
-            dataToSegue[1] = String(row)
-        }else if (pickerView == locationPicker && row == 0){
-            optionPicker.hidden = true;
-        }
-        
-        if( pickerView == optionPicker && row != 0){
+        if(pickerView == locationPicker){
+            if(row != 0){
+                optionPicker.hidden = false;
+                dataToSegue[0] = locations[row]
+                dataToSegue[1] = String(row)
+                locationIndex = row - 1
+            }else{
+                optionPicker.hidden = true;
+            }
+        }else if(pickerView == optionPicker && row != 0){
             optionPicker.selectRow(0, inComponent: 0, animated: true)
             if(row == 1){
                 if(dataToSegue[1] == "3"){
@@ -106,25 +107,27 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 }else{
                     self.performSegueWithIdentifier("ClinicHoursDataSegue1", sender: self)
                 }
-                
             }else if(row == 2){
                 self.performSegueWithIdentifier("ContactInfoDataSegue", sender: self)
             }else{
-                var directionsURL = String()
-                if(dataToSegue[1] == "1"){
-                    directionsURL = bloomdirect
-                }else if(dataToSegue[1] == "2"){
-                    directionsURL = caydirect
-                }else if(dataToSegue[1] == "3"){
-                    directionsURL = clintdirect
-                }else if(dataToSegue[1] == "4"){
-                    directionsURL = crawdirect
-                }else if(dataToSegue[1] == "5"){
-                    directionsURL = terredirect
-                }
-                UIApplication.sharedApplication().openURL(NSURL(fileURLWithPath: "http://maps.apple.com/?address=" + directionsURL))
+                let latConvert : NSString = directionsLat[locationIndex]
+                let longConvert : NSString = directionsLong[locationIndex]
+                
+                let latitude : CLLocationDegrees =  latConvert.doubleValue
+                let longitude : CLLocationDegrees =  longConvert.doubleValue
+                let regionDistance:CLLocationDistance = 10000
+                let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+                let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+                let options = [
+                    MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
+                    MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+                ]
+                let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+                let mapItem = MKMapItem(placemark: placemark)
+                mapItem.name = "VPCHC " + dataToSegue[0] + " Site"
+                mapItem.openInMapsWithLaunchOptions(options)
+       
             }
-            
             
         }
     }
