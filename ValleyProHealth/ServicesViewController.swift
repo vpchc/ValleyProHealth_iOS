@@ -80,18 +80,21 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // When a selection is made by the user
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if( pickerView == locationPicker && row != 0){
-            servicesPicker.hidden = false;
-            dataToSegue[0] = locations[row]
-            dataToSegue[2] = String(row)
-        }else if (pickerView == locationPicker && row == 0){
-            servicesPicker.hidden = true;
-        }
-        if( pickerView == servicesPicker && row != 0){
-            dataToSegue[1] = services[row]
-            dataToSegue[3] = String(row)
-            servicesPicker.selectRow(0, inComponent: 0, animated: true)
-            self.performSegueWithIdentifier("ServicesDataSegue", sender: self)
+        if(pickerView == locationPicker){
+            if(row != 0){
+                servicesPicker.hidden = false;
+                dataToSegue[0] = locations[row]
+                dataToSegue[2] = String(row)
+            }else{
+                servicesPicker.hidden = true;
+            }
+        }else{
+            if(row != 0){
+                dataToSegue[1] = services[row]
+                dataToSegue[3] = String(row)
+                servicesPicker.selectRow(0, inComponent: 0, animated: false)
+                self.performSegueWithIdentifier("ServicesDataSegue", sender: self)
+            }
             
         }
     }

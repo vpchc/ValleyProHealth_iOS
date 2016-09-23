@@ -762,27 +762,43 @@
                                     <constraint firstAttribute="height" constant="74" id="AM6-HJ-2dt"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzS-am-9pz">
-                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqH-Dz-65T">
                                 <rect key="frame" x="205" y="82" width="182" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iM-Ug-UVD" userLabel="ServicesTableContainer">
+                                <rect key="frame" x="5" y="121" width="591" height="479"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="azY-TS-LBE">
+                                        <rect key="frame" x="8" y="8" width="575" height="463"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="azY-TS-LBE" firstAttribute="leading" secondItem="4iM-Ug-UVD" secondAttribute="leading" constant="8" id="0cW-AK-TSh"/>
+                                    <constraint firstItem="azY-TS-LBE" firstAttribute="top" secondItem="4iM-Ug-UVD" secondAttribute="top" id="5Fr-Tg-FYa"/>
+                                    <constraint firstAttribute="bottom" secondItem="azY-TS-LBE" secondAttribute="bottom" id="dwA-aA-wKY"/>
+                                    <constraint firstAttribute="trailing" secondItem="azY-TS-LBE" secondAttribute="trailing" constant="8" id="qhp-XG-oMO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="F35-6G-qo4" firstAttribute="top" secondItem="pzS-am-9pz" secondAttribute="bottom" id="Efk-yq-V1Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4iM-Ug-UVD" secondAttribute="trailing" constant="-16" id="7HB-mP-KEw"/>
+                            <constraint firstItem="4iM-Ug-UVD" firstAttribute="top" secondItem="ZqH-Dz-65T" secondAttribute="bottom" id="K9Y-qt-pOp"/>
+                            <constraint firstItem="4iM-Ug-UVD" firstAttribute="leading" secondItem="5jf-8u-5a5" secondAttribute="leadingMargin" constant="-15" id="M2g-VH-eIb"/>
                             <constraint firstItem="ZqH-Dz-65T" firstAttribute="centerX" secondItem="5jf-8u-5a5" secondAttribute="centerX" id="aAC-IC-QOR"/>
+                            <constraint firstItem="F35-6G-qo4" firstAttribute="top" secondItem="4iM-Ug-UVD" secondAttribute="bottom" id="ymZ-m9-amh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="yXT-6r-lsS" id="E1D-bU-ekn"/>
                         <outlet property="locationLabel" destination="4WL-Jn-Vpg" id="qer-ls-l4c"/>
                         <outlet property="servicesLabel" destination="ZqH-Dz-65T" id="rU2-zz-1CP"/>
-                        <outlet property="servicesScroll" destination="pzS-am-9pz" id="xNG-YR-O6v"/>
+                        <outlet property="servicesTable" destination="azY-TS-LBE" id="d7n-zm-SPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MF9-uS-5r7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -903,17 +919,20 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7F-5F-dnm">
                                 <rect key="frame" x="0.0" y="147" width="600" height="135"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSB-A3-6pp">
-                                <rect key="frame" x="0.0" y="468" width="600" height="132"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-Zb-w13">
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-Zb-w13">
                                 <rect key="frame" x="0.0" y="302" width="600" height="132"/>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSB-A3-6pp">
+                                <rect key="frame" x="0.0" y="468" width="600" height="132"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Va7-g7-Jeb" id="b6q-AT-p2l"/>
+                        <outlet property="categoriesPicker" destination="HMK-Zb-w13" id="f23-Qg-e81"/>
+                        <outlet property="formPicker" destination="YSB-A3-6pp" id="DJH-X8-WdE"/>
+                        <outlet property="locationPicker" destination="a7F-5F-dnm" id="Tub-Ah-D7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1z1-15-ATF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1012,7 +1031,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-1v-FBr">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-1v-FBr">
                                 <rect key="frame" x="0.0" y="136" width="600" height="225"/>
                             </pickerView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-Bc-Wre">
@@ -1050,17 +1069,18 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="l1Y-jf-3Sa" id="EuP-dN-bDS"/>
-                        <segue destination="gzx-nO-Kcg" kind="presentation" modalPresentationStyle="formSheet" id="sO8-mj-RCP"/>
+                        <outlet property="categoriesPicker" destination="6Oj-1v-FBr" id="zcL-H3-pOb"/>
+                        <segue destination="gzx-nO-Kcg" kind="presentation" identifier="FAQsDataSegue" modalPresentationStyle="formSheet" id="sO8-mj-RCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kx-IX-xY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2942" y="3161"/>
         </scene>
-        <!--View Controller-->
+        <!--Qs Form View Controller-->
         <scene sceneID="1B6-aM-tEN">
             <objects>
-                <viewController id="gzx-nO-Kcg" sceneMemberID="viewController">
+                <viewController id="gzx-nO-Kcg" customClass="FAQsFormViewController" customModule="ValleyProHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eYM-7N-7vy"/>
                         <viewControllerLayoutGuide type="bottom" id="Fgt-dT-Hft"/>
@@ -1081,6 +1101,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="cancelButtonTap:" destination="gzx-nO-Kcg" eventType="touchUpInside" id="Id4-7i-MVD"/>
                                             <action selector="closeButtonTap:" destination="bxf-2O-ezR" eventType="touchUpInside" id="5mt-ig-L02"/>
                                             <action selector="modalDismiss:" destination="Cxf-DF-qf5" eventType="touchUpInside" id="ayR-c5-5fg"/>
                                         </connections>
@@ -1098,18 +1119,51 @@
                                     <constraint firstItem="CeB-e4-YDO" firstAttribute="centerX" secondItem="xnE-bo-fnQ" secondAttribute="centerX" id="3b3-d7-KGl"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4z-Q2-DcP">
+                                <rect key="frame" x="200" y="82" width="182" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-5x-7VS" userLabel="ServicesTableContainer">
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-DX-gWq">
+                                        <rect key="frame" x="8" y="8" width="584" height="463"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fLp-DX-gWq" secondAttribute="trailing" constant="8" id="4B6-hI-XGg"/>
+                                    <constraint firstItem="fLp-DX-gWq" firstAttribute="top" secondItem="3zD-5x-7VS" secondAttribute="top" id="GM4-Uq-ePv"/>
+                                    <constraint firstAttribute="bottom" secondItem="fLp-DX-gWq" secondAttribute="bottom" id="M3D-wa-cmO"/>
+                                    <constraint firstItem="fLp-DX-gWq" firstAttribute="leading" secondItem="3zD-5x-7VS" secondAttribute="leading" constant="8" id="PlN-Bt-sIT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3zD-5x-7VS" firstAttribute="top" secondItem="z4z-Q2-DcP" secondAttribute="bottom" constant="8" id="3Le-qp-BRY"/>
+                            <constraint firstItem="3zD-5x-7VS" firstAttribute="leading" secondItem="OCD-Sr-1dR" secondAttribute="leadingMargin" constant="-20" id="W3Q-Qd-Khj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3zD-5x-7VS" secondAttribute="trailing" constant="-20" id="XLh-1I-PLo"/>
+                            <constraint firstItem="Fgt-dT-Hft" firstAttribute="top" secondItem="3zD-5x-7VS" secondAttribute="bottom" id="gLn-6W-fyz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="eKe-2A-Bau" id="yrg-RO-3pR"/>
+                        <outlet property="categoryLabel" destination="z4z-Q2-DcP" id="PO8-Un-4Eo"/>
+                        <outlet property="faqsTable" destination="fLp-DX-gWq" id="AsC-W4-dxL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac4-b0-3gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="3929"/>
+            <point key="canvasLocation" x="2942" y="3979"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient Resources Form View Controller-->
         <scene sceneID="gxc-4p-HBV">
             <objects>
-                <viewController id="DRh-zc-Rur" sceneMemberID="viewController">
+                <viewController id="DRh-zc-Rur" customClass="PatientResourcesFormViewController" customModule="ValleyProHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WL1-JA-ik9"/>
                         <viewControllerLayoutGuide type="bottom" id="Rb6-xI-Mhx"/>
@@ -1130,6 +1184,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="cancelButtonTap:" destination="DRh-zc-Rur" eventType="touchUpInside" id="r5Z-2a-Xh3"/>
                                             <action selector="closeButtonTap:" destination="bxf-2O-ezR" eventType="touchUpInside" id="gXX-h9-pVB"/>
                                             <action selector="modalDismiss:" destination="Cxf-DF-qf5" eventType="touchUpInside" id="s8q-D5-c0C"/>
                                         </connections>
@@ -1147,13 +1202,46 @@
                                     <constraint firstAttribute="height" constant="74" id="nql-m9-5RH"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D61-PE-ByD">
+                                <rect key="frame" x="200" y="82" width="182" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emg-dq-uHW" userLabel="ServicesTableContainer">
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BYw-9J-Z8w">
+                                        <rect key="frame" x="8" y="8" width="584" height="463"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BYw-9J-Z8w" secondAttribute="bottom" id="05I-KQ-Q9c"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYw-9J-Z8w" secondAttribute="trailing" constant="8" id="Zbm-wq-EAB"/>
+                                    <constraint firstItem="BYw-9J-Z8w" firstAttribute="top" secondItem="emg-dq-uHW" secondAttribute="top" id="b0m-UB-Bs6"/>
+                                    <constraint firstItem="BYw-9J-Z8w" firstAttribute="leading" secondItem="emg-dq-uHW" secondAttribute="leading" constant="8" id="h4p-uF-HvT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rb6-xI-Mhx" firstAttribute="top" secondItem="emg-dq-uHW" secondAttribute="bottom" id="1Uj-f9-pu8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="emg-dq-uHW" secondAttribute="trailing" constant="-20" id="DhZ-ho-XvQ"/>
+                            <constraint firstItem="emg-dq-uHW" firstAttribute="leading" secondItem="U2s-aT-MQM" secondAttribute="leadingMargin" constant="-20" id="cjY-dc-HoA"/>
+                            <constraint firstItem="emg-dq-uHW" firstAttribute="top" secondItem="D61-PE-ByD" secondAttribute="bottom" id="oO0-8y-2jF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="m62-w3-yTS" id="yuP-6u-ikN"/>
+                        <outlet property="categoryLabel" destination="D61-PE-ByD" id="dIb-y4-CxC"/>
+                        <outlet property="resourceTable" destination="BYw-9J-Z8w" id="GPg-is-UBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHG-Kd-HtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624" y="3929"/>
+            <point key="canvasLocation" x="3624" y="3979"/>
         </scene>
         <!--Patient Resources View Controller-->
         <scene sceneID="zPZ-3r-SrR">
@@ -1188,7 +1276,7 @@
                                         <state key="normal" title="Button" image="ios_back_arrow_off"/>
                                         <state key="highlighted" image="ios_back_arrow_on"/>
                                         <connections>
-                                            <action selector="backButton:" destination="ZEr-LD-KIa" eventType="touchUpInside" id="Q2n-M0-wM5"/>
+                                            <action selector="backButtonTap:" destination="ZEr-LD-KIa" eventType="touchUpInside" id="9bk-AS-5bK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1204,8 +1292,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="PQe-rL-bTM" id="hM5-2X-9nl"/>
-                        <segue destination="DRh-zc-Rur" kind="presentation" modalPresentationStyle="formSheet" id="3f0-mr-gOW"/>
+                        <outlet property="backButton" destination="PQe-rL-bTM" id="aEj-XZ-kpZ"/>
+                        <outlet property="categoriesPicker" destination="9ja-lk-E5w" id="3Uy-FY-WVB"/>
+                        <segue destination="DRh-zc-Rur" kind="presentation" identifier="PatientResourcesDataSegue" modalPresentationStyle="formSheet" id="3f0-mr-gOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwC-Wc-mqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1264,7 +1353,7 @@
                                         <state key="normal" title="Button" image="providers_off"/>
                                         <state key="highlighted" image="providers_on"/>
                                         <connections>
-                                            <segue destination="kX4-gW-U1d" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="VXa-0V-qJZ"/>
+                                            <segue destination="kX4-gW-U1d" kind="presentation" modalTransitionStyle="crossDissolve" id="VXa-0V-qJZ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jx-Qa-O8R">
@@ -1291,7 +1380,7 @@
                                         <state key="normal" title="Button" image="forms_off"/>
                                         <state key="highlighted" image="forms_on"/>
                                         <connections>
-                                            <segue destination="iAj-5L-DH2" kind="presentation" id="X2a-8X-Lrh"/>
+                                            <segue destination="iAj-5L-DH2" kind="presentation" modalTransitionStyle="crossDissolve" id="X2a-8X-Lrh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Forms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwf-6p-rsh">
@@ -1325,7 +1414,7 @@
                                         <state key="normal" title="Button" image="services_off"/>
                                         <state key="highlighted" image="services_on"/>
                                         <connections>
-                                            <segue destination="n0u-1k-AIC" kind="presentation" id="7vg-Fz-aBT"/>
+                                            <segue destination="n0u-1k-AIC" kind="presentation" modalTransitionStyle="crossDissolve" id="7vg-Fz-aBT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1459,7 +1548,7 @@ Tracker</string>
                                         <state key="normal" title="Button" image="locations_off"/>
                                         <state key="highlighted" image="locations_on"/>
                                         <connections>
-                                            <segue destination="ig4-1U-EYE" kind="presentation" id="0In-xe-PjM"/>
+                                            <segue destination="ig4-1U-EYE" kind="presentation" modalTransitionStyle="crossDissolve" id="0In-xe-PjM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92L-ZO-N4T">
@@ -1560,7 +1649,7 @@ Tracker</string>
                                         <state key="normal" title="Button" image="faq_off"/>
                                         <state key="highlighted" image="faq_on"/>
                                         <connections>
-                                            <segue destination="8Gi-qs-az6" kind="presentation" id="s6T-mF-wmb"/>
+                                            <segue destination="8Gi-qs-az6" kind="presentation" modalTransitionStyle="crossDissolve" id="s6T-mF-wmb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FAQs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-LQ-cEC">
@@ -1588,7 +1677,7 @@ Tracker</string>
                                         <state key="normal" title="Button" image="patres_off"/>
                                         <state key="highlighted" image="patres_on"/>
                                         <connections>
-                                            <segue destination="ZEr-LD-KIa" kind="presentation" id="uiT-VD-hfW"/>
+                                            <segue destination="ZEr-LD-KIa" kind="presentation" modalTransitionStyle="crossDissolve" id="uiT-VD-hfW"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2B-qo-nsl">
@@ -1682,7 +1771,7 @@ Resources</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9c-LA-vT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3278" y="2238"/>
+            <point key="canvasLocation" x="3292" y="2054"/>
         </scene>
         <!--Clinic Hours Form View Controller-->
         <scene sceneID="osB-2e-PEc">

@@ -14,8 +14,12 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var providerTypePicker: UIPickerView!
     
     var locations = [String]()
-    var providerTypes = [String]()
+    var providerTypes1 = [String]()
+    var providerTypes2 = [String]()
+    var finalProviderTypes = [String]()
     var dataToSegue = ["", "", "" , ""]
+    
+    var locationSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,9 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.providerTypePicker.dataSource = self
         
         locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
-        providerTypes = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
+        providerTypes1 = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
+        //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
+        providerTypes2 = ["Select a Type of Provider", "Behavioral Health", "Medical"]
         
 
     }
@@ -53,17 +59,21 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if( pickerView == locationPicker){
             return locations.count
         }else{
-            return providerTypes.count
+            if(locationSelection == 1 || locationSelection == 2){
+                finalProviderTypes = providerTypes1
+            }else{
+                finalProviderTypes = providerTypes2
+            }
+            return finalProviderTypes.count
         }
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if( pickerView == locationPicker){
+        if(pickerView == locationPicker){
             return locations[row]
         }else{
-            return providerTypes[row]
-
+            return finalProviderTypes[row]
         }
     }
     
@@ -81,19 +91,23 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // When a selection is made by the user
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if( pickerView == locationPicker && row != 0){
-            providerTypePicker.hidden = false;
-            dataToSegue[0] = locations[row]
-            dataToSegue[2] = String(row)
-        }else if (pickerView == locationPicker && row == 0){
-            providerTypePicker.hidden = true;
-        }
-        
-        if( pickerView == providerTypePicker && row != 0){
-            dataToSegue[1] = providerTypes[row]
-            dataToSegue[3] = String(row)
-            providerTypePicker.selectRow(0, inComponent: 0, animated: true)
-            self.performSegueWithIdentifier("ProvidersDataSegue", sender: self)
+        if(pickerView == locationPicker){
+            if(row != 0){
+                locationSelection = row
+                self.providerTypePicker.reloadAllComponents()
+                providerTypePicker.hidden = false;
+                dataToSegue[0] = locations[row]
+                dataToSegue[2] = String(row)
+            }else{
+                providerTypePicker.hidden = true;
+            }
+        }else{
+            if(row != 0){
+                dataToSegue[1] = finalProviderTypes[row]
+                dataToSegue[3] = String(row)
+                providerTypePicker.selectRow(0, inComponent: 0, animated: false)
+                self.performSegueWithIdentifier("ProvidersDataSegue", sender: self)
+            }
         }
     }
 

@@ -8,19 +8,19 @@
 
 import UIKit
 
-class ServicesFormViewController: UIViewController {
+class ServicesFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var servicesLabel: UILabel!
-    @IBOutlet weak var servicesScroll: UIScrollView!
+    @IBOutlet weak var servicesTable: UITableView!
     
-    
-    var bhServices = ["•Child/Adolescent counseling", "•Crisis counseling", "•Family counseling", "•Psychiatry", "•Testing/Assessment(upon referral)"]
-    var dentalServices = ["•Preventive and restorative services"]
-    var patsupportServices = ["•Community Health Workers","-Provide assistance navigating the Insurance Marketplace, Healthy Indiana Plan, and Medicaid applications", "-Educate patients on preventive healthcare behaviors", "-Help patients find necessities like food, clothes, and toiletries", "•Patient Care Coordinator", "-Work with a Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health", "-Are patient advocates and your navigator through the healthcare system"]
-    var primcare1 = ["•Acute Illness", "•Chronic Disease Care", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Physical Exam", "•Preventive Care", "•Well Child Visits", "•Women's Health"]
-    var primcare2 = ["•Acute Illness", "•Chronic Disease Care", "•Colposcopy", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Labor and Delivery", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Pregnancy Care", "•Preventive Care", "•Physical Exam", "•Well Child Visits", "•Women's Health", "•Vasectomy"]
+    let cellReuseIdentifier = "cell"
+    let bhServices = ["•Child/Adolescent counseling", "•Crisis counseling", "•Family counseling", "•Psychiatry", "•Testing/Assessment(upon referral)"]
+    let dentalServices = ["•Preventive and restorative services"]
+    let patsupportServices = ["•Community Health Workers","-Provide assistance navigating the Insurance Marketplace, Healthy Indiana Plan, and Medicaid applications", "-Educate patients on preventive healthcare behaviors", "-Help patients find necessities like food, clothes, and toiletries", "•Patient Care Coordinator", "-Work with a Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health", "-Are patient advocates and your navigator through the healthcare system"]
+    let primcare1 = ["•Acute Illness", "•Chronic Disease Care", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Physical Exam", "•Preventive Care", "•Well Child Visits", "•Women's Health"]
+    let primcare2 = ["•Acute Illness", "•Chronic Disease Care", "•Colposcopy", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Labor and Delivery", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Pregnancy Care", "•Preventive Care", "•Physical Exam", "•Well Child Visits", "•Women's Health", "•Vasectomy"]
     var servicesList = [String]()
     var dataSegue = ["", "", "", ""]
     
@@ -29,10 +29,6 @@ class ServicesFormViewController: UIViewController {
         
         locationLabel.text = dataSegue[0]
         servicesLabel.text = dataSegue[1]
-        
-        var number: CGFloat = 0
-        
-        var servicesLength = 0
         
         if(dataSegue[3] == "1"){
             servicesList = bhServices
@@ -48,23 +44,16 @@ class ServicesFormViewController: UIViewController {
             }
         }
         
-        servicesLength = servicesList.count
+        // Register the table view cell class and its reuse id
+        self.servicesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
-        for i in 0..<servicesLength
-        {
-            let label = UILabel(frame: CGRectMake(0, number, servicesScroll.bounds.size.width - 42, 25))
-            label.lineBreakMode = .ByWordWrapping
-            label.numberOfLines = 0
-            label.font = UIFont(name: label.font.fontName, size: 25)
-            label.text = servicesList[i]
-            self.servicesScroll.addSubview(label)
-            number = number + 50
-            
-        }
-        self.servicesScroll.contentSize = CGSizeMake(servicesScroll.bounds.size.width - 220, number);
-
-
-        // Do any additional setup after loading the view.
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        servicesTable.delegate = self
+        servicesTable.dataSource = self
+        
+        servicesTable.estimatedRowHeight = 44.0
+        servicesTable.rowHeight = UITableViewAutomaticDimension
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +64,31 @@ class ServicesFormViewController: UIViewController {
     @IBAction func cancelButtonTap(sender: AnyObject) {
          self.dismissViewControllerAnimated(true, completion: nil)
     }
-
-  
+    
+    // number of rows in table view
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.servicesList.count
+    }
+    
+    // create a cell for each table view row
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = self.servicesTable.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
+        
+        // set the text from the data model
+        cell.textLabel?.text = self.servicesList[indexPath.row]
+        
+        //Used to wrap the words
+        cell.textLabel?.numberOfLines = 0
+        
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:20)
+        
+        return cell
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+    }
 }

@@ -100,7 +100,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 optionPicker.hidden = true;
             }
         }else if(pickerView == optionPicker && row != 0){
-            optionPicker.selectRow(0, inComponent: 0, animated: true)
+            optionPicker.selectRow(0, inComponent: 0, animated: false)
             if(row == 1){
                 if(dataToSegue[1] == "3"){
                     self.performSegueWithIdentifier("ClinicHoursDataSegue2", sender: self)

@@ -29,6 +29,8 @@
 		DD7334981D40FCBC008A9023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */; };
 		DD7334A31D40FCBC008A9023 /* ValleyProHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */; };
 		DD7334AE1D40FCBC008A9023 /* ValleyProHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */; };
+		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
+		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9A9C21D819882000924E8 /* PageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		DD7334A91D40FCBC008A9023 /* ValleyProHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyProHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyProHealthUITests.swift; sourceTree = "<group>"; };
 		DD7334AF1D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
+		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,8 @@
 				B82D5C991D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift */,
 				B82D5C9B1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift */,
 				B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */,
+				DD7419611D92D27200C2694D /* FAQsFormViewController.swift */,
+				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -321,11 +327,13 @@
 				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
 				B82D5C9C1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift in Sources */,
 				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
+				DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */,
 				B82D5C9E1D8F023900BDB9E8 /* ServicesFormViewController.swift in Sources */,
 				B878ACFA1D8A1E940098DD10 /* LocationsViewController.swift in Sources */,
 				B82D5C9A1D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift in Sources */,
 				DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */,
 				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
+				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,
 				B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */,
 				DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */,
 				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,

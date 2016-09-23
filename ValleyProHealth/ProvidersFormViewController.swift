@@ -57,7 +57,6 @@ class ProvidersFormViewController: UIViewController {
         if(dataSegue[3] == "1"){
             if(dataSegue[2] == "1"){
                 providersList = bh_bloom
-                print("made it")
             }else if(dataSegue[2] == "2"){
                 providersList = bh_cay
             }else if(dataSegue[2] == "3"){
@@ -75,20 +74,6 @@ class ProvidersFormViewController: UIViewController {
             }else if(dataSegue[2] == "2"){
                 providersList = dental_cay
             }else if(dataSegue[2] == "3"){
-                providersList = dental_clint
-            }else if(dataSegue[2] == "4"){
-                providersList = dental_craw
-            }else if(dataSegue[2] == "5"){
-                providersList = dental_terre
-            }else if(dataSegue[2] == "6"){
-                providersList = dental_msbhc
-            }
-        }else if(dataSegue[3] == "3"){
-            if(dataSegue[2] == "1"){
-                providersList = med_bloom
-            }else if(dataSegue[2] == "2"){
-                providersList = med_cay
-            }else if(dataSegue[2] == "3"){
                 providersList = med_clint
             }else if(dataSegue[2] == "4"){
                 providersList = med_craw
@@ -96,6 +81,12 @@ class ProvidersFormViewController: UIViewController {
                 providersList = med_terre
             }else if(dataSegue[2] == "6"){
                 providersList = med_msbhc
+            }
+        }else if(dataSegue[3] == "3"){
+            if(dataSegue[2] == "1"){
+                providersList = med_bloom
+            }else if(dataSegue[2] == "2"){
+                providersList = med_cay
             }
         }
         

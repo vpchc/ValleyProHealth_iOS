@@ -1,0 +1,76 @@
+//
+//  PatientResourcesFormViewController.swift
+//  ValleyProHealth
+//
+//  Created by Brice Local Account on 9/21/16.
+//  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
+//
+
+import UIKit
+
+class PatientResourcesFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var resourceTable: UITableView!
+    
+    var diabetesResource = ["Valley Professionals holds monthly Diabetes Support Group meetings that are completely free and open to anyone who is affected by Diabetes, even if you are not a patient with Valley Professionals. For more information visit valleyprohealth.org/diabetes"]
+    var prescriptResource = ["We have several ways to help patients that are having trouble affording their medication.","340B Program: This program helps cover the cost of many precscription medications. Based on your family income and size determines how much you have to pay for your medications. Application for the sliding fee scale is required for this program. If you qualify, medications may be free or low cost.","Drug Companies: Many of commonly prescribed drugs can be obtained through drug companies at no cost or low cost. Our Community Health Workers can assist in these applications.","Good Rx: The website goodrx.com has comparison shopping on prescriptions and offer many good coupons.","Additional programs are also available such as discount drug cards and the Freestyle Promise Program."]
+    var scaleResource = ["If patients are not covered by any type of medical insurance for their medical needs, a sliding fee scale is available for patients to receive a discounted rate. Discounts available are based on patient family size and income in accordance with the most recent U.S. Department of Health and Human Services Federal Poverty Guidelines.", "The sliding fee scale is based upon the current income of all family members, and the number of people in the household. An individual who is unemployed, has no income and is being supported by others must provide documentation showing that no federal income taxes have been filed, and the person supporting the patient must provide written and signed documentation that they are providing food and shelter for the patient.", "In order to qualify for the sliding fee scale at VPCHC, patients and their families must have a combined income that falls within the U.S. Federal Poverty Guidelines."]
+    
+    
+    var dataSegue = ["", ""]
+    var resourceList = [String]()
+    let cellReuseIdentifier = "cell"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        categoryLabel.text = dataSegue[0]
+        
+        
+        if(dataSegue[1] == "1"){
+            resourceList = diabetesResource
+        }else if(dataSegue[1] == "2"){
+            resourceList = prescriptResource
+        }else if(dataSegue[1] == "3"){
+            resourceList = scaleResource
+        }
+        self.resourceTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        resourceTable.delegate = self
+        resourceTable.dataSource = self
+        
+        resourceTable.estimatedRowHeight = 44.0
+        resourceTable.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func cancelButtonTap(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+   
+    // number of rows in table view
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.resourceList.count
+    }
+    
+    // create a cell for each table view row
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = self.resourceTable.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
+        
+        cell.textLabel?.text = self.resourceList[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFontOfSize(20.0)
+        
+        //Used to wrap the words
+        cell.textLabel?.numberOfLines = 0
+        return cell
+    }
+
+}
