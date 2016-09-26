@@ -33,28 +33,28 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButtonTap(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categoriesList.count
     }
     
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return categoriesList[row]
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FAQsDataSegue" {
-            if let destination = segue.destinationViewController as? FAQsFormViewController{
+            if let destination = segue.destination as? FAQsFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])
             }
@@ -62,13 +62,13 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     // When a selection is made by the user
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if( row != 0){
             dataToSegue[0] = categoriesList[row]
             dataToSegue[1] = String(row)
             categoriesPicker.selectRow(0, inComponent: 0, animated: false)
-            self.performSegueWithIdentifier("FAQsDataSegue", sender: self)
+            self.performSegue(withIdentifier: "FAQsDataSegue", sender: self)
         }
     }
 }

@@ -13,8 +13,8 @@ private(set) var orderedViewControllers: [UIViewController] = {
             newScreenViewController("Secondary")]
 }()
 
-private func newScreenViewController(selection: String) -> UIViewController {
-    return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("\(selection)ScreenViewController")
+private func newScreenViewController(_ selection: String) -> UIViewController {
+    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(selection)ScreenViewController")
 }
 
 
@@ -30,7 +30,7 @@ class MainPageViewController: UIPageViewController {
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
-                               direction: .Forward,
+                               direction: .forward,
                                animated: true,
                                completion: nil)
         }
@@ -47,9 +47,9 @@ class MainPageViewController: UIPageViewController {
 }
 extension MainPageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -66,9 +66,9 @@ extension MainPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -90,12 +90,12 @@ extension MainPageViewController: UIPageViewControllerDataSource {
 
 extension MainPageViewController: UIPageViewControllerDelegate {
     
-    func pageViewController(pageViewController: UIPageViewController,
+    func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                                                previousViewControllers: [UIViewController],
                                                transitionCompleted completed: Bool) {
         if let firstViewController = viewControllers?.first,
-            let index = orderedViewControllers.indexOf(firstViewController) {
+            let index = orderedViewControllers.index(of: firstViewController) {
             pageControlDelegate?.mainPageViewController(self,
                                                          didUpdatePageIndex: index)
         }
@@ -111,7 +111,7 @@ protocol MainPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter count: the total number of pages.
      */
-    func mainPageViewController(mainPageViewController: MainPageViewController,
+    func mainPageViewController(_ mainPageViewController: MainPageViewController,
                                     didUpdatePageCount count: Int)
     
     /**
@@ -120,7 +120,7 @@ protocol MainPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter index: the index of the currently visible page.
      */
-    func mainPageViewController(mainPageViewController: MainPageViewController,
+    func mainPageViewController(_ mainPageViewController: MainPageViewController,
                                     didUpdatePageIndex index: Int)
     
 }

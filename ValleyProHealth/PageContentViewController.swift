@@ -31,18 +31,18 @@ class PageContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func portalButtonTapOff(sender: AnyObject) {
-        let portalUrl: NSURL = NSURL(string:"https://secure2.myunionportal.org/vpchc/default.aspx")!
-        let application = UIApplication.sharedApplication()
+    @IBAction func portalButtonTapOff(_ sender: AnyObject) {
+        let portalUrl: URL = URL(string:"https://secure2.myunionportal.org/vpchc/default.aspx")!
+        let application = UIApplication.shared
         
         application.openURL(portalUrl)
     }
   
-    @IBAction func facebookButtonTapOff(sender: AnyObject) {
-        let application = UIApplication.sharedApplication()
+    @IBAction func facebookButtonTapOff(_ sender: AnyObject) {
+        let application = UIApplication.shared
         
-        let facebookApp: NSURL = NSURL(string:"fb://profile/132585333458352")!
-        let facebookUrl: NSURL = NSURL(string:"http://www.facebook.com/132585333458352")!
+        let facebookApp: URL = URL(string:"fb://profile/132585333458352")!
+        let facebookUrl: URL = URL(string:"http://www.facebook.com/132585333458352")!
         
         //Open the facebook app to the vpchc profile is the app is available, otherwise open in the browser
         if application.canOpenURL(facebookApp) {
@@ -52,23 +52,11 @@ class PageContentViewController: UIViewController {
         }
     }
     
-    @IBAction func websiteButtonTapOff(sender: AnyObject) {
-        let websiteUrl: NSURL = NSURL(string:"https://valleyprohealth.org")!
-        let application = UIApplication.sharedApplication()
+    @IBAction func websiteButtonTapOff(_ sender: AnyObject) {
+        let websiteUrl: URL = URL(string:"https://valleyprohealth.org")!
+        let application = UIApplication.shared
         
         application.openURL(websiteUrl)
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

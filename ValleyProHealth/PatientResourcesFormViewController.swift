@@ -36,7 +36,7 @@ class PatientResourcesFormViewController: UIViewController, UITableViewDelegate,
         }else if(dataSegue[1] == "3"){
             resourceList = scaleResource
         }
-        self.resourceTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        self.resourceTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         resourceTable.delegate = self
         resourceTable.dataSource = self
@@ -50,23 +50,23 @@ class PatientResourcesFormViewController: UIViewController, UITableViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButtonTap(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
    
     // number of rows in table view
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.resourceList.count
     }
     
     // create a cell for each table view row
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = self.resourceTable.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
+        let cell:UITableViewCell = self.resourceTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        cell.textLabel?.text = self.resourceList[indexPath.row]
-        cell.textLabel?.font = UIFont.systemFontOfSize(20.0)
+        cell.textLabel?.text = self.resourceList[(indexPath as NSIndexPath).row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 20.0)
         
         //Used to wrap the words
         cell.textLabel?.numberOfLines = 0

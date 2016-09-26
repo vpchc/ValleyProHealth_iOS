@@ -25,33 +25,33 @@ class CallDialogViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func bloomButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://7654989000")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func bloomButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://7654989000")!
+        UIApplication.shared.openURL(telenumber)
         print("calling bloom")
     }
-    @IBAction func cayButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://7654989042")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func cayButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://7654989042")!
+        UIApplication.shared.openURL(telenumber)
     }
-    @IBAction func clintButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://7658281003")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func clintButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://7658281003")!
+        UIApplication.shared.openURL(telenumber)
     }
-    @IBAction func crawButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://7653625100")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func crawButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://7653625100")!
+        UIApplication.shared.openURL(telenumber)
     }
-    @IBAction func terreButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://8122387631")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func terreButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://8122387631")!
+        UIApplication.shared.openURL(telenumber)
     }
-    @IBAction func msbhcButtonTap(sender: AnyObject) {
-        let telenumber:NSURL = NSURL(string: "tel://7655926164")!
-        UIApplication.sharedApplication().openURL(telenumber)
+    @IBAction func msbhcButtonTap(_ sender: AnyObject) {
+        let telenumber:URL = URL(string: "tel://7655926164")!
+        UIApplication.shared.openURL(telenumber)
     }
-    @IBAction func modalDismiss(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func modalDismiss(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

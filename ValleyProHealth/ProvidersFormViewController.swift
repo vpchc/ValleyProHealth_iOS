@@ -94,23 +94,23 @@ class ProvidersFormViewController: UIViewController {
         
         for i in 0..<providerLength
         {
-            let label = UILabel(frame: CGRectMake(-10, number, providerScroll.bounds.size.width - 42, 25))
+            let label = UILabel(frame: CGRect(x: -10, y: number, width: providerScroll.bounds.size.width - 42, height: 25))
  
          
-            label.textAlignment = .Center
+            label.textAlignment = .center
             label.font = UIFont(name: label.font.fontName, size: 25)
             label.text = providersList[i]
             self.providerScroll.addSubview(label)
             number = number + 50
             
         }
-        self.providerScroll.contentSize = CGSizeMake(providerScroll.bounds.size.width - 220, number);
+        self.providerScroll.contentSize = CGSize(width: providerScroll.bounds.size.width - 220, height: number);
     }
         override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func closeButtonTap(sender: AnyObject) {
-         self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closeButtonTap(_ sender: AnyObject) {
+         self.dismiss(animated: true, completion: nil)
     }
 }

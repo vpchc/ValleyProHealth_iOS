@@ -45,7 +45,7 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         // Register the table view cell class and its reuse id
-        self.servicesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        self.servicesTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         // This view controller itself will provide the delegate methods and row data for the table view.
         servicesTable.delegate = self
@@ -61,23 +61,23 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButtonTap(sender: AnyObject) {
-         self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonTap(_ sender: AnyObject) {
+         self.dismiss(animated: true, completion: nil)
     }
     
     // number of rows in table view
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.servicesList.count
     }
     
     // create a cell for each table view row
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = self.servicesTable.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
+        let cell:UITableViewCell = self.servicesTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
         // set the text from the data model
-        cell.textLabel?.text = self.servicesList[indexPath.row]
+        cell.textLabel?.text = self.servicesList[(indexPath as NSIndexPath).row]
         
         //Used to wrap the words
         cell.textLabel?.numberOfLines = 0
@@ -88,7 +88,7 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     // method to run when table view cell is tapped
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \((indexPath as NSIndexPath).row).")
     }
 }

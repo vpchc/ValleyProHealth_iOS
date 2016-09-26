@@ -49,7 +49,7 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
             answersList = servicesAnswers
         }
         
-         self.faqsTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+         self.faqsTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         faqsTable.delegate = self
         faqsTable.dataSource = self
@@ -65,32 +65,32 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButtonTap(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     // number of rows in table view
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.questionsList.count * 2
     }
 
     // create a cell for each table view row
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = self.faqsTable.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
+        let cell:UITableViewCell = self.faqsTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
       
         //Formula is used to get the same index for odd and even
-        let rowFormula = indexPath.row - ((indexPath.row + 1) / 2)
-        if(indexPath.row % 2 == 0){
-            if(indexPath.row == 0){
+        let rowFormula = (indexPath as NSIndexPath).row - (((indexPath as NSIndexPath).row + 1) / 2)
+        if((indexPath as NSIndexPath).row % 2 == 0){
+            if((indexPath as NSIndexPath).row == 0){
                 cell.textLabel?.text = self.questionsList[0]
             }else{
                 cell.textLabel?.text = self.questionsList[rowFormula]
             }
-           cell.textLabel?.font = UIFont.boldSystemFontOfSize(20.0)
+           cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
         }else{
             cell.textLabel?.text = self.answersList[rowFormula]
-            cell.textLabel?.font = UIFont.systemFontOfSize(20.0)
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 20.0)
         }
         
         //Used to wrap the words
@@ -99,8 +99,8 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // method to run when table view cell is tapped
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \((indexPath as NSIndexPath).row).")
     }
 
 }

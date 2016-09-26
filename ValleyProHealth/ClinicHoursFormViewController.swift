@@ -57,12 +57,12 @@ class ClinicHoursFormViewController: UIViewController {
     
     
     
-    @IBAction func cancelButton1(sender: AnyObject) {
-         self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButton1(_ sender: AnyObject) {
+         self.dismiss(animated: true, completion: nil)
     }
   
-    @IBAction func cancelButton2(sender: AnyObject) {
-         self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButton2(_ sender: AnyObject) {
+         self.dismiss(animated: true, completion: nil)
     }
 
     /*

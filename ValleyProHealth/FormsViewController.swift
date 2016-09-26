@@ -39,7 +39,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var locationSelection = 0
     var categorySelection = 0
     
-    let application = UIApplication.sharedApplication()
+    let application = UIApplication.shared
 
     var dataToSegue = ["", "", "" , ""]
     
@@ -80,17 +80,17 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButtonTap(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView == locationPicker){
             return locations.count
         }else if(pickerView == categoriesPicker){
@@ -116,7 +116,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == locationPicker){
             return locations[row]
         }else if(pickerView == categoriesPicker){
@@ -127,26 +127,26 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // When a selection is made by the user
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
             if(row == 0){
-                categoriesPicker.hidden = true
-                formPicker.hidden = true
+                categoriesPicker.isHidden = true
+                formPicker.isHidden = true
                 categoriesPicker.selectRow(0, inComponent: 0, animated: true)
                 formPicker.selectRow(0, inComponent: 0, animated: true)
             }else{
                 locationSelection = row
-                categoriesPicker.hidden = false
+                categoriesPicker.isHidden = false
             }
         }else if(pickerView == categoriesPicker){
             if(row == 0){
-                formPicker.hidden = true
+                formPicker.isHidden = true
                 formPicker.selectRow(0, inComponent: 0, animated: true)
             }else{
                 categorySelection = row
                 self.formPicker.reloadAllComponents()
-                formPicker.hidden = false
+                formPicker.isHidden = false
             }
         }else{
             if(row != 0){
@@ -186,7 +186,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                             websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + studentFiles[row - 1]
                         }
                 }
-                let websiteUrl: NSURL = NSURL(string: websiteUrlCombine)!
+                let websiteUrl: URL = URL(string: websiteUrlCombine)!
                 application.openURL(websiteUrl)
                 formPicker.selectRow(0, inComponent: 0, animated: false)
             }

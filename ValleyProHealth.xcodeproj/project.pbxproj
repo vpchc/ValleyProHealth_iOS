@@ -18,7 +18,7 @@
 		DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22EC291D74922E00E0518F /* MainPageViewController.swift */; };
 		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
 		DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */; };
-		DD6C440D1D86EE6400ADABA1 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440C1D86EE6400ADABA1 /* CustomColors.swift */; };
+		DD6C440D1D86EE6400ADABA1 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */; };
 		DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD6C44111D88322D00ADABA1 /* Franklin Gothic Medium.ttf */; };
 		DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */; };
 		DD6C441A1D89C7E100ADABA1 /* ProvidersFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C44191D89C7E100ADABA1 /* ProvidersFormViewController.swift */; };
@@ -31,6 +31,7 @@
 		DD7334AE1D40FCBC008A9023 /* ValleyProHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */; };
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
+		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
 		DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9A9C21D819882000924E8 /* PageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +64,7 @@
 		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
 		DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDialogViewController.swift; sourceTree = "<group>"; };
-		DD6C440C1D86EE6400ADABA1 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		DD6C44111D88322D00ADABA1 /* Franklin Gothic Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Franklin Gothic Medium.ttf"; sourceTree = "<group>"; };
 		DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidersViewController.swift; sourceTree = "<group>"; };
 		DD6C44151D88397100ADABA1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		DD7334AF1D40FCBC008A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
+		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
 		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +153,7 @@
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
-				DD6C440C1D86EE6400ADABA1 /* CustomColors.swift */,
+				DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */,
 				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
 				DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */,
 				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
@@ -167,6 +169,7 @@
 				B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */,
 				DD7419611D92D27200C2694D /* FAQsFormViewController.swift */,
 				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
+				DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -258,13 +261,16 @@
 					DD7334891D40FCBC008A9023 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = XZ8WZZTXA7;
+						LastSwiftMigration = 0800;
 					};
 					DD73349D1D40FCBC008A9023 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = DD7334891D40FCBC008A9023;
 					};
 					DD7334A81D40FCBC008A9023 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = DD7334891D40FCBC008A9023;
 					};
 				};
@@ -336,8 +342,9 @@
 				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,
 				B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */,
 				DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */,
+				DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */,
 				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,
-				DD6C440D1D86EE6400ADABA1 /* CustomColors.swift in Sources */,
+				DD6C440D1D86EE6400ADABA1 /* CustomFunctions.swift in Sources */,
 				DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */,
 				B878AD001D8A22250098DD10 /* ServicesViewController.swift in Sources */,
 				DD6C441A1D89C7E100ADABA1 /* ProvidersFormViewController.swift in Sources */,
@@ -494,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -510,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -522,6 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValleyProHealth.app/ValleyProHealth";
 			};
 			name = Debug;
@@ -534,6 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValleyProHealth.app/ValleyProHealth";
 			};
 			name = Release;
@@ -545,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ValleyProHealth;
 			};
 			name = Debug;
@@ -556,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ValleyProHealth;
 			};
 			name = Release;
