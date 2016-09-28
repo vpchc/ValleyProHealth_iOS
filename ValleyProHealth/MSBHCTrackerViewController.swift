@@ -47,7 +47,7 @@ class MSBHCTrackerViewController: UIViewController {
         var busScheduleSplit = [String]()
         var r = 0
         var busStatus = ""
-        for i in 0...locations.count{
+        for i in 0...locations.count - 1{
             busScheduleSplit = locations[i].components(separatedBy: ",")
             r = busTimeCheck(location: busScheduleSplit)
             if(r != 0){
@@ -75,13 +75,13 @@ class MSBHCTrackerViewController: UIViewController {
         let currentMilliseconds = NSDate().timeIntervalSince1970
         
         //Bus start time in milliseconds
-        let splitStartTime = location[0].components(separatedBy: ":")
+        let splitStartTime = location[2].components(separatedBy: ":")
         let busStartHour = Double(splitStartTime[0])! * 3.6e6
         let busStartMin  = Double(splitStartTime[1])! * 6e4
         let busStartTime = busStartHour + busStartMin
         
         //Bus end time in milliseconds
-        let splitEndTime = location[1].components(separatedBy: ":")
+        let splitEndTime = location[3].components(separatedBy: ":")
         let busEndHour = Double(splitEndTime[0])! * 3.6e6
         let busEndMin  = Double(splitEndTime[1])! * 6e4
         let busEndTime = busEndHour + busEndMin
