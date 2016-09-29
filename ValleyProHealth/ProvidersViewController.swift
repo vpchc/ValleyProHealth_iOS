@@ -13,6 +13,8 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var providerTypePicker: UIPickerView!
     
+    let defaults = UserDefaults.standard
+    
     var locations = [String]()
     var providerTypes1 = [String]()
     var providerTypes2 = [String]()
@@ -23,6 +25,9 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let locationSet = defaults.object(forKey:"locationPreference")
+        providerTypePicker.selectRow(locationSet as! Int, inComponent: 0, animated: false)
         
         // Connect data:
         self.locationPicker.delegate = self

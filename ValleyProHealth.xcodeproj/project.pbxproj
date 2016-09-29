@@ -32,6 +32,13 @@
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
+		DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC1946F1D9D54A2006B1A58 /* Fabric.framework */; };
+		DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC194701D9D54A2006B1A58 /* TwitterKit.framework */; };
+		DDC194751D9D54A2006B1A58 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDC194711D9D54A2006B1A58 /* TwitterKitResources.bundle */; };
+		DDC194761D9D54A2006B1A58 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC194721D9D54A2006B1A58 /* TwitterCore.framework */; };
+		DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */; };
+		DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */; };
+		DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */; };
 		DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9A9C21D819882000924E8 /* PageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +93,13 @@
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
+		DDC1946F1D9D54A2006B1A58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		DDC194701D9D54A2006B1A58 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		DDC194711D9D54A2006B1A58 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		DDC194721D9D54A2006B1A58 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreferenceViewController.swift; sourceTree = "<group>"; };
+		DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +108,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */,
+				DDC194761D9D54A2006B1A58 /* TwitterCore.framework in Frameworks */,
+				DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +170,10 @@
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
+				DDC1946F1D9D54A2006B1A58 /* Fabric.framework */,
+				DDC194701D9D54A2006B1A58 /* TwitterKit.framework */,
+				DDC194711D9D54A2006B1A58 /* TwitterKitResources.bundle */,
+				DDC194721D9D54A2006B1A58 /* TwitterCore.framework */,
 				DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */,
 				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
 				DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */,
@@ -170,6 +191,9 @@
 				DD7419611D92D27200C2694D /* FAQsFormViewController.swift */,
 				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
 				DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */,
+				DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */,
+				DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */,
+				DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -202,6 +226,7 @@
 				DD7334861D40FCBC008A9023 /* Sources */,
 				DD7334871D40FCBC008A9023 /* Frameworks */,
 				DD7334881D40FCBC008A9023 /* Resources */,
+				DDC1946E1D9D545B006B1A58 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -304,6 +329,7 @@
 				DD6C441C1D89EF3400ADABA1 /* Images.xcassets in Resources */,
 				DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */,
 				DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */,
+				DDC194751D9D54A2006B1A58 /* TwitterKitResources.bundle in Resources */,
 				DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +350,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DDC1946E1D9D545B006B1A58 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 607eb4d8580faaad3c22d9181877fdebfa193260 0616824e06eeba7d027d2d937b3133c186b42d90ae14ad71b1fc8fd7f0cc01bf";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD7334861D40FCBC008A9023 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -332,7 +374,9 @@
 				DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */,
 				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
 				B82D5C9C1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift in Sources */,
+				DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */,
 				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
+				DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */,
 				DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */,
 				B82D5C9E1D8F023900BDB9E8 /* ServicesFormViewController.swift in Sources */,
 				B878ACFA1D8A1E940098DD10 /* LocationsViewController.swift in Sources */,
@@ -340,6 +384,7 @@
 				DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */,
 				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
 				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,
+				DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */,
 				B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */,
 				DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */,
 				DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */,
@@ -495,6 +540,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ValleyProHealth",
+				);
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -512,6 +561,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ValleyProHealth",
+				);
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

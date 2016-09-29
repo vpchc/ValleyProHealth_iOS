@@ -8,31 +8,52 @@
 
 import UIKit
 import Foundation
+import Fabric
+import TwitterKit
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var twitterBird: UIButton!
     
-    let defaults = UserDefaults.standard
+    @IBOutlet weak var twitterFeed: UILabel!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let mainPageViewController = segue.destination as? MainPageViewController {
-            mainPageViewController.pageControlDelegate = self
-        }
-    }
- 
+    @IBOutlet weak var optionsButton: UIButton!
+    let defaults = UserDefaults.standard
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        getBusSchedule()
         
-       
+        Fabric.with([Twitter.self])
+        
+        twitterUpdate()
+        getBusSchedule()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Runs the initial location preferences set.
+        if(defaults.object(forKey:"locationPreference") == nil){
+            self.performSegue(withIdentifier: "LocationPreferenceSegue", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func twitterUpdate(){
+        let client = TWTRAPIClient()
+        client.loadUser(withID: "706934622001606656") {tweet, error in
+            if let t = tweet {
+               self.twitterFeed.text = String(describing: t)
+            } else {
+                print("Failed to load Tweet")
+            }
+        }
     }
     
     func getBusSchedule(){
@@ -68,8 +89,34 @@ class MainViewController: UIViewController {
         }
 
     }
-     
     
+    //This is used instead of perform segue to get the anchor point just right, otherwise it is off-center.
+    @IBAction func optionButtonsTap(_ sender: AnyObject) {
+        // get a reference to the view controller for the popover
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionsPopover")
+        
+        // set the presentation style
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        
+        // set up the popover presentation controller
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        popController.popoverPresentationController?.sourceView = sender as? UIView // button
+        popController.popoverPresentationController?.sourceRect = sender.bounds
+        
+        // present the popover
+        self.present(popController, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let mainPageViewController = segue.destination as? MainPageViewController {
+            mainPageViewController.pageControlDelegate = self
+        }
+    }
+    // UIPopoverPresentationControllerDelegate method
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        // Force popover style
+        return UIModalPresentationStyle.none
+    }
 }
 extension MainViewController: MainPageViewControllerDelegate {
     
