@@ -98,7 +98,7 @@ class MainViewController: UIViewController {
     //This is used instead of perform segue to get the anchor point just right, otherwise it is off-center.
     @IBAction func optionButtonsTap(_ sender: AnyObject) {
         // get a reference to the view controller for the popover
-        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionsPopover")
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menuPopover")
         
         // set the presentation style
         popController.modalPresentationStyle = UIModalPresentationStyle.popover

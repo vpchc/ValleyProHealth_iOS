@@ -32,6 +32,7 @@
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
+		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
 		DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC1946F1D9D54A2006B1A58 /* Fabric.framework */; };
 		DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC194701D9D54A2006B1A58 /* TwitterKit.framework */; };
 		DDC194751D9D54A2006B1A58 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDC194711D9D54A2006B1A58 /* TwitterKitResources.bundle */; };
@@ -93,6 +94,7 @@
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
+		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		DDC1946F1D9D54A2006B1A58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DDC194701D9D54A2006B1A58 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		DDC194711D9D54A2006B1A58 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */,
 				DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */,
 				DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */,
+				DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
 				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,
 				DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */,
+				DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */,
 				B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */,
 				DD6C44141D8836A400ADABA1 /* ProvidersViewController.swift in Sources */,
 				DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */,
