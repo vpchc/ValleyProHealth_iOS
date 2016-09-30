@@ -74,6 +74,11 @@ class MainViewController: UIViewController {
             print("Error: \(error)")
         }
     }
+    
+    func twitterSetup(){
+
+       
+    }
 
     @IBAction func twitterBirdTap(_ sender: AnyObject) {
         let application = UIApplication.shared
