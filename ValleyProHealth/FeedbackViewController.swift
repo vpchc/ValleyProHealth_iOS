@@ -10,7 +10,9 @@ import UIKit
 
 class FeedbackViewController: UIViewController {
 
+    @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var messageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +29,11 @@ class FeedbackViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func ratebuttonTap(_ sender: AnyObject) {
+        //Open valleyprohealth page in app store
     }
-    */
-
+    @IBAction func messageButtonTap(_ sender: AnyObject) {
+        
+    }
+   
 }

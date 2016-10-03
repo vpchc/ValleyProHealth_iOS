@@ -12,26 +12,19 @@ class OptionTableViewController: UITableViewController {
 
    
     @IBOutlet var optionsTable: UITableView!
-    @IBOutlet weak var cell1: UITableViewCell!
-    @IBOutlet weak var Cell2: UITableViewCell!
-    @IBOutlet weak var Cell3: UITableViewCell!
-    @IBOutlet weak var Cell4: UITableViewCell!
-    @IBOutlet weak var Cell5: UITableViewCell!
-    @IBOutlet weak var Cell6: UITableViewCell!
-    @IBOutlet weak var Cell7: UITableViewCell!
-
-    @IBOutlet weak var Cell8: UITableViewCell!
-    @IBOutlet weak var Cell9: UITableViewCell!
-    
+       
     
     let numberOfRows = [7,2]
     
-    let cellIdentifier = "Cell"
+    let cellIdentifier = "OptionCells"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.clearsSelectionOnViewWillAppear = false
+        self.optionsTable.delegate = self
+        self.optionsTable.dataSource = self
+        
+        //self.clearsSelectionOnViewWillAppear = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,16 +51,22 @@ class OptionTableViewController: UITableViewController {
     
     }
     
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = optionsTable.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-
-        cell.accessoryType = .checkmark
-
-        return cell
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        let cell = optionsTable.cellForRow(at: indexPath as IndexPath)
+        print("Should be checked")
+        cell?.accessoryType = .checkmark
+        
     }
-    */
 
+    /*
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = optionsTable.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
+        print("in there")
+        cell.accessoryType = .checkmark
+    }
+ 
+*/
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var optionsButton: UIButton!
     let defaults = UserDefaults.standard
+    
+    private var currentIndex:Int = 0
+    private let maxLimit = 2
+    private let minLimit = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,6 +115,18 @@ class MainViewController: UIViewController {
         // present the popover
         self.present(popController, animated: true, completion: nil)
     }
+    
+    @IBAction func pageControlValueChange(_ sender: AnyObject) {
+        if currentIndex < maxLimit && sender.currentPage > currentIndex {
+            currentIndex += 1
+            self.scrollToItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection: 0), atScrollPosition: .Right, animated: true)
+            // Move to Left
+        } else if currentIndex > minLimit {
+            currentIndex -= 1
+            self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection: 0), atScrollPosition: .Left, animated: true)
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mainPageViewController = segue.destination as? MainPageViewController {
