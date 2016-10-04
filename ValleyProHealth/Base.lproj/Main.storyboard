@@ -111,7 +111,7 @@
                                     <constraint firstAttribute="height" constant="698" id="Qqu-1I-on0"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="ZVx-HL-fzn" kind="embed" id="eh0-HY-3Gz"/>
+                                    <segue destination="ZVx-HL-fzn" kind="embed" identifier="PagerContainerSegue" id="eh0-HY-3Gz"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndB-V2-BaI" userLabel="Page Control Container">
@@ -151,7 +151,7 @@
                                                     <action selector="twitterBirdTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNo-Da-cgA"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x5-dM-5eN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x5-dM-5eN" customClass="MarqueeLabel">
                                                 <frame key="frameInset" minX="84" minY="23" width="637" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -352,7 +352,7 @@
                         <sections>
                             <tableViewSection headerTitle="Location Preference:" id="nd5-8c-ruu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="RcE-uH-rOU" style="IBUITableViewCellStyleDefault" id="n4T-yG-8Ra">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" editingAccessoryType="checkmark" textLabel="RcE-uH-rOU" style="IBUITableViewCellStyleDefault" id="n4T-yG-8Ra">
                                         <rect key="frame" x="0.0" y="56" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n4T-yG-8Ra" id="s5b-VQ-IJv">

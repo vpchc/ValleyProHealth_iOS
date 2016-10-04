@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		489B60DB89E42243D1FBBD96 /* Pods_ValleyProHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E0D4D97718E5787CA27A3F /* Pods_ValleyProHealthUITests.framework */; };
+		683F6E77FC809EF9A540C919 /* Pods_ValleyProHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E489910162A90C5CDDAF3EB6 /* Pods_ValleyProHealth.framework */; };
 		B82D5C9A1D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D5C991D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift */; };
 		B82D5C9C1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D5C9B1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift */; };
 		B82D5C9E1D8F023900BDB9E8 /* ServicesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */; };
@@ -33,6 +35,7 @@
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
+		DD7E0CD61DA4390D007DEA8C /* MarqueeLabel-swift-3.0 in Resources */ = {isa = PBXBuildFile; fileRef = DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */; };
 		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
 		DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC1946F1D9D54A2006B1A58 /* Fabric.framework */; };
 		DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC194701D9D54A2006B1A58 /* TwitterKit.framework */; };
@@ -42,6 +45,7 @@
 		DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */; };
 		DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */; };
 		DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9A9C21D819882000924E8 /* PageContentViewController.swift */; };
+		E3957D26DBA85A9E21393DB3 /* Pods_ValleyProHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADACB344326A1BD5797F797 /* Pods_ValleyProHealthTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0150837C686FA7E453944123 /* Pods-ValleyProHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealthUITests/Pods-ValleyProHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		28E0D4D97718E5787CA27A3F /* Pods_ValleyProHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5422995C948A6F561DDFA809 /* Pods-ValleyProHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealthUITests/Pods-ValleyProHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AADACB344326A1BD5797F797 /* Pods_ValleyProHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF791674566E8AD3FE0F5381 /* Pods-ValleyProHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealthTests/Pods-ValleyProHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B82D5C991D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClinicHoursFormViewController.swift; sourceTree = "<group>"; };
 		B82D5C9B1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoFormViewController.swift; sourceTree = "<group>"; };
 		B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesFormViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +80,9 @@
 		B878AD011D8A24A60098DD10 /* FAQsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsViewController.swift; sourceTree = "<group>"; };
 		B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesViewController.swift; sourceTree = "<group>"; };
 		B893DE291DA18248008037FC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		C2E4E2647DAC45F3484FD195 /* Pods-ValleyProHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.release.xcconfig"; sourceTree = "<group>"; };
+		D09FACF5A267DA4F5437038D /* Pods-ValleyProHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealthTests/Pods-ValleyProHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC2BD4EB61462DA920CEB5BB /* Pods-ValleyProHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
 		DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDialogViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +108,7 @@
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
+		DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MarqueeLabel-swift-3.0"; path = "../../Downloads/MarqueeLabel-swift-3.0"; sourceTree = "<group>"; };
 		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		DDC1946F1D9D54A2006B1A58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DDC194701D9D54A2006B1A58 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -105,6 +118,7 @@
 		DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		E489910162A90C5CDDAF3EB6 /* Pods_ValleyProHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 				DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */,
 				DDC194761D9D54A2006B1A58 /* TwitterCore.framework in Frameworks */,
 				DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */,
+				683F6E77FC809EF9A540C919 /* Pods_ValleyProHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3957D26DBA85A9E21393DB3 /* Pods_ValleyProHealthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +145,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489B60DB89E42243D1FBBD96 /* Pods_ValleyProHealthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E94AF14F1CCF43C160EC73A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E489910162A90C5CDDAF3EB6 /* Pods_ValleyProHealth.framework */,
+				AADACB344326A1BD5797F797 /* Pods_ValleyProHealthTests.framework */,
+				28E0D4D97718E5787CA27A3F /* Pods_ValleyProHealthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		905D725060CCD18919BC2927 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC2BD4EB61462DA920CEB5BB /* Pods-ValleyProHealth.debug.xcconfig */,
+				C2E4E2647DAC45F3484FD195 /* Pods-ValleyProHealth.release.xcconfig */,
+				AF791674566E8AD3FE0F5381 /* Pods-ValleyProHealthTests.debug.xcconfig */,
+				D09FACF5A267DA4F5437038D /* Pods-ValleyProHealthTests.release.xcconfig */,
+				0150837C686FA7E453944123 /* Pods-ValleyProHealthUITests.debug.xcconfig */,
+				5422995C948A6F561DDFA809 /* Pods-ValleyProHealthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD397D2B1D4157C90002232E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +187,15 @@
 		DD7334811D40FCBC008A9023 = {
 			isa = PBXGroup;
 			children = (
+				DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */,
 				B893DE291DA18248008037FC /* MessageViewController.swift */,
 				DD397D2B1D4157C90002232E /* Resources */,
 				DD73348C1D40FCBC008A9023 /* ValleyProHealth */,
 				DD7334A11D40FCBC008A9023 /* ValleyProHealthTests */,
 				DD7334AC1D40FCBC008A9023 /* ValleyProHealthUITests */,
 				DD73348B1D40FCBC008A9023 /* Products */,
+				905D725060CCD18919BC2927 /* Pods */,
+				1E94AF14F1CCF43C160EC73A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,10 +272,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD7334B21D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealth" */;
 			buildPhases = (
+				8C443351E32BC8A054461054 /* [CP] Check Pods Manifest.lock */,
 				DD7334861D40FCBC008A9023 /* Sources */,
 				DD7334871D40FCBC008A9023 /* Frameworks */,
 				DD7334881D40FCBC008A9023 /* Resources */,
 				DDC1946E1D9D545B006B1A58 /* ShellScript */,
+				3942F233593530248FA59A07 /* [CP] Embed Pods Frameworks */,
+				403D80C0F957CEE2E4D6C0CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,9 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD7334B51D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthTests" */;
 			buildPhases = (
+				DEC7F4155A559E12D818BE3F /* [CP] Check Pods Manifest.lock */,
 				DD73349A1D40FCBC008A9023 /* Sources */,
 				DD73349B1D40FCBC008A9023 /* Frameworks */,
 				DD73349C1D40FCBC008A9023 /* Resources */,
+				AC8F867A228B199DCA510467 /* [CP] Embed Pods Frameworks */,
+				DA35155A7EDEE75DEA2C1148 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD7334B81D40FCBC008A9023 /* Build configuration list for PBXNativeTarget "ValleyProHealthUITests" */;
 			buildPhases = (
+				5576620820A365874E222C27 /* [CP] Check Pods Manifest.lock */,
 				DD7334A51D40FCBC008A9023 /* Sources */,
 				DD7334A61D40FCBC008A9023 /* Frameworks */,
 				DD7334A71D40FCBC008A9023 /* Resources */,
+				EBE985BF902A12720169577D /* [CP] Embed Pods Frameworks */,
+				9B38D726C7CB02AAF4491F21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +387,7 @@
 				DD6C441C1D89EF3400ADABA1 /* Images.xcassets in Resources */,
 				DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */,
 				DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */,
+				DD7E0CD61DA4390D007DEA8C /* MarqueeLabel-swift-3.0 in Resources */,
 				DDC194751D9D54A2006B1A58 /* TwitterKitResources.bundle in Resources */,
 				DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */,
 			);
@@ -357,6 +410,111 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3942F233593530248FA59A07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		403D80C0F957CEE2E4D6C0CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5576620820A365874E222C27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C443351E32BC8A054461054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B38D726C7CB02AAF4491F21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealthUITests/Pods-ValleyProHealthUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC8F867A228B199DCA510467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealthTests/Pods-ValleyProHealthTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA35155A7EDEE75DEA2C1148 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealthTests/Pods-ValleyProHealthTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DDC1946E1D9D545B006B1A58 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +527,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 607eb4d8580faaad3c22d9181877fdebfa193260 0616824e06eeba7d027d2d937b3133c186b42d90ae14ad71b1fc8fd7f0cc01bf";
+		};
+		DEC7F4155A559E12D818BE3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBE985BF902A12720169577D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValleyProHealthUITests/Pods-ValleyProHealthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -551,7 +739,9 @@
 		};
 		DD7334B31D40FCBC008A9023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2BD4EB61462DA920CEB5BB /* Pods-ValleyProHealth.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -573,7 +763,9 @@
 		};
 		DD7334B41D40FCBC008A9023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E4E2647DAC45F3484FD195 /* Pods-ValleyProHealth.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,6 +787,7 @@
 		};
 		DD7334B61D40FCBC008A9023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF791674566E8AD3FE0F5381 /* Pods-ValleyProHealthTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ValleyProHealthTests/Info.plist;
@@ -608,6 +801,7 @@
 		};
 		DD7334B71D40FCBC008A9023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09FACF5A267DA4F5437038D /* Pods-ValleyProHealthTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ValleyProHealthTests/Info.plist;
@@ -621,6 +815,7 @@
 		};
 		DD7334B91D40FCBC008A9023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0150837C686FA7E453944123 /* Pods-ValleyProHealthUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ValleyProHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -633,6 +828,7 @@
 		};
 		DD7334BA1D40FCBC008A9023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5422995C948A6F561DDFA809 /* Pods-ValleyProHealthUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ValleyProHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

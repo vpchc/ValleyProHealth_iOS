@@ -8,8 +8,7 @@
 
 import UIKit
 import Foundation
-import Fabric
-import TwitterKit
+
 
 class MainViewController: UIViewController {
 
@@ -22,18 +21,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var twitterFeed: UILabel!
     
     @IBOutlet weak var optionsButton: UIButton!
+    
     let defaults = UserDefaults.standard
     
-    private var currentIndex:Int = 0
-    private let maxLimit = 2
-    private let minLimit = 0
+    var pageIndex = 0
+    var pagerController: MainPageViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Fabric.with([Twitter.self])
-        
-        twitterUpdate()
+        twitterSetup()
         getBusSchedule()
     }
     
@@ -49,16 +46,6 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func twitterUpdate(){
-        let client = TWTRAPIClient()
-        client.loadUser(withID: "706934622001606656") {tweet, error in
-            if let t = tweet {
-               self.twitterFeed.text = String(describing: t)
-            } else {
-                print("Failed to load Tweet")
-            }
-        }
-    }
     
     func getBusSchedule(){
         var htmlString = ""
@@ -80,6 +67,22 @@ class MainViewController: UIViewController {
     }
     
     func twitterSetup(){
+        var htmlString = ""
+        let urlString = "https://twitter.com/search?f=tweets&q=from%3AValleyProHealth&src=typd"
+        guard let scheduleURL = URL(string: urlString) else {
+            print("Error: \(urlString) doesn't seem to be a valid URL")
+            return
+        }
+        
+        do {
+            htmlString = try String(contentsOf: scheduleURL, encoding: .ascii)
+            let htmlSplit = htmlString.components(separatedBy: "<p class=\"TweetTextSize  js-tweet-text tweet-text\" lang=\"en\" data-aria-label-part=\"0\">")
+            let refinedSplit = htmlSplit[1].components(separatedBy: "</p>")
+            print("HTML : \(refinedSplit[0])")
+          twitterFeed.text = refinedSplit[0]
+        } catch let error {
+            print("Error: \(error)")
+        }
 
        
     }
@@ -117,13 +120,19 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func pageControlValueChange(_ sender: AnyObject) {
-        if currentIndex < maxLimit && sender.currentPage > currentIndex {
-            currentIndex += 1
-            self.scrollToItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection: 0), atScrollPosition: .Right, animated: true)
-            // Move to Left
-        } else if currentIndex > minLimit {
-            currentIndex -= 1
-            self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection: 0), atScrollPosition: .Left, animated: true)
+        if(pageIndex == 0){
+            pagerController.setViewControllers([orderedViewControllers[1]],
+                                                  direction: .forward,
+                                                  animated: true,
+                                                  completion: nil)
+            pageIndex += 1
+            
+        }else{
+            pagerController.setViewControllers([orderedViewControllers[0]],
+                                                   direction: .reverse,
+                                                   animated: true,
+                                                   completion: nil)
+            pageIndex -= 1
         }
     }
     
@@ -132,6 +141,11 @@ class MainViewController: UIViewController {
         if let mainPageViewController = segue.destination as? MainPageViewController {
             mainPageViewController.pageControlDelegate = self
         }
+        if (segue.identifier == "PagerContainerSegue") {
+            //This is used to reference the paging left and right functions
+            let childViewController = segue.destination as! MainPageViewController
+            pagerController = childViewController
+        }
     }
     // UIPopoverPresentationControllerDelegate method
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -139,6 +153,7 @@ class MainViewController: UIViewController {
         return UIModalPresentationStyle.none
     }
 }
+
 extension MainViewController: MainPageViewControllerDelegate {
     
     func mainPageViewController(_ mainPageViewController: MainPageViewController,
@@ -148,6 +163,7 @@ extension MainViewController: MainPageViewControllerDelegate {
     
     func mainPageViewController(_ mainPageViewController: MainPageViewController,
                                     didUpdatePageIndex index: Int) {
+        pageIndex = index
         pageControl.currentPage = index
     }
     

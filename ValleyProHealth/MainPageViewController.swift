@@ -8,18 +8,11 @@
 
 import UIKit
 
-private(set) var orderedViewControllers: [UIViewController] = {
-    return [newScreenViewController("Main"),
-            newScreenViewController("Secondary")]
-}()
-
-private func newScreenViewController(_ selection: String) -> UIViewController {
-    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(selection)ScreenViewController")
-}
 
 
 class MainPageViewController: UIPageViewController {
-
+    
+    var pageControlChange = 0
     weak var pageControlDelegate: MainPageViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -35,7 +28,7 @@ class MainPageViewController: UIPageViewController {
                                completion: nil)
         }
         
-        pageControlDelegate?.mainPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
+        //pageControlDelegate?.mainPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
      
     }
 
@@ -45,6 +38,17 @@ class MainPageViewController: UIPageViewController {
     }
     
 }
+
+private(set) var orderedViewControllers: [UIViewController] = {
+    return [newScreenViewController("Main"),
+            newScreenViewController("Secondary")]
+}()
+
+private func newScreenViewController(_ selection: String) -> UIViewController {
+    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(selection)ScreenViewController")
+}
+
+//Makes the paging left and right happen
 extension MainPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController,
@@ -122,5 +126,6 @@ protocol MainPageViewControllerDelegate: class {
      */
     func mainPageViewController(_ mainPageViewController: MainPageViewController,
                                     didUpdatePageIndex index: Int)
+
     
 }
