@@ -35,7 +35,6 @@
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
-		DD7E0CD61DA4390D007DEA8C /* MarqueeLabel-swift-3.0 in Resources */ = {isa = PBXBuildFile; fileRef = DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */; };
 		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
 		DDC194731D9D54A2006B1A58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC1946F1D9D54A2006B1A58 /* Fabric.framework */; };
 		DDC194741D9D54A2006B1A58 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC194701D9D54A2006B1A58 /* TwitterKit.framework */; };
@@ -108,7 +107,6 @@
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
-		DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MarqueeLabel-swift-3.0"; path = "../../Downloads/MarqueeLabel-swift-3.0"; sourceTree = "<group>"; };
 		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		DDC1946F1D9D54A2006B1A58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DDC194701D9D54A2006B1A58 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		DD7334811D40FCBC008A9023 = {
 			isa = PBXGroup;
 			children = (
-				DD7E0CD51DA4390D007DEA8C /* MarqueeLabel-swift-3.0 */,
 				B893DE291DA18248008037FC /* MessageViewController.swift */,
 				DD397D2B1D4157C90002232E /* Resources */,
 				DD73348C1D40FCBC008A9023 /* ValleyProHealth */,
@@ -387,7 +384,6 @@
 				DD6C441C1D89EF3400ADABA1 /* Images.xcassets in Resources */,
 				DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */,
 				DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */,
-				DD7E0CD61DA4390D007DEA8C /* MarqueeLabel-swift-3.0 in Resources */,
 				DDC194751D9D54A2006B1A58 /* TwitterKitResources.bundle in Resources */,
 				DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */,
 			);

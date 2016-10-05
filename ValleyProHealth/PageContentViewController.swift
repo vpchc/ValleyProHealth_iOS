@@ -35,6 +35,7 @@ class PageContentViewController: UIViewController {
         let portalUrl: URL = URL(string:"https://secure2.myunionportal.org/vpchc/default.aspx")!
         let application = UIApplication.shared
         
+        self.view.makeToast("Opening VPCHC Patient Portal webpage…")
         application.openURL(portalUrl)
     }
   
@@ -45,6 +46,7 @@ class PageContentViewController: UIViewController {
         let facebookUrl: URL = URL(string:"http://www.facebook.com/132585333458352")!
         
         //Open the facebook app to the vpchc profile is the app is available, otherwise open in the browser
+        self.view.makeToast("Opening VPCHC Facebook page…")
         if application.canOpenURL(facebookApp) {
             application.openURL(facebookApp)
         } else {
@@ -56,6 +58,7 @@ class PageContentViewController: UIViewController {
         let websiteUrl: URL = URL(string:"https://valleyprohealth.org")!
         let application = UIApplication.shared
         
+        self.view.makeToast("Opening VPCHC webpage…")
         application.openURL(websiteUrl)
     }
 

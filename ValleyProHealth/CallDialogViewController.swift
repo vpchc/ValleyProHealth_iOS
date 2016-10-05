@@ -9,13 +9,14 @@
 import UIKit
 
 class CallDialogViewController: UIViewController {
-    @IBOutlet weak var bloomCallButton: UIButton!
-    @IBOutlet weak var cayCallButton: UIButton!
-    @IBOutlet weak var clintCallButton: UIButton!
-    @IBOutlet weak var crawCallButton: UIButton!
-    @IBOutlet weak var terreCallButton: UIButton!
-    @IBOutlet weak var msbhcCallButton: UIButton!
-    @IBOutlet weak var modalClose: UIButton!
+ 
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var bloomButton: UIButton!
+    @IBOutlet weak var cayButton: UIButton!
+    @IBOutlet weak var clintButton: UIButton!
+    @IBOutlet weak var crawButton: UIButton!
+    @IBOutlet weak var terreButton: UIButton!
+    @IBOutlet weak var msbhcButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,44 +26,41 @@ class CallDialogViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func cancelButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func bloomButtonTap(_ sender: AnyObject) {
+        self.view.makeToast("Calling Bloomingdale Location...")
         let telenumber:URL = URL(string: "tel://7654989000")!
         UIApplication.shared.openURL(telenumber)
-        print("calling bloom")
+ 
     }
     @IBAction func cayButtonTap(_ sender: AnyObject) {
         let telenumber:URL = URL(string: "tel://7654989042")!
         UIApplication.shared.openURL(telenumber)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func clintButtonTap(_ sender: AnyObject) {
         let telenumber:URL = URL(string: "tel://7658281003")!
         UIApplication.shared.openURL(telenumber)
+        self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func crawButtonTap(_ sender: AnyObject) {
+    @IBAction func crawButton(_ sender: AnyObject) {
         let telenumber:URL = URL(string: "tel://7653625100")!
         UIApplication.shared.openURL(telenumber)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func terreButtonTap(_ sender: AnyObject) {
         let telenumber:URL = URL(string: "tel://8122387631")!
         UIApplication.shared.openURL(telenumber)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func msbhcButtonTap(_ sender: AnyObject) {
         let telenumber:URL = URL(string: "tel://7655926164")!
         UIApplication.shared.openURL(telenumber)
-    }
-    @IBAction func modalDismiss(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

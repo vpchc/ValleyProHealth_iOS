@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1112E7EBDF0365F7D834335C9E92A101"
-               BuildableName = "Pods_ValleyProHealth.framework"
-               BlueprintName = "Pods-ValleyProHealth"
+               BlueprintIdentifier = "772521BAE75B0A8F885CD3A54BA3C62B"
+               BuildableName = "Toast_Swift.framework"
+               BlueprintName = "Toast-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1112E7EBDF0365F7D834335C9E92A101"
-            BuildableName = "Pods_ValleyProHealth.framework"
-            BlueprintName = "Pods-ValleyProHealth"
+            BlueprintIdentifier = "772521BAE75B0A8F885CD3A54BA3C62B"
+            BuildableName = "Toast_Swift.framework"
+            BlueprintName = "Toast-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

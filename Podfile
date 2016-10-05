@@ -6,6 +6,10 @@ target 'ValleyProHealth' do
   use_frameworks!
 
   # Pods for ValleyProHealth
+  
+  #Both of these are very specific so that it will grab version which includes swift 3.0
+  pod 'MarqueeLabel/Swift', :git => 'https://github.com/cbpowell/MarqueeLabel.git', :branch => 'swift-3.0'
+  pod 'Toast-Swift', :git => 'https://github.com/scalessec/Toast-Swift.git', :branch => 'master'
 
   target 'ValleyProHealthTests' do
     inherit! :search_paths

@@ -1,3 +1,31 @@
-PODFILE CHECKSUM: fecf3e02433fc10cb7b4d7ad8fbac8acfbe8856e
+PODS:
+  - MarqueeLabel/Swift (2.7.7)
+  - Toast-Swift (2.0.0)
+
+DEPENDENCIES:
+  - MarqueeLabel/Swift (from `https://github.com/cbpowell/MarqueeLabel.git`, branch `swift-3.0`)
+  - Toast-Swift (from `https://github.com/scalessec/Toast-Swift.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  MarqueeLabel:
+    :branch: swift-3.0
+    :git: https://github.com/cbpowell/MarqueeLabel.git
+  Toast-Swift:
+    :branch: master
+    :git: https://github.com/scalessec/Toast-Swift.git
+
+CHECKOUT OPTIONS:
+  MarqueeLabel:
+    :commit: 637250cead29afd0ac03dc337a6f08916be28bca
+    :git: https://github.com/cbpowell/MarqueeLabel.git
+  Toast-Swift:
+    :commit: 128796edae3eff302eea9b6731678a14662d8f27
+    :git: https://github.com/scalessec/Toast-Swift.git
+
+SPEC CHECKSUMS:
+  MarqueeLabel: be020407640503732f7b1dd53c2d4ee692e72041
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
+
+PODFILE CHECKSUM: ac7bde666917bd21ed5e4142fcadbe14319e8059
 
 COCOAPODS: 1.1.0.rc.2

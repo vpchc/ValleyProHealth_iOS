@@ -8,7 +8,8 @@
 
 import UIKit
 import Foundation
-
+import MarqueeLabel
+import Toast_Swift
 
 class MainViewController: UIViewController {
 
@@ -17,8 +18,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var twitterBird: UIButton!
+
+    @IBOutlet weak var twitterFeed: MarqueeLabel!
     
-    @IBOutlet weak var twitterFeed: UILabel!
     
     @IBOutlet weak var optionsButton: UIButton!
     
@@ -26,10 +28,12 @@ class MainViewController: UIViewController {
     
     var pageIndex = 0
     var pagerController: MainPageViewController!
-
+    
+    let twitterTips = ["Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!", "If you are not able to make an appointment, please call to let us know.", "Refills can take up to 48 business hours to refill.", "Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         twitterSetup()
         getBusSchedule()
     }
@@ -67,24 +71,23 @@ class MainViewController: UIViewController {
     }
     
     func twitterSetup(){
+        let initialText = "Check here for latest news and information concerning Valley Professionals Community Health Center."
+        var feedText = ""
         var htmlString = ""
         let urlString = "https://twitter.com/search?f=tweets&q=from%3AValleyProHealth&src=typd"
-        guard let scheduleURL = URL(string: urlString) else {
-            print("Error: \(urlString) doesn't seem to be a valid URL")
-            return
-        }
-        
+        let scheduleURL = URL(string: urlString)
+
         do {
-            htmlString = try String(contentsOf: scheduleURL, encoding: .ascii)
+            htmlString = try String(contentsOf: scheduleURL!, encoding: .ascii)
             let htmlSplit = htmlString.components(separatedBy: "<p class=\"TweetTextSize  js-tweet-text tweet-text\" lang=\"en\" data-aria-label-part=\"0\">")
             let refinedSplit = htmlSplit[1].components(separatedBy: "</p>")
-            print("HTML : \(refinedSplit[0])")
-          twitterFeed.text = refinedSplit[0]
+            feedText = refinedSplit[0] + " " + twitterTips[Int(arc4random_uniform(4))] + " " + initialText
         } catch let error {
+            feedText = initialText + " " + twitterTips[Int(arc4random_uniform(4))]
             print("Error: \(error)")
         }
-
-       
+        twitterFeed.text = feedText
+        twitterFeed.restartLabel()
     }
 
     @IBAction func twitterBirdTap(_ sender: AnyObject) {
@@ -94,6 +97,7 @@ class MainViewController: UIViewController {
         let twitterUrl: URL = URL(string:"https://twitter.com/ValleyProHealth")!
         
         //Open the facebook app to the vpchc profile is the app is available, otherwise open in the browser
+        self.view.makeToast("Opening VPCHC Twitter page…")
         if application.canOpenURL(twitterApp) {
             application.openURL(twitterApp)
         } else {

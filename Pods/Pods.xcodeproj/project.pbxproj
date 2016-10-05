@@ -7,53 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DBAACF08FD747A57033F9C06B1C3F9A /* Pods-ValleyProHealth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80C5AE4B8B8556B51D667D5640E501 /* Pods-ValleyProHealth-dummy.m */; };
-		22C4AD8452FDE97BFD26AB446C3D7DC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		2F503365DD3BEFC1F9CED083EB7333B0 /* Pods-ValleyProHealth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F61C884AC69264FA03E695470395D69 /* Pods-ValleyProHealth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EAE3C8815C7E643D1F3343B01DC270B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */; };
+		22C4AD8452FDE97BFD26AB446C3D7DC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
+		4A831323CF0B165C8D4CFDD3DBE2C584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
+		4D7BFA9D62DCF491BD4B663311F163A0 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A37530306E353CF104C949BABE62BCA0 /* Toast-Swift-dummy.m */; };
+		5F5088807F205846D2F3C83CD19B7368 /* Pods-ValleyProHealth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F61C884AC69264FA03E695470395D69 /* Pods-ValleyProHealth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		689ADFD855C28DC359AC1416F0CB6BA1 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA89B8406B104470027F255E0100DF4 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C0C18DEB8B9DAF3A1EF5D41D7C5077F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
 		8D0C2A049ADBF13226BBC562A6AA8D45 /* Pods-ValleyProHealthTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB6CECCAF3C1C510D3DA1BD3A0CF7E5 /* Pods-ValleyProHealthTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9581212385C41F99EB8A628168AB3C6F /* Pods-ValleyProHealthUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EE265022EFFFEE6415A654A29C8244 /* Pods-ValleyProHealthUITests-dummy.m */; };
+		A55F09580AF6DB3067763811D2FC0589 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB86389DCBFD40972EB228FE2C33F90 /* MarqueeLabel-dummy.m */; };
+		B6C3BBCA17A1585A8456C90F53EEE4DA /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22C1FF8B9521B911D2F1C0DA99FA09B /* MarqueeLabel.swift */; };
+		B70C92B6ABF69FE0AF78A846C20E4C0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */; };
+		B95A4FDF8D4351E40EC9A87B87BEC688 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */; };
+		BDAF4B5100F568A19528D96EBDDEC635 /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 335B5FAE46F7AA4E8D7910AC0E04159E /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C39E4F7FA7065A75E688CEFF9E8F809A /* Pods-ValleyProHealth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80C5AE4B8B8556B51D667D5640E501 /* Pods-ValleyProHealth-dummy.m */; };
 		C630DA1FF6AA92F0E2931ED327528E75 /* Pods-ValleyProHealthTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E470234EABADAA5173625FADEC38094B /* Pods-ValleyProHealthTests-dummy.m */; };
-		C866EFDDB1F083AECB9B60ADD89372CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		F33F16402737918E3331ACBAA3E12A8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F28D7F33A2CAAED5EA42C4961B5EE1A7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9117E7EE3439031962E7F6B0337EF8 /* Toast.swift */; };
+		F33F16402737918E3331ACBAA3E12A8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
 		F555806A77BEC3873FA8DD3CCAFBEC4B /* Pods-ValleyProHealthUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6ADB5FA0DE2C300B82FDD342D8CE5DD /* Pods-ValleyProHealthUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF144F274A3AF3B20E768142CAA86994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CB4A198C491D5AF77B20AA9A00C337B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 772521BAE75B0A8F885CD3A54BA3C62B;
+			remoteInfo = "Toast-Swift";
+		};
+		BC8AA437F346A80957F2BBBD6BCA7274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E7D1EFF1D51CC9945FC56699E2019A3;
+			remoteInfo = MarqueeLabel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		06FCB66F24587E573637BD5D7014F0B4 /* Pods-ValleyProHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealth.release.xcconfig"; sourceTree = "<group>"; };
+		091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		12CD06BD615287C0E0DD4965B4D873A2 /* Pods-ValleyProHealthUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValleyProHealthUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		220B61806DBAA1C410451469760D4255 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2538C5A05034279B9B08D4BE8FA0E285 /* Pods-ValleyProHealth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ValleyProHealth.modulemap"; sourceTree = "<group>"; };
 		2916F51AE4FABBF681867F68CAF71454 /* Pods-ValleyProHealth-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealth-resources.sh"; sourceTree = "<group>"; };
-		3AACB016EB789651D46569A8A40C0387 /* Pods_ValleyProHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2AB172BC5A748A0F4427B09C23C7D2 /* Pods_ValleyProHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB86389DCBFD40972EB228FE2C33F90 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		335B5FAE46F7AA4E8D7910AC0E04159E /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
+		340E24CE0AAE4824D805E51F7EF06A44 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
 		3F8910C5B586E78AB81F4BFA0C611EA0 /* Pods-ValleyProHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		4288289AA1C3D48C4DDDFD739D412EC2 /* Pods-ValleyProHealthTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ValleyProHealthTests.modulemap"; sourceTree = "<group>"; };
 		4C237550678139A8B9D7A6AF5C18404A /* Pods-ValleyProHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F61C884AC69264FA03E695470395D69 /* Pods-ValleyProHealth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValleyProHealth-umbrella.h"; sourceTree = "<group>"; };
 		6030EEA537F164B4E6A95FD6249C0B38 /* Pods-ValleyProHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealthTests.release.xcconfig"; sourceTree = "<group>"; };
 		67B5ED2443A94BD2F01722B94B3B080D /* Pods-ValleyProHealth-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealth-frameworks.sh"; sourceTree = "<group>"; };
-		68B3461F3BC997D9CA7112875B7BB606 /* Pods_ValleyProHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD0B708AFDCC06D1D09FD206D8BB60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73EE265022EFFFEE6415A654A29C8244 /* Pods-ValleyProHealthUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValleyProHealthUITests-dummy.m"; sourceTree = "<group>"; };
+		77FA20EE4F7FCA4C9168C5037457F89E /* Pods_ValleyProHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FDB818FF754176194E1A789D2DC869 /* Pods-ValleyProHealth-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValleyProHealth-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A3B8EF93EAA63853A97196781DEDB5F /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E61CCD7258BF2D067D53A171FED757C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8089F8BF11CCA92E46FD4B0B1394E9CA /* Pods-ValleyProHealthUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealthUITests-frameworks.sh"; sourceTree = "<group>"; };
 		819ED6A6BA774382CC22F34BB304249F /* Pods-ValleyProHealthUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValleyProHealthUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		82BAC04B37688255019327A922755A52 /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
 		82D9F8D739054FE085A18729929DA899 /* Pods-ValleyProHealthTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValleyProHealthTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8AB6CECCAF3C1C510D3DA1BD3A0CF7E5 /* Pods-ValleyProHealthTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValleyProHealthTests-umbrella.h"; sourceTree = "<group>"; };
 		8E80C5AE4B8B8556B51D667D5640E501 /* Pods-ValleyProHealth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValleyProHealth-dummy.m"; sourceTree = "<group>"; };
 		8FFA410AABBF968F06B44B64E93E6777 /* Pods-ValleyProHealthTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValleyProHealthTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		958CBD754939BFB256782C3B85542459 /* Pods-ValleyProHealthUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ValleyProHealthUITests.modulemap"; sourceTree = "<group>"; };
-		9D1B588E4347EDBD68307FDB2225DEF5 /* Pods_ValleyProHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2D38DD221158AEC7E60EA496002F77 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
+		9A477083667010F09066058550B7D11F /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9117E7EE3439031962E7F6B0337EF8 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		A37530306E353CF104C949BABE62BCA0 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B2D437C053F51D48CEE95EA0772C681A /* Pods-ValleyProHealth-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValleyProHealth-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B6ADB5FA0DE2C300B82FDD342D8CE5DD /* Pods-ValleyProHealthUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValleyProHealthUITests-umbrella.h"; sourceTree = "<group>"; };
 		BA818D9676F1241A236DA2026CB6BA42 /* Pods-ValleyProHealthTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealthTests-resources.sh"; sourceTree = "<group>"; };
 		BAAE7C64FC581992C79D8B887762E336 /* Pods-ValleyProHealthUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealthUITests-resources.sh"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BD851E9C1CA141E613A80D7DD8BA78D6 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
+		C8A8D22F826A1340D2BA990354A36D96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D465CF47CE9CF53C4E5D3DDFF885766F /* Pods-ValleyProHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DA98C813A8F96FE09BFDFB4A41E489B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBCB54EE760EA936742BFFD638600183 /* Pods_ValleyProHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31645542C522C17D7B6879D5EAD08A5 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
 		E470234EABADAA5173625FADEC38094B /* Pods-ValleyProHealthTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValleyProHealthTests-dummy.m"; sourceTree = "<group>"; };
+		EFA89B8406B104470027F255E0100DF4 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
 		F124016B04FF6B8C3A5A27314E6ED8B6 /* Pods-ValleyProHealthTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyProHealthTests-frameworks.sh"; sourceTree = "<group>"; };
+		F22C1FF8B9521B911D2F1C0DA99FA09B /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/Swift/MarqueeLabel.swift; sourceTree = "<group>"; };
 		FBCD29849159160D1BEA03CFCE590CCE /* Pods-ValleyProHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyProHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDBAA37E0FD37A3593810E506F4AD497 /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +111,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43D587BC8E1CFF0C742CDF535BC742E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A831323CF0B165C8D4CFDD3DBE2C584 /* Foundation.framework in Frameworks */,
+				B70C92B6ABF69FE0AF78A846C20E4C0D /* QuartzCore.framework in Frameworks */,
+				0EAE3C8815C7E643D1F3343B01DC270B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		781E6A5C3FAAF2E5C2CC73BBC870FBF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,33 +129,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DE84ECA931E27F804599B947E15287E /* Frameworks */ = {
+		79B0C52B1260E844921BF0221384F18B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C866EFDDB1F083AECB9B60ADD89372CA /* Foundation.framework in Frameworks */,
+				7C0C18DEB8B9DAF3A1EF5D41D7C5077F /* Foundation.framework in Frameworks */,
+				B95A4FDF8D4351E40EC9A87B87BEC688 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810229EC6B285903BB87F879506B3C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF144F274A3AF3B20E768142CAA86994 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A0076BCB0EC134542CC762475772AB1 /* Products */ = {
+		0614CE8562D962A8A2948A77D3A05A1F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D1B588E4347EDBD68307FDB2225DEF5 /* Pods_ValleyProHealth.framework */,
-				68B3461F3BC997D9CA7112875B7BB606 /* Pods_ValleyProHealthTests.framework */,
-				3AACB016EB789651D46569A8A40C0387 /* Pods_ValleyProHealthUITests.framework */,
+				C8A8D22F826A1340D2BA990354A36D96 /* Info.plist */,
+				FDBAA37E0FD37A3593810E506F4AD497 /* Toast-Swift.modulemap */,
+				340E24CE0AAE4824D805E51F7EF06A44 /* Toast-Swift.xcconfig */,
+				A37530306E353CF104C949BABE62BCA0 /* Toast-Swift-dummy.m */,
+				9A2D38DD221158AEC7E60EA496002F77 /* Toast-Swift-prefix.pch */,
+				EFA89B8406B104470027F255E0100DF4 /* Toast-Swift-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Toast-Swift";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		296D830F397245ADAD1F2C4D196B66FA /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				EC96AF8FA4CBF68185353BFE4E27695F /* Support Files */,
+				46143A9F079D11DF70D27205687AECD6 /* Swift */,
+			);
+			path = MarqueeLabel;
+			sourceTree = "<group>";
+		};
+		386F92154A62761A60A795B2A6B77087 /* Toast-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9C9117E7EE3439031962E7F6B0337EF8 /* Toast.swift */,
+				0614CE8562D962A8A2948A77D3A05A1F /* Support Files */,
+			);
+			path = "Toast-Swift";
+			sourceTree = "<group>";
+		};
+		46143A9F079D11DF70D27205687AECD6 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F22C1FF8B9521B911D2F1C0DA99FA09B /* MarqueeLabel.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		5D5CF689B210E88BEAAA129E6181D94D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				296D830F397245ADAD1F2C4D196B66FA /* MarqueeLabel */,
+				386F92154A62761A60A795B2A6B77087 /* Toast-Swift */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		6FC6BAB72AA253C65F161654D244FF58 /* Pods-ValleyProHealthTests */ = {
@@ -124,10 +228,23 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2A0076BCB0EC134542CC762475772AB1 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				5D5CF689B210E88BEAAA129E6181D94D /* Pods */,
+				823878ACFB58A03A5BA8D3F2337CF296 /* Products */,
 				A3432B6C0027854F0646E930C5C0741A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		823878ACFB58A03A5BA8D3F2337CF296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A3B8EF93EAA63853A97196781DEDB5F /* MarqueeLabel.framework */,
+				77FA20EE4F7FCA4C9168C5037457F89E /* Pods_ValleyProHealth.framework */,
+				2C2AB172BC5A748A0F4427B09C23C7D2 /* Pods_ValleyProHealthTests.framework */,
+				DBCB54EE760EA936742BFFD638600183 /* Pods_ValleyProHealthUITests.framework */,
+				9A477083667010F09066058550B7D11F /* Toast_Swift.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A3432B6C0027854F0646E930C5C0741A /* Targets Support Files */ = {
@@ -176,30 +293,54 @@
 			path = "Target Support Files/Pods-ValleyProHealth";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */,
+				23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */,
+				091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EC96AF8FA4CBF68185353BFE4E27695F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA98C813A8F96FE09BFDFB4A41E489B6 /* Info.plist */,
+				E31645542C522C17D7B6879D5EAD08A5 /* MarqueeLabel.modulemap */,
+				BD851E9C1CA141E613A80D7DD8BA78D6 /* MarqueeLabel.xcconfig */,
+				2FB86389DCBFD40972EB228FE2C33F90 /* MarqueeLabel-dummy.m */,
+				82BAC04B37688255019327A922755A52 /* MarqueeLabel-prefix.pch */,
+				335B5FAE46F7AA4E8D7910AC0E04159E /* MarqueeLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MarqueeLabel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1360FE7D699BFFCA7EE897CF5EBDFB90 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F503365DD3BEFC1F9CED083EB7333B0 /* Pods-ValleyProHealth-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B981EA5469D5C1E5C35BCD8965BCF54 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F555806A77BEC3873FA8DD3CCAFBEC4B /* Pods-ValleyProHealthUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BD99FAE05B9C68043B3906ABCB292CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689ADFD855C28DC359AC1416F0CB6BA1 /* Toast-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7935E93FAD051B9C32BCD1588489DE46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAF4B5100F568A19528D96EBDDEC635 /* MarqueeLabel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +352,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F31B85AAF9139D23ADD1FED0AFCEAF87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5088807F205846D2F3C83CD19B7368 /* Pods-ValleyProHealth-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0E7D1EFF1D51CC9945FC56699E2019A3 /* MarqueeLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B423020E1F279C3C76417AAD8664629F /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
+			buildPhases = (
+				F32EC1B1A4867A6A8B23C15525232BC5 /* Sources */,
+				43D587BC8E1CFF0C742CDF535BC742E6 /* Frameworks */,
+				7935E93FAD051B9C32BCD1588489DE46 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarqueeLabel;
+			productName = MarqueeLabel;
+			productReference = 7A3B8EF93EAA63853A97196781DEDB5F /* MarqueeLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1112E7EBDF0365F7D834335C9E92A101 /* Pods-ValleyProHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4145553C22703621CDEAB1D5D971E64C /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealth" */;
+			buildPhases = (
+				345BFF5C2BFBC12FAF840AF438739C86 /* Sources */,
+				810229EC6B285903BB87F879506B3C13 /* Frameworks */,
+				F31B85AAF9139D23ADD1FED0AFCEAF87 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8AAE6F62701E2B336F9F70464E15982 /* PBXTargetDependency */,
+				B697C517EC9BF8836444EA4CD5B9C592 /* PBXTargetDependency */,
+			);
+			name = "Pods-ValleyProHealth";
+			productName = "Pods-ValleyProHealth";
+			productReference = 77FA20EE4F7FCA4C9168C5037457F89E /* Pods_ValleyProHealth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		772521BAE75B0A8F885CD3A54BA3C62B /* Toast-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02DA2CD1EABB56AAE7784F4E50723123 /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildPhases = (
+				2CD95F177BD9D0B1F42813E7F8236A61 /* Sources */,
+				79B0C52B1260E844921BF0221384F18B /* Frameworks */,
+				5BD99FAE05B9C68043B3906ABCB292CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toast-Swift";
+			productName = "Toast-Swift";
+			productReference = 9A477083667010F09066058550B7D11F /* Toast_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9C254A9FE35C6864871A36E25DDCD717 /* Pods-ValleyProHealthTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4413F06CD7B9AF548983A82ABA9A4BF /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealthTests" */;
@@ -228,24 +430,7 @@
 			);
 			name = "Pods-ValleyProHealthTests";
 			productName = "Pods-ValleyProHealthTests";
-			productReference = 68B3461F3BC997D9CA7112875B7BB606 /* Pods_ValleyProHealthTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C537BD5833A3E17CCD350D91E55D91C0 /* Pods-ValleyProHealth */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDE081AC6EAC03D42585DCE75BF5B662 /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealth" */;
-			buildPhases = (
-				810780EBFC7EF0BC7B8671EA784B8F39 /* Sources */,
-				7DE84ECA931E27F804599B947E15287E /* Frameworks */,
-				1360FE7D699BFFCA7EE897CF5EBDFB90 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-ValleyProHealth";
-			productName = "Pods-ValleyProHealth";
-			productReference = 9D1B588E4347EDBD68307FDB2225DEF5 /* Pods_ValleyProHealth.framework */;
+			productReference = 2C2AB172BC5A748A0F4427B09C23C7D2 /* Pods_ValleyProHealthTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDD484BC526D0AAB7934DC6DE3D4C3A1 /* Pods-ValleyProHealthUITests */ = {
@@ -262,7 +447,7 @@
 			);
 			name = "Pods-ValleyProHealthUITests";
 			productName = "Pods-ValleyProHealthUITests";
-			productReference = 3AACB016EB789651D46569A8A40C0387 /* Pods_ValleyProHealthUITests.framework */;
+			productReference = DBCB54EE760EA936742BFFD638600183 /* Pods_ValleyProHealthUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -282,23 +467,34 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2A0076BCB0EC134542CC762475772AB1 /* Products */;
+			productRefGroup = 823878ACFB58A03A5BA8D3F2337CF296 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C537BD5833A3E17CCD350D91E55D91C0 /* Pods-ValleyProHealth */,
+				0E7D1EFF1D51CC9945FC56699E2019A3 /* MarqueeLabel */,
+				1112E7EBDF0365F7D834335C9E92A101 /* Pods-ValleyProHealth */,
 				9C254A9FE35C6864871A36E25DDCD717 /* Pods-ValleyProHealthTests */,
 				EDD484BC526D0AAB7934DC6DE3D4C3A1 /* Pods-ValleyProHealthUITests */,
+				772521BAE75B0A8F885CD3A54BA3C62B /* Toast-Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		810780EBFC7EF0BC7B8671EA784B8F39 /* Sources */ = {
+		2CD95F177BD9D0B1F42813E7F8236A61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DBAACF08FD747A57033F9C06B1C3F9A /* Pods-ValleyProHealth-dummy.m in Sources */,
+				4D7BFA9D62DCF491BD4B663311F163A0 /* Toast-Swift-dummy.m in Sources */,
+				F28D7F33A2CAAED5EA42C4961B5EE1A7 /* Toast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345BFF5C2BFBC12FAF840AF438739C86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39E4F7FA7065A75E688CEFF9E8F809A /* Pods-ValleyProHealth-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +514,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F32EC1B1A4867A6A8B23C15525232BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55F09580AF6DB3067763811D2FC0589 /* MarqueeLabel-dummy.m in Sources */,
+				B6C3BBCA17A1585A8456C90F53EEE4DA /* MarqueeLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B697C517EC9BF8836444EA4CD5B9C592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Toast-Swift";
+			target = 772521BAE75B0A8F885CD3A54BA3C62B /* Toast-Swift */;
+			targetProxy = 5CB4A198C491D5AF77B20AA9A00C337B /* PBXContainerItemProxy */;
+		};
+		D8AAE6F62701E2B336F9F70464E15982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MarqueeLabel;
+			target = 0E7D1EFF1D51CC9945FC56699E2019A3 /* MarqueeLabel */;
+			targetProxy = BC8AA437F346A80957F2BBBD6BCA7274 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
@@ -365,15 +585,48 @@
 			};
 			name = Debug;
 		};
-		2CD42AA76691970CDE4834260C32E5D8 /* Release */ = {
+		1CF2BA742DFE0B1FAD020712750B6F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06FCB66F24587E573637BD5D7014F0B4 /* Pods-ValleyProHealth.release.xcconfig */;
+			baseConfigurationReference = BD851E9C1CA141E613A80D7DD8BA78D6 /* MarqueeLabel.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MarqueeLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		28FAE1DFD77BE487A5FE68DB81B47A12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8910C5B586E78AB81F4BFA0C611EA0 /* Pods-ValleyProHealth.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -386,7 +639,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -394,6 +647,39 @@
 				PRODUCT_NAME = Pods_ValleyProHealth;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33FE158C2F2546B594093EA1FA119F68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340E24CE0AAE4824D805E51F7EF06A44 /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -440,6 +726,41 @@
 			};
 			name = Release;
 		};
+		4F0FE779D4699470BC982AFF6E1540D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06FCB66F24587E573637BD5D7014F0B4 /* Pods-ValleyProHealth.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ValleyProHealth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ValleyProHealth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5E20F27DAE793BF35947DADA33E8DC68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6030EEA537F164B4E6A95FD6249C0B38 /* Pods-ValleyProHealthTests.release.xcconfig */;
@@ -474,6 +795,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		5E8B1A4BBAE3CFB80E85E3DADE004A78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340E24CE0AAE4824D805E51F7EF06A44 /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A861EC208C85A25E71B5DDEF27725F95 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -545,40 +899,37 @@
 			};
 			name = Debug;
 		};
-		D3753011B0B54BCEEE5AC25072BB9D6F /* Debug */ = {
+		E0457FFB54D24471C9053C03ED8517B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8910C5B586E78AB81F4BFA0C611EA0 /* Pods-ValleyProHealth.debug.xcconfig */;
+			baseConfigurationReference = BD851E9C1CA141E613A80D7DD8BA78D6 /* MarqueeLabel.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ValleyProHealth/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ValleyProHealth;
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MarqueeLabel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		F6A044EAC873ACAF8EAE75A6EAC7CA70 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -618,11 +969,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		02DA2CD1EABB56AAE7784F4E50723123 /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8B1A4BBAE3CFB80E85E3DADE004A78 /* Debug */,
+				33FE158C2F2546B594093EA1FA119F68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
 				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4145553C22703621CDEAB1D5D971E64C /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FAE1DFD77BE487A5FE68DB81B47A12 /* Debug */,
+				4F0FE779D4699470BC982AFF6E1540D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -636,20 +1005,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B423020E1F279C3C76417AAD8664629F /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CF2BA742DFE0B1FAD020712750B6F74 /* Debug */,
+				E0457FFB54D24471C9053C03ED8517B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4413F06CD7B9AF548983A82ABA9A4BF /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealthTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDFCD03E5DD854BD49B4BB0199D5689A /* Debug */,
 				5E20F27DAE793BF35947DADA33E8DC68 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDE081AC6EAC03D42585DCE75BF5B662 /* Build configuration list for PBXNativeTarget "Pods-ValleyProHealth" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3753011B0B54BCEEE5AC25072BB9D6F /* Debug */,
-				2CD42AA76691970CDE4834260C32E5D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
