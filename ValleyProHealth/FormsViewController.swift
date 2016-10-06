@@ -183,9 +183,10 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                         }else if(categorySelection == 4){
                             websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + slidingFiles[row - 1]
                         }else if(categorySelection == 5){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + studentFiles[row - 1]
+                            websiteUrlCombine = "https://valleyprohealth.org/file s/forms/en/" + studentFiles[row - 1]
                         }
                 }
+                self.view.makeToast("Download Form...")
                 let websiteUrl: URL = URL(string: websiteUrlCombine)!
                 application.openURL(websiteUrl)
                 formPicker.selectRow(0, inComponent: 0, animated: false)

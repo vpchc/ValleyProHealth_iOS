@@ -20,6 +20,7 @@
 		B893DE2A1DA18249008037FC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893DE291DA18248008037FC /* MessageViewController.swift */; };
 		DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22EC291D74922E00E0518F /* MainPageViewController.swift */; };
 		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
+		DD41912B1DA6D291002C9706 /* BusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41912A1DA6D291002C9706 /* BusTableViewController.swift */; };
 		DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */; };
 		DD6C440D1D86EE6400ADABA1 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */; };
 		DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD6C44111D88322D00ADABA1 /* Franklin Gothic Medium.ttf */; };
@@ -84,6 +85,7 @@
 		DC2BD4EB61462DA920CEB5BB /* Pods-ValleyProHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
+		DD41912A1DA6D291002C9706 /* BusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewController.swift; sourceTree = "<group>"; };
 		DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDialogViewController.swift; sourceTree = "<group>"; };
 		DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		DD6C44111D88322D00ADABA1 /* Franklin Gothic Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Franklin Gothic Medium.ttf"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				DD73348D1D40FCBC008A9023 /* AppDelegate.swift */,
 				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
 				DD7334911D40FCBC008A9023 /* Main.storyboard */,
+				DD41912A1DA6D291002C9706 /* BusTableViewController.swift */,
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
@@ -565,6 +568,7 @@
 				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
 				B82D5C9C1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift in Sources */,
 				DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */,
+				DD41912B1DA6D291002C9706 /* BusTableViewController.swift in Sources */,
 				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
 				DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */,
 				DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */,

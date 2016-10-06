@@ -11,11 +11,12 @@ import UIKit
 class MSBHCTrackerViewController: UIViewController {
 
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var downloadButton: UIButton!
+
     @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
+    var tablecontroller: BusTableViewController!
     
     
     let defaults = UserDefaults.standard
@@ -39,38 +40,68 @@ class MSBHCTrackerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func busMain() {
-        let locations = defaults.object(forKey:"busSchedule") as? [String] ?? [String]()
-        var busScheduleSplit = [String]()
-        var r = 0
-        var busStatus = ""
-        for i in 0...locations.count - 1{
-            busScheduleSplit = locations[i].components(separatedBy: ",")
-            r = busTimeCheck(location: busScheduleSplit)
-            if(r != 0){
-                break;
-            }
-        }
-        if(r == 1){
-            busStatus = "Open"
-        }else if(r == 2){
-            busStatus = "Opening Soon"
-        }else if(r == 3){
-            busStatus = "En Route"
-        }else if(r == 4){
-            busStatus = "Closing Soon"
-        }else{
-            busStatus = "Closed"
-        }
-        locationLabel.text = busScheduleSplit[0]
-        hoursLabel.text = busScheduleSplit[1]
-        statusLabel.text = busStatus
+    @IBAction func downloadButtonTap(_ sender: AnyObject) {
+        let websiteUrl: URL = URL(string:"https://valleyprohealth.org/files/schedule/current_schedule.pdf")!
+        let application = UIApplication.shared
         
+        self.view.makeToast("Downloading MSBHC Schedule…")
+        application.openURL(websiteUrl)
     }
     
-    func busTimeCheck(location: [String]) -> Int{
-        let currentMilliseconds = NSDate().timeIntervalSince1970
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BusDataSegue" {
+            if let destination = segue.destination as? BusTableViewController{
+               tablecontroller = destination
+            }
+        }
+    }
+    
+    func busMain() {
+        let locationsForToday = defaults.object(forKey:"busSchedule") as? [String] ?? [String]()
+        var busCheck = [Int]()
+        var busInfo = [String]()
         
+        busCheck = busLocationCheck(locations: locationsForToday)
+        let currentLocation = locationsForToday[busCheck[0]].components(separatedBy: ",")
+        
+        let busLocation = currentLocation[0]
+        let busHours = currentLocation[1]
+        let busStatus = busStatusSet(busCheck: busCheck[1])
+        
+        busInfo.append(busLocation)
+        busInfo.append(busHours)
+        busInfo.append(busStatus)
+        tablecontroller.setText(busText: busInfo)
+    }
+    
+    
+    func busLocationCheck(locations: [String]) -> [Int]{
+        var busScheduleSplit = [String]()
+        var currentLocation = [Int]()
+        var locationCheck = 0
+        var flag = ""
+        var count = 0
+        
+        for i in 0...locations.count - 1{
+            busScheduleSplit = locations[i].components(separatedBy: ",")
+            flag = busScheduleSplit[4]
+            locationCheck = busTimeCheck(location: busScheduleSplit, count: i)
+            if(locationCheck != 0 && flag == "0"){
+                break;
+            }
+            print("looping")
+            count = i
+        }
+        
+        currentLocation.append(locationCheck)
+        currentLocation.append(count)
+       
+        return currentLocation
+    }
+    
+    func busTimeCheck(location: [String], count: Int) -> Int{
+        let currentMilliseconds = Date().milliseconds()
+
         //Bus start time in milliseconds
         let splitStartTime = location[2].components(separatedBy: ":")
         let busStartHour = Double(splitStartTime[0])! * 3.6e6
@@ -89,7 +120,7 @@ class MSBHCTrackerViewController: UIViewController {
         if(compareEnd <= 1.8e6 && compareEnd > 0){
             return 4;
         }else if(compareStart <= 1.8e6 && compareStart > 0){
-            if(location[4] == "1"){
+            if(location[4] == "1" && count != 0){
                 return 3;
             }else{
                 return 2;
@@ -100,4 +131,19 @@ class MSBHCTrackerViewController: UIViewController {
             return 0;
         }
     }
+    
+    func busStatusSet(busCheck: Int) -> String{
+        if(busCheck == 1){
+            return "Open"
+        }else if(busCheck == 2){
+            return "Opening Soon"
+        }else if(busCheck == 3){
+            return "En Route"
+        }else if(busCheck == 4){
+            return "Closing Soon"
+        }else{
+            return "Closed"
+        }
+    }
+
 }

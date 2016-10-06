@@ -83,6 +83,23 @@ extension Date {
         return minute!
     }
     
+    func seconds() -> Int
+    {
+        //Get Seconds
+        let calendar = Calendar.current
+        let components = (calendar as NSCalendar).components(.second, from: self)
+        let seconds = components.second
+        
+        return seconds!
+    }
+    
+    func milliseconds() -> Double
+    {
+        let milliseconds = (Double(hour())*3.6e6) + (Double(minute())*6e4) + (Double(seconds())*1e3)
+
+        return milliseconds
+    }
+    
     func dateToString() -> String
     {
         //Date in X/XX/XXXX format
@@ -90,4 +107,5 @@ extension Date {
         
         return date
     }
+    
 }
