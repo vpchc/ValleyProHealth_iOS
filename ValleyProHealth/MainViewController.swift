@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
     
     func getBusSchedule(){
         var htmlString = ""
-        let urlString = "https://valleyprohealth.org/info/bus_app_schedule.html"
+        let urlString = "https://valleyprohealth.org/info/bus_app_schedule2.html"
             guard let scheduleURL = URL(string: urlString) else {
             print("Error: \(urlString) doesn't seem to be a valid URL")
             return
@@ -61,7 +61,8 @@ class MainViewController: UIViewController {
     
         do {
             htmlString = try String(contentsOf: scheduleURL, encoding: .ascii)
-            let htmlSplit = htmlString.components(separatedBy: "/n")
+            let htmlSplit = htmlString.components(separatedBy: "\n")
+            print(htmlSplit.count)
             defaults.set(htmlSplit, forKey: "busSchedule")
             print("HTML : \(htmlString)")
             

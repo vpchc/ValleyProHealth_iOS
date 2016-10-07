@@ -30,6 +30,10 @@ class MSBHCTrackerViewController: UIViewController {
         
         busMain()
     }
+    
+      func applicationDidBecomeActive(_ application: UIApplication) {
+        print("Activate!")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,25 +85,26 @@ class MSBHCTrackerViewController: UIViewController {
         var locationCheck = 0
         var flag = ""
         var count = 0
-        
+  
         for i in 0...locations.count - 1{
+            count = i
             busScheduleSplit = locations[i].components(separatedBy: ",")
-            flag = busScheduleSplit[4]
             locationCheck = busTimeCheck(location: busScheduleSplit, count: i)
-            if(locationCheck != 0 && flag == "0"){
+            flag = busScheduleSplit[4].trimmingCharacters(in: .whitespacesAndNewlines)
+            if(locationCheck != 0 || flag == "0"){
                 break;
             }
-            print("looping")
-            count = i
         }
-        
-        currentLocation.append(locationCheck)
+ 
         currentLocation.append(count)
+        currentLocation.append(locationCheck)
+      
        
         return currentLocation
     }
     
     func busTimeCheck(location: [String], count: Int) -> Int{
+        let flag = location[4].trimmingCharacters(in: .whitespacesAndNewlines)
         let currentMilliseconds = Date().milliseconds()
 
         //Bus start time in milliseconds
@@ -117,14 +122,27 @@ class MSBHCTrackerViewController: UIViewController {
         //Where the comparing happens
         let compareStart = busStartTime - currentMilliseconds;
         let compareEnd   = busEndTime - currentMilliseconds;
+        print("count")
+        print(count)
+        print("flag")
+        print(flag)
+        print("currentTime")
+        print(currentMilliseconds)
+        print("busStart")
+        print(busStartTime)
+        print("busEnd")
+        print(busEndTime)
+        print("compareStart")
+        print(compareStart)
+        print("compareEnd")
+        print(compareEnd)
+        
         if(compareEnd <= 1.8e6 && compareEnd > 0){
             return 4;
-        }else if(compareStart <= 1.8e6 && compareStart > 0){
-            if(location[4] == "1" && count != 0){
-                return 3;
-            }else{
-                return 2;
-            }
+        }else if(count > 0 && flag == "1" && compareStart > 1.8e6){
+            return 3;
+        }else if(compareStart < 1.8e6 && compareStart > 0){
+            return 2;
         }else if(compareStart <= 0 && compareEnd > 0){
             return 1;
         }else{
