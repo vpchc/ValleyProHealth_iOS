@@ -34,8 +34,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        twitterSetup()
         getBusSchedule()
+        twitterSetup()
+        
+        //Listener for exiting the app and then re-entering
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +47,13 @@ class MainViewController: UIViewController {
             self.performSegue(withIdentifier: "LocationPreferenceSegue", sender: self)
         }
     }
-
+    
+    func didBecomeActive(){
+        //Runs when the user re-enters the app
+        getBusSchedule()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,11 +73,16 @@ class MainViewController: UIViewController {
             let htmlSplit = htmlString.components(separatedBy: "\n")
             print(htmlSplit.count)
             defaults.set(htmlSplit, forKey: "busSchedule")
-            print("HTML : \(htmlString)")
             
         } catch let error {
             print("Error: \(error)")
         }
+        
+        //Sets the date of when the bus schedule was stored.
+        let date = Date()
+        let cal = Calendar.current
+        let day = cal.ordinality(of: .day, in: .year, for: date)
+        defaults.set(day, forKey: "busScheduleDay")
     }
     
     func twitterSetup(){

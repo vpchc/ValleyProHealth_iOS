@@ -12,7 +12,7 @@ class OptionTableViewController: UITableViewController {
 
    
     @IBOutlet var optionsTable: UITableView!
-       
+  
     
     let numberOfRows = [7,2]
     
@@ -21,10 +21,8 @@ class OptionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.optionsTable.delegate = self
-        self.optionsTable.dataSource = self
+        self.optionsTable.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
-        //self.clearsSelectionOnViewWillAppear = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,22 +49,11 @@ class OptionTableViewController: UITableViewController {
     
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        let cell = optionsTable.cellForRow(at: indexPath as IndexPath)
-        print("Should be checked")
-        cell?.accessoryType = .checkmark
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        print("You selected cell #\(indexPath.row)!")
         
     }
-
-    /*
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = optionsTable.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
-        print("in there")
-        cell.accessoryType = .checkmark
-    }
- 
-*/
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

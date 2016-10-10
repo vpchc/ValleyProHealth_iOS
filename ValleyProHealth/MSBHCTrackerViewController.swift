@@ -35,6 +35,7 @@ class MSBHCTrackerViewController: UIViewController {
         print("Activate!")
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,13 +65,22 @@ class MSBHCTrackerViewController: UIViewController {
         let locationsForToday = defaults.object(forKey:"busSchedule") as? [String] ?? [String]()
         var busCheck = [Int]()
         var busInfo = [String]()
+        var busLocation = ""
+        var busHours = ""
+        var busStatus =  ""
         
         busCheck = busLocationCheck(locations: locationsForToday)
         let currentLocation = locationsForToday[busCheck[0]].components(separatedBy: ",")
         
-        let busLocation = currentLocation[0]
-        let busHours = currentLocation[1]
-        let busStatus = busStatusSet(busCheck: busCheck[1])
+        if(dayCheck()){
+            busLocation = currentLocation[0]
+            busHours = currentLocation[1]
+            busStatus = busStatusSet(busCheck: busCheck[1])
+        }else{
+            busLocation = "Schedule Outdated"
+            busHours = "Please"
+            busStatus = "Restart App"
+        }
         
         busInfo.append(busLocation)
         busInfo.append(busHours)
@@ -147,6 +157,20 @@ class MSBHCTrackerViewController: UIViewController {
             return 1;
         }else{
             return 0;
+        }
+    }
+    
+    func dayCheck() -> Bool{
+        let scheduleDate = defaults.object(forKey:"busScheduleDay") as? Int
+        
+        let date = Date()
+        let cal = Calendar.current
+        let todaysDate = cal.ordinality(of: .day, in: .year, for: date)
+        
+        if(scheduleDate == todaysDate){
+            return true
+        }else{
+            return false
         }
     }
     
