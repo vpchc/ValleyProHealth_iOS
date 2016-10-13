@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class FeedbackViewController: UIViewController {
 
@@ -31,9 +32,16 @@ class FeedbackViewController: UIViewController {
 
     @IBAction func ratebuttonTap(_ sender: AnyObject) {
         //Open valleyprohealth page in app store
-    }
-    @IBAction func messageButtonTap(_ sender: AnyObject) {
+        self.view.makeToast("Opening App Store...")
         
+        let appPageURL: URL = URL(string:"https://itunes.apple.com/us/app/apple-store/valleyprohealth")!
+
+        let application = UIApplication.shared
+        
+        application.openURL(appPageURL)
+       
     }
-   
+    
+    
+     
 }

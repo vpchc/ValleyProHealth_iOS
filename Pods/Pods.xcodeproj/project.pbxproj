@@ -26,7 +26,6 @@
 		F28D7F33A2CAAED5EA42C4961B5EE1A7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9117E7EE3439031962E7F6B0337EF8 /* Toast.swift */; };
 		F33F16402737918E3331ACBAA3E12A8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
 		F555806A77BEC3873FA8DD3CCAFBEC4B /* Pods-ValleyProHealthUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6ADB5FA0DE2C300B82FDD342D8CE5DD /* Pods-ValleyProHealthUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF144F274A3AF3B20E768142CAA86994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF144F274A3AF3B20E768142CAA86994 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
