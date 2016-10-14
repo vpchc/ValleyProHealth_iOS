@@ -31,10 +31,7 @@ class LocationPreferenceViewController: UIViewController, UIPickerViewDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func backButtonTap(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
     
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

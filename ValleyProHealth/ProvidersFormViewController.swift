@@ -9,13 +9,17 @@
 import UIKit
 
 
-class ProvidersFormViewController: UIViewController {
+class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var providerTypeLabel: UILabel!
-    @IBOutlet weak var providerLocationLabel: UILabel!
+    @IBOutlet weak var providerType: UILabel!
+    @IBOutlet weak var providerLocation: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
     
-    @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var providerScroll: UIScrollView!
+    @IBOutlet weak var providersTable: UITableView!
+    
+    
+    
+    let cellReuseIdentifier = "cell"
     
     var dataSegue = ["","","",""]
     
@@ -48,8 +52,8 @@ class ProvidersFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        providerTypeLabel.text = dataSegue[0]
-        providerLocationLabel.text = dataSegue[1]
+        providerType.text = dataSegue[1]
+        providerLocation.text = dataSegue[0]
         
         var number: CGFloat = 0
         
@@ -91,27 +95,42 @@ class ProvidersFormViewController: UIViewController {
             }
         }
         
+        
         providerLength = providersList.count
         
-        for i in 0..<providerLength
-        {
-            let label = UILabel(frame: CGRect(x: -10, y: number, width: providerScroll.bounds.size.width - 42, height: 25))
- 
-         
-            label.textAlignment = .center
-            label.font = UIFont(name: label.font.fontName, size: 25)
-            label.text = providersList[i]
-            self.providerScroll.addSubview(label)
-            number = number + 50
-            
-        }
-        self.providerScroll.contentSize = CGSize(width: providerScroll.bounds.size.width - 220, height: number);
+        // Register the table view cell class and its reuse id
+        self.providersTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        providersTable.delegate = self
+        providersTable.dataSource = self
     }
-        override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func closeButtonTap(_ sender: AnyObject) {
-         self.dismiss(animated: true, completion: nil)
+    
+    @IBAction func cancelButtonTap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.providersList.count
+    }
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = self.providersTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+        
+        // set the text from the data model
+        cell.textLabel?.text = self.providersList[(indexPath as NSIndexPath).row]
+        cell.textLabel?.textAlignment = .center
+         cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:25)
+        
+        return cell
     }
 }
