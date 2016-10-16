@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MarqueeLabel.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-ValleyProHealth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-ValleyProHealthTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-ValleyProHealthUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Toast-Swift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0E7D1EFF1D51CC9945FC56699E2019A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1112E7EBDF0365F7D834335C9E92A101</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>772521BAE75B0A8F885CD3A54BA3C62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C254A9FE35C6864871A36E25DDCD717</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDD484BC526D0AAB7934DC6DE3D4C3A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -15,26 +15,35 @@ class OptionTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     
     let numberOfRows = [7,2]
+    var checkedRow = [0,0]
     
-    let optionSelections = ["No Preference", "Atlanta", "Chicago", "LA" , "New York", "Santa Fe" , "Richmond", "English", "Spanish"]
+    let optionSelections = ["No Preference", "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC", "English", "Spanish"]
     
     let cellIdentifier = "OptionCells"
+    
+    let previousIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         optionsTable.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
-        //intialSetup()
+        intialSetup()
     }
     
     func intialSetup(){
+        print("initial setup")
         let locationSet = defaults.object(forKey:"locationPreference") as! Int
-        print(locationSet)
+        
         let locationIndex = IndexPath(row: locationSet, section: 0)
-
-        let cell = optionsTable.dequeueReusableCell(withIdentifier: cellIdentifier, for: locationIndex as IndexPath)
-        cell.accessoryType = .checkmark
+        let locationCell = tableView.cellForRow(at: locationIndex)
+        locationCell?.accessoryType = .checkmark
+        checkedRow[0] = locationSet
+        
+        let languageIndex = IndexPath(row: 0, section: 1)
+        let languageCell = tableView.cellForRow(at: languageIndex)
+        languageCell?.accessoryType = .checkmark
+        checkedRow[1] = 0
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,7 +51,7 @@ class OptionTableViewController: UITableViewController {
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,29 +66,38 @@ class OptionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Select")
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        //cell.accessoryType = .checkmark
-     
+        /*
+        let currentCell = tableView.cellForRow(at: indexPath)
+        let previousCell = tableView.cellForRow(at: previousIndex)
+        
+        
+        if (previousSection == indexPath.section){
+          if(previousIndex != indexPath){
+            previousCell?.accessoryType = .none
+            currentCell?.accessoryType = .checkmark
+          }
+        }else{
+          
+        }
+        //Set the previous section and index for the next check
+        previousSection = indexPath.section
+        previousIndex = indexPath
+ */
     }
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print("DeSelect")
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.accessoryType = .none
-        optionsTable.deselectRow(at: indexPath, animated: true)
-    }
+ 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("in there")
+        print("cell selectino none")
         cell.selectionStyle = .none
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("text setup")
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         cell.textLabel?.text = optionSelections[indexPath.row]
         return cell
     }
-    
+ 
  
     
 }
