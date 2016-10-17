@@ -11,6 +11,10 @@ import UIKit
 class OptionsViewController: UIViewController {
 
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var tableController: OptionTableViewController!
+    var menuController: MenuViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +29,25 @@ class OptionsViewController: UIViewController {
     
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
+          //menuController.closePopOver()
     }
 
+  
+    @IBAction func saveButtonTap(_ sender: AnyObject) {
+        tableController.saveChanges()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "OptionsSegue"){
+            let childViewController = segue.destination as! MenuViewController
+            menuController = childViewController
+        }
+        if (segue.identifier == "OptionsTableDataSegue") {
+            //This is used to reference the paging left and right functions
+            let childViewController = segue.destination as! OptionTableViewController
+            tableController = childViewController
+        }
+    }
     
 }
 

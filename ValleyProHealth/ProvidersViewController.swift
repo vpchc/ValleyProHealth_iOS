@@ -15,9 +15,11 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     let defaults = UserDefaults.standard
     
-    var locations = [String]()
-    var providerTypes1 = [String]()
-    var providerTypes2 = [String]()
+    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
+    var providerTypes1 = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
+    //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
+    var providerTypes2 = ["Select a Type of Provider", "Behavioral Health", "Medical"]
+    
     var finalProviderTypes = [String]()
     var dataToSegue = ["", "", "" , ""]
     
@@ -26,21 +28,21 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let locationSet = defaults.object(forKey:"locationPreference")
-        providerTypePicker.selectRow(locationSet as! Int, inComponent: 0, animated: false)
-        
         // Connect data:
         self.locationPicker.delegate = self
         self.locationPicker.dataSource = self
         self.providerTypePicker.delegate = self
         self.providerTypePicker.dataSource = self
         
-        locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
-        providerTypes1 = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
-        //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
-        providerTypes2 = ["Select a Type of Provider", "Behavioral Health", "Medical"]
-        
-
+        //Set the default locationPicker value based on the location Preference
+        let savedLocation = defaults.object(forKey:"locationPreference") as! Int
+        print(savedLocation)
+        locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
+        if(savedLocation == 1 || savedLocation == 2){
+            resetProviderPicker(row: savedLocation)
+        }else if(savedLocation > 2){
+            providerTypePicker.isHidden = false
+        }
     }
 
     //When the user taps the back button
@@ -52,7 +54,6 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -93,14 +94,18 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    func resetProviderPicker(row: Int){
+        locationSelection = row
+        self.providerTypePicker.reloadAllComponents()
+        providerTypePicker.isHidden = false;
+    }
+    
     // When a selection is made by the user
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
             if(row != 0){
-                locationSelection = row
-                self.providerTypePicker.reloadAllComponents()
-                providerTypePicker.isHidden = false;
+                resetProviderPicker(row: row)
                 dataToSegue[0] = locations[row]
                 dataToSegue[2] = String(row)
             }else{

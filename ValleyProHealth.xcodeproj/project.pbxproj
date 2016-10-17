@@ -36,9 +36,8 @@
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
 		DD75C9931DAD545E00BD686D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75C9921DAD545E00BD686D /* MessageViewController.swift */; };
-		DD75C9951DAE78B500BD686D /* options2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75C9941DAE78B500BD686D /* options2ViewController.swift */; };
-		DD75C9971DAE79D000BD686D /* options2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75C9961DAE79D000BD686D /* options2TableViewController.swift */; };
 		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
+		DD9F3BB21DB5298D00A2F8FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */; };
 		DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */; };
 		DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */; };
 		DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */; };
@@ -107,9 +106,8 @@
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
 		DD75C9921DAD545E00BD686D /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		DD75C9941DAE78B500BD686D /* options2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = options2ViewController.swift; sourceTree = "<group>"; };
-		DD75C9961DAE79D000BD686D /* options2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = options2TableViewController.swift; sourceTree = "<group>"; };
 		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
+		DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreferenceViewController.swift; sourceTree = "<group>"; };
 		DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
@@ -204,36 +202,35 @@
 			isa = PBXGroup;
 			children = (
 				DD73348D1D40FCBC008A9023 /* AppDelegate.swift */,
-				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
 				DD7334911D40FCBC008A9023 /* Main.storyboard */,
-				DD75C9961DAE79D000BD686D /* options2TableViewController.swift */,
-				DD75C9941DAE78B500BD686D /* options2ViewController.swift */,
-				DD75C9921DAD545E00BD686D /* MessageViewController.swift */,
-				DD41912A1DA6D291002C9706 /* BusTableViewController.swift */,
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
 				DD7334961D40FCBC008A9023 /* LaunchScreen.storyboard */,
 				DD7334991D40FCBC008A9023 /* Info.plist */,
-				DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */,
-				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
+				DD41912A1DA6D291002C9706 /* BusTableViewController.swift */,
 				DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */,
-				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
-				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
-				DD6C44191D89C7E100ADABA1 /* ProvidersFormViewController.swift */,
-				B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */,
-				B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */,
-				B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */,
-				B878AD011D8A24A60098DD10 /* FAQsViewController.swift */,
-				B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */,
 				B82D5C991D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift */,
 				B82D5C9B1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift */,
-				B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */,
+				DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */,
 				DD7419611D92D27200C2694D /* FAQsFormViewController.swift */,
-				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
-				DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */,
-				DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */,
-				DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */,
+				B878AD011D8A24A60098DD10 /* FAQsViewController.swift */,
 				DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */,
+				B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */,
+				DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */,
+				B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */,
+				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
+				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
+				DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */,
+				DD75C9921DAD545E00BD686D /* MessageViewController.swift */,
+				DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */,
 				DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */,
+				DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */,
+				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
+				B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */,
+				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
+				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
+				DD6C44191D89C7E100ADABA1 /* ProvidersFormViewController.swift */,
+				B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */,
+				B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */,
 			);
 			path = ValleyProHealth;
 			sourceTree = "<group>";
@@ -555,8 +552,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */,
-				DD75C9951DAE78B500BD686D /* options2ViewController.swift in Sources */,
 				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
+				DD9F3BB21DB5298D00A2F8FE /* MenuViewController.swift in Sources */,
 				B82D5C9C1D8CC9D700BDB9E8 /* ContactInfoFormViewController.swift in Sources */,
 				DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */,
 				DD41912B1DA6D291002C9706 /* BusTableViewController.swift in Sources */,
@@ -577,7 +574,6 @@
 				DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */,
 				DD73348E1D40FCBC008A9023 /* AppDelegate.swift in Sources */,
 				DD6C440D1D86EE6400ADABA1 /* CustomFunctions.swift in Sources */,
-				DD75C9971DAE79D000BD686D /* options2TableViewController.swift in Sources */,
 				DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */,
 				B878AD001D8A22250098DD10 /* ServicesViewController.swift in Sources */,
 				DD6C441A1D89C7E100ADABA1 /* ProvidersFormViewController.swift in Sources */,

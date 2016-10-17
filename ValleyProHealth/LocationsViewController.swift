@@ -15,8 +15,11 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var optionPicker: UIPickerView!
     
-    var locations = [String]()
-    var options = [String]()
+    let defaults = UserDefaults.standard
+    
+    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    var options = ["Select an option", "Clinic Hours", "Contact Info", "Get Directions"]
+    
     var locationIndex = 0
     var dataToSegue = ["", "", "" , ""]
     let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
@@ -32,10 +35,15 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.optionPicker.delegate = self
         self.optionPicker.dataSource = self
         
-        locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-        options = ["Select an option", "Clinic Hours", "Contact Info", "Get Directions"]
-
-        // Do any additional setup after loading the view.
+        //Set the default locationPicker value based on the location Preference
+        //If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
+        let savedLocation = defaults.object(forKey:"locationPreference") as! Int
+        if(savedLocation == 0 || savedLocation == 6){
+            locationPicker.selectRow(0, inComponent: 0, animated: false)
+        }else{
+            locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
+            optionPicker.isHidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {

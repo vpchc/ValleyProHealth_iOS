@@ -13,7 +13,7 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var categoriesPicker: UIPickerView!
 
-    var categoriesList = [String]()
+    var categoriesList = ["Select a Category", "Billing/Insurance", "Miscellaneous", "New Patients", "Services"]
     var dataToSegue = ["", ""]
     
     override func viewDidLoad() {
@@ -22,10 +22,6 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // Connect data:
         self.categoriesPicker.delegate = self
         self.categoriesPicker.dataSource = self
-        
-        categoriesList = ["Select a Category", "Billing/Insurance", "Miscellaneous", "New Patients", "Services"]
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {

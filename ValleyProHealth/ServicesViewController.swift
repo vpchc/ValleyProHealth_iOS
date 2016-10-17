@@ -13,9 +13,11 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var servicesPicker: UIPickerView!
+    
+    let defaults = UserDefaults.standard
    
-    var locations = [String]()
-    var services = [String]()
+    let locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    let services = ["Select a Services Category", "Behavioral Health", "Dental", "Patient Support", "Primary Care"]
     var dataToSegue = ["", "", "" , ""]
     
     override func viewDidLoad() {
@@ -27,10 +29,15 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.servicesPicker.delegate = self
         self.servicesPicker.dataSource = self
         
-        locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-        services = ["Select a Services Category", "Behavioral Health", "Dental", "Patient Support", "Primary Care"]
-        
-        // Do any additional setup after loading the view.
+        //Set the default locationPicker value based on the location Preference
+        //If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
+        let savedLocation = defaults.object(forKey:"locationPreference") as! Int
+        if(savedLocation == 0 || savedLocation == 6){
+            locationPicker.selectRow(0, inComponent: 0, animated: false)
+        }else{
+            locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
+            servicesPicker.isHidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {

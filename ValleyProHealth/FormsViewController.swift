@@ -15,24 +15,29 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var categoriesPicker: UIPickerView!
     @IBOutlet weak var formPicker: UIPickerView!
     
-    var locations = [String]()
-    var categories = [String]()
+    let defaults = UserDefaults.standard
+    
     var forms = [String]()
     
-    var consentForms = [String]()
-    var newpatForms = [String]()
-    var noticeForms = [String]()
-    var slidingForms = [String]()
-    var studentForms = [String]()
     var finalForms = [String]()
     
     var finalFiles = [String]()
-    var consentFiles = [String]()
-    var newpatFiles = [String]()
-    var noticeFiles = [String]()
-    var recordFiles = [String]()
-    var slidingFiles = [String]()
-    var studentFiles = [String]()
+    
+    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    var categories = ["Select a Category", "Consent", "New Patient", "Notice", "Sliding Fee Scale", "Student Forms"]
+    
+    var consentForms = ["Select a Form", "Behavioral Health Release of Info", "Minor Child", "Release of Information", "Release of Records", "Telemedicine"]
+    var newpatForms = ["Select a Form", "Adult", "Child"]
+    var noticeForms = ["Select a Form", "Acknowledgement of Bill of Rights", "Bill of Rights", "Privacy Practice"]
+    var slidingForms = ["Select a Form", "Sliding Fee Scale"]
+    var studentForms = ["Select a Form", "ISHAA Physical", "MSBHC Enrollment"]
+    
+    var consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
+    var newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
+    var noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "sliding_fee_scale_reqs.pdf"]
+    var recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
+    var slidingFiles = ["sliding_fee_scale_reqs.pdf"]
+    var studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
     
     var websiteUrlCombine = String()
     
@@ -53,26 +58,16 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.categoriesPicker.dataSource = self
         self.formPicker.delegate = self
         self.formPicker.dataSource = self
-        
-        locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-        categories = ["Select a Category", "Consent", "New Patient", "Notice", "Sliding Fee Scale", "Student Forms"]
-        
-        consentForms = ["Select a Form", "Behavioral Health Release of Info", "Minor Child", "Release of Information", "Release of Records", "Telemedicine"]
-        newpatForms = ["Select a Form", "Adult", "Child"]
-        noticeForms = ["Select a Form", "Acknowledgement of Bill of Rights", "Bill of Rights", "Privacy Practice"]
-        slidingForms = ["Select a Form", "Sliding Fee Scale"]
-        studentForms = ["Select a Form", "ISHAA Physical", "MSBHC Enrollment"]
-        
-        consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
-        newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
-        noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "sliding_fee_scale_reqs.pdf"]
-        recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
-        slidingFiles = ["sliding_fee_scale_reqs.pdf"]
-        studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
-        
 
-        
-        // Do any additional setup after loading the view.
+        //Set the default locationPicker value based on the location Preference
+        //If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
+        let savedLocation = defaults.object(forKey:"locationPreference") as! Int
+        if(savedLocation == 0 || savedLocation == 6){
+            locationPicker.selectRow(0, inComponent: 0, animated: false)
+        }else{
+            locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
+            categoriesPicker.isHidden = false
+        }
     }
     
     override func didReceiveMemoryWarning() {

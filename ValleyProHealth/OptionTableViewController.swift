@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class OptionTableViewController: UITableViewController {
     
@@ -15,9 +16,11 @@ class OptionTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     
     let numberOfRows = [7,2]
-    var checkedRow = [0,0]
+    var checkedRow = [IndexPath]()
+    var cellCount = 0
     
-    let optionSelections = ["No Preference", "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC", "English", "Spanish"]
+    let locationSelection = ["No Preference", "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC"]
+    let languageSelection = ["English", "Spanish"]
     
     let cellIdentifier = "OptionCells"
     
@@ -27,28 +30,24 @@ class OptionTableViewController: UITableViewController {
         super.viewDidLoad()
         
         optionsTable.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        
-        intialSetup()
     }
     
-    func intialSetup(){
-        print("initial setup")
-        let locationSet = defaults.object(forKey:"locationPreference") as! Int
-        
-        let locationIndex = IndexPath(row: locationSet, section: 0)
-        let locationCell = tableView.cellForRow(at: locationIndex)
-        locationCell?.accessoryType = .checkmark
-        checkedRow[0] = locationSet
-        
-        let languageIndex = IndexPath(row: 0, section: 1)
-        let languageCell = tableView.cellForRow(at: languageIndex)
-        languageCell?.accessoryType = .checkmark
-        checkedRow[1] = 0
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that con be recreated.
     }
+    
+    func saveChanges(){
+        let savedlocation = defaults.object(forKey:"locationPreference") as! Int
+        if(savedlocation != checkedRow[0].row){
+            defaults.set(checkedRow[0].row, forKey: "locationPreference")
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            self.view.makeToast("No changes to save")
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
@@ -66,35 +65,53 @@ class OptionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*
-        let currentCell = tableView.cellForRow(at: indexPath)
-        let previousCell = tableView.cellForRow(at: previousIndex)
         
-        
-        if (previousSection == indexPath.section){
-          if(previousIndex != indexPath){
+        if (indexPath.section == 0){
+          if (indexPath != checkedRow[0]){
+            let previousCell = tableView.cellForRow(at: checkedRow[0])
+            let currentCell = tableView.cellForRow(at: indexPath)
             previousCell?.accessoryType = .none
             currentCell?.accessoryType = .checkmark
+            //Set newly checked cell to compare
+            checkedRow[0] = indexPath
           }
         }else{
-          
+            if (indexPath != checkedRow[1]){
+              let previousCell = tableView.cellForRow(at: checkedRow[1])
+              let currentCell = tableView.cellForRow(at: indexPath)
+              previousCell?.accessoryType = .none
+              currentCell?.accessoryType = .checkmark
+              //Set newly checked cell to compare
+              checkedRow[1] = indexPath
+            }
         }
-        //Set the previous section and index for the next check
-        previousSection = indexPath.section
-        previousIndex = indexPath
- */
+
     }
  
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("cell selectino none")
+        if(indexPath.section == 0){
+          let locationSet = defaults.object(forKey:"locationPreference") as! Int
+            if(indexPath.row == locationSet){
+                cell.accessoryType = .checkmark
+                checkedRow.append(indexPath)
+            }
+        }else{
+            if(indexPath.row == 0){
+                cell.accessoryType = .checkmark
+                checkedRow.append(indexPath)
+            }
+        }
         cell.selectionStyle = .none
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("text setup")
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        cell.textLabel?.text = optionSelections[indexPath.row]
+        if(indexPath.section == 0){
+          cell.textLabel?.text = locationSelection[indexPath.row]
+        }else{
+          cell.textLabel?.text = languageSelection[indexPath.row]
+        }
         return cell
     }
  

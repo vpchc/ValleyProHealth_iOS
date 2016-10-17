@@ -23,7 +23,7 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     
     var dataSegue = ["","","",""]
     
-    var dental_bloom = ["Dr. Nels Ewoldsen, DDS", "Dr. Dane Mishler, DDS"]
+    var dental_bloom = ["Dr. Dane Mishler, DDS"]
     var bh_bloom = ["Dr. Paul Taraska, MD", "Michelle Bond, LMHCA"]
     var med_bloom = ["Christi Busenbark, FNP-C","Tammi Mundy, FNP-C","Louwanna Wallace, FNP-C"]
     
@@ -129,7 +129,7 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         // set the text from the data model
         cell.textLabel?.text = self.providersList[(indexPath as NSIndexPath).row]
         cell.textLabel?.textAlignment = .center
-         cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:25)
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:25)
         
         return cell
     }
