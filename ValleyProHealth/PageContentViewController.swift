@@ -20,6 +20,11 @@ class PageContentViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var websiteButton: UIButton!
     
+    let toastOpenWebsite = NSLocalizedString(<#T##key: String##String#>, comment: "Toast Main Open Website")
+    let toastOpenFacebookPage = NSLocalizedString(<#T##key: String##String#>, comment: "Toast Main Open Facebook Page")
+    let toastOpenPortal = NSLocalizedString("Opening VPCHC Patient Portal webpage…", comment: "Toast Main Open Portal")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +40,7 @@ class PageContentViewController: UIViewController {
         let portalUrl: URL = URL(string:"https://secure2.myunionportal.org/vpchc/default.aspx")!
         let application = UIApplication.shared
         
-        self.view.makeToast("Opening VPCHC Patient Portal webpage…")
+        self.view.makeToast(toastOpenPortal)
         application.openURL(portalUrl)
     }
   
@@ -46,7 +51,7 @@ class PageContentViewController: UIViewController {
         let facebookUrl: URL = URL(string:"http://www.facebook.com/132585333458352")!
         
         //Open the facebook app to the vpchc profile is the app is available, otherwise open in the browser
-        self.view.makeToast("Opening VPCHC Facebook page…")
+        self.view.makeToast(toastOpenFacebookPage)
         if application.canOpenURL(facebookApp) {
             application.openURL(facebookApp)
         } else {
@@ -58,7 +63,7 @@ class PageContentViewController: UIViewController {
         let websiteUrl: URL = URL(string:"https://valleyprohealth.org")!
         let application = UIApplication.shared
         
-        self.view.makeToast("Opening VPCHC webpage…")
+        self.view.makeToast(toastOpenWebsite)
         application.openURL(websiteUrl)
     }
 

@@ -23,21 +23,45 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var finalFiles = [String]()
     
-    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-    var categories = ["Select a Category", "Consent", "New Patient", "Notice", "Sliding Fee Scale", "Student Forms"]
+    let locations = [
+        NSLocalizedString("Select a Location", comment: "Forms Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    let categories = [
+        "Select a Category",
+        "Consent",
+        "New Patient",
+        "Notice",
+        "Sliding Fee Scale",
+        "Student Forms"]
+    let consentForms = [
+        "Select a Form",
+        "Behavioral Health Release of Info",
+        "Minor Child",
+        "Release of Information",
+        "Release of Records",
+        "Telemedicine"]
+    let newpatForms = [
+        "Select a Form",
+        "Adult",
+        "Child"]
+    let noticeForms = [
+        "Select a Form",
+        "Acknowledgement of Bill of Rights",
+        "Bill of Rights",
+        "Privacy Practice"]
+    let slidingForms = [
+        "Select a Form",
+        "Sliding Fee Scale"]
+    let studentForms = [
+        "Select a Form",
+        "ISHAA Physical",
+        "MSBHC Enrollment"]
     
-    var consentForms = ["Select a Form", "Behavioral Health Release of Info", "Minor Child", "Release of Information", "Release of Records", "Telemedicine"]
-    var newpatForms = ["Select a Form", "Adult", "Child"]
-    var noticeForms = ["Select a Form", "Acknowledgement of Bill of Rights", "Bill of Rights", "Privacy Practice"]
-    var slidingForms = ["Select a Form", "Sliding Fee Scale"]
-    var studentForms = ["Select a Form", "ISHAA Physical", "MSBHC Enrollment"]
-    
-    var consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
-    var newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
-    var noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "sliding_fee_scale_reqs.pdf"]
-    var recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
-    var slidingFiles = ["sliding_fee_scale_reqs.pdf"]
-    var studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
+    let consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
+    let newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
+    let noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "sliding_fee_scale_reqs.pdf"]
+    let recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
+    let slidingFiles = ["sliding_fee_scale_reqs.pdf"]
+    let studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
     
     var websiteUrlCombine = String()
     

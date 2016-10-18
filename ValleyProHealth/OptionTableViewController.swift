@@ -19,8 +19,14 @@ class OptionTableViewController: UITableViewController {
     var checkedRow = [IndexPath]()
     var cellCount = 0
     
-    let locationSelection = ["No Preference", "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC"]
-    let languageSelection = ["English", "Spanish"]
+    let locationSelection = [
+        NSLocalizedString("No Preference", comment: "Options Location Selection"),
+        "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC"]
+    let languageSelection = [
+        NSLocalizedString("English", comment: "Options Language Selection"),
+        NSLocalizedString("Spanish", comment: "Options Language Selection")]
+    
+    let toastSaveNoChanges = NSLocalizedString("No changes to save", comment: "Toast Options Save No Changes")
     
     let cellIdentifier = "OptionCells"
     
@@ -44,7 +50,7 @@ class OptionTableViewController: UITableViewController {
             defaults.set(checkedRow[0].row, forKey: "locationPreference")
             self.dismiss(animated: true, completion: nil)
         }else{
-            self.view.makeToast("No changes to save")
+            self.view.makeToast(toastSaveNoChanges)
         }
     }
     

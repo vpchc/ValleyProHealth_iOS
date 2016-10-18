@@ -14,6 +14,9 @@ class MessageViewController: UIViewController, MFMailComposeViewControllerDelega
     @IBOutlet weak var subjectField: UITextField!
     @IBOutlet weak var messageField: UITextView!
     
+    let messageErrorTitle = NSLocalizedString("Could Not Send Email", comment: "Message Error Text")
+    let messageErrorBody = NSLocalizedString("Your device could not send e-mail.  Please check e-mail configuration and try again.", comment: "Message Error Text")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +55,7 @@ class MessageViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        let sendMailErrorAlert = UIAlertView(title: messageErrorTitle , message: messageErrorBody, delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()
     }
     
@@ -60,17 +63,5 @@ class MessageViewController: UIViewController, MFMailComposeViewControllerDelega
         dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -17,8 +17,13 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     let defaults = UserDefaults.standard
     
-    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-    var options = ["Select an option", "Clinic Hours", "Contact Info", "Get Directions"]
+    var locations = [
+        NSLocalizedString("Select a Location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    var options = [
+        NSLocalizedString("Select an option", comment: "Locations Options Directions"),
+        NSLocalizedString("Clinic Hours", comment: "Locations Options Selection"),
+        NSLocalizedString("Contact Info", comment: "Locations Options Selection"),
+        NSLocalizedString("Get Directions", comment: "Locations Options Selection")]
     
     var locationIndex = 0
     var dataToSegue = ["", "", "" , ""]

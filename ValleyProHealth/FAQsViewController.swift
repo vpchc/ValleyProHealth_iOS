@@ -16,7 +16,12 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var categoriesPicker: UIPickerView!
 
     //MARK: Arrays
-    var categoriesList = ["Select a Category", "Billing/Insurance", "Miscellaneous", "New Patients", "Services"]
+    var categoriesList = [
+        NSLocalizedString("Select a Category", comment: "A selection in the FAQs Category List"),
+        NSLocalizedString("Billing/Insurance", comment: "A selection in the FAQs Category List"),
+        NSLocalizedString("Miscellaneous", comment: "A selection in the FAQs Category List"),
+        NSLocalizedString("New Patients", comment: "A selection in the FAQs Category List"),
+        NSLocalizedString("Services", comment: "A selection in the FAQs Category List")]
     var dataToSegue = ["", ""]
     
     //MARK: View Lifecyle

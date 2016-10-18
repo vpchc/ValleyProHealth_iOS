@@ -23,7 +23,11 @@ class PatientResourcesViewController: UIViewController, UIPickerViewDelegate, UI
         self.categoriesPicker.delegate = self
         self.categoriesPicker.dataSource = self
         
-        categoriesList = ["Select a Category", "Diabetic Support Group", "Prescription Assistance", "Sliding Fee Scale"]
+        categoriesList = [
+            NSLocalizedString("Select a Category", comment: "Patient Resources Categories Directions"),
+            NSLocalizedString("Diabetic Support Group", comment: "Patient Resources Categories Selection"),
+            NSLocalizedString("Prescription Assistance", comment: "Patient Resources Categories Selection"),
+            NSLocalizedString("Sliding Fee Scale", comment: "Patient Resources Categories Selection")]
         
         // Do any additional setup after loading the view.
     }

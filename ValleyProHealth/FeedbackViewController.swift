@@ -16,6 +16,9 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
     
+    //MARK: Strings
+    let toastRate = "Opening App Store..."
+    
     //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,7 @@ class FeedbackViewController: UIViewController {
     //MARK: Rate Button
     @IBAction func ratebuttonTap(_ sender: AnyObject) {
         //Open valleyprohealth page in app store
-        self.view.makeToast("Opening App Store...")
+        self.view.makeToast(toastRate)
         
         let appPageURL: URL = URL(string:"https://itunes.apple.com/us/app/apple-store/valleyprohealth")!
 

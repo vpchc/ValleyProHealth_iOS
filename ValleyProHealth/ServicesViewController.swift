@@ -16,8 +16,15 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     let defaults = UserDefaults.standard
    
-    let locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
-    let services = ["Select a Services Category", "Behavioral Health", "Dental", "Patient Support", "Primary Care"]
+    let locations = [
+        NSLocalizedString("Select a Location", comment: "Services Location Directions"),
+        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+    let services = [
+        NSLocalizedString("Select a Services Category", comment: "Services Service Directions"),
+        NSLocalizedString("Behavioral Health", comment: "Services Service Selection"),
+        NSLocalizedString("Dental", comment: "Services Service Selection"),
+        NSLocalizedString("Patient Support", comment: "Services Service Selection"),
+        NSLocalizedString("Primary Care", comment: "Services Service Selection")]
     var dataToSegue = ["", "", "" , ""]
     
     override func viewDidLoad() {

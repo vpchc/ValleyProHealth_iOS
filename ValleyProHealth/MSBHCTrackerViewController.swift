@@ -16,6 +16,18 @@ class MSBHCTrackerViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
+    let statusOpenText      = NSLocalizedString("Open", comment: "MSBHC Open Status")
+    let statusClosedText    = NSLocalizedString("Closed", comment: "MSBHC Closed Status")
+    let statusOpenSoonText  = NSLocalizedString("Opening Soon", comment: "MSBHC Opening Soon Status")
+    let statusCloseSoonText = NSLocalizedString("Closing Soon", comment: "MSBHC Closing Soon Status")
+    let statusEnRouteText   = NSLocalizedString("En Route", comment: "MSBHC En Route Status")
+    
+    let outdatedLine1Text = NSLocalizedString("Schedule Outdated", comment: "Outdated Text")
+    let outdatedLine2Text = NSLocalizedString("Please", comment: "Outdated Text")
+    let outdatedLine3Text = NSLocalizedString("Restart App", comment: "Outdated Text")
+    
+    let toastDownloadSchedule = NSLocalizedString("Downloading MSBHC Schedule…", comment: "Toast Download MSBHC Schedule")
+    
     var tablecontroller: BusTableViewController!
     
     
@@ -31,11 +43,6 @@ class MSBHCTrackerViewController: UIViewController {
         busMain()
     }
     
-      func applicationDidBecomeActive(_ application: UIApplication) {
-        print("Activate!")
-    }
-
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,7 +56,7 @@ class MSBHCTrackerViewController: UIViewController {
         let websiteUrl: URL = URL(string:"https://valleyprohealth.org/files/schedule/current_schedule.pdf")!
         let application = UIApplication.shared
         
-        self.view.makeToast("Downloading MSBHC Schedule…")
+        self.view.makeToast(toastDownloadSchedule)
         application.openURL(websiteUrl)
     }
     
@@ -77,9 +84,9 @@ class MSBHCTrackerViewController: UIViewController {
             busHours = currentLocation[1]
             busStatus = busStatusSet(busCheck: busCheck[1])
         }else{
-            busLocation = "Schedule Outdated"
-            busHours = "Please"
-            busStatus = "Restart App"
+            busLocation = outdatedLine1Text
+            busHours = outdatedLine2Text
+            busStatus = outdatedLine3Text
         }
         
         busInfo.append(busLocation)
@@ -176,15 +183,15 @@ class MSBHCTrackerViewController: UIViewController {
     
     func busStatusSet(busCheck: Int) -> String{
         if(busCheck == 1){
-            return "Open"
+            return statusOpenText
         }else if(busCheck == 2){
-            return "Opening Soon"
+            return statusOpenSoonText
         }else if(busCheck == 3){
-            return "En Route"
+            return statusEnRouteText
         }else if(busCheck == 4){
-            return "Closing Soon"
+            return statusCloseSoonText
         }else{
-            return "Closed"
+            return statusClosedText
         }
     }
 

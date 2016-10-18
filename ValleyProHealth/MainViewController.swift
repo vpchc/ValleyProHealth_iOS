@@ -24,12 +24,17 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var optionsButton: UIButton!
     
+    let informativeText = NSLocalizedString("Check here for latest news and information concerning Valley Professionals Community Health Center.", comment: "Twitter Feed Informative Text")
+    
     let defaults = UserDefaults.standard
     
     var pageIndex = 0
     var pagerController: MainPageViewController!
     
-    let twitterTips = ["Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!", "If you are not able to make an appointment, please call to let us know.", "Refills can take up to 48 business hours to refill.", "Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!"]
+    let twitterTips = [
+        NSLocalizedString("Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!", comment: "Twitter Tip"),
+        NSLocalizedString("If you are not able to make an appointment, please call to let us know.", comment: "Twitter Tip"),
+        NSLocalizedString("Refills can take up to 48 business hours to refill.", comment: "Twitter Tip"), NSLocalizedString("Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!", comment: "Twitter Tip")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +67,7 @@ class MainViewController: UIViewController {
     
     func getBusSchedule(){
         var htmlString = ""
-        let urlString = "https://valleyprohealth.org/info/bus_app_schedule2.html"
+        let urlString = "https://valleyprohealth.org/info/bus_app_schedule.html"
             guard let scheduleURL = URL(string: urlString) else {
             print("Error: \(urlString) doesn't seem to be a valid URL")
             return
@@ -86,7 +91,6 @@ class MainViewController: UIViewController {
     }
     
     func twitterSetup(){
-        let initialText = "Check here for latest news and information concerning Valley Professionals Community Health Center."
         var feedText = ""
         var htmlString = ""
         let urlString = "https://twitter.com/search?f=tweets&q=from%3AValleyProHealth&src=typd"
@@ -96,9 +100,9 @@ class MainViewController: UIViewController {
             htmlString = try String(contentsOf: scheduleURL!, encoding: .ascii)
             let htmlSplit = htmlString.components(separatedBy: "<p class=\"TweetTextSize  js-tweet-text tweet-text\" lang=\"en\" data-aria-label-part=\"0\">")
             let refinedSplit = htmlSplit[1].components(separatedBy: "</p>")
-            feedText = refinedSplit[0] + " " + twitterTips[Int(arc4random_uniform(4))] + " " + initialText
+            feedText = refinedSplit[0] + " " + twitterTips[Int(arc4random_uniform(4))] + " " + informativeText
         } catch let error {
-            feedText = initialText + " " + twitterTips[Int(arc4random_uniform(4))]
+            feedText = informativeText + " " + twitterTips[Int(arc4random_uniform(4))]
             print("Error: \(error)")
         }
         twitterFeed.text = feedText

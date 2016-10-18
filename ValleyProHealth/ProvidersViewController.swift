@@ -15,10 +15,19 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     let defaults = UserDefaults.standard
     
-    var locations = ["Select a Location", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
-    var providerTypes1 = ["Select a Type of Provider", "Behavioral Health", "Dental", "Medical"]
+    var locations = [
+        NSLocalizedString("Select a Location", comment: "Providers Locations Directions"),
+        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
+    var providerTypes1 = [
+        NSLocalizedString("Select a Type of Provider", comment: "Providers Provider Directions"),
+        NSLocalizedString("Behavioral Health", comment: "Providers Provider Selection"),
+        NSLocalizedString("Dental", comment: "Providers Provider Selection"),
+        NSLocalizedString("Medical", comment: "Providers Provider Selection")]
     //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
-    var providerTypes2 = ["Select a Type of Provider", "Behavioral Health", "Medical"]
+    var providerTypes2 = [
+        NSLocalizedString("Select a Type of Provider", comment: "Provider Provider Directions"),
+        NSLocalizedString("Behavioral Health", comment: "Provider Provider Selection"),
+        NSLocalizedString("Medical", comment: "Provider Provider Selection")]
     
     var finalProviderTypes = [String]()
     var dataToSegue = ["", "", "" , ""]

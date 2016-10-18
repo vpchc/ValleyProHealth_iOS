@@ -22,9 +22,9 @@ class LocationPreferenceViewController: UIViewController, UIPickerViewDelegate, 
         self.locationsPicker.delegate = self
         self.locationsPicker.dataSource = self
         
-        locationsList = ["Select a preferred location", "No Preference", "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
-        
-        // Do any additional setup after loading the view.
+        locationsList = [
+            NSLocalizedString("Select a preferred location", comment: "Locations Preference Selection Directions"),
+            NSLocalizedString("No Preference", comment: "Locations Preference Selection"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
     }
     
     override func didReceiveMemoryWarning() {

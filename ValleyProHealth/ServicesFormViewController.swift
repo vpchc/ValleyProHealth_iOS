@@ -16,11 +16,56 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var servicesTable: UITableView!
     
     let cellReuseIdentifier = "cell"
-    let bhServices = ["•Child/Adolescent counseling", "•Crisis counseling", "•Family counseling", "•Psychiatry", "•Testing/Assessment(upon referral)"]
-    let dentalServices = ["•Preventive and restorative services"]
-    let patsupportServices = ["•Community Health Workers","-Provide assistance navigating the Insurance Marketplace, Healthy Indiana Plan, and Medicaid applications", "-Educate patients on preventive healthcare behaviors", "-Help patients find necessities like food, clothes, and toiletries", "•Patient Care Coordinator", "-Work with a Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health", "-Are patient advocates and your navigator through the healthcare system"]
-    let primcare1 = ["•Acute Illness", "•Chronic Disease Care", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Physical Exam", "•Preventive Care", "•Well Child Visits", "•Women's Health"]
-    let primcare2 = ["•Acute Illness", "•Chronic Disease Care", "•Colposcopy", "•CDL Exam", "•Family Planning", "•Geriatric Care", "•Immunizations", "•Labor and Delivery", "•Laboratory Services", "•Men's Health", "•Minor Surgery", "•Nutritional Counseling", "•Pregnancy Care", "•Preventive Care", "•Physical Exam", "•Well Child Visits", "•Women's Health", "•Vasectomy"]
+    let bhServices = [
+        NSLocalizedString("•Child/Adolescent counseling", comment: "Services BH"),
+        NSLocalizedString("•Crisis counseling", comment: "Services BH"),
+        NSLocalizedString("•Family counseling", comment: "Services BH"),
+        NSLocalizedString("•Psychiatry", comment: "Services BH"),
+        NSLocalizedString("•Testing/Assessment(upon referral)", comment: "Services BH")]
+    let dentalServices = [
+        NSLocalizedString("•Preventive and restorative services", comment: "Services Dental")]
+    let patsupportServices = [
+        NSLocalizedString("•Community Health Workers", comment: "Services Patient Support"),
+        NSLocalizedString("-Provide assistance navigating the Insurance Marketplace, Healthy Indiana Plan, and Medicaid applications", comment: "Services Patient Support"),
+        NSLocalizedString("-Educate patients on preventive healthcare behaviors", comment: "Services Patient Support"),
+        NSLocalizedString("-Help patients find necessities like food, clothes, and toiletries", comment: "Services Patient Support"),
+        NSLocalizedString("•Patient Care Coordinator", comment: "Services Patient Support"),
+        NSLocalizedString("-Work with a Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health Care Coordinators and learn how to manage chronic health concerns, and take steps to improve your health", comment: "Services Patient Support"),
+        NSLocalizedString("-Are patient advocates and your navigator through the healthcare system", comment: "Services Patient Support")]
+    let primcare1 = [
+        NSLocalizedString("•Acute Illness", comment: "Services Primary Care"),
+        NSLocalizedString("•Chronic Disease Care", comment: "Services Primary Care"),
+        NSLocalizedString("•CDL Exam", comment: "Services Primary Care"),
+        NSLocalizedString("•Family Planning", comment: "Services Primary Care"),
+        NSLocalizedString("•Geriatric Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Immunizations", comment: "Services Primary Care"),
+        NSLocalizedString("•Laboratory Services", comment: "Services Primary Care"),
+        NSLocalizedString("•Men's Health", comment: "Services Primary Care"),
+        NSLocalizedString("•Minor Surgery", comment: "Services Primary Care"),
+        NSLocalizedString("•Nutritional Counseling", comment: "Services Primary Care"),
+        NSLocalizedString("•Physical Exam", comment: "Services Primary Care"),
+        NSLocalizedString("•Preventive Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Well Child Visits", comment: "Services Primary Care"),
+        NSLocalizedString("•Women's Health", comment: "Services Primary Care")]
+    let primcare2 = [
+        NSLocalizedString("•Acute Illness", comment: "Services Primary Care"),
+        NSLocalizedString("•Chronic Disease Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Colposcopy", comment: "Services Primary Care"),
+        NSLocalizedString("•CDL Exam", comment: "Services Primary Care"),
+        NSLocalizedString("•Family Planning", comment: "Services Primary Care"),
+        NSLocalizedString("•Geriatric Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Immunizations", comment: "Services Primary Care"),
+        NSLocalizedString("•Labor and Delivery", comment: "Services Primary Care"),
+        NSLocalizedString("•Laboratory Services", comment: "Services Primary Care"),
+        NSLocalizedString("•Men's Health", comment: "Services Primary Care"),
+        NSLocalizedString("•Minor Surgery", comment: "Services Primary Care"),
+        NSLocalizedString("•Nutritional Counseling", comment: "Services Primary Care"),
+        NSLocalizedString("•Pregnancy Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Preventive Care", comment: "Services Primary Care"),
+        NSLocalizedString("•Physical Exam", comment: "Services Primary Care"),
+        NSLocalizedString("•Well Child Visits", comment: "Services Primary Care"),
+        NSLocalizedString("•Women's Health", comment: "Services Primary Care"),
+        NSLocalizedString("•Vasectomy", comment: "Services Primary Care")]
     var servicesList = [String]()
     var dataSegue = ["", "", "", ""]
     
@@ -85,10 +130,5 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:20)
         
         return cell
-    }
-    
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \((indexPath as NSIndexPath).row).")
     }
 }
