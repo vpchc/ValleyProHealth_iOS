@@ -11,25 +11,28 @@ import Toast_Swift
 
 class FeedbackViewController: UIViewController {
 
+    //MARK: Buttons
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
     
+    //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Decision Buttons
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 
+    //MARK: Rate Button
     @IBAction func ratebuttonTap(_ sender: AnyObject) {
         //Open valleyprohealth page in app store
         self.view.makeToast("Opening App Store...")

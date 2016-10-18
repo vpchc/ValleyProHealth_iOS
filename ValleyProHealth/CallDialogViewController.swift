@@ -2,7 +2,7 @@
 //  CallDialogViewController.swift
 //  ValleyProHealth
 //
-//  Created by Brice Local Account on 9/12/16.
+//  Created by Brice Webster on 9/12/16.
 //  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import UIKit
 
 class CallDialogViewController: UIViewController {
  
+    //MARK: Buttons
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var bloomButton: UIButton!
     @IBOutlet weak var cayButton: UIButton!
@@ -18,19 +19,20 @@ class CallDialogViewController: UIViewController {
     @IBOutlet weak var terreButton: UIButton!
     @IBOutlet weak var msbhcButton: UIButton!
     
+    //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Decision Buttons
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Call Button Taps
     @IBAction func bloomButtonTap(_ sender: AnyObject) {
         self.view.makeToast("Calling Bloomingdale Location...")
         let telenumber:URL = URL(string: "tel://7654989000")!

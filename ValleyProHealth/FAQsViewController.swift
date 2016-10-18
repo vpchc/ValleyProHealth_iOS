@@ -10,54 +10,42 @@ import UIKit
 
 class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    //MARK: Buttons
     @IBOutlet weak var backButton: UIButton!
+    //MARK: Pickers
     @IBOutlet weak var categoriesPicker: UIPickerView!
 
+    //MARK: Arrays
     var categoriesList = ["Select a Category", "Billing/Insurance", "Miscellaneous", "New Patients", "Services"]
     var dataToSegue = ["", ""]
     
+    //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Connect data:
+        //Setup Cateogry Picker
         self.categoriesPicker.delegate = self
         self.categoriesPicker.dataSource = self
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Decision Buttons
     @IBAction func backButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // The number of columns of data
+    //MARK: PickerSetup
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categoriesList.count
     }
-    
-    // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return categoriesList[row]
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "FAQsDataSegue" {
-            if let destination = segue.destination as? FAQsFormViewController{
-                destination.dataSegue[0] = (dataToSegue[0])
-                destination.dataSegue[1] = (dataToSegue[1])
-            }
-        }
-    }
-    
-    // When a selection is made by the user
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if( row != 0){
@@ -65,6 +53,16 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             dataToSegue[1] = String(row)
             categoriesPicker.selectRow(0, inComponent: 0, animated: false)
             self.performSegue(withIdentifier: "FAQsDataSegue", sender: self)
+        }
+    }
+    
+    //MARK: Segue Setup
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FAQsDataSegue" {
+            if let destination = segue.destination as? FAQsFormViewController{
+                destination.dataSegue[0] = (dataToSegue[0])
+                destination.dataSegue[1] = (dataToSegue[1])
+            }
         }
     }
 }
