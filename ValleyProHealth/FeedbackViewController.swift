@@ -22,12 +22,9 @@ class FeedbackViewController: UIViewController {
     //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: Decision Buttons
@@ -40,10 +37,9 @@ class FeedbackViewController: UIViewController {
         //Open valleyprohealth page in app store
         self.view.makeToast(toastRate)
         
+        //Open ValleyProHealth App Store Page
         let appPageURL: URL = URL(string:"https://itunes.apple.com/us/app/apple-store/valleyprohealth")!
-
         let application = UIApplication.shared
-        
         application.openURL(appPageURL)
        
     }
