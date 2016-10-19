@@ -19,6 +19,10 @@
 		B878AD041D8A24DA0098DD10 /* PatientResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */; };
 		DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22EC291D74922E00E0518F /* MainPageViewController.swift */; };
 		DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */; };
+		DD3F20691DB7BCFB00407292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3F206B1DB7BCFB00407292 /* InfoPlist.strings */; };
+		DD3F206E1DB7BCFD00407292 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3F20701DB7BCFD00407292 /* Localizable.strings */; };
+		DD3F20731DB7BCFE00407292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3F20751DB7BCFE00407292 /* InfoPlist.strings */; };
+		DD3F20781DB7BCFF00407292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3F207A1DB7BCFF00407292 /* InfoPlist.strings */; };
 		DD41912B1DA6D291002C9706 /* BusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41912A1DA6D291002C9706 /* BusTableViewController.swift */; };
 		DD6C440B1D86EC1800ADABA1 /* CallDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */; };
 		DD6C440D1D86EE6400ADABA1 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */; };
@@ -83,6 +87,10 @@
 		DD33F0F91DB12BD5006FFD36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		DD33F0FA1DB12BD5006FFD36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
+		DD3F206A1DB7BCFB00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD3F206F1DB7BCFD00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD3F20741DB7BCFE00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD3F20791DB7BCFF00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD41912A1DA6D291002C9706 /* BusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewController.swift; sourceTree = "<group>"; };
 		DD6C440A1D86EC1800ADABA1 /* CallDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDialogViewController.swift; sourceTree = "<group>"; };
 		DD6C440C1D86EE6400ADABA1 /* CustomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
@@ -201,6 +209,8 @@
 		DD73348C1D40FCBC008A9023 /* ValleyProHealth */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F20701DB7BCFD00407292 /* Localizable.strings */,
+				DD3F206B1DB7BCFB00407292 /* InfoPlist.strings */,
 				DD73348D1D40FCBC008A9023 /* AppDelegate.swift */,
 				DD7334911D40FCBC008A9023 /* Main.storyboard */,
 				DD6C441B1D89EF3400ADABA1 /* Images.xcassets */,
@@ -238,6 +248,7 @@
 		DD7334A11D40FCBC008A9023 /* ValleyProHealthTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F20751DB7BCFE00407292 /* InfoPlist.strings */,
 				DD7334A21D40FCBC008A9023 /* ValleyProHealthTests.swift */,
 				DD7334A41D40FCBC008A9023 /* Info.plist */,
 			);
@@ -247,6 +258,7 @@
 		DD7334AC1D40FCBC008A9023 /* ValleyProHealthUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F207A1DB7BCFF00407292 /* InfoPlist.strings */,
 				DD7334AD1D40FCBC008A9023 /* ValleyProHealthUITests.swift */,
 				DD7334AF1D40FCBC008A9023 /* Info.plist */,
 			);
@@ -372,7 +384,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7334981D40FCBC008A9023 /* LaunchScreen.storyboard in Resources */,
+				DD3F20691DB7BCFB00407292 /* InfoPlist.strings in Resources */,
 				DD6C441C1D89EF3400ADABA1 /* Images.xcassets in Resources */,
+				DD3F206E1DB7BCFD00407292 /* Localizable.strings in Resources */,
 				DD397D2D1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf in Resources */,
 				DD6C44121D88322D00ADABA1 /* Franklin Gothic Medium.ttf in Resources */,
 				DD7334931D40FCBC008A9023 /* Main.storyboard in Resources */,
@@ -383,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3F20731DB7BCFE00407292 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3F20781DB7BCFF00407292 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +628,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DD3F206B1DB7BCFB00407292 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3F206A1DB7BCFB00407292 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD3F20701DB7BCFD00407292 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3F206F1DB7BCFD00407292 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DD3F20751DB7BCFE00407292 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3F20741DB7BCFE00407292 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD3F207A1DB7BCFF00407292 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3F20791DB7BCFF00407292 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DD7334911D40FCBC008A9023 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

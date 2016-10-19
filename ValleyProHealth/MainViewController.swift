@@ -51,6 +51,10 @@ class MainViewController: UIViewController {
         if(defaults.object(forKey:"locationPreference") == nil){
             self.performSegue(withIdentifier: "LocationPreferenceSegue", sender: self)
         }
+        if(defaults.object(forKey:"savedLocale") == nil){
+            let language = Bundle.main.preferredLocalizations.first
+            defaults.set(language!, forKey: "savedLocale")
+        }
     }
     
     func didBecomeActive(){

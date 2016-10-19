@@ -24,7 +24,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yh5-2J-RCU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4hp-8X-Bsx">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-qd-QBg"/>
@@ -54,7 +54,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2D9-Rr-Y4D" userLabel="Button Grid">
@@ -146,7 +146,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Lp-ADy" userLabel="Banner">
                                 <frame key="frameInset" width="768" height="172"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yo-bJ-zvf" userLabel="Title">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Yo-bJ-zvf" userLabel="Title">
+                                        <frame key="frameInset" minX="177" minY="44" width="655" height="93"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="juO-5b-iEY">
                                                 <constraints>
@@ -241,7 +242,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ny-pL-e5T">
                                 <state key="normal" title="Feedback"/>
                                 <connections>
-                                    <segue destination="Cfp-XB-gEZ" kind="presentation" id="VxX-WU-XUq"/>
+                                    <segue destination="Cfp-XB-gEZ" kind="presentation" modalTransitionStyle="crossDissolve" id="VxX-WU-XUq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iah-xE-Mq3">
@@ -279,7 +280,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x8I-6J-fTe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yYj-m1-3Q1">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-rU-eBW" userLabel="Title">
@@ -359,21 +360,21 @@
             <objects>
                 <tableViewController id="R4F-73-rbr" customClass="OptionTableViewController" customModule="ValleyProHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Mw8-df-UXu">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="546"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Location Preference:" id="RYQ-mu-05d">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="RcE-uH-rOU" style="IBUITableViewCellStyleDefault" id="n4T-yG-8Ra">
-                                        <rect key="frame" x="0.0" y="56" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="n4T-yG-8Ra" id="s5b-VQ-IJv">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RcE-uH-rOU">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -383,14 +384,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="Amo-D2-lhV" style="IBUITableViewCellStyleDefault" id="4zM-m0-u0j">
-                                        <rect key="frame" x="0.0" y="100" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="4zM-m0-u0j" id="Z80-Eb-NCl">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Amo-D2-lhV">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -400,14 +401,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="QCb-mW-fXK" style="IBUITableViewCellStyleDefault" id="bBa-kN-wDp">
-                                        <rect key="frame" x="0.0" y="144" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="bBa-kN-wDp" id="t58-oe-sX4">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QCb-mW-fXK">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -417,14 +418,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="vKh-sz-R8s" style="IBUITableViewCellStyleDefault" id="hZ3-rf-yif">
-                                        <rect key="frame" x="0.0" y="188" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="hZ3-rf-yif" id="MNH-y7-Swh">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vKh-sz-R8s">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -434,14 +435,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="HeJ-PN-EWM" style="IBUITableViewCellStyleDefault" id="VAn-8W-Bgl">
-                                        <rect key="frame" x="0.0" y="232" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="VAn-8W-Bgl" id="shy-uc-Zkg">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HeJ-PN-EWM">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -451,14 +452,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="mYN-IH-x1p" style="IBUITableViewCellStyleDefault" id="b0A-Se-fhy">
-                                        <rect key="frame" x="0.0" y="276" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="b0A-Se-fhy" id="P7A-dP-1cH">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYN-IH-x1p">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -468,14 +469,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="7r3-8X-OSN" style="IBUITableViewCellStyleDefault" id="Slh-nh-L6K">
-                                        <rect key="frame" x="0.0" y="320" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="Slh-nh-L6K" id="yK5-wD-ADJ">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7r3-8X-OSN">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -486,17 +487,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Language:" id="Xe0-Ne-v1z">
+                            <tableViewSection headerTitle="Language:(Requires you to Restart App)" id="Xe0-Ne-v1z">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="gQJ-5O-C5S" style="IBUITableViewCellStyleDefault" id="MTf-mG-wxh">
-                                        <rect key="frame" x="0.0" y="420" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="421" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="MTf-mG-wxh" id="lRd-xM-1Bn">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQJ-5O-C5S">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -506,14 +507,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="jRe-0g-zHn" style="IBUITableViewCellStyleDefault" id="ykt-mU-Sbe">
-                                        <rect key="frame" x="0.0" y="464" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="465" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="ykt-mU-Sbe" id="G89-SX-4gC">
-                                            <frame key="frameInset" width="540" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jRe-0g-zHn">
-                                                    <frame key="frameInset" minX="15" width="510" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -532,7 +533,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7H-vy-PGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="1235"/>
+            <point key="canvasLocation" x="2484" y="1234"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="6Pf-7A-zwC">
@@ -551,7 +552,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jY1-kg-oht"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="viD-kM-rAz">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTu-hb-zBU" userLabel="Title">
@@ -635,7 +636,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xjl-c9-ewC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RRl-uy-aWa">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zjx-R6-Qfw" userLabel="Location">
@@ -730,7 +731,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YNB-P4-Tfg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LZo-pB-MW9">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kk7-Gg-z5I" userLabel="callContainer">
@@ -989,7 +990,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6hD-Ef-rkS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F0E-jP-Pew">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2EI-uN-pcM">
@@ -1132,7 +1133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rZB-ym-3EE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c3M-Hw-tne">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-u7-PO8">
@@ -1254,7 +1255,7 @@
                         <viewControllerLayoutGuide type="bottom" id="F35-6G-qo4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5jf-8u-5a5">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqq-eq-kKw">
@@ -1460,7 +1461,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1uS-oC-GGD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="trE-NI-0Oc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBJ-Xb-tV5" userLabel="Title">
@@ -1539,7 +1540,7 @@
                         <viewControllerLayoutGuide type="bottom" id="att-rt-WzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3W7-Cc-xoa">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1n-W8-bmv" userLabel="Title">
@@ -1624,7 +1625,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bju-gO-LE3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ybZ-gO-koi">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78d-sj-PIj" userLabel="Title">
@@ -1701,7 +1702,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WNE-ru-Xfz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j1R-T9-6Hy">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8l-aB-9oR">
@@ -1819,7 +1820,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OYV-ym-7Of"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j9l-K4-Xdk">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-Bc-Wre">
@@ -1893,7 +1894,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fgt-dT-Hft"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OCD-Sr-1dR">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnE-bo-fnQ" userLabel="Title Bar">
@@ -1984,7 +1985,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rb6-xI-Mhx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U2s-aT-MQM">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQH-dI-5dO">
@@ -2067,7 +2068,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6cg-Pq-noM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zWT-Np-F4k">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2s-Uf-SLN">
@@ -2128,7 +2129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9gN-RA-koE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rw6-09-Jgt">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0P-co-XXG" userLabel="Top Left">
@@ -2470,7 +2471,7 @@ Tracker</string>
                         <viewControllerLayoutGuide type="bottom" id="qNH-9F-m0P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jh8-8d-m3E">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-U0-BBr" userLabel="Top Left">
@@ -2619,7 +2620,7 @@ Tracker</string>
                         <viewControllerLayoutGuide type="bottom" id="2SP-f2-BQ7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uee-vL-ZWI">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFT-8d-bjv">
@@ -2769,7 +2770,7 @@ Tracker</string>
                         <viewControllerLayoutGuide type="bottom" id="ZCf-lu-Wfi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZCG-X4-vqT">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-LM-ORs">
@@ -2865,7 +2866,7 @@ the App Store.</string>
                         <viewControllerLayoutGuide type="bottom" id="7mg-SS-ObI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="23w-LH-WkE">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-eC-QOe" userLabel="Title">

@@ -20,8 +20,8 @@ class PageContentViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var websiteButton: UIButton!
     
-    let toastOpenWebsite = NSLocalizedString(<#T##key: String##String#>, comment: "Toast Main Open Website")
-    let toastOpenFacebookPage = NSLocalizedString(<#T##key: String##String#>, comment: "Toast Main Open Facebook Page")
+    let toastOpenWebsite = NSLocalizedString("Opening VPCHC website…", comment: "Toast Main Open Website")
+    let toastOpenFacebookPage = NSLocalizedString("Opening VPCHC Facebook Page…", comment: "Toast Main Open Facebook Page")
     let toastOpenPortal = NSLocalizedString("Opening VPCHC Patient Portal webpage…", comment: "Toast Main Open Portal")
     
     

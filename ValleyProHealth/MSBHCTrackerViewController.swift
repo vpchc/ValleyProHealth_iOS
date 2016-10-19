@@ -81,12 +81,12 @@ class MSBHCTrackerViewController: UIViewController {
         
         if(dayCheck()){
             busLocation = currentLocation[0]
-            busHours = currentLocation[1]
-            busStatus = busStatusSet(busCheck: busCheck[1])
+            busHours    = currentLocation[1]
+            busStatus   = busStatusSet(busCheck: busCheck[1])
         }else{
             busLocation = outdatedLine1Text
-            busHours = outdatedLine2Text
-            busStatus = outdatedLine3Text
+            busHours    = outdatedLine2Text
+            busStatus   = outdatedLine3Text
         }
         
         busInfo.append(busLocation)
@@ -106,10 +106,17 @@ class MSBHCTrackerViewController: UIViewController {
         for i in 0...locations.count - 1{
             count = i
             busScheduleSplit = locations[i].components(separatedBy: ",")
+            
+            print(busScheduleSplit[2])
+            //These are days when the bus is scheduled to be closed.
+            if(busScheduleSplit[2].trimmingCharacters(in: .whitespacesAndNewlines) == "0:0"){
+                break
+            }
+            
             locationCheck = busTimeCheck(location: busScheduleSplit, count: i)
             flag = busScheduleSplit[4].trimmingCharacters(in: .whitespacesAndNewlines)
             if(locationCheck != 0 || flag == "0"){
-                break;
+                break
             }
         }
  

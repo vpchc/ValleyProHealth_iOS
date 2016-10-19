@@ -45,10 +45,29 @@ class OptionTableViewController: UITableViewController {
     }
     
     func saveChanges(){
-        let savedlocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedlocation != checkedRow[0].row){
+        let savedLocation = defaults.object(forKey:"locationPreference") as! Int
+        let languageSet = defaults.object(forKey:"savedLocale") as! String
+        var changes = false
+        
+        if(savedLocation != checkedRow[0].row){
             defaults.set(checkedRow[0].row, forKey: "locationPreference")
-            self.dismiss(animated: true, completion: nil)
+            changes = true
+        }
+        if(languageSet != String(checkedRow[1].row)){
+            var newLocale = "en"
+            if(checkedRow[1].row == 0){
+               newLocale = "en"
+            }else{
+               newLocale = "es"
+            }
+            defaults.set(newLocale, forKey: "savedLocale")
+            UserDefaults.standard.set([newLocale], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
+            changes = true
+        }
+        
+        if(changes){
+             self.dismiss(animated: true, completion: nil)
         }else{
             self.view.makeToast(toastSaveNoChanges)
         }
@@ -102,7 +121,15 @@ class OptionTableViewController: UITableViewController {
                 checkedRow.append(indexPath)
             }
         }else{
-            if(indexPath.row == 0){
+          let languageSet = defaults.object(forKey:"savedLocale") as! String
+          var languageCompare = 0
+            if(languageSet == "en"){
+                languageCompare = 0
+            }else{
+                languageCompare = 1
+            }
+          print("languageSet: " + languageSet)
+            if(indexPath.row == languageCompare){
                 cell.accessoryType = .checkmark
                 checkedRow.append(indexPath)
             }
