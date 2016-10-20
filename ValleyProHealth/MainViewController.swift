@@ -39,7 +39,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        getBusSchedule()
+        if(Reachability.isConnectedToNetwork() == true){
+            getBusSchedule()
+        }
         twitterSetup()
         
         //Listener for exiting the app and then re-entering

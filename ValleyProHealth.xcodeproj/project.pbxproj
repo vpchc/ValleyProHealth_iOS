@@ -40,6 +40,7 @@
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
 		DD75C9931DAD545E00BD686D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75C9921DAD545E00BD686D /* MessageViewController.swift */; };
+		DD7D1BF91DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D1BF81DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift */; };
 		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
 		DD9F3BB21DB5298D00A2F8FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */; };
 		DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */; };
@@ -114,6 +115,7 @@
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
 		DD75C9921DAD545E00BD686D /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		DD7D1BF81DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsHoursTableViewController.swift; path = ../LocationsHoursTableViewController.swift; sourceTree = "<group>"; };
 		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreferenceViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */,
 				B878ACFD1D8A214D0098DD10 /* FormsViewController.swift */,
 				DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */,
+				DD7D1BF81DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift */,
 				B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */,
 				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
 				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
@@ -580,6 +583,7 @@
 				B878ACFA1D8A1E940098DD10 /* LocationsViewController.swift in Sources */,
 				B82D5C9A1D8CC96300BDB9E8 /* ClinicHoursFormViewController.swift in Sources */,
 				DD22EC2A1D74922E00E0518F /* MainPageViewController.swift in Sources */,
+				DD7D1BF91DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift in Sources */,
 				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
 				DD75C9931DAD545E00BD686D /* MessageViewController.swift in Sources */,
 				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,

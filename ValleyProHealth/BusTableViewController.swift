@@ -40,7 +40,7 @@ class BusTableViewController: UITableViewController {
             Returns: Nothing
         */
         locationLabel.text = busText[0]
-        hoursLabel.text = busText[1]
-        statusLabel.text = busText[2]
+        hoursLabel.text    = busText[1]
+        statusLabel.text   = busText[2]
     }
 }

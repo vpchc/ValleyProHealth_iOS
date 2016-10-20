@@ -27,6 +27,7 @@ class MSBHCTrackerViewController: UIViewController {
     let outdatedLine3Text = NSLocalizedString("Restart App", comment: "Outdated Text")
     
     let toastDownloadSchedule = NSLocalizedString("Downloading MSBHC Schedule…", comment: "Toast Download MSBHC Schedule")
+    let toastNoNetwork = NSLocalizedString("Please Check Your Network Connection", comment: "Toast No Network")
     
     var tablecontroller: BusTableViewController!
     
@@ -76,19 +77,19 @@ class MSBHCTrackerViewController: UIViewController {
         var busHours = ""
         var busStatus =  ""
         
-        busCheck = busLocationCheck(locations: locationsForToday)
-        let currentLocation = locationsForToday[busCheck[0]].components(separatedBy: ",")
-        
-        if(dayCheck()){
-            busLocation = currentLocation[0]
-            busHours    = currentLocation[1]
-            busStatus   = busStatusSet(busCheck: busCheck[1])
-        }else{
+        if(!dayCheck() || defaults.object(forKey:"busSchedule") == nil){
             busLocation = outdatedLine1Text
             busHours    = outdatedLine2Text
             busStatus   = outdatedLine3Text
-        }
+            self.view.makeToast(toastNoNetwork, duration: 3.0 , position: .center)
+        }else{
+            busCheck = busLocationCheck(locations: locationsForToday)
+            let currentLocation = locationsForToday[busCheck[0]].components(separatedBy: ",")
         
+            busLocation = currentLocation[0]
+            busHours    = currentLocation[1]
+            busStatus   = busStatusSet(busCheck: busCheck[1])
+        }
         busInfo.append(busLocation)
         busInfo.append(busHours)
         busInfo.append(busStatus)

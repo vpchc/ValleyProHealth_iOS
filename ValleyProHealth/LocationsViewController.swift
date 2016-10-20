@@ -19,7 +19,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //MARK: Defaults
     let defaults = UserDefaults.standard
     //MARK: Arrays
-    var dataToSegue = ["", "", "" , ""]
+    var dataToSegue = ["", "", "", ""]
     let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
     let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.407648"]
     var locations = [
@@ -49,7 +49,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
-            optionPicker.isHidden = false
+            locationDataSegueSetup(row: savedLocation)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -84,23 +84,22 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
+            print("row: " + String(row))
             if(row != 0){
-                optionPicker.isHidden = false;
-                //Get chosen location ready to send in segue
-                dataToSegue[0] = locations[row]
-                dataToSegue[1] = String(row)
-                //Index used to grab longitude and latitude for corresponding location from list.
-                locationIndex = row
+                locationDataSegueSetup(row: row)
             }else{
                 optionPicker.isHidden = true;
             }
         }else if(pickerView == optionPicker && row != 0){
-            //TODO: Why is this line here?
+            //Resets the Picker after a selection is made
             optionPicker.selectRow(0, inComponent: 0, animated: false)
+            
             if(row == 1){//Clinic Hours Selection
                 if(locationIndex == 3){
                     self.performSegue(withIdentifier: "ClinicHoursDataSegue2", sender: self)
                 }else{
+                    print("0: " + dataToSegue[0])
+                    print("1: " + dataToSegue[1])
                     self.performSegue(withIdentifier: "ClinicHoursDataSegue1", sender: self)
                 }
             }else if(row == 2){//Contact Info Selection
@@ -134,21 +133,29 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 mapItem.openInMaps(launchOptions: options)
             }
         }
-        //MARK: Segue Setup
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "ClinicHoursDataSegue1" || segue.identifier == "ClinicHoursDataSegue2"{
-                if let destination = segue.destination as? ClinicHoursFormViewController{
-                    destination.dataSegue[0] = (dataToSegue[0])
-                    destination.dataSegue[1] = (dataToSegue[1])
-                }
-            }else{
-                if let destination = segue.destination as? ContactInfoFormViewController{
-                    destination.dataSegue[0] = (dataToSegue[0])
-                    destination.dataSegue[1] = (dataToSegue[1])
-                }
+    }
+    //MARK: Segue Setup
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ClinicHoursDataSegue1" || segue.identifier == "ClinicHoursDataSegue2"{
+            if let destination = segue.destination as? ClinicHoursFormViewController{
+                destination.dataSegue[0] = (dataToSegue[0])
+                destination.dataSegue[1] = (dataToSegue[1])
             }
-            
+        }else{
+            if let destination = segue.destination as? ContactInfoFormViewController{
+                destination.dataSegue[0] = (dataToSegue[0])
+                destination.dataSegue[1] = (dataToSegue[1])
+            }
         }
+        
+    }
+    func locationDataSegueSetup(row: Int){
+        optionPicker.isHidden = false;
+        //Get chosen location ready to send in segue
+        dataToSegue[0] = locations[row]
+        dataToSegue[1] = String(row)
+        //Index used to grab longitude and latitude for corresponding location from list.
+        locationIndex = row
     }
 
 }
