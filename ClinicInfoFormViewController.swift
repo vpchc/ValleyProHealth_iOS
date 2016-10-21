@@ -1,22 +1,28 @@
 //
-//  ClinicHoursFormViewController.swift
+//  ClinicInfoFormViewController.swift
 //  ValleyProHealth
 //
-//  Created by Brice Webster on 9/16/16.
+//  Created by Brice Local Account on 10/21/16.
 //  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
 //
 
 import UIKit
 
-class ClinicHoursFormViewController: UIViewController {
-    
+class ClinicInfoFormViewController: UIViewController {
+
     //MARK: Labels
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var locationImage: UIImageView!
-
+   
+    @IBOutlet weak var locationImage1: UIImageView!
+    @IBOutlet weak var locationImage2: UIImageView!
+    
+    
     //MARK: Buttons
+
     @IBOutlet weak var cancelButton1: UIButton!
     @IBOutlet weak var cancelButton2: UIButton!
+    
+    
     //MARK: Arrays
     var bloomcaycrawHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m."]
     var terreHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:30 a.m. - 8:00 p.m.","8:00 a.m. - 4:30 p.m."]
@@ -27,21 +33,26 @@ class ClinicHoursFormViewController: UIViewController {
     //MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Set location image
-        let locationImageName = dataSegue[0] + "_location_pic"
-        locationImage.image = UIImage(named:locationImageName)
+        
         
         //Doesn't set text when the location selected is Clinton, which has its own static controller due to Saturday Clinic
         print("dataSegue: " + dataSegue[1])
         if(dataSegue[1] != "3"){
             locationLabel.text = dataSegue[0]
+            //Set location image
+            let locationImageName = dataSegue[0] + "_location_pic"
+            locationImage1.image = UIImage(named:locationImageName)
 
             if(dataSegue[1] == "5"){
                 tableController.setTableText(hours: terreHours)
             }else{
                 tableController.setTableText(hours: bloomcaycrawHours)
             }
+        }else{
+            //Set location image
+            let locationImageName = dataSegue[0] + "_location_pic"
+            locationImage2.image = UIImage(named:locationImageName)
+
         }
     }
     
@@ -58,10 +69,11 @@ class ClinicHoursFormViewController: UIViewController {
     }
     
     //MARK: Decision Buttons
-    @IBAction func cancelButton1(_ sender: AnyObject) {
-         self.dismiss(animated: true, completion: nil)
+    @IBAction func cancelButton1Tap(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func cancelButton2(_ sender: AnyObject) {
-         self.dismiss(animated: true, completion: nil)
+    @IBAction func cancelButtonTap2(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
+
 }

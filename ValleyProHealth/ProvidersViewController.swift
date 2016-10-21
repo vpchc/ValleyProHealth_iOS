@@ -32,7 +32,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var finalProviderTypes = [String]()
     var dataToSegue = ["", "", "" , ""]
     
-    var locationSelection = 0
+    var locationIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +47,11 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
         print(savedLocation)
         locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
-        if(savedLocation == 1 || savedLocation == 2){
+        if(savedLocation == 0 || savedLocation == 2){
+            resetProviderPicker(row: 0)
+        }else if(savedLocation == 1 || savedLocation > 2){
             resetProviderPicker(row: savedLocation)
-        }else if(savedLocation > 2){
-            providerTypePicker.isHidden = false
+            dataSegueSetup(row: savedLocation, pickerIndex: 0)
         }
     }
 
@@ -74,7 +75,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if( pickerView == locationPicker){
             return locations.count
         }else{
-            if(locationSelection == 1 || locationSelection == 2){
+            if(locationIndex == 1 || locationIndex == 2){
                 finalProviderTypes = providerTypes1
             }else{
                 finalProviderTypes = providerTypes2
@@ -104,26 +105,35 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func resetProviderPicker(row: Int){
-        locationSelection = row
+        locationIndex = row
         self.providerTypePicker.reloadAllComponents()
-        providerTypePicker.isHidden = false;
+        if(row != 0 || row != 3){
+            providerTypePicker.isHidden = false;
+        }
     }
     
+    func dataSegueSetup(row: Int, pickerIndex: Int){
+        if(pickerIndex == 0){
+            dataToSegue[0] = locations[row]
+            dataToSegue[2] = String(row)
+        }else{
+            dataToSegue[1] = finalProviderTypes[row]
+            dataToSegue[3] = String(row)
+        }
+    }
     // When a selection is made by the user
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
             if(row != 0){
                 resetProviderPicker(row: row)
-                dataToSegue[0] = locations[row]
-                dataToSegue[2] = String(row)
+                dataSegueSetup(row: row, pickerIndex: 0)
             }else{
                 providerTypePicker.isHidden = true;
             }
         }else{
             if(row != 0){
-                dataToSegue[1] = finalProviderTypes[row]
-                dataToSegue[3] = String(row)
+                dataSegueSetup(row: row, pickerIndex: 1)
                 providerTypePicker.selectRow(0, inComponent: 0, animated: false)
                 self.performSegue(withIdentifier: "ProvidersDataSegue", sender: self)
             }

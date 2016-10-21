@@ -26,8 +26,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         NSLocalizedString("Select a Location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
     var options = [
         NSLocalizedString("Select an option", comment: "Locations Options Directions"),
-        NSLocalizedString("Clinic Hours", comment: "Locations Options Selection"),
-        NSLocalizedString("Contact Info", comment: "Locations Options Selection"),
+        NSLocalizedString("Clinic Info", comment: "Locations Options Selection"),
         NSLocalizedString("Get Directions", comment: "Locations Options Selection")]
     //MARK: String
     var locationIndex = 0
@@ -84,7 +83,6 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
-            print("row: " + String(row))
             if(row != 0){
                 locationDataSegueSetup(row: row)
             }else{
@@ -96,14 +94,10 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             if(row == 1){//Clinic Hours Selection
                 if(locationIndex == 3){
-                    self.performSegue(withIdentifier: "ClinicHoursDataSegue2", sender: self)
+                    self.performSegue(withIdentifier: "ClinicInfoDataSegue2", sender: self)
                 }else{
-                    print("0: " + dataToSegue[0])
-                    print("1: " + dataToSegue[1])
-                    self.performSegue(withIdentifier: "ClinicHoursDataSegue1", sender: self)
+                    self.performSegue(withIdentifier: "ClinicInfoDataSegue1", sender: self)
                 }
-            }else if(row == 2){//Contact Info Selection
-                self.performSegue(withIdentifier: "ContactInfoDataSegue", sender: self)
             }else{//Directions Selection
                 //Convert from string to NSString
                 let latConvert : NSString = directionsLat[locationIndex - 1] as NSString
@@ -136,13 +130,8 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     //MARK: Segue Setup
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ClinicHoursDataSegue1" || segue.identifier == "ClinicHoursDataSegue2"{
-            if let destination = segue.destination as? ClinicHoursFormViewController{
-                destination.dataSegue[0] = (dataToSegue[0])
-                destination.dataSegue[1] = (dataToSegue[1])
-            }
-        }else{
-            if let destination = segue.destination as? ContactInfoFormViewController{
+        if segue.identifier == "ClinicInfoDataSegue1" || segue.identifier == "ClinicInfoDataSegue2"{
+            if let destination = segue.destination as? ClinicInfoFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])
             }

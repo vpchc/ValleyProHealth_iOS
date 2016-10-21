@@ -30,6 +30,8 @@ class CustomColors {
     }
 }
 
+//Checks if there is a network connection
+//Code from http://stackoverflow.com/a/39782859/1715916
 public class Reachability {
     
     class func isConnectedToNetwork() -> Bool {
@@ -136,4 +138,29 @@ extension Date {
         return date
     }
     
+}
+
+//Used to convert special html characters but it also strips html tag as well.
+//Code from http://stackoverflow.com/a/39344394/1715916
+extension String {
+    init(htmlEncodedString: String) {
+        self.init()
+        guard let encodedData = htmlEncodedString.data(using: .utf8) else {
+            self = htmlEncodedString
+            return
+        }
+        
+        let attributedOptions: [String : Any] = [
+            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue
+        ]
+        
+        do {
+            let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+            self = attributedString.string
+        } catch {
+            print("Error: \(error)")
+            self = htmlEncodedString
+        }
+    }
 }

@@ -61,7 +61,10 @@ class MainViewController: UIViewController {
     
     func didBecomeActive(){
         //Runs when the user re-enters the app
-        getBusSchedule()
+        if(Reachability.isConnectedToNetwork() == true){
+            getBusSchedule()
+        }
+        twitterSetup()
     }
     
     
@@ -106,7 +109,9 @@ class MainViewController: UIViewController {
             htmlString = try String(contentsOf: scheduleURL!, encoding: .ascii)
             let htmlSplit = htmlString.components(separatedBy: "<p class=\"TweetTextSize  js-tweet-text tweet-text\" lang=\"en\" data-aria-label-part=\"0\">")
             let refinedSplit = htmlSplit[1].components(separatedBy: "</p>")
-            feedText = refinedSplit[0] + " " + twitterTips[Int(arc4random_uniform(4))] + " " + informativeText
+            //Converts any html special characters to 
+            let tweet = String(htmlEncodedString: refinedSplit[0])
+            feedText = tweet + " " + twitterTips[Int(arc4random_uniform(4))] + " " + informativeText
         } catch let error {
             feedText = informativeText + " " + twitterTips[Int(arc4random_uniform(4))]
             print("Error: \(error)")
