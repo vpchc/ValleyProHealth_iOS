@@ -153,6 +153,13 @@ class MainViewController: UIViewController {
         self.present(popController, animated: true, completion: nil)
     }
     
+    // UIPopoverPresentationControllerDelegate method
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+
+        // return UIModalPresentationStyle.FullScreen
+        return UIModalPresentationStyle.none
+    }
+    
     @IBAction func pageControlValueChange(_ sender: AnyObject) {
         if(pageIndex == 0){
             pagerController.setViewControllers([orderedViewControllers[1]],
@@ -181,11 +188,7 @@ class MainViewController: UIViewController {
             pagerController = childViewController
         }
     }
-    // UIPopoverPresentationControllerDelegate method
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        // Force popover style
-        return UIModalPresentationStyle.none
-    }
+    
 }
 
 extension MainViewController: MainPageViewControllerDelegate {
