@@ -129,7 +129,11 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         // set the text from the data model
         cell.textLabel?.text = self.providersList[(indexPath as NSIndexPath).row]
         cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:25)
+        print("Scale: ")
+        print(UIScreen.main.scale)
+        print("nativeScale: ")
+        print(UIScreen.main.nativeScale)
+        
         
         return cell
     }

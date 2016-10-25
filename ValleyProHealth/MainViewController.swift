@@ -11,7 +11,7 @@ import Foundation
 import MarqueeLabel
 import Toast_Swift
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -143,6 +143,7 @@ class MainViewController: UIViewController {
         
         // set the presentation style
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        popController.popoverPresentationController!.delegate = self
         
         // set up the popover presentation controller
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
@@ -153,9 +154,7 @@ class MainViewController: UIViewController {
         self.present(popController, animated: true, completion: nil)
     }
     
-    // UIPopoverPresentationControllerDelegate method
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-
         // return UIModalPresentationStyle.FullScreen
         return UIModalPresentationStyle.none
     }
