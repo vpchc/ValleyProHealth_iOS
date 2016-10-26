@@ -120,21 +120,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         twitterFeed.restartLabel()
     }
 
-    @IBAction func twitterBirdTap(_ sender: AnyObject) {
-        let application = UIApplication.shared
-        
-        let twitterApp: URL = URL(string:"twitter:///user?screen_name=valleyprohealth")!
-        let twitterUrl: URL = URL(string:"https://twitter.com/ValleyProHealth")!
-        
-        //Open the facebook app to the vpchc profile is the app is available, otherwise open in the browser
-        self.view.makeToast("Opening VPCHC Twitter page…")
-        if application.canOpenURL(twitterApp) {
-            application.openURL(twitterApp)
-        } else {
-            application.openURL(twitterUrl)
-        }
-
-    }
     
     //This is used instead of perform segue to get the anchor point just right, otherwise it is off-center.
     @IBAction func optionButtonsTap(_ sender: AnyObject) {
