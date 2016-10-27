@@ -12,7 +12,10 @@ class PatientResourcesFormViewController: UIViewController, UITableViewDelegate,
 
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var resourceTable: UITableView!
+    
+    let defaults = UserDefaults.standard
     
     var diabetesResource = [
         NSLocalizedString("Valley Professionals holds monthly Diabetes Support Group meetings that are completely free and open to anyone who is affected by Diabetes, even if you are not a patient with Valley Professionals. For more information visit valleyprohealth.org/diabetes", comment: "Patient Resources Diabetes")]
@@ -53,11 +56,17 @@ class PatientResourcesFormViewController: UIViewController, UITableViewDelegate,
         resourceTable.estimatedRowHeight = 44.0
         resourceTable.rowHeight = UITableViewAutomaticDimension
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if(defaults.object(forKey:"savedLocale") as! String == "es"){
+            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:21)
+            categoryLabel?.font = UIFont(name: (categoryLabel?.font.fontName)!, size:22)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)

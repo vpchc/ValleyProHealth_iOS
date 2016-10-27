@@ -84,9 +84,9 @@
 		D09FACF5A267DA4F5437038D /* Pods-ValleyProHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealthTests/Pods-ValleyProHealthTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC2BD4EB61462DA920CEB5BB /* Pods-ValleyProHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValleyProHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValleyProHealth/Pods-ValleyProHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		DD22EC291D74922E00E0518F /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		DD33F0F91DB12BD5006FFD36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		DD33F0FA1DB12BD5006FFD36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD397D2C1D41587A0002232E /* Franklin Gothic Heavy Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Franklin Gothic Heavy Regular.ttf"; path = "../Franklin Gothic Heavy Regular.ttf"; sourceTree = "<group>"; };
+		DD3CD5F11DC271FC00C811EC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		DD3F206A1DB7BCFB00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD3F206F1DB7BCFD00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD3F20741DB7BCFE00407292 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -668,7 +668,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD7334921D40FCBC008A9023 /* Base */,
-				DD33F0F91DB12BD5006FFD36 /* es */,
+				DD3CD5F11DC271FC00C811EC /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

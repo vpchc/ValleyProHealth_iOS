@@ -47,12 +47,8 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
         print(savedLocation)
         locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
-        if(savedLocation == 0 || savedLocation == 2){
-            resetProviderPicker(row: 0)
-        }else if(savedLocation == 1 || savedLocation > 2){
-            resetProviderPicker(row: savedLocation)
-            dataSegueSetup(row: savedLocation, pickerIndex: 0)
-        }
+        resetProviderPicker(row: savedLocation)
+        dataSegueSetup(row: savedLocation, pickerIndex: 0)
     }
 
     //When the user taps the back button

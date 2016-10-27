@@ -16,13 +16,18 @@ class ClinicInfoFormViewController: UIViewController {
     @IBOutlet weak var locationImage1: UIImageView!
     @IBOutlet weak var locationImage2: UIImageView!
     
+    @IBOutlet weak var titleLabel1: UILabel!
+    @IBOutlet weak var titleLabel2: UILabel!
+
+    
+    let defaults = UserDefaults.standard
     
     //MARK: Buttons
 
     @IBOutlet weak var cancelButton1: UIButton!
     @IBOutlet weak var cancelButton2: UIButton!
     
-    
+
     //MARK: Arrays
     var bloomcaycrawHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m."]
     var terreHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:30 a.m. - 8:00 p.m.","8:00 a.m. - 4:30 p.m."]
@@ -66,6 +71,15 @@ class ClinicInfoFormViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if(defaults.object(forKey:"savedLocale") as! String == "es"){
+          if(dataSegue[1] == "3"){
+            titleLabel2?.font = UIFont(name: (titleLabel2?.font.fontName)!, size:22)
+          }else{
+            titleLabel1?.font = UIFont(name: (titleLabel1?.font.fontName)!, size:22)
+            }
+        }
     }
     
     //MARK: Decision Buttons

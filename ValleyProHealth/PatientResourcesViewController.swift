@@ -13,6 +13,9 @@ class PatientResourcesViewController: UIViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var categoriesPicker: UIPickerView!
     
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var titleLabel: UILabel!
     var categoriesList = [String]()
     var dataToSegue = ["", ""]
     
@@ -35,6 +38,12 @@ class PatientResourcesViewController: UIViewController, UIPickerViewDelegate, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if(defaults.object(forKey:"savedLocale") as! String == "es"){
+            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:16)
+        }
     }
     
     @IBAction func backButtonTap(_ sender: AnyObject) {

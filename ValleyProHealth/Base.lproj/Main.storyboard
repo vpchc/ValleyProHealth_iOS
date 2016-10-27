@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -76,8 +76,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Lp-ADy" userLabel="Title Bar">
                                 <frame key="frameInset" minY="20" width="320" height="61"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr8-oJ-nmp">
-                                        <frame key="frameInset" minX="85" minY="6" width="183" height="47"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr8-oJ-nmp">
                                         <string key="text">Valley Professionals
 Community Health Center</string>
                                         <fontDescription key="fontDescription" name="FranklinGothic-Heavy" family="Franklin Gothic Heavy" pointSize="15"/>
@@ -143,8 +142,7 @@ Community Health Center</string>
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gnF-py-4BS">
-                                        <frame key="frameInset" minX="33" minY="8" width="44" height="45"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gnF-py-4BS">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="BPx-RU-uVb"/>
                                             <constraint firstAttribute="height" constant="45" id="nOu-tV-Ko0"/>
@@ -360,24 +358,24 @@ Community Health Center</string>
                                 <exclude reference="TFV-TF-hho"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IOp-q0-T2E"/>
-                                <exclude reference="LfX-S8-nsM"/>
-                                <exclude reference="WQa-fk-opx"/>
-                                <exclude reference="MAh-c0-1wb"/>
-                                <exclude reference="dKc-Jz-r5F"/>
-                                <exclude reference="q13-9I-uBM"/>
-                                <exclude reference="E4S-Yq-rnv"/>
-                                <exclude reference="dXb-LF-Efp"/>
-                                <exclude reference="ivo-Hv-TzE"/>
                                 <exclude reference="dfD-ek-y4B"/>
                                 <exclude reference="u7m-ee-3OY"/>
                                 <exclude reference="yaI-nI-smS"/>
+                                <exclude reference="IOp-q0-T2E"/>
+                                <exclude reference="LfX-S8-nsM"/>
+                                <exclude reference="WQa-fk-opx"/>
                                 <exclude reference="NAp-Eo-6Za"/>
                                 <exclude reference="qGa-fJ-Voa"/>
                                 <exclude reference="r7g-rK-NZ5"/>
                                 <exclude reference="rXg-dh-fx2"/>
+                                <exclude reference="MAh-c0-1wb"/>
+                                <exclude reference="dKc-Jz-r5F"/>
+                                <exclude reference="q13-9I-uBM"/>
                                 <exclude reference="K4n-14-1r5"/>
                                 <exclude reference="ONm-97-anY"/>
+                                <exclude reference="E4S-Yq-rnv"/>
+                                <exclude reference="dXb-LF-Efp"/>
+                                <exclude reference="ivo-Hv-TzE"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -385,24 +383,24 @@ Community Health Center</string>
                                 <include reference="TFV-TF-hho"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IOp-q0-T2E"/>
-                                <include reference="LfX-S8-nsM"/>
-                                <include reference="WQa-fk-opx"/>
-                                <include reference="MAh-c0-1wb"/>
-                                <include reference="dKc-Jz-r5F"/>
-                                <include reference="q13-9I-uBM"/>
-                                <include reference="E4S-Yq-rnv"/>
-                                <include reference="dXb-LF-Efp"/>
-                                <include reference="ivo-Hv-TzE"/>
                                 <include reference="dfD-ek-y4B"/>
                                 <include reference="u7m-ee-3OY"/>
                                 <include reference="yaI-nI-smS"/>
+                                <include reference="IOp-q0-T2E"/>
+                                <include reference="LfX-S8-nsM"/>
+                                <include reference="WQa-fk-opx"/>
                                 <include reference="NAp-Eo-6Za"/>
                                 <include reference="qGa-fJ-Voa"/>
                                 <include reference="r7g-rK-NZ5"/>
                                 <include reference="rXg-dh-fx2"/>
+                                <include reference="MAh-c0-1wb"/>
+                                <include reference="dKc-Jz-r5F"/>
+                                <include reference="q13-9I-uBM"/>
                                 <include reference="K4n-14-1r5"/>
                                 <include reference="ONm-97-anY"/>
+                                <include reference="E4S-Yq-rnv"/>
+                                <include reference="dXb-LF-Efp"/>
+                                <include reference="ivo-Hv-TzE"/>
                             </mask>
                         </variation>
                     </view>
@@ -436,7 +434,8 @@ Community Health Center</string>
                                     <segue destination="Cfp-XB-gEZ" kind="presentation" modalTransitionStyle="crossDissolve" id="VxX-WU-XUq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iah-xE-Mq3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iah-xE-Mq3">
+                                <frame key="frameInset" minX="16" minY="70" width="177" height="30"/>
                                 <state key="normal" title="Options"/>
                                 <connections>
                                     <segue destination="CGO-qc-VCi" kind="presentation" identifier="OptionsSegue" modalPresentationStyle="formSheet" id="Uj1-sW-3CR"/>
@@ -445,12 +444,12 @@ Community Health Center</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7ny-pL-e5T" firstAttribute="leading" secondItem="Yqg-RR-c8W" secondAttribute="leadingMargin" constant="22" id="GeS-nD-mDW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Iah-xE-Mq3" secondAttribute="trailing" constant="57" id="W6L-Q9-X4Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7ny-pL-e5T" secondAttribute="trailing" constant="22" id="ltX-DR-fpx"/>
-                            <constraint firstItem="Iah-xE-Mq3" firstAttribute="leading" secondItem="Yqg-RR-c8W" secondAttribute="leadingMargin" constant="57" id="qWf-uh-Z9A"/>
-                            <constraint firstItem="Iah-xE-Mq3" firstAttribute="top" secondItem="7ny-pL-e5T" secondAttribute="bottom" constant="20" id="s0I-Ic-PxC"/>
-                            <constraint firstItem="7ny-pL-e5T" firstAttribute="top" secondItem="raF-xa-vNX" secondAttribute="bottom" constant="20" id="sNg-Pt-vT3"/>
+                            <constraint firstAttribute="trailing" secondItem="Iah-xE-Mq3" secondAttribute="trailing" id="Fxv-D8-bf2"/>
+                            <constraint firstItem="Iah-xE-Mq3" firstAttribute="top" secondItem="7ny-pL-e5T" secondAttribute="bottom" constant="20" id="TaT-qM-Bcv"/>
+                            <constraint firstItem="Iah-xE-Mq3" firstAttribute="leading" secondItem="Yqg-RR-c8W" secondAttribute="leading" id="XRg-el-uxc"/>
+                            <constraint firstItem="7ny-pL-e5T" firstAttribute="top" secondItem="raF-xa-vNX" secondAttribute="bottom" constant="20" id="YzE-LB-dvJ"/>
+                            <constraint firstItem="7ny-pL-e5T" firstAttribute="leading" secondItem="Yqg-RR-c8W" secondAttribute="leading" id="iHY-SX-21u"/>
+                            <constraint firstAttribute="trailing" secondItem="7ny-pL-e5T" secondAttribute="trailing" id="vlv-oT-6qB"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="200" height="120"/>
@@ -460,7 +459,7 @@ Community Health Center</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5a-8f-Qxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="231"/>
+            <point key="canvasLocation" x="1860" y="230"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="kpq-fZ-iBw">
@@ -998,6 +997,7 @@ Community Health Center</string>
                         <outlet property="providerLocation" destination="pjQ-IT-5hu" id="a58-ir-WcO"/>
                         <outlet property="providerType" destination="LCU-bL-1QV" id="tLi-0e-Blp"/>
                         <outlet property="providersTable" destination="tX4-1O-pow" id="eYz-33-V8C"/>
+                        <outlet property="titleLabel" destination="LCU-bL-1QV" id="ETo-AD-jiu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f39-Uk-A3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1016,7 +1016,7 @@ Community Health Center</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-WO-abm" userLabel="Title">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-WO-abm" userLabel="Title Bar">
                                 <frame key="frameInset" width="1000" height="1000"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-yq-10d">
@@ -1252,6 +1252,7 @@ Community Health Center</string>
                         <outlet property="crawButton" destination="tui-Rt-zme" id="lFs-Da-e5P"/>
                         <outlet property="msbhcButton" destination="TVG-Yg-L6i" id="Qxr-p2-QFV"/>
                         <outlet property="terreButton" destination="C2u-9J-62q" id="OLr-Cv-LIL"/>
+                        <outlet property="titleLabel" destination="5Nf-AQ-20j" id="sX5-gH-QD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSF-Rp-Xiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1315,7 +1316,7 @@ Community Health Center</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7b-cs-zfN" userLabel="Location Label Container">
-                                <frame key="frameInset" minY="82" width="540" height="31"/>
+                                <frame key="frameInset" minY="82" width="375" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-N6-elh">
                                         <frame key="frameInset" minX="175" width="190" height="31"/>
@@ -1331,17 +1332,11 @@ Community Health Center</string>
                                     <constraint firstItem="b7A-N6-elh" firstAttribute="centerX" secondItem="D7b-cs-zfN" secondAttribute="centerX" id="kXN-xN-Z1y"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-Z8-ZBO">
-                                <frame key="frameInset" height="308"/>
-                                <connections>
-                                    <segue destination="0z3-AD-eU1" kind="embed" identifier="HoursTableSegue" id="5ek-MG-b85"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-pr-iwv" userLabel="Location Image Container">
-                                <frame key="frameInset" minY="121" width="540" height="183"/>
+                                <frame key="frameInset" minY="121" width="370" height="183"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-j8-vvy">
-                                        <frame key="frameInset" width="540" height="183"/>
+                                        <frame key="frameInset" width="370" height="183"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1352,6 +1347,12 @@ Community Health Center</string>
                                     <constraint firstAttribute="trailing" secondItem="KDs-j8-vvy" secondAttribute="trailing" id="ygX-1W-5UP"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-Z8-ZBO">
+                                <frame key="frameInset" minX="21" minY="312" width="333" height="308"/>
+                                <connections>
+                                    <segue destination="0z3-AD-eU1" kind="embed" identifier="HoursTableSegue" id="5ek-MG-b85"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1375,28 +1376,29 @@ Community Health Center</string>
                         <outlet property="cancelButton1" destination="df8-TU-KZu" id="w0a-P4-LhG"/>
                         <outlet property="locationImage1" destination="KDs-j8-vvy" id="Ix7-qC-psQ"/>
                         <outlet property="locationLabel" destination="b7A-N6-elh" id="HUL-Bm-tr1"/>
+                        <outlet property="titleLabel1" destination="6Hc-BZ-Am2" id="5Kn-DS-fZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAD-Ik-RDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="4644"/>
+            <point key="canvasLocation" x="-234.40000000000001" y="4643.9280359820095"/>
         </scene>
         <!--Locations Hours Table View Controller-->
         <scene sceneID="kEA-8F-cRd">
             <objects>
                 <tableViewController id="0z3-AD-eU1" customClass="LocationsHoursTableViewController" customModule="ValleyProHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iao-72-wz8">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="308"/>
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="308"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="gOa-8c-rm8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="9Vi-Ic-E7m">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Vi-Ic-E7m" id="okv-MN-Y6C">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Monday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-Rj-6ve">
@@ -1410,10 +1412,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="XSk-d9-a3d">
-                                        <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XSk-d9-a3d" id="Hgh-Hu-JUU">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sek-MO-xn6">
@@ -1431,10 +1433,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="nof-Ct-rKl">
-                                        <rect key="frame" x="0.0" y="88" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nof-Ct-rKl" id="CFI-OV-GrH">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Tuesday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-QX-2i2">
@@ -1448,10 +1450,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Xev-1C-7UY">
-                                        <rect key="frame" x="0.0" y="132" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xev-1C-7UY" id="mdn-aU-zhj">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toZ-zH-zmO">
@@ -1469,10 +1471,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cr0-Hy-odX">
-                                        <rect key="frame" x="0.0" y="176" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cr0-Hy-odX" id="Dcn-PX-eqC">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Wednesday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-Xo-c9L">
@@ -1486,10 +1488,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Ncf-C2-zz3">
-                                        <rect key="frame" x="0.0" y="220" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ncf-C2-zz3" id="ETZ-2K-osY">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-AZ-GfW">
@@ -1507,10 +1509,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="g6j-ec-BBO">
-                                        <rect key="frame" x="0.0" y="264" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="264" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g6j-ec-BBO" id="I3A-ri-DrW">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Thursday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiN-MQ-BHu">
@@ -1524,10 +1526,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fAJ-gP-qgd">
-                                        <rect key="frame" x="0.0" y="308" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="308" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fAJ-gP-qgd" id="kE7-WP-qa8">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-aY-vvs">
@@ -1545,10 +1547,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="A8A-Wi-Nsg">
-                                        <rect key="frame" x="0.0" y="352" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="352" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A8A-Wi-Nsg" id="KhW-uf-AG6">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Friday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5Q-YZ-vfO">
@@ -1562,10 +1564,10 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="on9-Ny-gL6">
-                                        <rect key="frame" x="0.0" y="396" width="0.0" height="44"/>
+                                        <rect key="frame" x="0.0" y="396" width="333" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="on9-Ny-gL6" id="L82-2E-1Ug">
-                                            <frame key="frameInset" width="320" height="44"/>
+                                            <frame key="frameInset" width="333" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-fp-q5Z">
@@ -3042,7 +3044,9 @@ Community Health Center</string>
                                     <constraint firstItem="MxO-Uy-xc2" firstAttribute="leading" secondItem="l1Y-jf-3Sa" secondAttribute="trailing" id="3b5-jY-Ywq"/>
                                     <constraint firstAttribute="bottom" secondItem="MxO-Uy-xc2" secondAttribute="bottom" id="6Rx-Ff-7J9"/>
                                     <constraint firstItem="l1Y-jf-3Sa" firstAttribute="centerY" secondItem="yXx-Bc-Wre" secondAttribute="centerY" id="Ec5-aa-6FI"/>
-                                    <constraint firstItem="l1Y-jf-3Sa" firstAttribute="leading" secondItem="yXx-Bc-Wre" secondAttribute="leading" constant="16" id="MEj-GN-LNM"/>
+                                    <constraint firstItem="l1Y-jf-3Sa" firstAttribute="leading" secondItem="yXx-Bc-Wre" secondAttribute="leading" constant="16" id="MEj-GN-LNM">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="128" id="esr-YJ-tob">
                                         <variation key="widthClass=compact" constant="60"/>
                                     </constraint>
@@ -3300,6 +3304,7 @@ Community Health Center</string>
                         <outlet property="cancelButton" destination="m62-w3-yTS" id="yuP-6u-ikN"/>
                         <outlet property="categoryLabel" destination="D61-PE-ByD" id="dIb-y4-CxC"/>
                         <outlet property="resourceTable" destination="BYw-9J-Z8w" id="GPg-is-UBl"/>
+                        <outlet property="titleLabel" destination="gZT-BO-9TI" id="HXj-fu-1qG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHG-Kd-HtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3408,7 +3413,9 @@ UGF0aWVudCARERERERERERERERERUmVzb3VyY2VzA
                                     <constraint firstAttribute="height" constant="60" id="Sjf-Sg-E83"/>
                                     <constraint firstItem="jO0-8S-LKl" firstAttribute="top" secondItem="q2s-Uf-SLN" secondAttribute="top" id="YiD-cH-Ork"/>
                                     <constraint firstAttribute="trailing" secondItem="jO0-8S-LKl" secondAttribute="trailing" id="awx-uc-Lre"/>
-                                    <constraint firstItem="PQe-rL-bTM" firstAttribute="leading" secondItem="q2s-Uf-SLN" secondAttribute="leading" constant="16" id="mR9-kz-CQK"/>
+                                    <constraint firstItem="PQe-rL-bTM" firstAttribute="leading" secondItem="q2s-Uf-SLN" secondAttribute="leading" constant="16" id="mR9-kz-CQK">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstItem="jO0-8S-LKl" firstAttribute="leading" secondItem="PQe-rL-bTM" secondAttribute="trailing" id="xwB-3q-hmL"/>
                                 </constraints>
                             </view>
@@ -3430,6 +3437,7 @@ UGF0aWVudCARERERERERERERERERUmVzb3VyY2VzA
                     <connections>
                         <outlet property="backButton" destination="PQe-rL-bTM" id="aEj-XZ-kpZ"/>
                         <outlet property="categoriesPicker" destination="9ja-lk-E5w" id="3Uy-FY-WVB"/>
+                        <outlet property="titleLabel" destination="vA1-dH-rdQ" id="Da4-Cd-XCU"/>
                         <segue destination="DRh-zc-Rur" kind="presentation" identifier="PatientResourcesDataSegue" modalPresentationStyle="formSheet" id="3f0-mr-gOW"/>
                     </connections>
                 </viewController>
@@ -3504,8 +3512,11 @@ UGF0aWVudCARERERERERERERERERUmVzb3VyY2VzA
                                             <segue destination="kX4-gW-U1d" kind="presentation" modalTransitionStyle="crossDissolve" id="VXa-0V-qJZ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jx-Qa-O8R">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jx-Qa-O8R">
                                         <frame key="frameInset" minX="80" minY="222" width="83" height="21"/>
+                                        <string key="text" base64-UTF8="YES">
+UHJvdmlkZXJzEREREeKAqA
+</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3746,17 +3757,18 @@ Resources</string>
                                             <action selector="portalButtonTap:" destination="Q3N-LD-kDH" eventType="touchUpInside" id="9fg-p2-dek"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Portal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7z-0D-Bd0">
-                                        <frame key="frameInset" minX="87" minY="222" width="69" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-BT-0Ph">
+                                        <frame key="frameInset" minX="71" minY="222" width="101" height="47"/>
+                                        <string key="text">Patient
+Portal</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="c7z-0D-Bd0" firstAttribute="centerX" secondItem="qv5-48-qTd" secondAttribute="centerX" id="6VY-DH-pUY"/>
-                                    <constraint firstItem="c7z-0D-Bd0" firstAttribute="top" secondItem="6Va-mS-4my" secondAttribute="bottom" constant="8" id="7s7-Xi-fey"/>
+                                    <constraint firstItem="WS8-BT-0Ph" firstAttribute="top" secondItem="6Va-mS-4my" secondAttribute="bottom" id="7mj-nJ-99n"/>
+                                    <constraint firstItem="WS8-BT-0Ph" firstAttribute="centerX" secondItem="qv5-48-qTd" secondAttribute="centerX" id="Pho-4j-8du"/>
                                     <constraint firstItem="6Va-mS-4my" firstAttribute="top" secondItem="qv5-48-qTd" secondAttribute="top" id="jO4-81-vBU"/>
                                     <constraint firstItem="6Va-mS-4my" firstAttribute="centerX" secondItem="qv5-48-qTd" secondAttribute="centerX" id="qIQ-aZ-RYp"/>
                                 </constraints>
@@ -4024,7 +4036,8 @@ Resources</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-LM-ORs" userLabel="Title Bar">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-LM-ORs" userLabel="Title Bar">
+                                <frame key="frameInset" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0R-aB-tsM">
                                         <frame key="frameInset" minX="8" minY="9" width="41" height="42"/>
@@ -4094,8 +4107,7 @@ ZS4
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-B9-2EY">
-                                        <frame key="frameInset" minX="134" minY="77" width="52" height="57"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-B9-2EY">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="94" id="LqG-WN-N9Q">
                                                 <variation key="widthClass=compact" constant="70"/>
@@ -4124,11 +4136,11 @@ ZS4
                                         <exclude reference="MzV-B9-2EY"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="F7b-eW-edl"/>
+                                        <exclude reference="gpa-GK-NwS"/>
                                         <exclude reference="IlT-o7-ibx"/>
                                         <exclude reference="irV-0O-asg"/>
                                         <exclude reference="lxd-zB-L7O"/>
-                                        <exclude reference="F7b-eW-edl"/>
-                                        <exclude reference="gpa-GK-NwS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -4137,11 +4149,11 @@ ZS4
                                         <include reference="MzV-B9-2EY"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="F7b-eW-edl"/>
+                                        <include reference="gpa-GK-NwS"/>
                                         <include reference="IlT-o7-ibx"/>
                                         <include reference="irV-0O-asg"/>
                                         <include reference="lxd-zB-L7O"/>
-                                        <include reference="F7b-eW-edl"/>
-                                        <include reference="gpa-GK-NwS"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4155,8 +4167,7 @@ ZS4
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vla-IL-Bn3">
-                                        <frame key="frameInset" minX="129" minY="104" width="63" height="68"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vla-IL-Bn3">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="94" id="f9S-du-mAM">
                                                 <variation key="widthClass=compact" constant="70"/>
@@ -4185,11 +4196,11 @@ ZS4
                                         <exclude reference="Vla-IL-Bn3"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="Htm-Ry-AuD"/>
+                                        <exclude reference="chN-WM-HfF"/>
                                         <exclude reference="5mY-jU-4YM"/>
                                         <exclude reference="8NL-Xv-SFY"/>
                                         <exclude reference="bvB-A9-fEU"/>
-                                        <exclude reference="Htm-Ry-AuD"/>
-                                        <exclude reference="chN-WM-HfF"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -4198,11 +4209,11 @@ ZS4
                                         <include reference="Vla-IL-Bn3"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="Htm-Ry-AuD"/>
+                                        <include reference="chN-WM-HfF"/>
                                         <include reference="5mY-jU-4YM"/>
                                         <include reference="8NL-Xv-SFY"/>
                                         <include reference="bvB-A9-fEU"/>
-                                        <include reference="Htm-Ry-AuD"/>
-                                        <include reference="chN-WM-HfF"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4228,6 +4239,8 @@ ZS4
                                 <exclude reference="3kt-Lb-cgL"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="a0F-26-sdf"/>
+                                <exclude reference="Dpc-cf-bjZ"/>
                                 <exclude reference="ErB-gz-fyP"/>
                                 <exclude reference="Gap-cu-DQH"/>
                                 <exclude reference="QTR-xs-Js0"/>
@@ -4236,8 +4249,6 @@ ZS4
                                 <exclude reference="Qd4-8C-KGY"/>
                                 <exclude reference="S0s-6S-eBr"/>
                                 <exclude reference="ZaU-tq-6wB"/>
-                                <exclude reference="a0F-26-sdf"/>
-                                <exclude reference="Dpc-cf-bjZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -4246,6 +4257,8 @@ ZS4
                                 <include reference="3kt-Lb-cgL"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="a0F-26-sdf"/>
+                                <include reference="Dpc-cf-bjZ"/>
                                 <include reference="ErB-gz-fyP"/>
                                 <include reference="Gap-cu-DQH"/>
                                 <include reference="QTR-xs-Js0"/>
@@ -4254,8 +4267,6 @@ ZS4
                                 <include reference="Qd4-8C-KGY"/>
                                 <include reference="S0s-6S-eBr"/>
                                 <include reference="ZaU-tq-6wB"/>
-                                <include reference="a0F-26-sdf"/>
-                                <include reference="Dpc-cf-bjZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -4330,7 +4341,8 @@ ZS4
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Message:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-XI-Lx4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Message:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-XI-Lx4">
+                                <frame key="frameInset" minX="16" minY="123" width="359" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -4351,21 +4363,21 @@ ZS4
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Agj-FO-SpC"/>
-                                <exclude reference="UUh-8k-kas"/>
                                 <exclude reference="4eD-VQ-VHz"/>
                                 <exclude reference="FE7-Eh-mSz"/>
                                 <exclude reference="gdJ-Q8-tfu"/>
+                                <exclude reference="Agj-FO-SpC"/>
+                                <exclude reference="UUh-8k-kas"/>
                                 <exclude reference="g4i-0J-GkY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="Agj-FO-SpC"/>
-                                <include reference="UUh-8k-kas"/>
                                 <include reference="4eD-VQ-VHz"/>
                                 <include reference="FE7-Eh-mSz"/>
                                 <include reference="gdJ-Q8-tfu"/>
+                                <include reference="Agj-FO-SpC"/>
+                                <include reference="UUh-8k-kas"/>
                                 <include reference="g4i-0J-GkY"/>
                             </mask>
                         </variation>
@@ -4495,6 +4507,7 @@ ZS4
                     <connections>
                         <outlet property="cancelButton2" destination="peL-Ct-Fbu" id="y2d-ov-N0b"/>
                         <outlet property="locationImage2" destination="QaM-PN-DP8" id="BqF-rO-wb0"/>
+                        <outlet property="titleLabel2" destination="SCB-2G-zyy" id="F7Y-a4-5g9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFT-Jk-eDt" userLabel="First Responder" sceneMemberID="firstResponder"/>

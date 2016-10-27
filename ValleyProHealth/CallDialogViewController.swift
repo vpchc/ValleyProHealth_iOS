@@ -18,6 +18,7 @@ class CallDialogViewController: UIViewController {
     @IBOutlet weak var crawButton: UIButton!
     @IBOutlet weak var terreButton: UIButton!
     @IBOutlet weak var msbhcButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let defaults = UserDefaults.standard
     
@@ -38,22 +39,7 @@ class CallDialogViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         if(defaults.object(forKey:"savedLocale") as! String == "es"){
-        
-          let spanishCallOffImage = UIImage(named: "call_site_off_es.png")
-          let spanishCallOnImage = UIImage(named: "call_site_on_es.png")
-        
-          bloomButton.setImage(spanishCallOffImage, for: .normal)
-          bloomButton.setImage(spanishCallOnImage, for: .highlighted)
-          cayButton.setImage(spanishCallOffImage, for: .normal)
-          cayButton.setImage(spanishCallOnImage, for: .highlighted)
-          clintButton.setImage(spanishCallOffImage, for: .normal)
-          clintButton.setImage(spanishCallOnImage, for: .highlighted)
-          crawButton.setImage(spanishCallOffImage, for: .normal)
-          crawButton.setImage(spanishCallOnImage, for: .highlighted)
-          terreButton.setImage(spanishCallOffImage, for: .normal)
-          terreButton.setImage(spanishCallOnImage, for: .highlighted)
-          msbhcButton.setImage(spanishCallOffImage, for: .normal)
-          msbhcButton.setImage(spanishCallOnImage, for: .highlighted)
+            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:22)
         }
     }
     

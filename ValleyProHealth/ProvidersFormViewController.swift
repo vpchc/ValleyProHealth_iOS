@@ -16,8 +16,9 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBOutlet weak var providersTable: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    
+    let defaults = UserDefaults.standard
     
     let cellReuseIdentifier = "cell"
     
@@ -54,10 +55,7 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         
         providerType.text = dataSegue[1]
         providerLocation.text = dataSegue[0]
-        
-        var number: CGFloat = 0
-        
-        var providerLength = 0
+        print("dataSegue: " + dataSegue[0])
       
         if(dataSegue[3] == "1"){
             if(dataSegue[2] == "1"){
@@ -95,9 +93,6 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
             }
         }
         
-        
-        providerLength = providersList.count
-        
         // Register the table view cell class and its reuse id
         self.providersTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
@@ -109,6 +104,11 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if(defaults.object(forKey:"savedLocale") as! String == "es"){
+            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:20)
+        }
     }
     
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
@@ -129,11 +129,6 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         // set the text from the data model
         cell.textLabel?.text = self.providersList[(indexPath as NSIndexPath).row]
         cell.textLabel?.textAlignment = .center
-        print("Scale: ")
-        print(UIScreen.main.scale)
-        print("nativeScale: ")
-        print(UIScreen.main.nativeScale)
-        
         
         return cell
     }
