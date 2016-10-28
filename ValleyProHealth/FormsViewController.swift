@@ -24,41 +24,53 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var finalFiles = [String]()
     
     let locations = [
-        NSLocalizedString("Select a Location", comment: "Forms Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+        NSLocalizedString("Select a location", comment: "Forms Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
     let categories = [
-        "Select a Category",
+        "Select a category",
         "Consent",
         "New Patient",
         "Notice",
         "Sliding Fee Scale",
-        "Student Forms"]
+        "Student"]
+    let categoriesSpanish = [
+        "Seleccione una categoría",
+        "Consentimiento",
+        "Nuevo Paciente",
+        "Darse Cuenta",
+        "Sliding Fee Scale"]
     let consentForms = [
-        "Select a Form",
+        "Select a form",
         "Behavioral Health Release of Info",
         "Minor Child",
         "Release of Information",
         "Release of Records",
         "Telemedicine"]
+    let consentFormsSpanish = [
+        "Seleccione un formulario",
+        "Liberación de información"]
     let newpatForms = [
-        "Select a Form",
-        "Adult",
-        "Child"]
+        NSLocalizedString("Select a form", comment: "Forms New Patient Directions"),
+        NSLocalizedString("Adult", comment: "Forms New Patient Selection"),
+        NSLocalizedString("Child", comment: "New Patient Selection")]
     let noticeForms = [
-        "Select a Form",
-        "Acknowledgement of Bill of Rights",
-        "Bill of Rights",
-        "Privacy Practice"]
+        NSLocalizedString("Select a form", comment: "Forms Notice Directions"),
+        NSLocalizedString("Acknowledgment of Bill of Rights", comment: "Forms Notic Selection"),
+        NSLocalizedString("Bill of Rights", comment: "Forms Notice Selection"),
+        NSLocalizedString("Privacy Practice", comment: "Forms Notice Selection")]
     let slidingForms = [
-        "Select a Form",
+        NSLocalizedString("Select a form", comment: "Sliding Fee Scale Directions"),
         "Sliding Fee Scale"]
     let studentForms = [
         "Select a Form",
         "ISHAA Physical",
         "MSBHC Enrollment"]
     
+    let websiteEnglishPath = "https://valleyprohealth.org/files/forms/en/"
+    let websiteSpanishPath = "https://valleyprohealth.org/files/forms/es/"
+    
     let consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
     let newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
-    let noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "sliding_fee_scale_reqs.pdf"]
+    let noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "notice_privacy_practices.pdf"]
     let recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
     let slidingFiles = ["sliding_fee_scale_reqs.pdf"]
     let studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
@@ -113,11 +125,20 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if(pickerView == locationPicker){
             return locations.count
         }else if(pickerView == categoriesPicker){
-            return categories.count
+            if(defaults.object(forKey:"savedLocale") as! String == "es"){
+                return categoriesSpanish.count
+            }else{
+                return categories.count
+            }
         }else{
             if(categorySelection == 1){
-                finalForms = consentForms
-                return consentForms.count
+                if(defaults.object(forKey:"savedLocale") as! String == "es"){
+                    finalForms = consentFormsSpanish
+                    return consentFormsSpanish.count
+                }else{
+                    finalForms = consentForms
+                    return consentForms.count
+                }
             }else if(categorySelection == 2){
                 finalForms = newpatForms
                 return newpatForms.count
@@ -139,7 +160,11 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if(pickerView == locationPicker){
             return locations[row]
         }else if(pickerView == categoriesPicker){
-            return categories[row]
+            if(defaults.object(forKey:"savedLocale") as! String == "es"){
+                return categoriesSpanish[row]
+            }else{
+                return categories[row]
+            }
         }else{
             return finalForms[row]
         }
@@ -169,40 +194,53 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             }
         }else{
             if(row != 0){
+                var websitePath = ""
+                var languageCheck = 0
+                if(defaults.object(forKey:"savedLocale") as! String == "es"){
+                    websitePath = websiteSpanishPath
+                    languageCheck += 1
+                }else{
+                    websitePath = websiteEnglishPath
+                }
                 //Release of Records selected which has different forms for each location
-                if(categorySelection == 1 && row == 4){
-                    websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + recordFiles[locationSelection - 1]
-                    //New Patient selected which has different forms for some locations
+                if(categorySelection == 1 && row == 4 && languageCheck == 0){
+                    websiteUrlCombine = websitePath + recordFiles[locationSelection - 1]
+                //New Patient selected which has different forms for some locations
                 }else if(categorySelection == 2){
                     //Adult Selected
                     if(row == 1){
                         if(locationSelection == 5){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[2]
+                            websiteUrlCombine = websitePath + newpatFiles[2]
                         }else if(locationSelection == 4){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[1]
+                            websiteUrlCombine = websitePath + newpatFiles[1]
                         }else{
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[0]
+                            websiteUrlCombine = websitePath + newpatFiles[0]
                         }
                         //Child Selected
                     }else if(row == 2){
                         if(locationSelection == 5){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[5]
+                            websiteUrlCombine = websitePath + newpatFiles[5]
                         }else if(locationSelection == 4){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[4]
+                            websiteUrlCombine = websitePath + newpatFiles[4]
                         }else{
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + newpatFiles[3]
+                            websiteUrlCombine = websitePath + newpatFiles[3]
                         }
                     }
-                    //Everything besides new patient and release of records
+                //Everything besides new patient and release of records
                 }else{
                         if(categorySelection == 1){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" +  consentFiles[row - 1]
+                            if(languageCheck == 0){
+                                websiteUrlCombine = websitePath +  consentFiles[row - 1]
+                            }else{
+                                print("Spanish Consent")
+                                websiteUrlCombine = websitePath + consentFiles[2]
+                            }
                         }else if(categorySelection == 3){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + noticeFiles[row - 1]
+                                websiteUrlCombine = websitePath + noticeFiles[row - 1]
                         }else if(categorySelection == 4){
-                            websiteUrlCombine = "https://valleyprohealth.org/files/forms/en/" + slidingFiles[row - 1]
+                            websiteUrlCombine = websitePath + slidingFiles[row - 1]
                         }else if(categorySelection == 5){
-                            websiteUrlCombine = "https://valleyprohealth.org/file s/forms/en/" + studentFiles[row - 1]
+                            websiteUrlCombine = websitePath + studentFiles[row - 1]
                         }
                 }
                 self.view.makeToast("Download Form...")
