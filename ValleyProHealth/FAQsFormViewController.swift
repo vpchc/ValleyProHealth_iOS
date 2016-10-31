@@ -10,18 +10,16 @@ import UIKit
 
 class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: Buttons
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var cancelButton: UIButton!
-    //MARK: Labels
+    // MARK: Labels
     @IBOutlet weak var categoryLabel: UILabel!
-    //MARK: Table Views
+    // MARK: Table Views
     @IBOutlet weak var faqsTable: UITableView!
    
-    let test = NSLocalizedString("This be a test", comment: "Test of localization")
-    
-    //MARK: Strings
-    let cellReuseIdentifier = "cell"
-    //MARK: Arrays
+    // MARK: - Global Variables -
+    // MARK: Arrays
     let billQuestions = [
         NSLocalizedString("What types of insurance do you accept?", comment: "A billing question in the faq section"),
         NSLocalizedString("Can I be seen by a provider even if I do not have health insurance?", comment: "A billing question in the faq section"),
@@ -89,13 +87,16 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
     var answersList = [String]()
     var dataSegue = ["", ""]
     var questionsList = [String]()
+    //MARK: Strings
+    let cellReuseIdentifier = "cell"
 
-    //MARK: View Lifecyle
+    //MARK: - View Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
         questionAnswerSetup()
         
+        //Set category label text
         categoryLabel.text = dataSegue[0]
         
         //Setup Table
@@ -109,15 +110,14 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Decision Buttons
+    //MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: Table Setup
+    //MARK: - Table Setup -
     func questionAnswerSetup(){
     /*
       Arguements: None
@@ -146,6 +146,7 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
       
         //Formula is used to get the same index so that rows are not skipped
         let rowFormula = (indexPath as NSIndexPath).row - (((indexPath as NSIndexPath).row + 1) / 2)
+        
         if((indexPath as NSIndexPath).row % 2 == 0){//Even row
             if((indexPath as NSIndexPath).row == 0){
                 cell.textLabel?.text = self.questionsList[0]

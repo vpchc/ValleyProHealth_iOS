@@ -11,12 +11,14 @@ import Toast_Swift
 
 class FeedbackViewController: UIViewController {
 
-    //MARK: Buttons
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
     
-    //MARK: Strings
+    // MARK: - Global Variables -
+    // MARK: Strings
     let toastRate = "Opening App Store..."
     
     //MARK: View Lifecyle
@@ -27,14 +29,13 @@ class FeedbackViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: Decision Buttons
+    //MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    //MARK: Rate Button
+    //MARK: - Rate Button Tap -
     @IBAction func ratebuttonTap(_ sender: AnyObject) {
-        //Open valleyprohealth page in app store
         self.view.makeToast(toastRate)
         
         //Open ValleyProHealth App Store Page
@@ -43,7 +44,4 @@ class FeedbackViewController: UIViewController {
         application.openURL(appPageURL)
        
     }
-    
-    
-     
 }

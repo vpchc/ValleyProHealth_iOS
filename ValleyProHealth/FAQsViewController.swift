@@ -10,12 +10,14 @@ import UIKit
 
 class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    //MARK: Buttons
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var backButton: UIButton!
-    //MARK: Pickers
+    // MARK: Pickers
     @IBOutlet weak var categoriesPicker: UIPickerView!
 
-    //MARK: Arrays
+    // MARK: - Global Variables -
+    // MARK: Arrays
     var categoriesList = [
         NSLocalizedString("Select a Category", comment: "A selection in the FAQs Category List"),
         NSLocalizedString("Billing/Insurance", comment: "A selection in the FAQs Category List"),
@@ -24,7 +26,7 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         NSLocalizedString("Services", comment: "A selection in the FAQs Category List")]
     var dataToSegue = ["", ""]
     
-    //MARK: View Lifecyle
+    // MARK: - View Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +38,12 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: Decision Buttons
+    // MARK: - Navigation Buttons -
     @IBAction func backButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: PickerSetup
+    // MARK: - Picker Setup -
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -61,7 +63,7 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         }
     }
     
-    //MARK: Segue Setup
+    // MARK: - Segue Setup -
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FAQsDataSegue" {
             if let destination = segue.destination as? FAQsFormViewController{

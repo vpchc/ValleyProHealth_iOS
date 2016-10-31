@@ -42,6 +42,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if(savedLocation == 0 || savedLocation == 6){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
+            dataSegueSetup(row: savedLocation, pickerIndex: 0)
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
             servicesPicker.isHidden = false
         }
@@ -80,6 +81,17 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    
+    func dataSegueSetup(row: Int, pickerIndex: Int){
+        if(pickerIndex == 0){
+            dataToSegue[0] = locations[row]
+            dataToSegue[2] = String(row)
+        }else{
+            dataToSegue[1] = services[row]
+            dataToSegue[3] = String(row)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ServicesDataSegue" {
             if let destination = segue.destination as? ServicesFormViewController{
@@ -97,15 +109,13 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if(pickerView == locationPicker){
             if(row != 0){
                 servicesPicker.isHidden = false;
-                dataToSegue[0] = locations[row]
-                dataToSegue[2] = String(row)
+                dataSegueSetup(row: row, pickerIndex: 0)
             }else{
                 servicesPicker.isHidden = true;
             }
         }else{
             if(row != 0){
-                dataToSegue[1] = services[row]
-                dataToSegue[3] = String(row)
+                dataSegueSetup(row: row, pickerIndex: 1)
                 servicesPicker.selectRow(0, inComponent: 0, animated: false)
                 self.performSegue(withIdentifier: "ServicesDataSegue", sender: self)
             }

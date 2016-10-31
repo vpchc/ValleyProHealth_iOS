@@ -10,7 +10,8 @@ import UIKit
 
 class CallDialogViewController: UIViewController {
  
-    //MARK: Buttons
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var bloomButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var cayButton: UIButton!
@@ -20,9 +21,10 @@ class CallDialogViewController: UIViewController {
     @IBOutlet weak var msbhcButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     
+    // MARK: - Global Variables -
+    // MARK: Defaults
     let defaults = UserDefaults.standard
-    
-    //MARK: Strings
+    // MARK: Strings
     let toastCallBloom = NSLocalizedString("Calling Bloomingdale Location...", comment: "Toast when calling Bloomingdale location")
     let toastCallCay = NSLocalizedString("Calling Cayuga Location...", comment: "Toast when calling Cayuga location")
     let toastCallClint = NSLocalizedString("Calling Clinton Location...", comment: "Toast when calling Clinton location")
@@ -30,25 +32,25 @@ class CallDialogViewController: UIViewController {
     let toastCallTerre = NSLocalizedString("Calling Terre Haute Location...", comment: "Toast when calling Terre Haute location")
     let toastCallMSBHC = NSLocalizedString("Calling MSBHC Location...", comment: "Toast when calling MSBHC location")
     
-    //MARK: View Lifecyle
+    //MARK: - View Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     override func viewWillAppear(_ animated: Bool) {
         if(defaults.object(forKey:"savedLocale") as! String == "es"){
             titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:22)
         }
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
-    //MARK: Decision Buttons
+    //MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: Call Button Taps
+    //MARK: - Call Button Taps -
     @IBAction func bloomButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallBloom)
         let telenumber = URL(string: "tel://7654989000")!
