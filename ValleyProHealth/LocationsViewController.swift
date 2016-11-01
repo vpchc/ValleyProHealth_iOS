@@ -11,14 +11,15 @@ import MapKit
 
 class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    //MARK: Buttons
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var backButton: UIButton!
-    //MARK: Pickers
+    // MARK: Pickers
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var optionPicker: UIPickerView!
-    //MARK: Defaults
-    let defaults = UserDefaults.standard
-    //MARK: Arrays
+    
+    // MARK: - Global Variables -
+    // MARK: Arrays
     var dataToSegue = ["", "", "", ""]
     let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
     let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.407648"]
@@ -28,43 +29,47 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         NSLocalizedString("Select an option", comment: "Locations Options Directions"),
         NSLocalizedString("Clinic Info", comment: "Locations Options Selection"),
         NSLocalizedString("Get Directions", comment: "Locations Options Selection")]
-    //MARK: String
+    // MARK: Defaults
+    let defaults = UserDefaults.standard
+    // MARK: Ints
     var locationIndex = 0
 
-    //MARK: View Lifecyle
+    // MARK: - View Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Setup Pickers
+        // Connect data to pickers
         self.locationPicker.delegate = self
         self.locationPicker.dataSource = self
         self.optionPicker.delegate = self
         self.optionPicker.dataSource = self
         
-        //Set the default locationPicker value based on the location Preference.
-        //If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
+        // Set the default locationPicker value based on the location Preference.
+        // If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
         if(savedLocation == 0 || savedLocation == 6){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
             locationDataSegueSetup(row: savedLocation)
+            optionPicker.isHidden = false;
         }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: Decision Buttons
+    // MARK: - Navigation Buttons -
     @IBAction func backButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    //MARK: Picker Setup
+    // MARK: - Picker Setup -
+    // Number of components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    // Number of rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if( pickerView == locationPicker){
             return locations.count
@@ -72,6 +77,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             return options.count
         }
     }
+    // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if( pickerView == locationPicker){
             return locations[row]
@@ -80,22 +86,23 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
         }
     }
+    // Row selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(pickerView == locationPicker){
             if(row != 0){
                 locationDataSegueSetup(row: row)
+                 optionPicker.isHidden = false;
             }else{
                 optionPicker.isHidden = true;
             }
         }else if(pickerView == optionPicker && row != 0){
             //Resets the Picker after a selection is made
             optionPicker.selectRow(0, inComponent: 0, animated: false)
-            
             if(row == 1){//Clinic Hours Selection
-                if(locationIndex == 3){
+                if(locationIndex == 3){// Clinton Location
                     self.performSegue(withIdentifier: "ClinicInfoDataSegue2", sender: self)
-                }else{
+                }else{ // All other locations
                     self.performSegue(withIdentifier: "ClinicInfoDataSegue1", sender: self)
                 }
             }else{//Directions Selection
@@ -128,7 +135,8 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
     }
-    //MARK: Segue Setup
+    
+    //MARK: - Segue Setup -
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClinicInfoDataSegue1" || segue.identifier == "ClinicInfoDataSegue2"{
             if let destination = segue.destination as? ClinicInfoFormViewController{
@@ -139,7 +147,10 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
     func locationDataSegueSetup(row: Int){
-        optionPicker.isHidden = false;
+    /*   Arguments: row - location picker row selected by user
+         Description: Setup the segue data
+         Returns: Nothing
+    */
         //Get chosen location ready to send in segue
         dataToSegue[0] = locations[row]
         dataToSegue[1] = String(row)

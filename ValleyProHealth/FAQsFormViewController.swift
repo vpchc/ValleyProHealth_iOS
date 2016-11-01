@@ -138,28 +138,30 @@ class FAQsFormViewController: UIViewController, UITableViewDelegate, UITableView
             answersList = servicesAnswers
         }
     }
+    // Number of sections
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.questionsList.count * 2
     }
+    // Row selection
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.faqsTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
       
-        //Formula is used to get the same index so that rows are not skipped
+        // Formula is used to get the same index so that rows are not skipped
         let rowFormula = (indexPath as NSIndexPath).row - (((indexPath as NSIndexPath).row + 1) / 2)
         
-        if((indexPath as NSIndexPath).row % 2 == 0){//Even row
+        if((indexPath as NSIndexPath).row % 2 == 0){// Even row
             if((indexPath as NSIndexPath).row == 0){
                 cell.textLabel?.text = self.questionsList[0]
             }else{
                 cell.textLabel?.text = self.questionsList[rowFormula]
             }
            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-        }else{//Odd row
+        }else{// Odd row
             cell.textLabel?.text = self.answersList[rowFormula]
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20.0)
         }
         
-        //Used to wrap the words
+        // Used to wrap the words
         cell.textLabel?.numberOfLines = 0
         
         return cell

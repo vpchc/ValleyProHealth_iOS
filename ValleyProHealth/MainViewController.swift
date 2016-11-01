@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  ValleyProHealth
 //
-//  Created by Brice Local Account on 7/21/16.
+//  Created by Brice Webster on 7/21/16.
 //  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
 //
 
@@ -13,146 +13,167 @@ import Toast_Swift
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
+    // MARK: - Outlets -
+    // MARK: Buttons 
+    @IBOutlet weak var optionsButton: UIButton!
+    // MARK: Container Views
+    @IBOutlet weak var containerView: UIView!
+    // MARK: Labels
+    @IBOutlet weak var twitterFeed: MarqueeLabel!
+    // MARK: Page Control
     @IBOutlet weak var pageControl: UIPageControl!
     
-    @IBOutlet weak var containerView: UIView!
-    
-    @IBOutlet weak var twitterBird: UIButton!
-
-    @IBOutlet weak var twitterFeed: MarqueeLabel!
-    
-    
-    @IBOutlet weak var optionsButton: UIButton!
-    
-    let informativeText = NSLocalizedString("Check here for latest news and information concerning Valley Professionals Community Health Center.", comment: "Twitter Feed Informative Text")
-    
-    let defaults = UserDefaults.standard
-    
-    var pageIndex = 0
-    var pagerController: MainPageViewController!
-    
+    // MARK: - Global Variables -
+    // MARK: Arrays
     let twitterTips = [
         NSLocalizedString("Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!", comment: "Twitter Tip"),
         NSLocalizedString("If you are not able to make an appointment, please call to let us know.", comment: "Twitter Tip"),
         NSLocalizedString("Refills can take up to 48 business hours to refill.", comment: "Twitter Tip"), NSLocalizedString("Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!", comment: "Twitter Tip")]
+    // MARK: Controlller Reference
+    var pagerController: MainPageViewController!
+    // MARK: Defaults
+    let defaults = UserDefaults.standard
+    // MARK: Ints
+    var pageIndex = 0
+    // MARK: Strings
+    let informativeText = NSLocalizedString("Check here for latest news and information concerning Valley Professionals Community Health Center.", comment: "Twitter Feed Informative Text")
     
+    // MARK: - View Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        // Checks if there is a network connection and then updates the bus schedule if there is
         if(Reachability.isConnectedToNetwork() == true){
             getBusSchedule()
         }
+        
+        // Setup twitter feed
         twitterSetup()
         
-        //Listener for exiting the app and then re-entering
+        // Listener for exiting the app and then re-entering
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
-    
     override func viewDidAppear(_ animated: Bool) {
-        //Runs the initial location preferences set.
+        // Initial set of the locationPreference default
         if(defaults.object(forKey:"locationPreference") == nil){
             self.performSegue(withIdentifier: "LocationPreferenceSegue", sender: self)
         }
+        // Inital set of the savedLocale default
         if(defaults.object(forKey:"savedLocale") == nil){
             let language = Bundle.main.preferredLocalizations.first
             defaults.set(language!, forKey: "savedLocale")
         }
     }
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     func didBecomeActive(){
-        //Runs when the user re-enters the app
+    /*   
+         Arguments:   None
+         Description: Updates the bus schedule and twitter feed when the user re-enters the app after exiting
+         Returns:     Nothing
+    */
+        // Checks if there is a network connection and then updates the bus schedule if there is
         if(Reachability.isConnectedToNetwork() == true){
             getBusSchedule()
         }
+        
+        // Twitter Feed setup
         twitterSetup()
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+    // MARK: - Network Functions -
+    // MARK: Bus Schedule Update
     func getBusSchedule(){
+    /*
+         Arguments:   None
+         Description: Updates the bus schedule from the html file at valleyprohealh.org/info/bus_app_schedule.html and stores it
+                      in the default "busSchedule"
+         Returns:     Nothing
+    */
         var htmlString = ""
         let urlString = "https://valleyprohealth.org/info/bus_app_schedule.html"
-            guard let scheduleURL = URL(string: urlString) else {
-            print("Error: \(urlString) doesn't seem to be a valid URL")
-            return
-        }
-    
+        let scheduleURL = URL(string: urlString)
+        
+        // Attempt to connect to the website with the schedule, get the html from the page, and then parse out the schedule for the day
         do {
-            htmlString = try String(contentsOf: scheduleURL, encoding: .ascii)
+            htmlString = try String(contentsOf: scheduleURL!, encoding: .ascii)
             let htmlSplit = htmlString.components(separatedBy: "\n")
-            print(htmlSplit.count)
             defaults.set(htmlSplit, forKey: "busSchedule")
             
         } catch let error {
             print("Error: \(error)")
         }
         
-        //Sets the date of when the bus schedule was stored.
+        // Sets the date of when the bus schedule was stored to be checked later for an outdated schedule
         let date = Date()
         let cal = Calendar.current
         let day = cal.ordinality(of: .day, in: .year, for: date)
         defaults.set(day, forKey: "busScheduleDay")
     }
-    
+    // MARK: Twitter Feed Update
     func twitterSetup(){
         var feedText = ""
         var htmlString = ""
         let urlString = "https://twitter.com/search?f=tweets&q=from%3AValleyProHealth&src=typd"
         let scheduleURL = URL(string: urlString)
 
+        // Attempt to connect to twitter, get the latest tweet from @valleyprohealth, then put together a feed string
         do {
             htmlString = try String(contentsOf: scheduleURL!, encoding: .ascii)
             let htmlSplit = htmlString.components(separatedBy: "<p class=\"TweetTextSize  js-tweet-text tweet-text\" lang=\"en\" data-aria-label-part=\"0\">")
             let refinedSplit = htmlSplit[1].components(separatedBy: "</p>")
-            //Converts any html special characters to 
+            
+            //Converts any html special characters to usable characters
             let tweet = String(htmlEncodedString: refinedSplit[0])
+            
+            // Final string used in feed when there is a network connection
             feedText = tweet + " " + twitterTips[Int(arc4random_uniform(4))] + " " + informativeText
         } catch let error {
+            // Final string used in feed when there is no network connection
             feedText = informativeText + " " + twitterTips[Int(arc4random_uniform(4))]
             print("Error: \(error)")
         }
+        
+        // Sets the twitter feed text in the feed
         twitterFeed.text = feedText
         twitterFeed.restartLabel()
     }
 
-    
-    //This is used instead of perform segue to get the anchor point just right, otherwise it is off-center.
+    // MARK: - Menu Setup -
+    // This is used instead of perform segue to get the anchor point just right, otherwise it is off-center.
     @IBAction func optionButtonsTap(_ sender: AnyObject) {
-        // get a reference to the view controller for the popover
+        // Get a reference to the view controller for the popover
         let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menuPopover")
         
-        // set the presentation style
+        // Set the presentation style
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController!.delegate = self
         
-        // set up the popover presentation controller
+        // Set up the popover presentation controller
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.sourceView = sender as? UIView // button
         popController.popoverPresentationController?.sourceRect = sender.bounds
         
-        // present the popover
+        // Present the popover
         self.present(popController, animated: true, completion: nil)
     }
-    
+    // Makes sure that the menu is displayed as a popover on iphones
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        // return UIModalPresentationStyle.FullScreen
         return UIModalPresentationStyle.none
     }
     
+    // MARK: - Page Control -
+    // Changes page when user taps page control
     @IBAction func pageControlValueChange(_ sender: AnyObject) {
-        if(pageIndex == 0){
+        if(pageIndex == 0){ // If on first page, page right
             pagerController.setViewControllers([orderedViewControllers[1]],
                                                   direction: .forward,
                                                   animated: true,
                                                   completion: nil)
             pageIndex += 1
             
-        }else{
+        }else{// If on second page, page left
             pagerController.setViewControllers([orderedViewControllers[0]],
                                                    direction: .reverse,
                                                    animated: true,
@@ -160,14 +181,12 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             pageIndex -= 1
         }
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mainPageViewController = segue.destination as? MainPageViewController {
             mainPageViewController.pageControlDelegate = self
         }
         if (segue.identifier == "PagerContainerSegue") {
-            //This is used to reference the paging left and right functions
+            // This is used to reference the paging left and right functions
             let childViewController = segue.destination as! MainPageViewController
             pagerController = childViewController
         }
@@ -175,6 +194,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
 }
 
+// Makes the page control indicator change
 extension MainViewController: MainPageViewControllerDelegate {
     
     func mainPageViewController(_ mainPageViewController: MainPageViewController,

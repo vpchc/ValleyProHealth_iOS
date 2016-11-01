@@ -25,9 +25,11 @@ class BusTableViewController: UITableViewController {
     }
 
     //MARK: - TableSetup -
+    // Number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    // Number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }

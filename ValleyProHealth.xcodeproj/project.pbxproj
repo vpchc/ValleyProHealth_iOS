@@ -37,11 +37,9 @@
 		DD7419621D92D27300C2694D /* FAQsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419611D92D27200C2694D /* FAQsFormViewController.swift */; };
 		DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */; };
 		DD7419661D95A06000C2694D /* MSBHCTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */; };
-		DD75C9931DAD545E00BD686D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75C9921DAD545E00BD686D /* MessageViewController.swift */; };
 		DD7D1BF91DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D1BF81DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift */; };
 		DD7D1BFB1DBA43D400E5EDD2 /* ClinicInfoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D1BFA1DBA43D400E5EDD2 /* ClinicInfoFormViewController.swift */; };
 		DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */; };
-		DD9F3BB21DB5298D00A2F8FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */; };
 		DDC194781D9D9467006B1A58 /* LocationPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */; };
 		DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */; };
 		DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */; };
@@ -111,11 +109,9 @@
 		DD7419611D92D27200C2694D /* FAQsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsFormViewController.swift; sourceTree = "<group>"; };
 		DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientResourcesFormViewController.swift; sourceTree = "<group>"; };
 		DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSBHCTrackerViewController.swift; sourceTree = "<group>"; };
-		DD75C9921DAD545E00BD686D /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		DD7D1BF81DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsHoursTableViewController.swift; path = ../LocationsHoursTableViewController.swift; sourceTree = "<group>"; };
 		DD7D1BFA1DBA43D400E5EDD2 /* ClinicInfoFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClinicInfoFormViewController.swift; path = ../ClinicInfoFormViewController.swift; sourceTree = "<group>"; };
 		DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
-		DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreferenceViewController.swift; sourceTree = "<group>"; };
 		DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +225,6 @@
 				B878ACF91D8A1E940098DD10 /* LocationsViewController.swift */,
 				DD22EC291D74922E00E0518F /* MainPageViewController.swift */,
 				DD73348F1D40FCBC008A9023 /* MainViewController.swift */,
-				DD9F3BB11DB5298D00A2F8FE /* MenuViewController.swift */,
-				DD75C9921DAD545E00BD686D /* MessageViewController.swift */,
 				DD7419651D95A06000C2694D /* MSBHCTrackerViewController.swift */,
 				DD9F23951D9EC00F00C5E7B7 /* OptionTableViewController.swift */,
 				DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */,
@@ -343,7 +337,7 @@
 				TargetAttributes = {
 					DD7334891D40FCBC008A9023 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = XZ8WZZTXA7;
+						DevelopmentTeam = DBBH97JPKH;
 						LastSwiftMigration = 0800;
 					};
 					DD73349D1D40FCBC008A9023 = {
@@ -569,7 +563,6 @@
 			files = (
 				DD7334901D40FCBC008A9023 /* MainViewController.swift in Sources */,
 				B878AD021D8A24A60098DD10 /* FAQsViewController.swift in Sources */,
-				DD9F3BB21DB5298D00A2F8FE /* MenuViewController.swift in Sources */,
 				DDC1947A1D9DAB53006B1A58 /* OptionsViewController.swift in Sources */,
 				DD41912B1DA6D291002C9706 /* BusTableViewController.swift in Sources */,
 				DDD9A9C31D819882000924E8 /* PageContentViewController.swift in Sources */,
@@ -581,7 +574,6 @@
 				DD7D1BF91DB9364F00E5EDD2 /* LocationsHoursTableViewController.swift in Sources */,
 				B878ACFE1D8A214D0098DD10 /* FormsViewController.swift in Sources */,
 				DD7D1BFB1DBA43D400E5EDD2 /* ClinicInfoFormViewController.swift in Sources */,
-				DD75C9931DAD545E00BD686D /* MessageViewController.swift in Sources */,
 				DD7419641D92D2F300C2694D /* PatientResourcesFormViewController.swift in Sources */,
 				DDC1947C1D9DB7D2006B1A58 /* FeedbackViewController.swift in Sources */,
 				DD9F23961D9EC01000C5E7B7 /* OptionTableViewController.swift in Sources */,
@@ -781,7 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8WZZTXA7;
+				DEVELOPMENT_TEAM = DBBH97JPKH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ValleyProHealth",
@@ -789,7 +781,7 @@
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vpchc.ValleyProHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -805,7 +797,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8WZZTXA7;
+				DEVELOPMENT_TEAM = DBBH97JPKH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ValleyProHealth",
@@ -813,7 +805,7 @@
 				INFOPLIST_FILE = ValleyProHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.VPCHC.ValleyProHealth;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vpchc.ValleyProHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;

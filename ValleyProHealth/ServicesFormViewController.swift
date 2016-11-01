@@ -10,12 +10,17 @@ import UIKit
 
 class ServicesFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: - Outlets -
+    // MARK: Buttons
     @IBOutlet weak var cancelButton: UIButton!
+    // MARK: Labels
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var servicesLabel: UILabel!
+    // MARK: TableViews
     @IBOutlet weak var servicesTable: UITableView!
     
-    let cellReuseIdentifier = "cell"
+    // MARK: - Global Variables -
+     // MARK: Arrays
     let bhServices = [
         NSLocalizedString("•Child/Adolescent counseling", comment: "Services BH"),
         NSLocalizedString("•Crisis counseling", comment: "Services BH"),
@@ -68,13 +73,18 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         NSLocalizedString("•Vasectomy", comment: "Services Primary Care")]
     var servicesList = [String]()
     var dataSegue = ["", "", "", ""]
-    
+    // MARK: Strings
+    let cellReuseIdentifier = "cell"
+   
+    // MARK: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set location and services text
         locationLabel.text = dataSegue[0]
         servicesLabel.text = dataSegue[1]
         
+        // Set servicesList based on users location
         if(dataSegue[3] == "1"){
             servicesList = bhServices
         }else if(dataSegue[3] == "2"){
@@ -92,30 +102,29 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         // Register the table view cell class and its reuse id
         self.servicesTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
-        // This view controller itself will provide the delegate methods and row data for the table view.
+        // Connect data to services table
         servicesTable.delegate = self
         servicesTable.dataSource = self
         
+        // Used for variable row height
         servicesTable.estimatedRowHeight = 44.0
         servicesTable.rowHeight = UITableViewAutomaticDimension
-        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
          self.dismiss(animated: true, completion: nil)
     }
     
-    // number of rows in table view
+    // MARK: - Table Setup -
+    // Number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.servicesList.count
     }
-    
-    // create a cell for each table view row
+    // Cell create
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one

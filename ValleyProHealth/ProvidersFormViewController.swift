@@ -2,7 +2,7 @@
 //  ProvidersFormViewController.swift
 //  ValleyProHealth
 //
-//  Created by Brice Local Account on 9/14/16.
+//  Created by Brice Webster on 9/14/16.
 //  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
 //
 
@@ -11,52 +11,52 @@ import UIKit
 
 class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - Outlets -
+    // MARK: Buttons
+    @IBOutlet weak var cancelButton: UIButton!
+    // MARK: Labels
     @IBOutlet weak var providerType: UILabel!
     @IBOutlet weak var providerLocation: UILabel!
-    @IBOutlet weak var cancelButton: UIButton!
-    
+     @IBOutlet weak var titleLabel: UILabel!
+    // MARK: TableViews
     @IBOutlet weak var providersTable: UITableView!
-    @IBOutlet weak var titleLabel: UILabel!
     
-    let defaults = UserDefaults.standard
-    
-    let cellReuseIdentifier = "cell"
-    
+    // MARK: - Global Variables -
+    // MARK: Arrays
     var dataSegue = ["","","",""]
-    
     var dental_bloom = ["Dr. Dane Mishler, DDS"]
     var bh_bloom = ["Dr. Paul Taraska, MD", "Michelle Bond, LMHCA"]
     var med_bloom = ["Christi Busenbark, FNP-C","Tammi Mundy, FNP-C","Louwanna Wallace, FNP-C"]
-    
     var dental_cay = ["Dr. Nichole Barnett, DDS"]
     var bh_cay = ["Dr. Paul Taraska, MD", "Johnathan Detwiler, MS"]
     var med_cay = ["Dr. Bing Gale, MD","Renae Norman, FNP-C"]
-    
     var dental_clint = ["Currently none at this location"]
     var bh_clint = ["Dr. Paul Taraska, MD", "Dr. Julia Wernz, PhD, HSPP", "Michelle Bond, LMHCA", "Linda Lonneman, LCSW", "David McIntyre, LCAC", "Heather Woods, LMHCA"]
     var med_clint = ["Dr. Aziz Abed, MD", "Dr. Bing Gale, MD", "Dr. Steven Macke, MD", "Gretchen Blevins, FNP-C", "Nicole Cook, FNP-C", "Nichole Hall, FNP-C", "Tammi Mundy, FNP-C"]
-    
     var dental_craw = ["Currently none at this location"]
     var bh_craw = ["Dr. Paul Taraska, MD", "Keith Seegers, LCSW", "Dana Tinkle, LMHCA"]
     var med_craw = ["Dr. James Buechler, MD", "Dr. Do S. Hwang, MD", "Gwyndolen Morson, FNP-C"]
-    
     var dental_terre = ["Currently none at this location"]
     var bh_terre = ["Dr. Paul Taraska, MD", "Sara Ritter, LCSW", "Lacey Skwortz, LCSW"]
     var med_terre = ["Leslie Batty, FNP-C","Beth Fields, FNP-C"]
-    
     var dental_msbhc = ["Currently none at this location"]
     var bh_msbhc = ["Dr. Paul Taraska, MD", "Heather Woods, LMHCA"]
     var med_msbhc = ["Nicole Hall, FNP-C", "Renae Norman, FNP-C"]
-
     var providersList = [String]()
-
+    // MARK: Defaults
+    let defaults = UserDefaults.standard
+    // MARK: Strings
+    let cellReuseIdentifier = "cell"
+   
+    // MARk: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set provider type and location text
         providerType.text = dataSegue[1]
         providerLocation.text = dataSegue[0]
-        print("dataSegue: " + dataSegue[0])
       
+        // Set providerList based on users location and provider type choice
         if(dataSegue[3] == "1"){
             if(dataSegue[2] == "1"){
                 providersList = bh_bloom
@@ -96,31 +96,32 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         // Register the table view cell class and its reuse id
         self.providersTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
-        // This view controller itself will provide the delegate methods and row data for the table view.
+        // Connect the data to providersTable
         providersTable.delegate = self
         providersTable.dataSource = self
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     override func viewWillAppear(_ animated: Bool) {
+        //Shrinks some text size for Spanish locale
         if(defaults.object(forKey:"savedLocale") as! String == "es"){
             titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:20)
         }
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
+    // MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // number of rows in table view
+    // MARK: - Table Setup -
+    // Number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.providersList.count
     }
-    
-    // create a cell for each table view row
+    // Cell create
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one

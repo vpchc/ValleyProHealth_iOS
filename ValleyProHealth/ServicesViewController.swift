@@ -10,12 +10,16 @@ import UIKit
 
 class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    // MARK: - Outlets - 
+    // MARK: Buttons
     @IBOutlet weak var backButton: UIButton!
+    // MARK: Pickers
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var servicesPicker: UIPickerView!
     
-    let defaults = UserDefaults.standard
-   
+    // MARK: - Global Variables -
+    // MARK: Arrays
+    var dataToSegue = ["", "", "" , ""]
     let locations = [
         NSLocalizedString("Select a Location", comment: "Services Location Directions"),
         "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
@@ -25,12 +29,14 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         NSLocalizedString("Dental", comment: "Services Service Selection"),
         NSLocalizedString("Patient Support", comment: "Services Service Selection"),
         NSLocalizedString("Primary Care", comment: "Services Service Selection")]
-    var dataToSegue = ["", "", "" , ""]
+    // MARK: Defaults
+    let defaults = UserDefaults.standard
     
+    // MARk: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Connect data:
+        // Connect data to pickers
         self.locationPicker.delegate = self
         self.locationPicker.dataSource = self
         self.servicesPicker.delegate = self
@@ -47,22 +53,22 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             servicesPicker.isHidden = false
         }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Navigation Buttons -
     @IBAction func backButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    // The number of columns of data
+    // MARK: - Picker Setup -
+    // Number of columns
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    // The number of rows of data
+    // Number of rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if( pickerView == locationPicker){
             return locations.count
@@ -70,8 +76,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             return services.count
         }
     }
-    
-    // The data to return for the row and component (column) that's being passed in
+    // Row data
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if( pickerView == locationPicker){
             return locations[row]
@@ -80,29 +85,6 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
         }
     }
-    
-    
-    func dataSegueSetup(row: Int, pickerIndex: Int){
-        if(pickerIndex == 0){
-            dataToSegue[0] = locations[row]
-            dataToSegue[2] = String(row)
-        }else{
-            dataToSegue[1] = services[row]
-            dataToSegue[3] = String(row)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ServicesDataSegue" {
-            if let destination = segue.destination as? ServicesFormViewController{
-                destination.dataSegue[0] = (dataToSegue[0])
-                destination.dataSegue[1] = (dataToSegue[1])
-                destination.dataSegue[2] = (dataToSegue[2])
-                destination.dataSegue[3] = (dataToSegue[3])
-            }
-        }
-    }
-    
     // When a selection is made by the user
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
@@ -120,6 +102,32 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.performSegue(withIdentifier: "ServicesDataSegue", sender: self)
             }
             
+        }
+    }
+
+    // MARK: - Segue Setup -
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ServicesDataSegue" {
+            if let destination = segue.destination as? ServicesFormViewController{
+                destination.dataSegue[0] = (dataToSegue[0])
+                destination.dataSegue[1] = (dataToSegue[1])
+                destination.dataSegue[2] = (dataToSegue[2])
+                destination.dataSegue[3] = (dataToSegue[3])
+            }
+        }
+    }
+    func dataSegueSetup(row: Int, pickerIndex: Int){
+        /*
+         Arguments: row - Integer that is the row selected by the user, pickerIndex - Integer of the picker storing data
+         Description: Resets the providerType picker
+         Returns: Nothing
+         */
+        if(pickerIndex == 0){
+            dataToSegue[0] = locations[row]
+            dataToSegue[2] = String(row)
+        }else{
+            dataToSegue[1] = services[row]
+            dataToSegue[3] = String(row)
         }
     }
     

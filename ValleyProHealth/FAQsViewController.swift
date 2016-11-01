@@ -44,18 +44,23 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     // MARK: - Picker Setup -
+    // number of components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    // Number of rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categoriesList.count
     }
+    // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return categoriesList[row]
     }
+    // Row Selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if( row != 0){
+            // Setup data to send in segue, reset category picker, then perform the segue with the data
             dataToSegue[0] = categoriesList[row]
             dataToSegue[1] = String(row)
             categoriesPicker.selectRow(0, inComponent: 0, animated: false)

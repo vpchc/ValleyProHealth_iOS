@@ -2,48 +2,49 @@
 //  MainPageViewController.swift
 //  ValleyProHealth
 //
-//  Created by Brice Local Account on 8/29/16.
+//  Created by Brice Webster on 8/29/16.
 //  Copyright © 2016 Valley Professionals Community Health Center. All rights reserved.
 //
 
 import UIKit
 
-
-
 class MainPageViewController: UIPageViewController {
     
+    // MARK: - Global Variables -
+    // MARK: Ints
     var pageControlChange = 0
+    // MARK: Controller References
     weak var pageControlDelegate: MainPageViewControllerDelegate?
     
+    // MARK: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Connect data for pager
         dataSource = self
         delegate = self
         
+        // Setup initial page for pager
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
                                animated: true,
                                completion: nil)
         }
-        
-        //pageControlDelegate?.mainPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
      
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
-
+//Array of pages for pager
 private(set) var orderedViewControllers: [UIViewController] = {
     return [newScreenViewController("Main"),
             newScreenViewController("Secondary")]
 }()
 
+//Initiates a new controller when paging
 private func newScreenViewController(_ selection: String) -> UIViewController {
     return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(selection)ScreenViewController")
 }
@@ -51,6 +52,7 @@ private func newScreenViewController(_ selection: String) -> UIViewController {
 //Makes the paging left and right happen
 extension MainPageViewController: UIPageViewControllerDataSource {
     
+    // Page left
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
@@ -70,6 +72,7 @@ extension MainPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
+    // Page right
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
@@ -92,6 +95,7 @@ extension MainPageViewController: UIPageViewControllerDataSource {
     
 }
 
+// Used to update the page control
 extension MainPageViewController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController,
@@ -106,7 +110,6 @@ extension MainPageViewController: UIPageViewControllerDelegate {
     }
     
 }
-
 protocol MainPageViewControllerDelegate: class {
     
     /**
