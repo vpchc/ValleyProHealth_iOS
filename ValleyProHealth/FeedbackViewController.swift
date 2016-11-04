@@ -24,7 +24,7 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
     let messageErrorTitle = NSLocalizedString("Could Not Send Email", comment: "Message Error Text")
     let messageErrorBody = NSLocalizedString("Your device could not send e-mail.  Please check e-mail configuration and try again.", comment: "Message Error Text")
     
-    //MARK: View Lifecyle
+    // MARK: View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,21 +32,20 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: - Navigation Buttons -
+    // MARK: - Navigation Buttons -
     @IBAction func cancelButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    //MARK: - Rate Button Tap -
+    // MARK: - Button Taps -
     @IBAction func rateButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastRate)
         
         //Open ValleyProHealth App Store Page
-        let appPageURL: URL = URL(string:"https://itunes.apple.com/us/app/apple-store/valleyprohealth")!
-        UIApplication.shared.openURL(appPageURL)
+        let appPageURL = URL(string:"itms-apps://itunes.apple.com/us/app/apple-store/1171455532")
+        UIApplication.shared.openURL(appPageURL!)
        
     }
-    
     @IBAction func messageButtonTap(_ sender: AnyObject) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
@@ -56,7 +55,7 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     
-    
+    //MARK: - Mail Functions -
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
@@ -64,12 +63,10 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
         
         return mailComposerVC
     }
-    
     func showSendMailErrorAlert() {
         let sendMailErrorAlert = UIAlertView(title: messageErrorTitle , message: messageErrorBody, delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()
     }
-    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: nil)
     }

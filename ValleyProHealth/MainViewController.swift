@@ -53,6 +53,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         // Listener for exiting the app and then re-entering
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .default
+    }
     override func viewDidAppear(_ animated: Bool) {
         // Initial set of the locationPreference default
         if(defaults.object(forKey:"locationPreference") == nil){
@@ -63,6 +66,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             let language = Bundle.main.preferredLocalizations.first
             defaults.set(language!, forKey: "savedLocale")
         }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -110,9 +116,19 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let cal = Calendar.current
         let day = cal.ordinality(of: .day, in: .year, for: date)
         defaults.set(day, forKey: "busScheduleDay")
+        
+        // Sets the date of when the bus schedule was stored in xx/xx/xxxx to give the users a better understanding when their schedule is outdated.
+        defaults.set(date.dateToString(), forKey: "busScheduleDate")
+        
     }
     // MARK: Twitter Feed Update
     func twitterSetup(){
+    /*
+         Arguments:   None
+         Description: Get the latest tweet from handle #valleyprohealth, construct twitter feed string, then display it
+         in the default "busSchedule"
+         Returns:     Nothing
+    */
         var feedText = ""
         var htmlString = ""
         let urlString = "https://twitter.com/search?f=tweets&q=from%3AValleyProHealth&src=typd"

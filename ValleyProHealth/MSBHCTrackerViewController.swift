@@ -40,10 +40,14 @@ class MSBHCTrackerViewController: UIViewController {
         super.viewDidLoad()
         
         // Sets the date label
-        let currentDate = Date()
-        dateLabel.text = currentDate.dateToString()
+        let storedDate = defaults.object(forKey:"busScheduleDate") as! String
+        dateLabel.text = storedDate
         
         busMain()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        // Used to make status bar text black so that it is legible
+        UIApplication.shared.statusBarStyle = .default
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -154,7 +158,6 @@ class MSBHCTrackerViewController: UIViewController {
          Description: Compares the current time with the bus time from the location that is being checked
          Returns:     Integer of the results of the comparing
     */
-        let flag = location[4].trimmingCharacters(in: .whitespacesAndNewlines)
         let currentMilliseconds = Date().milliseconds()
 
         //Bus start time in milliseconds

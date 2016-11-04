@@ -110,6 +110,14 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         servicesTable.estimatedRowHeight = 44.0
         servicesTable.rowHeight = UITableViewAutomaticDimension
     }
+    override func viewWillAppear(_ animated: Bool) {
+        // Used to make status bar text black so that it is legible
+        UIApplication.shared.statusBarStyle = .default
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // Used to make status bar text back to white
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

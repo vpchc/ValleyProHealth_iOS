@@ -66,6 +66,12 @@ class ClinicInfoFormViewController: UIViewController {
             titleLabel1?.font = UIFont(name: (titleLabel1?.font.fontName)!, size:22)
             }
         }
+        // Used to make status bar text black so that it is legible
+        UIApplication.shared.statusBarStyle = .default
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // Used to make status bar text back to white
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

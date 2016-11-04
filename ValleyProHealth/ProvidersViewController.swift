@@ -28,7 +28,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         NSLocalizedString("Select a Type of Provider", comment: "Providers Provider Directions"),
         NSLocalizedString("Behavioral Health", comment: "Providers Provider Selection"),
         NSLocalizedString("Dental", comment: "Providers Provider Selection"),
-        NSLocalizedString("Medical", comment: "Providers Provider Selection")]
+        NSLocalizedString("Primary Care", comment: "Providers Provider Selection")]
     //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
     var providerTypes2 = [
         NSLocalizedString("Select a Type of Provider", comment: "Provider Provider Directions"),
@@ -51,9 +51,13 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         //Set the default locationPicker value based on the location Preference
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
-        resetProviderPicker(row: savedLocation)
-        dataSegueSetup(row: savedLocation, pickerIndex: 0)
+        if(savedLocation == 0 || savedLocation == 6){
+            locationPicker.selectRow(0, inComponent: 0, animated: false)
+        }else{
+            locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
+            resetProviderPicker(row: savedLocation)
+            dataSegueSetup(row: savedLocation, pickerIndex: 0)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

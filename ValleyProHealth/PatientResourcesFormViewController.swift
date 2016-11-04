@@ -72,6 +72,12 @@ class PatientResourcesFormViewController: UIViewController, UITableViewDelegate,
             titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:21)
             categoryLabel?.font = UIFont(name: (categoryLabel?.font.fontName)!, size:22)
         }
+        // Used to make status bar text black so that it is legible
+        UIApplication.shared.statusBarStyle = .default
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // Used to make status bar text back to white
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -24,6 +24,9 @@ class OptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .default
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

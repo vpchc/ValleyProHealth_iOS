@@ -40,6 +40,9 @@ class CallDialogViewController: UIViewController {
         if(defaults.object(forKey:"savedLocale") as! String == "es"){
             titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:22)
         }
+        
+        // Used to make status bar text black so that it is legible
+        UIApplication.shared.statusBarStyle = .default
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
