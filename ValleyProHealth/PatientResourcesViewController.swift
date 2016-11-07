@@ -21,7 +21,7 @@ class PatientResourcesViewController: UIViewController, UIPickerViewDelegate, UI
     // MARK: - Global Variables -
     // MARK: Arrays
     let categoriesList = [
-        NSLocalizedString("Select a Category", comment: "Patient Resources Categories Directions"),
+        NSLocalizedString("Select a category", comment: "Patient Resources Categories Directions"),
         NSLocalizedString("Diabetic Support Group", comment: "Patient Resources Categories Selection"),
         NSLocalizedString("Prescription Assistance", comment: "Patient Resources Categories Selection"),
         NSLocalizedString("Sliding Fee Scale", comment: "Patient Resources Categories Selection")]

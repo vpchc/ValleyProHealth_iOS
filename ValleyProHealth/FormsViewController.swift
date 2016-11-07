@@ -176,6 +176,8 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 formPicker.selectRow(0, inComponent: 0, animated: true)
             }else{
                 locationSelection = row
+                categoriesPicker.selectRow(0, inComponent: 0, animated: true)
+                formPicker.isHidden = true
                 categoriesPicker.isHidden = false
             }
         }else if(pickerView == categoriesPicker){

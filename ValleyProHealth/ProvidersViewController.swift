@@ -22,10 +22,10 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var dataToSegue = ["", "", "" , ""]
     var finalProviderTypes = [String]()
     var locations = [
-        NSLocalizedString("Select a Location", comment: "Providers Locations Directions"),
+        NSLocalizedString("Select a location", comment: "Providers Locations Directions"),
         "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
     var providerTypes1 = [
-        NSLocalizedString("Select a Type of Provider", comment: "Providers Provider Directions"),
+        NSLocalizedString("Select a type of provider", comment: "Providers Provider Directions"),
         NSLocalizedString("Behavioral Health", comment: "Providers Provider Selection"),
         NSLocalizedString("Dental", comment: "Providers Provider Selection"),
         NSLocalizedString("Primary Care", comment: "Providers Provider Selection")]

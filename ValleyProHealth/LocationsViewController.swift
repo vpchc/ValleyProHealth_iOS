@@ -24,7 +24,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
     let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.407648"]
     var locations = [
-        NSLocalizedString("Select a Location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+        NSLocalizedString("Select a location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
     var options = [
         NSLocalizedString("Select an option", comment: "Locations Options Directions"),
         NSLocalizedString("Clinic Info", comment: "Locations Options Selection"),

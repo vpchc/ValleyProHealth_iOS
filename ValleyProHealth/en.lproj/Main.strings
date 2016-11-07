@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "Services"; ObjectID = "0g8-hP-5LE"; */
-"0g8-hP-5LE.text" = "Servicios";
+"0g8-hP-5LE.text" = "Services";
 
 /* Class = "UILabel"; text = "Options"; ObjectID = "210-7O-YOB"; */
-"210-7O-YOB.text" = "Opciones";
+"210-7O-YOB.text" = "Options";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2ZJ-Lz-H35"; */
 "2ZJ-Lz-H35.normalTitle" = "Button";
@@ -12,28 +12,31 @@
 "326-CG-AAY.text" = "Twitter";
 
 /* Class = "UILabel"; text = "Tuesday:"; ObjectID = "3Sq-QX-2i2"; */
-"3Sq-QX-2i2.text" = "Martes:";
+"3Sq-QX-2i2.text" = "Tuesday:";
 
 /* Class = "UILabel"; text = "Forms"; ObjectID = "4Qn-xI-8XO"; */
-"4Qn-xI-8XO.text" = "Formularios";
+"4Qn-xI-8XO.text" = "Forms";
+
+/* Class = "UILabel"; text = "Memory &\nAging Center"; ObjectID = "52r-7t-TGr"; */
+"52r-7t-TGr.text" = "Memory &\nAging Center";
 
 /* Class = "UILabel"; text = "Call a Location"; ObjectID = "5Nf-AQ-20j"; */
-"5Nf-AQ-20j.text" = "Llamar a una ubicación";
+"5Nf-AQ-20j.text" = "Call a Location";
 
 /* Class = "UILabel"; text = "Clinic Information"; ObjectID = "6Hc-BZ-Am2"; */
-"6Hc-BZ-Am2.text" = "Información de la clínica";
+"6Hc-BZ-Am2.text" = "Clinic Information";
 
 /* Class = "UIButton"; normalTitle = "Feedback"; ObjectID = "7ny-pL-e5T"; */
-"7ny-pL-e5T.normalTitle" = "Reacciones";
+"7ny-pL-e5T.normalTitle" = "Feedback";
 
 /* Class = "UILabel"; text = "Location:"; ObjectID = "8V0-TU-V7E"; */
-"8V0-TU-V7E.text" = "Ubicación:";
+"8V0-TU-V7E.text" = "Location:";
 
 /* Class = "UILabel"; text = "Wednesday:"; ObjectID = "8aI-Xo-c9L"; */
-"8aI-Xo-c9L.text" = "Miércoles:";
+"8aI-Xo-c9L.text" = "Wednesday:";
 
 /* Class = "UILabel"; text = "Locations"; ObjectID = "92L-ZO-N4T"; */
-"92L-ZO-N4T.text" = "Ubicaciones";
+"92L-ZO-N4T.text" = "Locations";
 
 /* Class = "UILabel"; text = "5:00 p.m. - 8:00 p.m."; ObjectID = "Aew-oR-8Gi"; */
 "Aew-oR-8Gi.text" = "5:00 p.m. - 8:00 p.m.";
@@ -47,14 +50,17 @@
 /* Class = "UILabel"; text = "FAQs"; ObjectID = "CeB-e4-YDO"; */
 "CeB-e4-YDO.text" = "FAQs";
 
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Cev-u8-bOw"; */
+"Cev-u8-bOw.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "Status:"; ObjectID = "HGX-CK-mfo"; */
-"HGX-CK-mfo.text" = "Situación:";
+"HGX-CK-mfo.text" = "Status:";
 
 /* Class = "UIButton"; normalTitle = "Options"; ObjectID = "Iah-xE-Mq3"; */
-"Iah-xE-Mq3.normalTitle" = "Opciones";
+"Iah-xE-Mq3.normalTitle" = "Options";
 
 /* Class = "UILabel"; text = "After-Hours Clinic:"; ObjectID = "IdT-qV-M2b"; */
-"IdT-qV-M2b.text" = "Después de las Horas de la Clínica:";
+"IdT-qV-M2b.text" = "After-Hours Clinic:";
 
 /* Class = "UILabel"; text = "8:00 a.m. - 5:00 p.m."; ObjectID = "MRo-mn-fmo"; */
 "MRo-mn-fmo.text" = "8:00 a.m. - 5:00 p.m.";
@@ -65,8 +71,11 @@
 /* Class = "UILabel"; text = "FAQs"; ObjectID = "Mry-4G-6aG"; */
 "Mry-4G-6aG.text" = "FAQs";
 
+/* Class = "UILabel"; text = "UH\nResidency"; ObjectID = "Nh9-gk-UBf"; */
+"Nh9-gk-UBf.text" = "UH\nResidency";
+
 /* Class = "UILabel"; text = "Monday:"; ObjectID = "Oza-Rj-6ve"; */
-"Oza-Rj-6ve.text" = "Lunes:";
+"Oza-Rj-6ve.text" = "Monday:";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PQe-rL-bTM"; */
 "PQe-rL-bTM.normalTitle" = "Button";
@@ -78,22 +87,22 @@
 "Q9r-hU-6qu.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Thursday:"; ObjectID = "QiN-MQ-BHu"; */
-"QiN-MQ-BHu.text" = "Jueves:";
+"QiN-MQ-BHu.text" = "Thursday:";
 
 /* Class = "UILabel"; text = "Services"; ObjectID = "QuU-SB-7Zf"; */
-"QuU-SB-7Zf.text" = "Servicios";
+"QuU-SB-7Zf.text" = "Services";
 
 /* Class = "UITableViewSection"; headerTitle = "Location Preference:"; ObjectID = "RYQ-mu-05d"; */
-"RYQ-mu-05d.headerTitle" = "Ubicaciones de su Preferencia:";
+"RYQ-mu-05d.headerTitle" = "Location Preference:";
 
 /* Class = "UILabel"; text = "Clinic Information"; ObjectID = "SCB-2G-zyy"; */
-"SCB-2G-zyy.text" = "Información de la clínica";
+"SCB-2G-zyy.text" = "Clinic Information";
 
 /* Class = "UIButton"; highlightedTitle = "Cancel"; ObjectID = "TP4-aK-piE"; */
-"TP4-aK-piE.highlightedTitle" = "Cancelar";
+"TP4-aK-piE.highlightedTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "TP4-aK-piE"; */
-"TP4-aK-piE.normalTitle" = "Cancelar";
+"TP4-aK-piE.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "Clinton"; ObjectID = "Tc0-FK-SRs"; */
 "Tc0-FK-SRs.text" = "Clinton";
@@ -101,8 +110,11 @@
 /* Class = "UILabel"; text = "9:00 a.m. - 1:00 p.m."; ObjectID = "VTo-Cc-EZE"; */
 "VTo-Cc-EZE.text" = "9:00 a.m. - 1:00 p.m.";
 
+/* Class = "UILabel"; text = "Patient\nPortal"; ObjectID = "WS8-BT-0Ph"; */
+"WS8-BT-0Ph.text" = "Patient\nPortal";
+
 /* Class = "UITableViewSection"; headerTitle = "Language:(Requires you to Restart App)"; ObjectID = "Xe0-Ne-v1z"; */
-"Xe0-Ne-v1z.headerTitle" = "Idioma:(Requiere que reinicie App)";
+"Xe0-Ne-v1z.headerTitle" = "Language:(Requires you to Restart App)";
 
 /* Class = "UILabel"; text = "5:00 p.m. - 8:00 p.m."; ObjectID = "YzL-ZH-Dj7"; */
 "YzL-ZH-Dj7.text" = "5:00 p.m. - 8:00 p.m.";
@@ -114,64 +126,64 @@
 "Zfx-GY-jUw.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Friday:"; ObjectID = "aGg-tA-1rq"; */
-"aGg-tA-1rq.text" = "Viernes:";
+"aGg-tA-1rq.text" = "Friday:";
 
 /* Class = "UILabel"; text = "8:00 a.m. - 5:00 p.m."; ObjectID = "akh-iq-J6P"; */
 "akh-iq-J6P.text" = "8:00 a.m. - 5:00 p.m.";
 
 /* Class = "UILabel"; text = "MSBHC Tracker"; ObjectID = "bmx-ae-5DP"; */
-"bmx-ae-5DP.text" = "MSBHC Curso";
+"bmx-ae-5DP.text" = "MSBHC Tracker";
 
 /* Class = "UILabel"; text = "If you would like to leave the us feedback, please send us a message."; ObjectID = "c6z-pa-fHR"; */
-"c6z-pa-fHR.text" = "Si desea a dejar comentarios, por favor, envíenos un mensaje.";
+"c6z-pa-fHR.text" = "If you would like to leave the us feedback, please send us a message.";
 
 /* Class = "UILabel"; text = "Patient\nResources"; ObjectID = "cPS-1f-MNN"; */
-"cPS-1f-MNN.text" = "Recursos para\nel paciente";
+"cPS-1f-MNN.text" = "Patient\nResources";
 
 /* Class = "UILabel"; text = "MSBHC\nTracker"; ObjectID = "cZz-qf-IO6"; */
-"cZz-qf-IO6.text" = "MSBHC\nCurso";
+"cZz-qf-IO6.text" = "MSBHC\nTracker";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "dRj-yq-10d"; */
-"dRj-yq-10d.normalTitle" = "Cancelar";
+"dRj-yq-10d.normalTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "df8-TU-KZu"; */
-"df8-TU-KZu.normalTitle" = "Cancelar";
+"df8-TU-KZu.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "Friday:"; ObjectID = "e5Q-YZ-vfO"; */
-"e5Q-YZ-vfO.text" = "Viernes:";
+"e5Q-YZ-vfO.text" = "Friday:";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "eKe-2A-Bau"; */
-"eKe-2A-Bau.normalTitle" = "Cancelar";
+"eKe-2A-Bau.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "After-Hours Clinic:"; ObjectID = "eQD-1X-5cV"; */
-"eQD-1X-5cV.text" = "Después de las Horas de la Clínica:";
+"eQD-1X-5cV.text" = "After-Hours Clinic:";
 
 /* Class = "UILabel"; text = "Thursday:"; ObjectID = "egh-7F-091"; */
-"egh-7F-091.text" = "Jueves:";
+"egh-7F-091.text" = "Thursday:";
 
 /* Class = "UILabel"; text = "Website"; ObjectID = "fCf-0L-j1n"; */
-"fCf-0L-j1n.text" = "Sitio web";
+"fCf-0L-j1n.text" = "Website";
 
 /* Class = "UILabel"; text = "Saturday Clinic:"; ObjectID = "fZg-jw-NuA"; */
-"fZg-jw-NuA.text" = "Sábado:";
+"fZg-jw-NuA.text" = "Saturday Clinic:";
 
 /* Class = "UILabel"; text = "Patient Resources"; ObjectID = "gZT-BO-9TI"; */
-"gZT-BO-9TI.text" = "Recursos para el paciente";
+"gZT-BO-9TI.text" = "Patient Resources";
 
 /* Class = "UILabel"; text = "Valley Professionals\nCommunity Health Center"; ObjectID = "gr8-oJ-nmp"; */
 "gr8-oJ-nmp.text" = "Valley Professionals\nCommunity Health Center";
 
 /* Class = "UILabel"; text = "Forms"; ObjectID = "gwf-6p-rsh"; */
-"gwf-6p-rsh.text" = "Formas";
+"gwf-6p-rsh.text" = "Forms";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i2v-hS-dpB"; */
 "i2v-hS-dpB.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "After-Hours Clinic:"; ObjectID = "jkc-gw-NO1"; */
-"jkc-gw-NO1.text" = "Después de las Horas de la Clínica:";
+"jkc-gw-NO1.text" = "After-Hours Clinic:";
 
 /* Class = "UILabel"; text = "Call"; ObjectID = "k55-dO-fHS"; */
-"k55-dO-fHS.text" = "Llamada";
+"k55-dO-fHS.text" = "Call";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kO7-KZ-zvc"; */
 "kO7-KZ-zvc.normalTitle" = "Button";
@@ -180,58 +192,61 @@
 "l1Y-jf-3Sa.normalTitle" = "Button";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "m62-w3-yTS"; */
-"m62-w3-yTS.normalTitle" = "Cancelar";
+"m62-w3-yTS.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "Locations"; ObjectID = "mEM-Ci-j8i"; */
-"mEM-Ci-j8i.text" = "Ubicaciones";
+"mEM-Ci-j8i.text" = "Locations";
 
 /* Class = "UILabel"; text = "Feedback"; ObjectID = "nZt-Oi-NSw"; */
-"nZt-Oi-NSw.text" = "Reacciones";
+"nZt-Oi-NSw.text" = "Feedback";
 
 /* Class = "UILabel"; text = "5:00 p.m. - 8:00 p.m."; ObjectID = "nrf-m8-DUP"; */
 "nrf-m8-DUP.text" = "5:00 p.m. - 8:00 p.m.";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "peL-Ct-Fbu"; */
-"peL-Ct-Fbu.normalTitle" = "Cancelar";
+"peL-Ct-Fbu.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "Wenesday:"; ObjectID = "qc6-WW-4RR"; */
-"qc6-WW-4RR.text" = "Miércoles:";
+"qc6-WW-4RR.text" = "Wenesday:";
 
 /* Class = "UILabel"; text = "Download Schedule"; ObjectID = "qjE-JY-ZoZ"; */
-"qjE-JY-ZoZ.text" = "Programación de descarga";
+"qjE-JY-ZoZ.text" = "Download Schedule";
 
 /* Class = "UILabel"; text = "Tuesday:"; ObjectID = "rTx-v2-v4f"; */
-"rTx-v2-v4f.text" = "Martes:";
+"rTx-v2-v4f.text" = "Tuesday:";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tNv-yt-tqn"; */
 "tNv-yt-tqn.normalTitle" = "Button";
 
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tOA-X8-2ts"; */
+"tOA-X8-2ts.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "Monday:"; ObjectID = "toN-1M-TQb"; */
-"toN-1M-TQb.text" = "Lunes:";
+"toN-1M-TQb.text" = "Monday:";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "utp-jT-o7b"; */
 "utp-jT-o7b.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Patient Resources"; ObjectID = "vA1-dH-rdQ"; */
-"vA1-dH-rdQ.text" = "Recursos para el paciente";
+"vA1-dH-rdQ.text" = "Patient Resources";
 
 /* Class = "UIButton"; normalTitle = "Save"; ObjectID = "vcE-in-g7P"; */
-"vcE-in-g7P.normalTitle" = "Guardar";
+"vcE-in-g7P.normalTitle" = "Save";
 
 /* Class = "UILabel"; text = "5:00 p.m. - 8:00 p.m."; ObjectID = "w2S-Xm-Jt4"; */
 "w2S-Xm-Jt4.text" = "5:00 p.m. - 8:00 p.m.";
 
 /* Class = "UILabel"; text = "Providers"; ObjectID = "wOG-Gu-uKg"; */
-"wOG-Gu-uKg.text" = "Proveedores";
+"wOG-Gu-uKg.text" = "Providers";
 
 /* Class = "UILabel"; text = "After-Hours Clinic:"; ObjectID = "wTk-Ib-uFd"; */
-"wTk-Ib-uFd.text" = "Después de las Horas de la Clínica:";
+"wTk-Ib-uFd.text" = "After-Hours Clinic:";
 
 /* Class = "UIButton"; highlightedTitle = "Cancel"; ObjectID = "xhc-uy-hY3"; */
-"xhc-uy-hY3.highlightedTitle" = "Cancelar";
+"xhc-uy-hY3.highlightedTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "xhc-uy-hY3"; */
-"xhc-uy-hY3.normalTitle" = "Cancelar";
+"xhc-uy-hY3.normalTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xql-37-J81"; */
 "xql-37-J81.normalTitle" = "Button";
@@ -240,31 +255,16 @@
 "y98-5R-BC7.text" = "FAQs";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "yXT-6r-lsS"; */
-"yXT-6r-lsS.normalTitle" = "Cancelar";
+"yXT-6r-lsS.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "Hours:"; ObjectID = "z28-Og-dhD"; */
-"z28-Og-dhD.text" = "Horas:";
+"z28-Og-dhD.text" = "Hours:";
 
 /* Class = "UIButton"; highlightedTitle = "Cancel"; ObjectID = "z41-y2-sKF"; */
-"z41-y2-sKF.highlightedTitle" = "Cancelar";
+"z41-y2-sKF.highlightedTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "z41-y2-sKF"; */
-"z41-y2-sKF.normalTitle" = "Cancelar";
+"z41-y2-sKF.normalTitle" = "Cancel";
 
 /* Class = "UILabel"; text = "8:00 a.m. - 5:00 p.m."; ObjectID = "zUY-VP-dWd"; */
 "zUY-VP-dWd.text" = "8:00 a.m. - 5:00 p.m.";
-
-/* Class = "UILabel"; text = "Memory &\nAging Center"; ObjectID = "52r-7t-TGr"; */
-"52r-7t-TGr.text" = "";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Cev-u8-bOw"; */
-"Cev-u8-bOw.normalTitle" = "";
-
-/* Class = "UILabel"; text = "UH\nResidency"; ObjectID = "Nh9-gk-UBf"; */
-"Nh9-gk-UBf.text" = "";
-
-/* Class = "UILabel"; text = "Patient\nPortal"; ObjectID = "WS8-BT-0Ph"; */
-"WS8-BT-0Ph.text" = "";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tOA-X8-2ts"; */
-"tOA-X8-2ts.normalTitle" = "";

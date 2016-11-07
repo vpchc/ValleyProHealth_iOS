@@ -21,10 +21,10 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // MARK: Arrays
     var dataToSegue = ["", "", "" , ""]
     let locations = [
-        NSLocalizedString("Select a Location", comment: "Services Location Directions"),
+        NSLocalizedString("Select a location", comment: "Services Location Directions"),
         "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
     let services = [
-        NSLocalizedString("Select a Services Category", comment: "Services Service Directions"),
+        NSLocalizedString("Select a category", comment: "Services Service Directions"),
         NSLocalizedString("Behavioral Health", comment: "Services Service Selection"),
         NSLocalizedString("Dental", comment: "Services Service Selection"),
         NSLocalizedString("Patient Support", comment: "Services Service Selection"),

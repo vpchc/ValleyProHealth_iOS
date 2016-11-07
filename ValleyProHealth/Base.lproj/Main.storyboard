@@ -24,7 +24,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yh5-2J-RCU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4hp-8X-Bsx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-qd-QBg"/>
@@ -54,11 +54,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFV-TF-hho" userLabel="Status Bar Container">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="LLn-Ld-SLF"/>
                                 </constraints>
@@ -103,7 +103,7 @@ Community Health Center</string>
                                                 </variation>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="gr8-oJ-nmp" secondAttribute="trailing" id="1Mx-c6-MYU"/>
                                             <constraint firstAttribute="width" constant="427" id="MZy-2a-DH1">
@@ -134,7 +134,7 @@ Community Health Center</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="GI7-Vh-csA">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="36"/>
@@ -154,7 +154,7 @@ Community Health Center</string>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="vJi-O8-Jut" secondAttribute="bottom" id="Hig-c2-VHU"/>
                                     <constraint firstAttribute="trailing" secondItem="vJi-O8-Jut" secondAttribute="trailing" constant="8" id="XWN-KF-26n">
@@ -312,7 +312,7 @@ Community Health Center</string>
                             <constraint firstItem="TFV-TF-hho" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ivo-Hv-TzE"/>
                             <constraint firstAttribute="trailing" secondItem="4lp-nJ-cCj" secondAttribute="trailing" id="q13-9I-uBM"/>
                             <constraint firstAttribute="trailing" secondItem="ndB-V2-BaI" secondAttribute="trailing" id="qGa-fJ-Voa"/>
-                            <constraint firstItem="2D9-Rr-Y4D" firstAttribute="top" secondItem="jTQ-ZH-V6G" secondAttribute="bottom" id="qfR-cx-qS2"/>
+                            <constraint firstItem="2D9-Rr-Y4D" firstAttribute="top" secondItem="jTQ-ZH-V6G" secondAttribute="bottom" constant="8" id="qfR-cx-qS2"/>
                             <constraint firstItem="ndB-V2-BaI" firstAttribute="top" secondItem="2D9-Rr-Y4D" secondAttribute="bottom" id="r7g-rK-NZ5"/>
                             <constraint firstItem="ndB-V2-BaI" firstAttribute="top" secondItem="2D9-Rr-Y4D" secondAttribute="bottom" id="rXg-dh-fx2"/>
                             <constraint firstItem="w32-Lp-ADy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u7m-ee-3OY"/>
@@ -409,7 +409,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="x8I-6J-fTe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yYj-m1-3Q1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-rU-eBW" userLabel="Title Bar">
@@ -491,21 +491,21 @@ Community Health Center</string>
             <objects>
                 <tableViewController id="R4F-73-rbr" customClass="OptionTableViewController" customModule="ValleyProHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Mw8-df-UXu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Location Preference:" id="RYQ-mu-05d">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="RcE-uH-rOU" style="IBUITableViewCellStyleDefault" id="n4T-yG-8Ra">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="n4T-yG-8Ra" id="s5b-VQ-IJv">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RcE-uH-rOU">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -515,14 +515,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="Amo-D2-lhV" style="IBUITableViewCellStyleDefault" id="4zM-m0-u0j">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="4zM-m0-u0j" id="Z80-Eb-NCl">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Amo-D2-lhV">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -532,14 +532,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="QCb-mW-fXK" style="IBUITableViewCellStyleDefault" id="bBa-kN-wDp">
-                                        <rect key="frame" x="0.0" y="144" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="bBa-kN-wDp" id="t58-oe-sX4">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QCb-mW-fXK">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -549,14 +549,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="vKh-sz-R8s" style="IBUITableViewCellStyleDefault" id="hZ3-rf-yif">
-                                        <rect key="frame" x="0.0" y="188" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="hZ3-rf-yif" id="MNH-y7-Swh">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vKh-sz-R8s">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -566,14 +566,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="HeJ-PN-EWM" style="IBUITableViewCellStyleDefault" id="VAn-8W-Bgl">
-                                        <rect key="frame" x="0.0" y="232" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="VAn-8W-Bgl" id="shy-uc-Zkg">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HeJ-PN-EWM">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -583,14 +583,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="mYN-IH-x1p" style="IBUITableViewCellStyleDefault" id="b0A-Se-fhy">
-                                        <rect key="frame" x="0.0" y="276" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="b0A-Se-fhy" id="P7A-dP-1cH">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYN-IH-x1p">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -600,14 +600,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="7r3-8X-OSN" style="IBUITableViewCellStyleDefault" id="Slh-nh-L6K">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="Slh-nh-L6K" id="yK5-wD-ADJ">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7r3-8X-OSN">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -621,14 +621,14 @@ Community Health Center</string>
                             <tableViewSection headerTitle="Language:(Requires you to Restart App)" id="Xe0-Ne-v1z">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="gQJ-5O-C5S" style="IBUITableViewCellStyleDefault" id="MTf-mG-wxh">
-                                        <rect key="frame" x="0.0" y="421" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="421" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="MTf-mG-wxh" id="lRd-xM-1Bn">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQJ-5O-C5S">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -638,14 +638,14 @@ Community Health Center</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCells" textLabel="jRe-0g-zHn" style="IBUITableViewCellStyleDefault" id="ykt-mU-Sbe">
-                                        <rect key="frame" x="0.0" y="465" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="465" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="ykt-mU-Sbe" id="G89-SX-4gC">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jRe-0g-zHn">
-                                                    <frame key="frameInset" minX="15" width="290" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -683,7 +683,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="jY1-kg-oht"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="viD-kM-rAz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-30-iTu" userLabel="Status Bar Container">
@@ -845,7 +845,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="Xjl-c9-ewC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RRl-uy-aWa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-9t-NOm" userLabel="Title Bar">
@@ -900,7 +900,7 @@ Community Health Center</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-IT-5hu" userLabel="providerLocation">
                                         <frame key="frameInset" minX="175" minY="3" width="190" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -952,7 +952,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="YNB-P4-Tfg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LZo-pB-MW9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-WO-abm" userLabel="Title Bar">
@@ -1206,7 +1206,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="6hD-Ef-rkS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F0E-jP-Pew">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EI-uN-pcM" userLabel="Title Bar">
@@ -1259,7 +1259,7 @@ Community Health Center</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-N6-elh">
                                         <frame key="frameInset" minX="175" width="190" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1956,7 +1956,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="F35-6G-qo4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5jf-8u-5a5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqq-eq-kKw" userLabel="Title Bar">
@@ -2010,7 +2010,7 @@ Community Health Center</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqH-Dz-65T">
                                         <frame key="frameInset" minX="179" width="182" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2205,7 +2205,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="1uS-oC-GGD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="trE-NI-0Oc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgM-LA-TEI" userLabel="Status Bar Container">
@@ -2380,7 +2380,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="att-rt-WzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3W7-Cc-xoa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-dV-Ubq" userLabel="Status Bar Container">
@@ -2577,7 +2577,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="bju-gO-LE3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ybZ-gO-koi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-Pz-uMU" userLabel="Status Bar Container">
@@ -2723,7 +2723,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="WNE-ru-Xfz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j1R-T9-6Hy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8l-aB-9oR" userLabel="Title Bar">
@@ -2776,7 +2776,7 @@ Community Health Center</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73v-FC-xri">
                                         <frame key="frameInset" minX="179" width="182" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2882,7 +2882,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="OYV-ym-7Of"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j9l-K4-Xdk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CL0-Qd-7Ii" userLabel="Status Bar Container">
@@ -3041,7 +3041,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="Fgt-dT-Hft"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OCD-Sr-1dR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnE-bo-fnQ" userLabel="Title Bar">
@@ -3097,7 +3097,7 @@ Community Health Center</string>
                                             <constraint firstAttribute="height" constant="31" id="qhH-Sm-jYt"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -3146,7 +3146,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="Rb6-xI-Mhx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U2s-aT-MQM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQH-dI-5dO" userLabel="Title Bar">
@@ -3203,7 +3203,7 @@ Community Health Center</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D61-PE-ByD">
                                         <frame key="frameInset" minX="179" width="182" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -3250,7 +3250,7 @@ Community Health Center</string>
                         <viewControllerLayoutGuide type="bottom" id="6cg-Pq-noM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zWT-Np-F4k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-oT-ZzF" userLabel="Status Bar Container">
@@ -3386,7 +3386,7 @@ UGF0aWVudCARERERERERERERERERUmVzb3VyY2VzA
                         <viewControllerLayoutGuide type="bottom" id="9gN-RA-koE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rw6-09-Jgt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0P-co-XXG" userLabel="Top Left">
@@ -3549,7 +3549,7 @@ UHJvdmlkZXJzEREREeKAqA
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-SB-7Zf">
-                                        <frame key="frameInset" minX="87" minY="223" width="69" height="21"/>
+                                        <frame key="frameInset" minX="87" minY="223" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3777,7 +3777,7 @@ Portal</string>
                         <viewControllerLayoutGuide type="bottom" id="qNH-9F-m0P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jh8-8d-m3E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-U0-BBr" userLabel="Top Left">
@@ -3883,11 +3883,79 @@ Portal</string>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aby-vc-I15" userLabel="Center Left">
                                 <frame key="frameInset" minX="20" minY="355" width="243" height="335"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-u8-bOw">
+                                        <frame key="frameInset" minX="74" minY="120" width="94" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="A1P-Ge-xEp">
+                                                <variation key="widthClass=compact" constant="70"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="94" id="kqb-cj-Op0">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="memory_off"/>
+                                        <state key="highlighted" image="memory_on"/>
+                                        <connections>
+                                            <action selector="facebookButtonTap:" destination="aI2-6Q-ELl" eventType="touchUpInside" id="qrg-eM-uUk"/>
+                                            <action selector="memoryCenterButtonTap:" destination="aI2-6Q-ELl" eventType="touchUpInside" id="oeb-Tc-Fyr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52r-7t-TGr">
+                                        <frame key="frameInset" minX="65" minY="222" width="113" height="47"/>
+                                        <string key="text">Memory &amp;
+Aging Center</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Cev-u8-bOw" firstAttribute="centerX" secondItem="Aby-vc-I15" secondAttribute="centerX" id="1tg-Yl-Oa6"/>
+                                    <constraint firstItem="Cev-u8-bOw" firstAttribute="top" secondItem="Aby-vc-I15" secondAttribute="top" id="4gH-pp-P8X"/>
+                                    <constraint firstItem="52r-7t-TGr" firstAttribute="top" secondItem="Cev-u8-bOw" secondAttribute="bottom" constant="8" id="CVd-RQ-4nk">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="52r-7t-TGr" firstAttribute="centerX" secondItem="Aby-vc-I15" secondAttribute="centerX" id="iUW-Id-yU4"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M15-TU-pWh" userLabel="Center Center">
                                 <frame key="frameInset" minX="263" minY="355" width="243" height="335"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOA-X8-2ts">
+                                        <frame key="frameInset" minX="74" minY="120" width="94" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="7zT-Wv-fxI">
+                                                <variation key="widthClass=compact" constant="70"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="94" id="doM-cc-VHV">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="residency_off"/>
+                                        <state key="highlighted" image="residency_on"/>
+                                        <connections>
+                                            <action selector="facebookButtonTap:" destination="aI2-6Q-ELl" eventType="touchUpInside" id="tiO-Se-LHK"/>
+                                            <action selector="residencyButtonTap:" destination="aI2-6Q-ELl" eventType="touchUpInside" id="sHw-KY-3UU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh9-gk-UBf">
+                                        <frame key="frameInset" minX="38" minY="222" width="168" height="47"/>
+                                        <string key="text">UH
+Residency</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nh9-gk-UBf" firstAttribute="top" secondItem="tOA-X8-2ts" secondAttribute="bottom" constant="8" id="7Pk-JQ-JzS">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="Nh9-gk-UBf" firstAttribute="centerX" secondItem="M15-TU-pWh" secondAttribute="centerX" id="AyM-dM-ejW"/>
+                                    <constraint firstItem="tOA-X8-2ts" firstAttribute="centerX" secondItem="M15-TU-pWh" secondAttribute="centerX" id="aXy-2s-wa2"/>
+                                    <constraint firstItem="tOA-X8-2ts" firstAttribute="top" secondItem="M15-TU-pWh" secondAttribute="top" id="l7H-q3-l4U"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMP-ZW-lVd" userLabel="Center Right">
                                 <frame key="frameInset" minX="506" minY="355" width="242" height="335"/>
@@ -3952,6 +4020,8 @@ Portal</string>
                     </view>
                     <connections>
                         <outlet property="facebookButton" destination="2ZJ-Lz-H35" id="Ap4-hw-BCk"/>
+                        <outlet property="memoryCenterButton" destination="Cev-u8-bOw" id="exe-g1-kBP"/>
+                        <outlet property="residencyButton" destination="tOA-X8-2ts" id="bsD-83-oZJ"/>
                         <outlet property="twitterButton" destination="BhK-2D-woL" id="pHV-rg-ORj"/>
                         <outlet property="websiteButton" destination="Zfx-GY-jUw" id="dkO-ik-nZa"/>
                     </connections>
@@ -3969,7 +4039,7 @@ Portal</string>
                         <viewControllerLayoutGuide type="bottom" id="ZCf-lu-Wfi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZCG-X4-vqT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-LM-ORs" userLabel="Title Bar">
@@ -4182,7 +4252,7 @@ ZS4
                         <viewControllerLayoutGuide type="bottom" id="nJx-LJ-Hng"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SW1-nI-Nrb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-gn-Oj5" userLabel="Title Bar">
@@ -4235,7 +4305,7 @@ ZS4
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Clinton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc0-FK-SRs">
                                         <frame key="frameInset" minX="175" width="190" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.1450980392" green="0.56078431370000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2274509804" green="0.30588235289999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -4327,6 +4397,8 @@ ZS4
         <image name="locations_off" width="170" height="170"/>
         <image name="locations_on" width="170" height="170"/>
         <image name="main_logo" width="115" height="98"/>
+        <image name="memory_off" width="170" height="170"/>
+        <image name="memory_on" width="170" height="170"/>
         <image name="menu_off" width="55" height="55"/>
         <image name="menu_on" width="55" height="55"/>
         <image name="message_off" width="170" height="170"/>
@@ -4341,6 +4413,8 @@ ZS4
         <image name="providers_on" width="170" height="170"/>
         <image name="rate_off" width="170" height="170"/>
         <image name="rate_on" width="170" height="170"/>
+        <image name="residency_off" width="170" height="170"/>
+        <image name="residency_on" width="170" height="170"/>
         <image name="services_logo" width="64" height="64"/>
         <image name="services_off" width="170" height="170"/>
         <image name="services_on" width="170" height="170"/>

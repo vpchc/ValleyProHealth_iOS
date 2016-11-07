@@ -24,10 +24,14 @@ class PageContentViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var websiteButton: UIButton!
+    @IBOutlet weak var memoryCenterButton: UIButton!
+    @IBOutlet weak var residencyButton: UIButton!
     
     // MARK: - Global Variables -
     // MARK: Strings
-    let toastOpenWebsite = NSLocalizedString("Opening VPCHC website…", comment: "Toast Main Open Website")
+    let toastOpenVPCHCWebsite = NSLocalizedString("Opening VPCHC website…", comment: "Toast Main Open  VPCHC Website")
+    let toastOpenMemoryWebsite = NSLocalizedString("Opening Memory & Aging Center website…", comment: "Toast Main Open Memory Website")
+    let toastOpenResidencyWebsite = NSLocalizedString("Opening UH Family Medicine Resideny website…", comment: "Toast Main Open Residency Website")
     let toastOpenFacebookPage = NSLocalizedString("Opening VPCHC Facebook Page…", comment: "Toast Main Open Facebook Page")
     let toastOpenPortal = NSLocalizedString("Opening VPCHC Patient Portal webpage…", comment: "Toast Main Open Portal")
     
@@ -76,11 +80,30 @@ class PageContentViewController: UIViewController {
         }
     }
     @IBAction func websiteButtonTap(_ sender: AnyObject) {
+        // Open VPCHC website
         let websiteUrl: URL = URL(string:"https://valleyprohealth.org")!
         let application = UIApplication.shared
         
-        self.view.makeToast(toastOpenWebsite)
+        self.view.makeToast(toastOpenVPCHCWebsite)
         application.openURL(websiteUrl)
     }
-
+    @IBAction func memoryCenterButtonTap(_ sender: AnyObject) {
+        // Open Memory & Aging Center website
+        let websiteUrl: URL = URL(string:"http://www.memoryandagingcenter.org/")!
+        let application = UIApplication.shared
+        
+        self.view.makeToast(toastOpenMemoryWebsite)
+        application.openURL(websiteUrl)
+        
+    }
+    @IBAction func residencyButtonTap(_ sender: AnyObject) {
+        // Open UH Family Medicine Residency website
+        
+        let websiteUrl: URL = URL(string:"http://www.uhfmr.org/index.php")!
+        let application = UIApplication.shared
+        
+        self.view.makeToast(toastOpenResidencyWebsite)
+        application.openURL(websiteUrl)
+        
+    }
 }

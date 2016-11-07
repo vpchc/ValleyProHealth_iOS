@@ -19,7 +19,7 @@ class FAQsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     // MARK: - Global Variables -
     // MARK: Arrays
     var categoriesList = [
-        NSLocalizedString("Select a Category", comment: "A selection in the FAQs Category List"),
+        NSLocalizedString("Select a category", comment: "A selection in the FAQs Category List"),
         NSLocalizedString("Billing/Insurance", comment: "A selection in the FAQs Category List"),
         NSLocalizedString("Miscellaneous", comment: "A selection in the FAQs Category List"),
         NSLocalizedString("New Patients", comment: "A selection in the FAQs Category List"),

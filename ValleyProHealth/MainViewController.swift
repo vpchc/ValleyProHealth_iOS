@@ -28,7 +28,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     let twitterTips = [
         NSLocalizedString("Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!", comment: "Twitter Tip"),
         NSLocalizedString("If you are not able to make an appointment, please call to let us know.", comment: "Twitter Tip"),
-        NSLocalizedString("Refills can take up to 48 business hours to refill.", comment: "Twitter Tip"), NSLocalizedString("Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!", comment: "Twitter Tip")]
+        NSLocalizedString("Refills can take up to 48 business hours to refill.", comment: "Twitter Tip"),
+        NSLocalizedString("Do you need resources in your community? Do you need help find health coverage for your family? Contact one of our CHWs!", comment: "Twitter Tip"),
+        NSLocalizedString("Did you know that you do not have to be a patient at Valley Professionals in order to use our After-Hours and Saturday Clinic?", comment: "Twitter Tip")]
     // MARK: Controlller Reference
     var pagerController: MainPageViewController!
     // MARK: Defaults
