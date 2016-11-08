@@ -165,13 +165,13 @@
 
 /* Provider Provider Selection
    Providers Provider Selection */
-"Medical" = "Médico";
+"Primary Care" = "Atención primaria";
 
 /* A selection in the FAQs Category List */
 "Miscellaneous" = "Diverso";
 
 /* A selection in the FAQs Category List */
-"New Patients" = "nuevos pacientes";
+"New Patients" = "Nuevos Pacientes";
 
 /* A new patient answer in the faq section */
 "New patient appointments can be scheduled as soon as two weeks. In the mean time we will send you paperwork to be completed and brought in on the day of your appointment." = "Nuevas citas de los pacientes se pueden programar tan pronto como dos semanas. Por el momento, le enviaremos el papeleo para ser completado y puesto en el día de su cita";
@@ -243,7 +243,7 @@
 
 /* Provider Provider Directions
    Providers Provider Directions */
-"Select a Type of Provider" = "Seleccionar un tipo de proveedor";
+"Select a type of provider" = "Seleccionar un tipo de proveedor";
 
 /* Locations Preference Selection Directions */
 "Select a preferred location" = "Seleccione una ubicación preferida";
