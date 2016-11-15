@@ -92,7 +92,7 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         }else if(dataSegue[3] == "3"){
             servicesList = patsupportServices
         }else if(dataSegue[3] == "4"){
-            if(dataSegue[2] == "6"){
+            if(dataSegue[2] == "5"){
                 servicesList = primcare2
             }else{
                 servicesList = primcare1

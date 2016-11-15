@@ -134,8 +134,8 @@
 /* Class = "UILabel"; text = "MSBHC Tracker"; ObjectID = "bmx-ae-5DP"; */
 "bmx-ae-5DP.text" = "MSBHC Tracker";
 
-/* Class = "UILabel"; text = "If you would like to leave the us feedback, please send us a message."; ObjectID = "c6z-pa-fHR"; */
-"c6z-pa-fHR.text" = "If you would like to leave the us feedback, please send us a message.";
+/* Class = "UILabel"; text = "If you would like to leave us feedback, please send a message."; ObjectID = "c6z-pa-fHR"; */
+"c6z-pa-fHR.text" = "If you would like to leave us feedback, please send a message.";
 
 /* Class = "UILabel"; text = "Patient\nResources"; ObjectID = "cPS-1f-MNN"; */
 "cPS-1f-MNN.text" = "Patient\nResources";
@@ -268,3 +268,6 @@
 
 /* Class = "UILabel"; text = "8:00 a.m. - 5:00 p.m."; ObjectID = "zUY-VP-dWd"; */
 "zUY-VP-dWd.text" = "8:00 a.m. - 5:00 p.m.";
+
+/* Class = "UILabel"; text = "If you like our app, please rate it\non the App Store."; ObjectID = "hCf-VU-dhj"; */
+"hCf-VU-dhj.text" = "";

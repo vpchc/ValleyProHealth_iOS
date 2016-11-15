@@ -31,9 +31,9 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         NSLocalizedString("Primary Care", comment: "Providers Provider Selection")]
     //This is for Clinton, Crawfordsville, Terre Haute and the MSBHC which don't currently have dental
     var providerTypes2 = [
-        NSLocalizedString("Select a Type of Provider", comment: "Provider Provider Directions"),
+        NSLocalizedString("Select a type of provider", comment: "Provider Provider Directions"),
         NSLocalizedString("Behavioral Health", comment: "Provider Provider Selection"),
-        NSLocalizedString("Medical", comment: "Provider Provider Selection")]
+        NSLocalizedString("Primary Care", comment: "Provider Provider Selection")]
     // MARK: Defaults
     let defaults = UserDefaults.standard
     // MARK: Ints

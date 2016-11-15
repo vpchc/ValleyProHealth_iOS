@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ios_back_arrow_on.png",
+      "filename" : "ios_back_arrow_off.png",
       "scale" : "1x"
     },
     {

@@ -18,36 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJ9-0J-WN8" userLabel="Main Container">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJ9-0J-WN8" userLabel="Main Container">
                                 <frame key="frameInset" minX="40" minY="178" width="240" height="124"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9Cb-g4-rcg">
-                                        <frame key="frameInset" minX="81" minY="8" width="71" height="62"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="121" id="OUI-TD-A4V">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="62"/>
-                                            </constraint>
-                                            <constraint firstAttribute="width" constant="128" id="iol-8b-auQ">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="71"/>
-                                            </constraint>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ValleyProHealth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Sh-zBW">
-                                        <frame key="frameInset" minX="5" minY="79" width="230" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ValleyProHealth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Sh-zBW">
+                                        <frame key="frameInset" minX="2" minY="85" width="230" height="45"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Y4-V3-kzn">
+                                        <frame key="frameInset" minX="79" minY="9" width="83" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="QRp-nO-ZL4"/>
+                                            <constraint firstAttribute="height" constant="68" id="ybN-ol-K8a"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="auO-Sh-zBW" firstAttribute="top" secondItem="9Cb-g4-rcg" secondAttribute="bottom" constant="8" id="3XZ-h2-T9B"/>
-                                    <constraint firstItem="9Cb-g4-rcg" firstAttribute="centerX" secondItem="oJ9-0J-WN8" secondAttribute="centerX" id="BFb-dI-MPr"/>
-                                    <constraint firstAttribute="height" constant="203" id="Jhy-tE-nXD">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="121"/>
-                                    </constraint>
-                                    <constraint firstItem="9Cb-g4-rcg" firstAttribute="top" secondItem="oJ9-0J-WN8" secondAttribute="top" constant="74" id="ZxW-dd-R8j"/>
-                                    <constraint firstAttribute="width" constant="240" id="tr6-NE-IRg"/>
+                                    <constraint firstItem="auO-Sh-zBW" firstAttribute="top" secondItem="3Y4-V3-kzn" secondAttribute="bottom" constant="8" id="688-Io-L59"/>
+                                    <constraint firstItem="3Y4-V3-kzn" firstAttribute="centerX" secondItem="oJ9-0J-WN8" secondAttribute="centerX" id="d0u-Xh-uqt"/>
+                                    <constraint firstItem="3Y4-V3-kzn" firstAttribute="top" secondItem="oJ9-0J-WN8" secondAttribute="top" id="hzm-RG-lYE"/>
                                     <constraint firstItem="auO-Sh-zBW" firstAttribute="centerX" secondItem="oJ9-0J-WN8" secondAttribute="centerX" id="u3G-SS-Cw5"/>
                                 </constraints>
                             </view>
@@ -61,10 +53,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.625" y="373.75"/>
+            <point key="canvasLocation" x="50.399999999999999" y="372.86356821589209"/>
         </scene>
     </scenes>
     <resources>
-        <image name="main_logo" width="115" height="98"/>
+        <image name="main_logo" width="67" height="63"/>
     </resources>
 </document>

@@ -115,8 +115,6 @@
 		DDC194771D9D9467006B1A58 /* LocationPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreferenceViewController.swift; sourceTree = "<group>"; };
 		DDC194791D9DAB53006B1A58 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		DDC1947B1D9DB7D2006B1A58 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		DDC8C9C51DD12DC100367F1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DDC8C9C71DD12F3600367F1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DDD9A9C21D819882000924E8 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		E489910162A90C5CDDAF3EB6 /* Pods_ValleyProHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValleyProHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -634,7 +632,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD3F206F1DB7BCFD00407292 /* es */,
-				DDC8C9C51DD12DC100367F1C /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -660,7 +657,6 @@
 			children = (
 				DD7334921D40FCBC008A9023 /* Base */,
 				DD3CD5F11DC271FC00C811EC /* es */,
-				DDC8C9C71DD12F3600367F1C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

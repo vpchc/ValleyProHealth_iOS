@@ -40,7 +40,7 @@ class PatientResourcesViewController: UIViewController, UIPickerViewDelegate, UI
     override func viewWillAppear(_ animated: Bool) {
         //Shrinks some text size for Spanish locale
         if(defaults.object(forKey:"savedLocale") as! String == "es"){
-            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:16)
+            titleLabel?.font = UIFont(name: (titleLabel?.font.fontName)!, size:20)
         }
     }
     override func didReceiveMemoryWarning() {

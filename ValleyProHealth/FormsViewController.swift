@@ -65,7 +65,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         "ISHAA Physical",
         "MSBHC Enrollment"]
     let consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
-    let newpatFiles = ["new_patient_packet_adult_bloomcayclint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloomcayclint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
+    let newpatFiles = ["new_patient_packet_adult_bloom.pdf", "new_patient_packet_adult_cay.pdf", "new_patient_packet_adult_clint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloom.pdf", "new_patient_packet_child_cay.pdf", "new_patient_packet_child_clint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
     let noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "notice_privacy_practices.pdf"]
     let recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
     let slidingFiles = ["sliding_fee_scale_reqs.pdf"]
@@ -208,28 +208,15 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                     websiteUrlCombine = websitePath + recordFiles[locationSelection - 1]
                 }else if(categorySelection == 2){// New Patient selected which has different forms for some locations
                     if(row == 1){// Adult Selected
-                        if(locationSelection == 5){
-                            websiteUrlCombine = websitePath + newpatFiles[2]
-                        }else if(locationSelection == 4){
-                            websiteUrlCombine = websitePath + newpatFiles[1]
-                        }else{
-                            websiteUrlCombine = websitePath + newpatFiles[0]
-                        }
+                        websiteUrlCombine = websitePath + newpatFiles[locationSelection - 1]
                     }else if(row == 2){// Child Selected
-                        if(locationSelection == 5){
-                            websiteUrlCombine = websitePath + newpatFiles[5]
-                        }else if(locationSelection == 4){
-                            websiteUrlCombine = websitePath + newpatFiles[4]
-                        }else{
-                            websiteUrlCombine = websitePath + newpatFiles[3]
-                        }
+                        websiteUrlCombine = websitePath + newpatFiles[locationSelection + 5 - 1]
                     }
                 }else{// Everything besides release of records and new patient
                         if(categorySelection == 1){
                             if(languageCheck == 0){
                                 websiteUrlCombine = websitePath +  consentFiles[row - 1]
                             }else{
-                                print("Spanish Consent")
                                 websiteUrlCombine = websitePath + consentFiles[2]
                             }
                         }else if(categorySelection == 3){

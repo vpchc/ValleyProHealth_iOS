@@ -20,7 +20,7 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     // MARK: - Global Variables -
     // MARK: Strings
-    let toastRate = "Opening App Store..."
+    let toastRate = NSLocalizedString("Opening app store...", comment: "Feedback Open Store")
     let messageErrorTitle = NSLocalizedString("Could Not Send Email", comment: "Message Error Text")
     let messageErrorBody = NSLocalizedString("Your device could not send e-mail.  Please check e-mail configuration and try again.", comment: "Message Error Text")
     

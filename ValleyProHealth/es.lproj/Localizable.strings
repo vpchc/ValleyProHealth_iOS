@@ -67,7 +67,7 @@
 "Check out our Patient Portal where you can schedule appointments, email your provider, request refills and more! See one of our receptionists to enroll for free now!" = "Visita nuestra Portal del Paciente donde se puede programar citas , enviar por correo electrónico su proveedor, recargas de petición y más ! Ver uno de nuestros recepcionistas para inscribirse de forma gratuita ahora!";
 
 /* Locations Options Selection */
-"Clinic Hours" = "Horario de la clínica";
+"Clinic Info" = "Información de la clínica";
 
 /* MSBHC Closed Status */
 "Closed" = "Cerrado";
@@ -205,7 +205,7 @@
 "Opening VPCHC Patient Portal webpage…" = "la Apertura de la página web VPCHC Portal del Paciente…";
 
 /* Services Service Selection */
-"Patient Support" = "Portal del paciente";
+"Patient Support" = "Apoyo al paciente";
 
 /* Outdated Text */
 "Please" = "Por favor";
@@ -240,6 +240,26 @@
    Providers Locations Directions
    Services Location Directions */
 "Select a location" = "Seleccione una ubicación";
+
+/* Forms New Patient Directions
+   Forms Release Directions
+   Forms Sliding Fee Scale Directions*/
+"Select a form" = "Seleccione un formulario";
+
+/* Forms New Patient Selection */
+"Adult" = "Adulto";
+
+/* Forms New Patient Selection */
+"Child" = "Niño";
+
+/* Rights Selection */
+"Acknowledgment of Bill of Rights" = "El reconocimiento de la Declaración de Derechos";
+
+/* Rights Selection */
+"Bill of Rights" = "Declaración de Derechos";
+
+/* Rights Selection */
+"Privacy Practice" = "Práctica de Privacidad";
 
 /* Provider Provider Directions
    Providers Provider Directions */

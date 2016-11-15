@@ -122,7 +122,7 @@
 /* Class = "UILabel"; text = "MSBHC Tracker"; ObjectID = "bmx-ae-5DP"; */
 "bmx-ae-5DP.text" = "MSBHC Curso";
 
-/* Class = "UILabel"; text = "If you would like to leave the us feedback, please send us a message."; ObjectID = "c6z-pa-fHR"; */
+/* Class = "UILabel"; text = "If you would like to leave us feedback, please send a message."; ObjectID = "c6z-pa-fHR"; */
 "c6z-pa-fHR.text" = "Si desea a dejar comentarios, por favor, envíenos un mensaje.";
 
 /* Class = "UILabel"; text = "Patient\nResources"; ObjectID = "cPS-1f-MNN"; */
@@ -162,7 +162,7 @@
 "gr8-oJ-nmp.text" = "Valley Professionals\nCommunity Health Center";
 
 /* Class = "UILabel"; text = "Forms"; ObjectID = "gwf-6p-rsh"; */
-"gwf-6p-rsh.text" = "Formas";
+"gwf-6p-rsh.text" = "Formularios";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i2v-hS-dpB"; */
 "i2v-hS-dpB.normalTitle" = "Button";
@@ -224,6 +224,9 @@
 /* Class = "UILabel"; text = "Providers"; ObjectID = "wOG-Gu-uKg"; */
 "wOG-Gu-uKg.text" = "Proveedores";
 
+/* Class = "UILabel"; text = "Providers"; ObjectID = "0jx-Qa-O8R"; */
+"0jx-Qa-O8R.text" = "Proveedores";
+
 /* Class = "UILabel"; text = "After-Hours Clinic:"; ObjectID = "wTk-Ib-uFd"; */
 "wTk-Ib-uFd.text" = "Después de las Horas:";
 
@@ -268,3 +271,6 @@
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tOA-X8-2ts"; */
 "tOA-X8-2ts.normalTitle" = "";
+
+/* Class = "UILabel"; text = "If you like our app, please rate it\non the App Store."; ObjectID = "zpW-cJ-JiC"; */
+"zpW-cJ-JiC.text" = "Si te gusta nuestra aplicación, por favor Precio en la App Store";
