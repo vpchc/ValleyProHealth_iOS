@@ -31,7 +31,7 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     var bh_cay = ["Johnathan Detwiler, MS", "Lisa Tincher, PMHNP"]
     var med_cay = ["Dr. Bing Gale, MD","Renae Norman, FNP-C"]
     var dental_clint = ["Currently none at this location"]
-    var bh_clint = ["Dr. Paul Taraska, MD", "Dr. Julia Wernz, PhD, HSPP", "Michelle Bond, LMHCA", "Linda Lonneman, LCSW", "David McIntyre, LCAC", "Lisa Tincher, PMHNP"]
+    var bh_clint = ["Dr. Paul Taraska, MD", "Dr. Julia Wernz, PhD, HSPP", "Linda Lonneman, LCSW", "David McIntyre, LCAC", "Lisa Tincher, PMHNP"]
     var med_clint = ["Dr. Aziz Abed, MD", "Dr. Bing Gale, MD", "Dr. Steven Macke, MD", "Gretchen Blevins, FNP-C", "Nicole Hall, FNP-C", "Brandi Larson, FNP-C", "Tammy Mundy, FNP-C"]
     var dental_craw = ["Currently none at this location"]
     var bh_craw = ["Dr. Paul Taraska, MD", "Keith Seegers, LCSW", "Dana Tinkle, LMHC"]

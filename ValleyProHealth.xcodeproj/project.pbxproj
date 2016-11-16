@@ -231,8 +231,8 @@
 				DDD9A9C21D819882000924E8 /* PageContentViewController.swift */,
 				B878AD031D8A24DA0098DD10 /* PatientResourcesViewController.swift */,
 				DD7419631D92D2F300C2694D /* PatientResourcesFormViewController.swift */,
-				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
 				DD6C44191D89C7E100ADABA1 /* ProvidersFormViewController.swift */,
+				DD6C44131D8836A400ADABA1 /* ProvidersViewController.swift */,
 				B878ACFF1D8A22250098DD10 /* ServicesViewController.swift */,
 				B82D5C9D1D8F023900BDB9E8 /* ServicesFormViewController.swift */,
 			);

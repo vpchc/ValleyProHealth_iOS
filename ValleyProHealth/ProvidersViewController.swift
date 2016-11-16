@@ -121,9 +121,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     */
         locationIndex = row
         self.providerTypePicker.reloadAllComponents()
-        if(row != 0 || row != 3){
-            providerTypePicker.isHidden = false;
-        }
+        providerTypePicker.isHidden = false;
     }
     
     // MARK: - Segue Setup -

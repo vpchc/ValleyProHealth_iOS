@@ -12,6 +12,10 @@ class LocationsHoursTableViewController: UITableViewController {
 
     // MARK: - Outlets -
     // MARK: Labels
+    @IBOutlet weak var addressLabel1: UILabel!
+    @IBOutlet weak var addressLabel2: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var faxLabel: UILabel!
     @IBOutlet weak var mondayHoursLabel: UILabel!
     @IBOutlet weak var tuesdayHoursLabel: UILabel!
     @IBOutlet weak var wednesdayHoursLabel: UILabel!
@@ -27,7 +31,18 @@ class LocationsHoursTableViewController: UITableViewController {
     }
     
     // MARK: - Table Setup -
-    func setTableText(hours: [String]){
+    func setTableContactInfo(index: Int, info: [String]){
+        var contactIndex = index
+
+        addressLabel1.text = info[contactIndex]
+        contactIndex += 1
+        addressLabel2.text = info[contactIndex]
+        contactIndex += 1
+        phoneLabel.text    = info[contactIndex]
+        contactIndex += 1
+        faxLabel.text      = info[contactIndex]
+    }
+    func setTableHours(hours: [String]){
         mondayHoursLabel.text    = hours[0]
         tuesdayHoursLabel.text   = hours[1]
         wednesdayHoursLabel.text = hours[2]
@@ -40,6 +55,6 @@ class LocationsHoursTableViewController: UITableViewController {
     }
     // Number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 14
     }
 }

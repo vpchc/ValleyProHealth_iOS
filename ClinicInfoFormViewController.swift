@@ -26,6 +26,27 @@ class ClinicInfoFormViewController: UIViewController {
     // MARK: Arrays
     var bloomcaycrawHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m."]
     var terreHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:30 a.m. - 8:00 p.m.","8:00 a.m. - 4:30 p.m."]
+    var contactInfo = ["201 W. Academy St.",
+                       "Bloomingdale, IN 47832",
+                       "(765) 498–9000",
+                       "Fax: (765) 498–9004",
+                       "703 W. Park Street",
+                       "Cayuga, IN 47928",
+                       "(765) 492–9042",
+                       "Fax: (765) 492–9048",
+                       "777 S. Main Street, Suite 100",
+                       "Clinton, IN 47842",
+                       "(765) 828–1003",
+                       "Fax: (765) 828–1030",
+                       "1810 Layfayette Ave.",
+                       "Crawfordsville, IN 47933",
+                       "(765) 362–5100",
+                       "Fax: (765) 362–5171",
+                       "1530 North 7th Street, Suite 201",
+                       "Terre Haute, IN 47807",
+                       "(812) 238–7631",
+                       "Fax: (812) 238–7003"]
+    
     var dataSegue = ["", ""]
     // MARK: Defaults
     let defaults = UserDefaults.standard
@@ -45,11 +66,16 @@ class ClinicInfoFormViewController: UIViewController {
             let locationImageName = dataSegue[0] + "_location_pic"
             locationImage1.image = UIImage(named:locationImageName)
 
+            //Set Contact Info
+            let indexIntConvert = Int(dataSegue[1])!
+            let contactInfoIndex = (indexIntConvert - 1) * 3
+            tableController.setTableContactInfo(index: contactInfoIndex, info: contactInfo)
+            
             //Set the hours
             if(dataSegue[1] == "5"){
-                tableController.setTableText(hours: terreHours)
+                tableController.setTableHours(hours: terreHours)
             }else{
-                tableController.setTableText(hours: bloomcaycrawHours)
+                tableController.setTableHours(hours: bloomcaycrawHours)
             }
         }else{//Clinton location
             //Set location image

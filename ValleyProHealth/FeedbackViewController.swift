@@ -42,7 +42,7 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
         self.view.makeToast(toastRate)
         
         //Open ValleyProHealth App Store Page
-        let appPageURL = URL(string:"itms-apps://itunes.apple.com/us/app/apple-store/1171455532")
+        let appPageURL = URL(string:"https://itunes.apple.com/app/id1171455532")
         UIApplication.shared.openURL(appPageURL!)
        
     }

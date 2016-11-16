@@ -20,6 +20,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // MARK: - Global Variables -
     // MARK: Arrays
     var dataToSegue = ["", "", "" , ""]
+    var finalServices = [String]()
     let locations = [
         NSLocalizedString("Select a location", comment: "Services Location Directions"),
         "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
@@ -29,8 +30,15 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         NSLocalizedString("Dental", comment: "Services Service Selection"),
         NSLocalizedString("Patient Support", comment: "Services Service Selection"),
         NSLocalizedString("Primary Care", comment: "Services Service Selection")]
+    let services2 = [
+        NSLocalizedString("Select a category", comment: "Services Service Directions"),
+        NSLocalizedString("Behavioral Health", comment: "Services Service Selection"),
+        NSLocalizedString("Patient Support", comment: "Services Service Selection"),
+        NSLocalizedString("Primary Care", comment: "Services Service Selection")]
     // MARK: Defaults
     let defaults = UserDefaults.standard
+    // MARK: Ints
+    var locationIndex = 0
     
     // MARk: - View Lifecycle -
     override func viewDidLoad() {
@@ -48,9 +56,9 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if(savedLocation == 0 || savedLocation == 6){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
-            dataSegueSetup(row: savedLocation, pickerIndex: 0)
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
-            servicesPicker.isHidden = false
+            resetServicesPicker(row: savedLocation)
+            dataSegueSetup(row: savedLocation, pickerIndex: 0)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -73,7 +81,12 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if( pickerView == locationPicker){
             return locations.count
         }else{
-            return services.count
+            if(locationIndex == 1 || locationIndex == 2){
+                finalServices = services
+            }else{
+                finalServices = services2
+            }
+            return finalServices.count
         }
     }
     // Row data
@@ -81,7 +94,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if( pickerView == locationPicker){
             return locations[row]
         }else{
-            return services[row]
+            return finalServices[row]
             
         }
     }
@@ -90,19 +103,28 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     {
         if(pickerView == locationPicker){
             if(row != 0){
-                servicesPicker.isHidden = false;
+                resetServicesPicker(row: row)
                 dataSegueSetup(row: row, pickerIndex: 0)
             }else{
                 servicesPicker.isHidden = true;
             }
         }else{
             if(row != 0){
-                dataSegueSetup(row: row, pickerIndex: 1)
                 servicesPicker.selectRow(0, inComponent: 0, animated: false)
+                dataSegueSetup(row: row, pickerIndex: 1)
                 self.performSegue(withIdentifier: "ServicesDataSegue", sender: self)
             }
-            
         }
+    }
+    func resetServicesPicker(row: Int){
+    /*
+         Arguments: row - Integer that is the row selected by the user
+         Description: Resets the services picker
+         Returns: Nothing
+    */
+        locationIndex = row
+        self.servicesPicker.reloadAllComponents()
+        servicesPicker.isHidden = false;
     }
 
     // MARK: - Segue Setup -
@@ -126,7 +148,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             dataToSegue[0] = locations[row]
             dataToSegue[2] = String(row)
         }else{
-            dataToSegue[1] = services[row]
+            dataToSegue[1] = finalServices[row]
             dataToSegue[3] = String(row)
         }
     }
