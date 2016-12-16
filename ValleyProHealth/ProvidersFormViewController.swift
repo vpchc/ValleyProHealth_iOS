@@ -37,8 +37,8 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     var bh_craw = ["Dr. Paul Taraska, MD", "Keith Seegers, LCSW", "Dana Tinkle, LMHC"]
     var med_craw = ["Dr. Do S. Hwang, MD", "Gwyndolen Morson, FNP-C"]
     var dental_terre = ["Currently none at this location"]
-    var bh_terre = ["Sara Ritter, LCSW", "Lacey Skwortz, LCSW", "Lisa Tincher, PMHNP"]
-    var med_terre = ["Leslie Batty, FNP-C","Beth Fields, FNP-C"]
+    var bh_terre = ["Amber Cadick, PhD", "Sara Ritter, LCSW", "Lacey Skwortz, LCSW", "Lisa Tincher, PMHNP"]
+    var med_terre = ["Andre Anderson, M.D.", "Eric D. Beachy, M.D.", "Tamara Copeland, M.D.", "Danielle Cundiff, D.O.", "Jonathan Dario, M.D.", "Robert Ehresman, M.D.", "Eugene Epplin, M.D.", "Sean Ewing, M.D.", "Alexander Facista, M.D.", "Christopher Fitzsimmons, M.D.", "George Fritch, M.D.", "Angela Hatfield, M.D.", "Danny Isawi, M.D.", "Elias Khalaf, M.D.", "Kenneth Kigorwe, M.D.", "Amy Laib, M.D.", "Darcy Lash, M.D.", "Jansen Mallari, M.D.", "Steven McDonald, M.D.", "Kenneth Reece, M.D.","Puja Sharma, M.D.", "Joshua Slep, M.D.", "Patrick Titzer, M.D.", "Tony Tran, M.D.", "Laurie Valera, M.D.", "Christopher Walker, M.D.", "Laura Watt, M.D.", "Amanda Williams, M.D.", "Leslie Batty, FNP-C", "Beth Fields, FNP-C"]
     var dental_msbhc = ["Currently none at this location"]
     var bh_msbhc = ["Heather Woods, LMHCA"]
     var med_msbhc = ["Nicole Cook, FNP-C", "Renae Norman, FNP-C"]
@@ -135,7 +135,6 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
         
         // set the text from the data model
         cell.textLabel?.text = self.providersList[(indexPath as NSIndexPath).row]
-        cell.textLabel?.textAlignment = .center
         
         return cell
     }

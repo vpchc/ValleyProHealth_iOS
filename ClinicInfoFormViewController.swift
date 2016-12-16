@@ -68,7 +68,7 @@ class ClinicInfoFormViewController: UIViewController {
 
             //Set Contact Info
             let indexIntConvert = Int(dataSegue[1])!
-            let contactInfoIndex = (indexIntConvert - 1) * 3
+            let contactInfoIndex = (indexIntConvert - 1) * 4
             tableController.setTableContactInfo(index: contactInfoIndex, info: contactInfo)
             
             //Set the hours
