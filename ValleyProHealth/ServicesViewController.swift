@@ -23,7 +23,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var finalServices = [String]()
     let locations = [
         NSLocalizedString("Select a location", comment: "Services Location Directions"),
-        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Rockville", "Terre Haute"]
     let services = [
         NSLocalizedString("Select a category", comment: "Services Service Directions"),
         NSLocalizedString("Behavioral Health", comment: "Services Service Selection"),
@@ -34,6 +34,9 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         NSLocalizedString("Select a category", comment: "Services Service Directions"),
         NSLocalizedString("Behavioral Health", comment: "Services Service Selection"),
         NSLocalizedString("Patient Support", comment: "Services Service Selection"),
+        NSLocalizedString("Primary Care", comment: "Services Service Selection")]
+    let services3 = [
+        NSLocalizedString("Select a category", comment: "Services Service Directions"),
         NSLocalizedString("Primary Care", comment: "Services Service Selection")]
     // MARK: Defaults
     let defaults = UserDefaults.standard
@@ -53,7 +56,7 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //Set the default locationPicker value based on the location Preference
         //If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedLocation == 0 || savedLocation == 6){
+        if(savedLocation == 0 || savedLocation == 7){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
@@ -81,8 +84,10 @@ class ServicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if( pickerView == locationPicker){
             return locations.count
         }else{
-            if(locationIndex == 1 || locationIndex == 2){
+            if(locationIndex == 2){//Cayuga
                 finalServices = services
+            }else if(locationIndex == 5){//Rockville
+                finalServices = services3
             }else{
                 finalServices = services2
             }

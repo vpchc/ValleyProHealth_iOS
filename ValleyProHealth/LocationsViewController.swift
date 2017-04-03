@@ -21,10 +21,10 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // MARK: - Global Variables -
     // MARK: Arrays
     var dataToSegue = ["", "", "", ""]
-    let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.484390"]
-    let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.407648"]
+    let directionsLat = ["39.830453", "39.940612", "39.653585", "40.049819", "39.770212", "39.484390"]
+   let directionsLong = ["-87.254084", "-87.469077", "-87.399138", "-86.907426", "-87.235723", "-87.407648"]
     var locations = [
-        NSLocalizedString("Select a location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+        NSLocalizedString("Select a location", comment: "Locations Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Rockville", "Terre Haute"]
     var options = [
         NSLocalizedString("Select an option", comment: "Locations Options Directions"),
         NSLocalizedString("Clinic Info", comment: "Locations Options Selection"),
@@ -47,7 +47,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Set the default locationPicker value based on the location Preference.
         // If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedLocation == 0 || savedLocation == 6){
+        if(savedLocation == 0 || savedLocation == 7){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)

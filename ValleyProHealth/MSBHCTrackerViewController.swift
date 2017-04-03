@@ -1,4 +1,4 @@
-//
+                //
 //  MSBHCTrackerViewController.swift
 //  ValleyProHealth
 //
@@ -16,7 +16,9 @@ class MSBHCTrackerViewController: UIViewController {
     @IBOutlet weak var downloadButton: UIButton!
     // MARK: Labels
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var currentLocationLabel: UILabel!
+    @IBOutlet weak var currentHoursLabel: UILabel!
+    @IBOutlet weak var currentStatusLabel: UILabel!
     
     // MARK: - Global Variables -
     // MARK: Controller Reference
@@ -64,15 +66,6 @@ class MSBHCTrackerViewController: UIViewController {
         UIApplication.shared.openURL(websiteUrl)
     }
     
-    // MARK: - Segue Setup -
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "BusDataSegue" {
-            if let destination = segue.destination as? BusTableViewController{
-               tablecontroller = destination
-            }
-        }
-    }
-    
     // MARK: - Bus Functions -
     func busMain() {
     /*   
@@ -82,7 +75,6 @@ class MSBHCTrackerViewController: UIViewController {
     */
         let locationsForToday = defaults.object(forKey:"busSchedule") as? [String] ?? [String]()
         var busCheck = [Int]()
-        var busInfo = [String]()
         var busLocation = ""
         var busHours = ""
         var busStatus =  ""
@@ -105,11 +97,11 @@ class MSBHCTrackerViewController: UIViewController {
             busStatus   = busStatusSet(busCheck: busCheck[1])
         }
         
-        // Stores the bus information in an array and sends that to a function that displays the text on the screen
-        busInfo.append(busLocation)
-        busInfo.append(busHours)
-        busInfo.append(busStatus)
-        tablecontroller.setText(busText: busInfo)
+        //Sets the bus info text on the screen
+        currentLocationLabel.text = busLocation
+        currentHoursLabel.text = busHours
+        currentStatusLabel.text = busStatus
+        
     }
     
     func busLocationCheck(locations: [String]) -> [Int]{

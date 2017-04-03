@@ -22,8 +22,8 @@ class OptionTableViewController: UITableViewController {
         NSLocalizedString("Spanish", comment: "Options Language Selection")]
     let locationSelection = [
         NSLocalizedString("No Preference", comment: "Options Location Selection"),
-        "Bloomingdale", "Cayuga", "Clinton" , "Crawfordsville", "Terre Haute" , "MSBHC"]
-    let numberOfRows = [7,2]
+        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Rockville", "Terre Haute", "MSBHC"]
+    let numberOfRows = [8,2]
     // MARK: Defaults
     let defaults = UserDefaults.standard
     // MARK: Ints

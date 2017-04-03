@@ -17,8 +17,10 @@ class CallDialogViewController: UIViewController {
     @IBOutlet weak var cayButton: UIButton!
     @IBOutlet weak var clintButton: UIButton!
     @IBOutlet weak var crawButton: UIButton!
+    @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var terreButton: UIButton!
     @IBOutlet weak var msbhcButton: UIButton!
+    // MARK: Labels
     @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: - Global Variables -
@@ -29,6 +31,7 @@ class CallDialogViewController: UIViewController {
     let toastCallCay = NSLocalizedString("Calling Cayuga Location...", comment: "Toast when calling Cayuga location")
     let toastCallClint = NSLocalizedString("Calling Clinton Location...", comment: "Toast when calling Clinton location")
     let toastCallCraw = NSLocalizedString("Calling Crawfordsville Location...", comment: "Toast when calling Crawfordsville location")
+    let toastCallRock = NSLocalizedString("Calling Rockville Location...", comment: "Toast when calling Rockville location")
     let toastCallTerre = NSLocalizedString("Calling Terre Haute Location...", comment: "Toast when calling Terre Haute location")
     let toastCallMSBHC = NSLocalizedString("Calling MSBHC Location...", comment: "Toast when calling MSBHC location")
     
@@ -57,36 +60,45 @@ class CallDialogViewController: UIViewController {
     @IBAction func bloomButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallBloom)
         let telenumber = URL(string: "tel://7654989000")!
-        UIApplication.shared.openURL(telenumber)
-        self.dismiss(animated: true, completion: nil)
+        callNumber(telenumber: telenumber)
     }
     @IBAction func cayButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallCay)
         let telenumber = URL(string: "tel://7654989042")!
-        UIApplication.shared.openURL(telenumber)
-        self.dismiss(animated: true, completion: nil)
+        callNumber(telenumber: telenumber)
     }
     @IBAction func clintButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallClint)
         let telenumber = URL(string: "tel://7658281003")!
-        UIApplication.shared.openURL(telenumber)
-        self.dismiss(animated: true, completion: nil)
+        callNumber(telenumber: telenumber)
     }
-    @IBAction func crawButton(_ sender: AnyObject) {
+    @IBAction func crawButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallCraw)
         let telenumber = URL(string: "tel://7653625100")!
-        UIApplication.shared.openURL(telenumber)
-        self.dismiss(animated: true, completion: nil)
+        callNumber(telenumber: telenumber)
+    }
+    @IBAction func rockButtonTap(_ sender: AnyObject) {
+        self.view.makeToast(toastCallRock)
+        let telenumber = URL(string: "tel://7655691123")!
+        callNumber(telenumber: telenumber)
     }
     @IBAction func terreButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallTerre)
         let telenumber = URL(string: "tel://8122387631")!
-        UIApplication.shared.openURL(telenumber)
-        self.dismiss(animated: true, completion: nil)
+        callNumber(telenumber: telenumber)
     }
     @IBAction func msbhcButtonTap(_ sender: AnyObject) {
         self.view.makeToast(toastCallMSBHC)
         let telenumber = URL(string: "tel://7655926164")!
+        callNumber(telenumber: telenumber)
+    }
+    func callNumber(telenumber: URL){
+    /*
+         Arguments:   telenumber - A URL which of the number to call based on users selection.
+         Description: Calls a number based on the users selection and then closes the window.
+         Returns:     Nothing
+    */
+
         UIApplication.shared.openURL(telenumber)
         self.dismiss(animated: true, completion: nil)
     }

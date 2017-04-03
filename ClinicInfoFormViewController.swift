@@ -24,8 +24,9 @@ class ClinicInfoFormViewController: UIViewController {
     
     // MARK: - Global Variables -
     // MARK: Arrays
-    var bloomcaycrawHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m."]
-    var terreHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:30 a.m. - 8:00 p.m.","8:00 a.m. - 4:30 p.m."]
+    var officeHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m."]
+    var rockHours = ["7:30 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","7:30 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","7:30 a.m. - 5:00 p.m."]
+    var terreHours = ["8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:00 a.m. - 5:00 p.m.","8:30 a.m. - 5:00 p.m.","8:00 a.m. - 4:30 p.m."]
     var contactInfo = ["201 W. Academy St.",
                        "Bloomingdale, IN 47832",
                        "(765) 498–9000",
@@ -42,6 +43,10 @@ class ClinicInfoFormViewController: UIViewController {
                        "Crawfordsville, IN 47933",
                        "(765) 362–5100",
                        "Fax: (765) 362–5171",
+                       "727 N Lincoln Rd",
+                       "Rockville, IN 47872",
+                       "(765) 569-1123",
+                       "Fax: (765) 569-6412",
                        "1530 North 7th Street, Suite 201",
                        "Terre Haute, IN 47807",
                        "(812) 238–7631",
@@ -73,9 +78,11 @@ class ClinicInfoFormViewController: UIViewController {
             
             //Set the hours
             if(dataSegue[1] == "5"){
+                tableController.setTableHours(hours: rockHours)
+            }else if(dataSegue[1] == "6"){
                 tableController.setTableHours(hours: terreHours)
             }else{
-                tableController.setTableHours(hours: bloomcaycrawHours)
+                tableController.setTableHours(hours: officeHours)
             }
         }else{//Clinton location
             //Set location image

@@ -85,7 +85,7 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
         servicesLabel.text = dataSegue[1]
         
         // Set servicesList based on users location
-        if(dataSegue[2] == "1" || dataSegue[2] == "2"){//Has dental services
+        if(dataSegue[2] == "2"){//Cayuga
             if(dataSegue[3] == "1"){
                 servicesList = bhServices
             }else if(dataSegue[3] == "2"){
@@ -95,13 +95,15 @@ class ServicesFormViewController: UIViewController, UITableViewDelegate, UITable
             }else if(dataSegue[3] == "4"){
                 servicesList = primcare1
             }
-        }else{//Doesn't have dental services
+        }else if(dataSegue[2] == "5"){//Rockville
+            servicesList = primcare1
+        }else{//All other locations
             if(dataSegue[3] == "1"){
                 servicesList = bhServices
             }else if(dataSegue[3] == "2"){
                 servicesList = patsupportServices
             }else if(dataSegue[3] == "3"){
-                if(dataSegue[2] == "5"){
+                if(dataSegue[2] == "6"){
                     servicesList = primcare2
                 }else{
                     servicesList = primcare1

@@ -24,7 +24,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var finalForms = [String]()
     var forms = [String]()
     let locations = [
-        NSLocalizedString("Select a location", comment: "Forms Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute"]
+        NSLocalizedString("Select a location", comment: "Forms Location Directions"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Rockville", "Terre Haute"]
     let categories = [
         "Select a category",
         "Consent",
@@ -47,7 +47,8 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         "Telemedicine"]
     let consentFormsSpanish = [
         "Seleccione un formulario",
-        "Liberación de información"]
+        "Liberación de información",
+        "Liberación de Registros"]
     let newpatForms = [
         NSLocalizedString("Select a form", comment: "Forms New Patient Directions"),
         NSLocalizedString("Adult", comment: "Forms New Patient Selection"),
@@ -64,10 +65,35 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         "Select a Form",
         "ISHAA Physical",
         "MSBHC Enrollment"]
-    let consentFiles = ["behavioral_health_release.pdf", "minor_child_consent_to_treat.pdf",  "release_of_information.pdf", "", "telemedicine_consent.pdf"]
-    let newpatFiles = ["new_patient_packet_adult_bloom.pdf", "new_patient_packet_adult_cay.pdf", "new_patient_packet_adult_clint.pdf", "new_patient_packet_adult_crawfordsville.pdf", "new_patient_packet_adult_terrehaute.pdf", "new_patient_packet_child_bloom.pdf", "new_patient_packet_child_cay.pdf", "new_patient_packet_child_clint.pdf", "new_patient_packet_child_crawfordsville.pdf", "new_patient_packet_child_terrehaute.pdf"]
-    let noticeFiles = ["acknowledgement_receipt.pdf", "patient_bill_of_rights.pdf", "notice_privacy_practices.pdf"]
-    let recordFiles = ["records_release_bloomingdale.pdf", "records_release_cayuga.pdf", "records_release_clinton.pdf", "records_release_crawfordsville.pdf", "records_release_terre_haute.pdf"]
+    let consentFiles = [
+        "behavioral_health_release.pdf",
+        "minor_child_consent_to_treat.pdf",
+        "release_of_information.pdf", "",
+        "telemedicine_consent.pdf"]
+    let newpatFiles = [
+        "new_patient_packet_adult_bloomingdale.pdf",
+        "new_patient_packet_adult_cayuga.pdf",
+        "new_patient_packet_adult_clinton.pdf",
+        "new_patient_packet_adult_crawfordsville.pdf",
+        "new_patient_packet_adult_rockville.pdf",
+        "new_patient_packet_adult_terrehaute.pdf",
+        "new_patient_packet_child_bloomingdale.pdf",
+        "new_patient_packet_child_cayuga.pdf",
+        "new_patient_packet_child_clinton.pdf",
+        "new_patient_packet_child_crawfordsville.pdf",
+        "new_patient_packet_child_rockville.pdf",
+        "new_patient_packet_child_terrehaute.pdf"]
+    let noticeFiles = [
+        "acknowledgement_receipt.pdf",
+        "patient_bill_of_rights.pdf",
+        "notice_privacy_practices.pdf"]
+    let recordFiles = [
+        "records_release_bloomingdale.pdf",
+        "records_release_cayuga.pdf",
+        "records_release_clinton.pdf",
+        "records_release_crawfordsville.pdf",
+        "records_release_rockville.pdf",
+        "records_release_terrehaute.pdf"]
     let slidingFiles = ["sliding_fee_scale_reqs.pdf"]
     let studentFiles = ["ihsaa_physical.pdf", "msbhc_student_enrollment.pdf"]
     var dataToSegue = ["", "", "" , ""]
@@ -95,7 +121,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Set the default locationPicker value based on the location Preference
         // If the location preference is msbhc, it is set to no preference since there isn't information for the msbhc.
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedLocation == 0 || savedLocation == 6){
+        if(savedLocation == 0 || savedLocation == 7){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
@@ -204,13 +230,13 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 }
                 
                 // Depending on the locale and selections made by the user, sets up the websiteURL that contains the correct form to download
-                if(categorySelection == 1 && row == 4 && languageCheck == 0){// Release of Records selected which has different forms for each location
+                if(categorySelection == 1 && ((languageCheck == 0 && row == 4) || (languageCheck == 1 && row == 2))){// Release of Records selected which has different forms for each location
                     websiteUrlCombine = websitePath + recordFiles[locationSelection - 1]
-                }else if(categorySelection == 2){// New Patient selected which has different forms for some locations
+                }else if(categorySelection == 2){// New Patient selected which has different forms for each location
                     if(row == 1){// Adult Selected
                         websiteUrlCombine = websitePath + newpatFiles[locationSelection - 1]
                     }else if(row == 2){// Child Selected
-                        websiteUrlCombine = websitePath + newpatFiles[locationSelection + 5 - 1]
+                        websiteUrlCombine = websitePath + newpatFiles[locationSelection + 6 - 1]
                     }
                 }else{// Everything besides release of records and new patient
                         if(categorySelection == 1){
@@ -220,7 +246,7 @@ class FormsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                                 websiteUrlCombine = websitePath + consentFiles[2]
                             }
                         }else if(categorySelection == 3){
-                                websiteUrlCombine = websitePath + noticeFiles[row - 1]
+                            websiteUrlCombine = websitePath + noticeFiles[row - 1]
                         }else if(categorySelection == 4){
                             websiteUrlCombine = websitePath + slidingFiles[row - 1]
                         }else if(categorySelection == 5){

@@ -23,7 +23,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var finalProviderTypes = [String]()
     var locations = [
         NSLocalizedString("Select a location", comment: "Providers Locations Directions"),
-        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
+        "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Rockville", "Terre Haute", "MSBHC"]
     var providerTypes1 = [
         NSLocalizedString("Select a type of provider", comment: "Providers Provider Directions"),
         NSLocalizedString("Behavioral Health", comment: "Providers Provider Selection"),
@@ -33,6 +33,9 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var providerTypes2 = [
         NSLocalizedString("Select a type of provider", comment: "Provider Provider Directions"),
         NSLocalizedString("Behavioral Health", comment: "Provider Provider Selection"),
+        NSLocalizedString("Primary Care", comment: "Provider Provider Selection")]
+    var providerTypes3 = [
+        NSLocalizedString("Select a type of provider", comment: "Provider Provider Directions"),
         NSLocalizedString("Primary Care", comment: "Provider Provider Selection")]
     // MARK: Defaults
     let defaults = UserDefaults.standard
@@ -51,7 +54,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         //Set the default locationPicker value based on the location Preference
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedLocation == 0 || savedLocation == 6){
+        if(savedLocation == 0 || savedLocation == 7){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
@@ -78,8 +81,10 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if( pickerView == locationPicker){
             return locations.count
         }else{
-            if(locationIndex == 1 || locationIndex == 2){
+            if(locationIndex == 2){
                 finalProviderTypes = providerTypes1
+            }else if(locationIndex == 5){
+                finalProviderTypes = providerTypes3
             }else{
                 finalProviderTypes = providerTypes2
             }
@@ -138,7 +143,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func dataSegueSetup(row: Int, pickerIndex: Int){
     /*
          Arguments: row - Integer that is the row selected by the user, pickerIndex - Integer of the picker storing data
-         Description: Resets the providerType picker
+         Description: Setup the data to send via Segue.
          Returns: Nothing
     */
         if(pickerIndex == 0){

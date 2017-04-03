@@ -14,7 +14,7 @@ class LocationPreferenceViewController: UIViewController, UIPickerViewDelegate, 
     //MARK: Arrays
     let locationsList =
             [NSLocalizedString("Select a preferred location", comment: "Locations Preference Selection Directions"),
-            NSLocalizedString("No Preference", comment: "Locations Preference Selection"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville", "Terre Haute", "MSBHC"]
+            NSLocalizedString("No Preference", comment: "Locations Preference Selection"), "Bloomingdale", "Cayuga", "Clinton", "Crawfordsville","Rockville", "Terre Haute", "MSBHC"]
     //MARK: Defaults
     let defaults = UserDefaults.standard
     // MARK: Pickers

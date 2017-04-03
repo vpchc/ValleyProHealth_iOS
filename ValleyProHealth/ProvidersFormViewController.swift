@@ -36,6 +36,9 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
     var dental_craw = ["Currently none at this location"]
     var bh_craw = ["Dr. Paul Taraska, MD", "Keith Seegers, LCSW", "Dana Tinkle, LMHC"]
     var med_craw = ["Dr. Do S. Hwang, MD", "Gwyndolen Morson, FNP-C"]
+    var dental_rock = ["Currently none at this location"]
+    var bh_rock = ["Currently none at this location"]
+    var med_rock = ["Jordan Ryley, FNP-C"]
     var dental_terre = ["Currently none at this location"]
     var bh_terre = ["Amber Cadick, PhD", "Sara Ritter, LCSW", "Lacey Skwortz, LCSW", "Lisa Tincher, PMHNP"]
     var med_terre = ["Andre Anderson, M.D.", "Eric D. Beachy, M.D.", "Tamara Copeland, M.D.", "Danielle Cundiff, D.O.", "Jonathan Dario, M.D.", "Robert Ehresman, M.D.", "Eugene Epplin, M.D.", "Sean Ewing, M.D.", "Alexander Facista, M.D.", "Christopher Fitzsimmons, M.D.", "George Fritch, M.D.", "Angela Hatfield, M.D.", "Danny Isawi, M.D.", "Elias Khalaf, M.D.", "Kenneth Kigorwe, M.D.", "Amy Laib, M.D.", "Darcy Lash, M.D.", "Jansen Mallari, M.D.", "Steven McDonald, M.D.", "Kenneth Reece, M.D.","Puja Sharma, M.D.", "Joshua Slep, M.D.", "Patrick Titzer, M.D.", "Tony Tran, M.D.", "Laurie Valera, M.D.", "Christopher Walker, M.D.", "Laura Watt, M.D.", "Amanda Williams, M.D.", "Leslie Batty, FNP-C", "Beth Fields, FNP-C"]
@@ -67,28 +70,28 @@ class ProvidersFormViewController: UIViewController, UITableViewDelegate, UITabl
             }else if(dataSegue[2] == "4"){
                 providersList = bh_craw
             }else if(dataSegue[2] == "5"){
-                providersList = bh_terre
+                providersList = med_rock
             }else if(dataSegue[2] == "6"){
+                providersList = bh_terre
+            }else{
                 providersList = bh_msbhc
             }
         }else if(dataSegue[3] == "2"){
             if(dataSegue[2] == "1"){
-                providersList = dental_bloom
+                providersList = med_bloom
             }else if(dataSegue[2] == "2"){
                 providersList = dental_cay
             }else if(dataSegue[2] == "3"){
                 providersList = med_clint
             }else if(dataSegue[2] == "4"){
                 providersList = med_craw
-            }else if(dataSegue[2] == "5"){
-                providersList = med_terre
             }else if(dataSegue[2] == "6"){
+                providersList = med_terre
+            }else{
                 providersList = med_msbhc
             }
         }else if(dataSegue[3] == "3"){
             if(dataSegue[2] == "1"){
-                providersList = med_bloom
-            }else if(dataSegue[2] == "2"){
                 providersList = med_cay
             }
         }
