@@ -59,7 +59,7 @@ class PageContentViewController: UIViewController {
         }
     }
     @IBAction func portalButtonTap(_ sender: AnyObject) {
-        let portalUrl: URL = URL(string:"https://secure2.myunionportal.org/vpchc/default.aspx")!
+        let portalUrl: URL = URL(string: "https://mycw108.ecwcloud.com/portal14763/jsp/100mp/login_otp.jsp")!
         let application = UIApplication.shared
         
         self.view.makeToast(toastOpenPortal)

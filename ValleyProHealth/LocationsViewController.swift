@@ -100,11 +100,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //Resets the Picker after a selection is made
             optionPicker.selectRow(0, inComponent: 0, animated: false)
             if(row == 1){//Clinic Hours Selection
-                if(locationIndex == 3){// Clinton Location
-                    self.performSegue(withIdentifier: "ClinicInfoDataSegue2", sender: self)
-                }else{ // All other locations
-                    self.performSegue(withIdentifier: "ClinicInfoDataSegue1", sender: self)
-                }
+                self.performSegue(withIdentifier: "ClinicInfoDataSegue", sender: self)
             }else{//Directions Selection
                 //Convert from string to NSString
                 let latConvert : NSString = directionsLat[locationIndex - 1] as NSString
@@ -138,7 +134,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     //MARK: - Segue Setup -
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ClinicInfoDataSegue1" || segue.identifier == "ClinicInfoDataSegue2"{
+        if segue.identifier == "ClinicInfoDataSegue"{
             if let destination = segue.destination as? ClinicInfoFormViewController{
                 destination.dataSegue[0] = (dataToSegue[0])
                 destination.dataSegue[1] = (dataToSegue[1])

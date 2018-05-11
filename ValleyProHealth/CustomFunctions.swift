@@ -59,6 +59,26 @@ public class Reachability {
     }
 }
 
+//Resize Scrollview based on content for nice scrolling
+//Code from https://stackoverflow.com/a/43985163/1715916
+extension UIScrollView {
+    
+    func resizeScrollViewContentSize() {
+        
+        var contentRect = CGRect.zero
+        
+        for view in self.subviews {
+            
+            contentRect = contentRect.union(view.frame)
+            
+        }
+        
+        self.contentSize = contentRect.size
+        
+    }
+    
+}
+
 extension Date {
     
     func year() -> Int

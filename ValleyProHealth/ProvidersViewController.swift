@@ -40,23 +40,23 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         NSLocalizedString("Primary Care", comment: "Provider Provider Selection")]
     var dataSegue = ["","","",""]
     var providers_dental_bloomingdale = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Dane Mishler, DDS"]
-    var providers_bh_bloomingdale = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Megan Neitling, LMHCA"]
-    var providers_medical_bloomingdale = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Christi Busenbark, FNP-C", "Louwanna Wallace, FNP-C"]
+    var providers_bh_bloomingdale = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Zac Milam, LMHC", "Megan Neitling, LMHCA"]
+    var providers_medical_bloomingdale = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Christopher Fitzsimmons, MD", "Christi Busenbark, FNP-C", "Louwanna Wallace, FNP-C"]
     var providers_dental_cayuga = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Nichole Barnett, DDS"]
-    var providers_bh_cayuga = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Johnathan Detwiler, MS", "Lisa Tincher, PMHNP"]
-    var providers_medical_cayuga = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Bing Gale, MD","Renae Norman, FNP-C"]
+    var providers_bh_cayuga = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Johnathan Detwiler, MS", "Tasha Stevens, LCSW, RN", "Lisa Tincher, PMHNP"]
+    var providers_medical_cayuga = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Danielle Cundiff, DO", "Dr. Bing Gale, MD", "Renae Norman, FNP-C"]
     var providers_dental_clinton = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
-    var providers_bh_clinton = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Dr. Julia Wernz, PhD, HSPP", "Linda Lonneman, LCSW", "David McIntyre, LCAC", "Lisa Tincher, PMHNP"]
-    var providers_medical_clinton = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Aziz Abed, MD", "Dr. Bing Gale, MD", "Gretchen Blevins, FNP-C", "Nicole Hall, FNP-C", "Brandi Larson, FNP-C", "Tammy Mundy, FNP-C"]
+    var providers_bh_clinton = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Dr. Julia Wernz, PhD, HSPP", "Gary Anderson, MS", "Linda Lonneman, LCSW", "David McIntyre, LCAC", "Zac Milam, LMHC", "Lisa Tincher, PMHNP"]
+    var providers_medical_clinton = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Aziz Abed, MD, MPH", "Dr. Danielle Cundiff, DO", "Dr. Bing Gale, MD", "Gretchen Blevins, FNP-C", "Nicole Hall, FNP-C", "Brandi Larson, FNP-C", "Tammy Mundy, FNP-C"]
     var providers_dental_crawfordsville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
-    var providers_bh_crawfordsville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Keith Seegers, LCSW", "Dana Tinkle, LMHC"]
-    var providers_medical_crawfordsville = [NSLocalizedString("Select a provider", comment: "Provider Selection")	]
+    var providers_bh_crawfordsville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Paul Taraska, MD", "Misha Bennett, LCSW", "Keith Seegers, LCSW", "Dana Tinkle, LMHC, RPT"]
+    var providers_medical_crawfordsville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Danielle Cundiff, DO", "Dr. Christopher Fitzsimmons, MD", "Dr. Patrick Foley, MD", "Jessica Bekkering, FNP-C", "Brandi Larson, FNP-C"]
     var providers_dental_rockville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
     var providers_bh_rockville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
-    var providers_medical_rockville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Steven Waltz, MD", "Jordan Ryley, FNP-C"]
+    var providers_medical_rockville = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Dr. Christopher Fitzsimmons, MD", "Dr. Steven Waltz, MD", "Brandie Ruark, FNP-C", "Jordan Ryley, FNP-C"]
     var providers_dental_terrehaute = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
-    var providers_bh_terrehaute = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Amber Cadick, PhD", "Sara Ritter, LCSW", "Lacey Skwortz, LCSW", "Lisa Tincher, PMHNP"]
-    var providers_medical_terrehaute = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Leslie Batty, FNP-C", "Beth Fields, FNP-C", "Residents"]
+    var providers_bh_terrehaute = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Sara Ritter, LCSW", "Lacey Skwortz, LCSW", "Lisa Tincher, PMHNP"]
+    var providers_medical_terrehaute = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Leslie Batty, FNP-C", "Beth Fields, FNP-C", "Tammy Pearson, FNP-C", "Residents"]
     var providers_dental_msbhc = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Currently none at this location"]
     var providers_bh_msbhc = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Heather Woods, LMHCA"]
     var providers_medical_msbhc = [NSLocalizedString("Select a provider", comment: "Provider Selection"), "Nicole Cook, FNP-C", "Renae Norman, FNP-C"]
@@ -82,12 +82,11 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         //Set the default locationPicker value based on the location Preference
         let savedLocation = defaults.object(forKey:"locationPreference") as! Int
-        if(savedLocation == 0 || savedLocation == 7){
+        if(savedLocation == 0){
             locationPicker.selectRow(0, inComponent: 0, animated: false)
         }else{
             locationPicker.selectRow(savedLocation, inComponent: 0, animated: false)
             resetProviderPicker(row: savedLocation, selection: 0)
-            dataSegueSetup(row: savedLocation, pickerSelection: 0)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -109,13 +108,13 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if(pickerView == locationPicker){
             return locations.count
         }else if(pickerView == providerTypePicker){
-            if(locationIndex == 2){
+            if(locationIndex == 2){//Cayuga
                 finalProviderTypes = providerTypes1
                 dentalCheck = true
                 medOnlyCheck = false
-            }else if(locationIndex == 5){
+            }else if(locationIndex == 5){//Rockville
                 finalProviderTypes = providerTypes3
-                dentalCheck = true
+                dentalCheck = false
                 medOnlyCheck = true
             }else{
                 dentalCheck = false
@@ -198,7 +197,7 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }else{
             if(row != 0){
                 //If the residents are selected, open the "Our Residents" page on FP residency website
-                if(locationIndex == 6 && dataToSegue[0] == "Medical" && row == 3){
+                if(locationIndex == 6 && (dataToSegue[0] == "Primary Care" || dataToSegue[0] == "Atención primaria") && row == 4){
                     let residentsUrl = URL(string: "http://www.uhfmr.org/index.php/about-us/45")!
                     if #available(iOS 10.0, *) {
                         UIApplication.shared.open(residentsUrl, options: [:], completionHandler: nil)
@@ -245,14 +244,15 @@ class ProvidersViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     func dataSegueSetup(row: Int, pickerSelection: Int){
     /*
-         Arguments:   row - Integer that is the row selected by the user, pickerIndex - Integer of the picker
-                      storing data
+         Arguments:   row - Integer that is the row selected by the user, pickerIndex - Integer of the picker storing data
          Description: Setup the data to send via Segue.
          Returns:     Nothing
     */
         if(pickerSelection == 0){
+            print(finalProviderTypes)
+            print(row)
             dataToSegue[0] = finalProviderTypes[row]
-        }else{
+                    }else{
             dataToSegue[1] = providerList[row]
         }
     }

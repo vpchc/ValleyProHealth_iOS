@@ -274,3 +274,13 @@
 
 /* Class = "UILabel"; text = "If you like our app, please rate it\non the App Store."; ObjectID = "zpW-cJ-JiC"; */
 "zpW-cJ-JiC.text" = "Si te gusta nuestra aplicación, por favor Precio en la App Store";
+
+/* Class = "UILabel"; text = "Contact Us"; ObjectID = "BRv-zK-F2D"; */
+"BRv-zK-F2D.text" = "Contáctenos";
+
+/* Class = "UILabel"; text = "Hours"; ObjectID = "1N6-Jz-aYZ"; */
+"1N6-Jz-aYZ.text" = "Horas";
+
+/* Class = "UILabel"; text = "Education:"; ObjectID = "A9B-1z-tpJ"; */
+"A9B-1z-tpJ.text" = "Educación:";
+

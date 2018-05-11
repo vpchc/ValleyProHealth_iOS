@@ -69,8 +69,38 @@
 /* Locations Options Selection */
 "Clinic Info" = "Información de la clínica";
 
+/* Locations Days*/
+"Monday - Friday" = "Lunes - Viernes";
+
+/* Locations Days*/
+"Monday - Wednesday" = "Lunes - Miércoles";
+
+/*Locations Days*/
+"Monday - Thursday" = "Lunes - Jueves";
+
+/* Locations Days*/
+"Monday" = "Lunes";
+
+/* Locations Days*/
+"Wednesday" = "Miércoles";
+
+/* Locations Days*/
+"Thursday" = "Jueves";
+
+/* Locations Days*/
+"Saturday" = "Sábado";
+
 /* MSBHC Closed Status */
 "Closed" = "Cerrado";
+
+/* After-Hours */
+"After-Hours" = "Después de horas";
+
+/* Extended Hours */
+"Extended Hours" = "Horas extendidas";
+
+/* Lunch Open */
+"Phone calls accepted during this time." = "Llamadas telefónicas aceptadas durante este tiempo.";
 
 /* MSBHC Closing Soon Status */
 "Closing Soon" = "Próximas a concluir";
@@ -454,3 +484,146 @@
 /* Services Primary Care */
 "•Women's Health" = "•La salud de la mujer";
 
+/* Personal Abed */
+"Dr. Abed enjoys weight training and sports, including football, basketball, and baseball." = "El Dr. Abed disfruta de entrenamiento con pesas y deportes, como el fútbol, baloncesto y béisbol.";
+
+/* Personal Cundiff */
+"Dr. Cundiff was born and raised in Dana, IN. She is excited to now get the opportunity to be practicing near her hometown. Dr. Cundiff enjoys spending time outdoors when she can, am is a huge 'I Love Lucy' fan, and enjoys skydiving." = "El Dr. Cundiff nació y creció en Dana, IN. Ella está emocionada de tener ahora la oportunidad de practicar cerca de su ciudad natal. La Dra. Cundiff disfruta pasar el tiempo al aire libre cuando puede, soy una gran fan de 'I Love Lucy' y disfruta del paracaidismo.";
+
+/* Personal Fitzsimmons */
+"Dr. Fitzsimmons enjoys film and running. He is an avid Star Wars fanatic. He believes prevention is the best medicine. He serves our country as a doctor in the Air Force Reserve. He chose to work at our FQHC due to our many in house services." = "El Dr. Fitzsimmons disfruta el cine y correr. Él es un ávido fanático de Star Wars. Él cree que la prevención es la mejor medicina. Sirve a nuestro país como médico en la Reserva de la Fuerza Aérea. Eligió trabajar en nuestro FQHC debido a nuestros muchos servicios internos.";
+
+/* Personal Gale */
+"Dr. Gale has been practicing in the area for over fifteen years. She enjoys focusing on patient care and creating a happier and healthier community." = "El Dr. Gale ha estado practicando en el área por más de quince años. Disfruta de enfoque en la atención al paciente y la creación de una existencia más feliz y más saludable de la comunidad.";
+
+/* Personal Wernz */
+"Dr. Wernz is a psychologist with more than ten years of experience, She specializes in treating patients with attention deficit, pervasive developmental, mood, anxiety and personality disorders, while collaborating with medical providers and other service providers to comprehensively treat patients. Dr. Wernz created the behavioral health integration model for the VPCHC as well as developed the current integrated MAT addictions program. She also serves, as the Director of Behavioral Health for all VPCHC locations." = "El Dr. Wernz es un psicólogo con más de diez años de experiencia, se especializa en el tratamiento de pacientes con déficit de atención, generalizados del desarrollo, el estado de ánimo, la ansiedad y los trastornos de la personalidad, además de colaborar con los médicos y otros proveedores de servicios de manera integral el tratamiento de los pacientes. El Dr. Wernz creado el comportamiento de la salud modelo de integración para la VPCHC así como se desarrolló el actual integrado MAT adicciones programa. Ella también sirve como el Director de Salud mental para todos VPCHC lugares.";
+
+/* Personal Barnett */
+"Dr. Barnett became a dentist so she could help the underserved, and her goal is to make every patient feel comfortable while having their dental work done. In addition to being a dentist, she is also a member of a gospel trio along with her husband and sister-in-law. In her free time she enjoys spending time with her family, hunting and fishing." = "El Dr. Barnett se convirtió en un dentista para que pudiera ayudar a los más necesitados, y su objetivo es hacer que cada paciente se sienta cómodo, mientras que tener su trabajo dental listo. Además de ser un dentista, ella es también un miembro de un evangelio trío junto con su esposo y hermana-en-ley. En su tiempo libre le gusta pasar tiempo con su familia, la caza y la pesca.";
+
+/* Personal Taraska */
+"Dr. Taraska is passionate about providing behavorial healthcare for the patients of VPCHC." = "El Dr. Taraska es un apasionado de proporcionar behavorial cuidado de la salud para los pacientes de VPCHC.";
+
+/* Personal Waltz */
+"Dr. Waltz has been practicing medicine in the Wabash Valley for over 30 years. He enjoys teaching and mentoring other primary care providers in his role as Chief Medical Officer at Valley Professionals, as well as continuing to provide excellent care to his patients in Rockville." = "El Dr. Waltz ha estado practicando la medicina en el Wabash Valley por más de 30 años. Disfruta de enseñanza y tutoría con otros proveedores de atención primaria en su papel como Director Médico en el Valle de los Profesionales, así como la continuación de proporcionar una excelente atención a sus pacientes, en Rockville.";
+
+/* Personal Beth */
+"Beth considers it an honor and a privilege to care for persons who entrust her with their healthcare needs. In her free time she enjoys spending time with her family, gardening, and travel." = "Beth considera que es un honor y un privilegio cuidar a las personas que le confían sus necesidades de atención médica. En su tiempo libre le gusta pasar tiempo con su familia, jardinería y viajes.";
+
+/* Personal Larson */
+"Brandi is originally from Reno Nevada born and raised. She has been in Indiana since 2006. Brandi enjoys working out and spending time with her two beautiful children. She is devoted to country and serves in the Air National Guard. She is passionate about holistic preventative patient care." = "Brandi es originario de Reno Nevada nacido y criado. Ella ha estado en Indiana desde 2006. Brandi disfruta ejercitándose y pasando tiempo con sus dos hermosos hijos. Ella se dedica al país y sirve en la Guardia Nacional Aérea. Ella es una apasionada de la atención integral del paciente preventiva.";
+
+/* Personal Busenbark */
+"Christi enjoys spending time with her four children and family. She is an avid reader and also enjoys photography." = "Christi disfruta pasar tiempo con sus cuatro hijos y su familia. Es un ávido lector y también disfruta de la fotografía.";
+
+/* Personal Tinkle */
+"Dana is currently working towards becoming a Registered Play Therapist. She works with clients of all ages and mental health concerns, and has a strong clinical interest in childhood trauma treatment. Dana is married and enjoys traveling with her husband. Her hobbies include reading, fitness classes, and listening to music. She also loves to spend time with her friends and family." = "Dana está trabajando para convertirse en un Terapeuta de Juego Registrado. Ella trabaja con clientes de todas las edades y problemas de salud mental, y que tiene un gran interés clínico en la infancia tratamiento del trauma. Dana está casado y disfruta de viajar con su marido. Sus hobbies son la lectura, clases de fitness, y escuchar música. Ella también le encanta pasar tiempo con sus amigos y familia.";
+
+/* Personal McIntyre */
+"Dave is a Licensed Clinical Addictions Counselor (LCAC) and is a certified Medically Assisted Treatment (MAT) provider. Dave has worked in the field of addictions and mental health for over 30 years. In addition to providing clinical services, Dave has served as the Coordinator of Counselor Training Services at the Fairbanks Research and Training Institute, and worked as Training Specialist for the Indiana Department of Mental Health and Addiction Services. In his free time, Dave enjoys spending time with his grandkids, vacationing with family, coaching basketball, fishing, and being outdoors." = "Dave es una Licencia de Clínica de Adicciones Consejero (LCAC) y tiene un certificado de asistencia médica, Tratamiento (MAT), el proveedor. Dave ha trabajado en el campo de las adicciones y la salud mental durante más de 30 años. Además de proporcionar servicios clínicos, Dave se ha desempeñado como Coordinador de la Consejera de Servicios de Capacitación en el Fairbanks Investigación y el Instituto de Capacitación, y trabajó como Especialista de Capacitación para el Departamento de Indiana de Salud Mental y Servicios de Adicción. En su tiempo libre, a Dave le gusta pasar tiempo con sus nietos, de vacaciones con la familia, entrenador de baloncesto, pesca, y estar al aire libre.";
+
+/* Personal Anderson */
+"Gary has worked as a social worker serving the needs of families in the Wabash Valley area for over 15 years. He is married and has 2 children. He\'s all about spending time with his family, traveling and enjoying the outdoors as much as possible." = "Gary ha trabajado como asistente social al servicio de las necesidades de las familias en el área de Wabash Valley por más de 15 años. Está casado y tiene 2 hijos. Se trata de pasar tiempo con su familia, viajar y disfrutar al aire libre tanto como sea posible.";
+
+/* Personal Blevins */
+"In addition to practicing medicine, Gretchen enjoys spending time with her family swimming, kayaking, ATV riding, and trying new things like sky diving when she gets the opportunity." = "Además de practicar la medicina, Gretchen disfruta pasar tiempo con su familia de la natación, kayak, ATV montar a caballo, y de probar cosas nuevas como el cielo de buceo cuando llega la oportunidad.";
+
+/* Personal Bekkering */
+"Jessica began her journey in medical field 16 years ago as medic in the Air Force. She was born and raised in Dana, IN and after several years and many moves she is excited to be settled back and providing care close to her hometown." = "Jessica comenzó su viaje en el campo de la medicina hace 16 años como médica en la Fuerza Aérea. Ella nació y se crió en Dana, IN y después de varios años y muchas mudanzas, está emocionada de que se establezca y brinde cuidados cerca de su ciudad natal.";
+
+/* Personal Woods */
+"Heather is currently working towards becoming a Registered Play Therapist. Her favorite part of working on the Mobile School-Based Health Center is having the ability to provide services to children and adolescents who may otherwise not be able to receive behavioral healthcare, as well as, the privilege of working and collaborating with some wonderful members of the school staff. Heather enjoys spending her free-time with family and friends. She also enjoys crafting, decorating, listening to music, learning new things, and playing with her two dogs." = "Heather es actualmente trabajando para convertirse en un Terapeuta de Juego Registrado. Su parte favorita de trabajar en la Escuela Móvil-Centro de Salud es tener la capacidad de proporcionar servicios a los niños y adolescentes que de lo contrario puede no ser capaz de recibir cuidados de salud conductual, así como, el privilegio de trabajar y colaborar con algunos de los maravillosos miembros del personal de la escuela. Heather le gusta pasar su tiempo libre con la familia y los amigos. Ella también disfruta de manualidades, decoración, escuchar música, aprender cosas nuevas, y jugando con sus dos perros.";
+
+/* Personal Detwiler */
+"Johnathan is currently working towards a PhD at Indiana State University. He has been working in integrated healthcare since August 2015 and has a passion for helping patients reach their Behavioral Health treatment goals. Johnathan is an avid outdoorsman, golfer, and enjoys riding anything from motorcycles to jet skis. He has a passion for animal welfare and enjoys spending time with his dogs and his cat." = "Johnathan está trabajando hacia un Doctorado en la Universidad Estatal de Indiana. Él ha estado trabajando en la atención integral de la salud a partir de agosto de 2015 y tiene una pasión por ayudar a los pacientes a alcanzar su tratamiento de Salud Conductual de los objetivos. Johnathan es un ávido amante de la naturaleza, el jugador de golf y disfruta de montar cualquier cosa, desde motocicletas, motos de agua. Él tiene una pasión por el bienestar de los animales y le gusta pasar tiempo con sus perros y su gato.";
+
+/* Personal Ryley */
+"Jordan’s favorite part of working for Valley Professionals in Rockville is knowing that she is a part of the solution to the shortage of rural health providers. She also enjoys the connection that she has with the patients, coming from a small town herself. Jordan enjoys traveling and all things outdoors, especially hiking and gardening." = "Jordan parte favorita de trabajar en el Valle de los Profesionales en Rockville es saber que ella es una parte de la solución a la escasez de zonas rurales proveedores de servicios de salud. Ella también disfruta de la conexión que tiene con los pacientes, que viene de un pequeño pueblo a sí misma. Jordan disfruta de viajar y de todas las cosas al aire libre, especialmente el senderismo y la jardinería.";
+
+/* Personal Ruark */
+"As a lifelong resident of Parke county, Brandie looks forward to serving the healthcare needs of the community she calls home. Brandie enjoys time with family, traveling, hiking, gardening and just have a general love for nature." = "Como residente de por vida del condado de Parke, Brandie espera atender las necesidades de atención médica de la comunidad a la que llama hogar. Brandie disfruta de pasar tiempo con su familia, viajar, hacer excursiones, cultivar un huerto y solo tiene un amor general por la naturaleza.";
+
+/* Personal Seegers */
+"Keith is married with two adult children and two grandsons. He enjoys travel and the out of doors. He takes special interest in history, especially Williamsburg, VA. He enjoys his home gardens and dog and cat." = "Keith es casado con dos hijos y dos nietos. Disfruta de los viajes y de la salida de las puertas. Él tiene interés especial en la historia, especialmente en Williamsburg, virginia. Él disfruta de su casa, los jardines y el perro y el gato.";
+
+/* Personal Skwortz */
+"Lacey comes from a big family, is married and has a daughter. She was born in Cory, Indiana, but has lived most of her life in Terre Haute and has been a social worker in the community since 2006. Lacey became a social worker because she has a heart for helping others and enjoys getting to know her patients and assisting them in meeting their goals." = "Lacey viene de una gran familia, está casado y tiene una hija. Ella nació en Cory, Indiana, pero ha vivido la mayor parte de su vida en Terre Haute y ha sido un trabajador social en la comunidad desde el año 2006. Lacey se convirtió en un trabajador social, porque ella tiene un corazón para ayudar a los demás y disfruta de conocer a sus pacientes y ayudarles en el cumplimiento de sus objetivos.";
+
+/* Personal Milam */
+"Zac is a lifelong resident of the Wabash Valley. He has experience in providing services in the office, school, and home settings. His areas of interest include working with children, trauma, and grief and bereavement. In his free time, he enjoys music, comic books, TV and movies, reading, cooking, hockey and football, and spending time with his wife and daughter." = "Zac es un residente de toda la vida del Valle de Wabash. Tiene experiencia en la prestación de servicios en la oficina, la escuela y el hogar. Sus áreas de interés incluyen trabajar con niños, trauma y duelo y duelo. En su tiempo libre, le gusta la música, los cómics, la televisión y el cine, la lectura, la cocina, el hockey y el fútbol, ​​y pasa tiempo con su esposa y su hija.";
+
+/* Personal Batty */
+"Leslie is married with 2 daughters. She is active in her church, enjoys spending time with her family, watching her daughters in their many sporting events, and photography." = "Leslie es casado con 2 hijas. Ella es activa en su iglesia, le gusta pasar tiempo con su familia, ver a sus hijas en sus muchos eventos deportivos, y la fotografía.";
+
+/* Personal Lonneman */
+"Linda is married and has two children, three granddaughters, and two stepdaughters. She enjoys spending time with family and friends, cycling and outdoor activities, traveling, and caring for her animals." = "Linda está casada y tiene dos hijos, tres nietas y dos hijastras. Ella disfruta pasar tiempo con la familia y amigos, ciclismo y actividades al aire libre, viajar, y el cuidado de sus animales.";
+
+/* Personal Pearson */
+"Tammy has always had a passion for caring for others. She is married and has 2 grown children, as son and a daughter. She enjoys spending time with her family and her special fur baby dog, Dodger." = "Tammy siempre ha tenido una pasión por el cuidado de los demás. Está casada y tiene 2 hijos mayores, como hijo e hija. Le gusta pasar tiempo con su familia y su perrito de piel especial, Dodger.";
+
+/* Personal Stevens */
+"Tasha has always had a passion for mental health and diversity. She is constantly amazed by the resiliency and strength people possess. She enjoys working at VPCHC because of the holistic treatment we are able to provide people. When not working, she loves spending time with her family, friends, and 2 adorable chihuahuas." = "Tasha siempre ha tenido una pasión por la salud mental y la diversidad. Ella está constantemente sorprendida por la resistencia y la fuerza que la gente posee. Le gusta trabajar en VPCHC debido al tratamiento holístico que podemos brindar a las personas. Cuando no está trabajando, le encanta pasar tiempo con su familia, amigos y 2 adorables chihuahuas.";
+
+/* Personal Tincher */
+"Lisa has worked as a nurse practitioner since 1999, first as Family Nurse Practitioner for 10 years, and for the last 7 years as a Psychiatric Mental Health NP. Lisa’s favorite hobby is scuba diving. She also loves spending time with her family including, two daughters and two grandchildren" = "Lisa ha trabajado como enfermera profesional desde 1999, primero como Enfermera de Familia por 10 años, y durante los últimos 7 años, como un Psiquiátrica de Salud Mental de la NP. Lisa pasatiempo favorito es el buceo. Ella también le encanta pasar tiempo con su familia, dos hijas y dos nietos.";
+
+/* Personal Wallace */
+"Louwanna has been in the healthcare field more than 40 years and enjoys providing health care in a rural clinic setting In her free time, she enjoys spending time with family, hunting, reading, and music." = "Louwanna ha sido en el campo de la salud más de 40 años y goza de prestación de atención de salud en una clínica rural de configuración En su tiempo libre le gusta pasar tiempo con la familia, la caza, la lectura y la música.";
+
+/* Personal Neitling */
+"Megan is pursuing her PhD at the California Institute of Integral Studies. Megan enjoys working with children, adolescents, adults, couples, and families to improve their quality of life through counseling. Megan enjoys traveling, live music, and Netflix. She spends weekends relaxing with family and friends." = "Megan está llevando a cabo su Doctorado en el California Institute of Integral Studies. Megan le gusta trabajar con niños, adolescentes, adultos, parejas y familias a mejorar su calidad de vida a través de la consejería. Megan le gusta viajar, la música en vivo, y Netflix. Ella pasa los fines de semana de relax con la familia y los amigos.";
+
+/* Personal Cook */
+"Nicole says her favorite part of working on the Mobile Health Unit is being able to provide healthcare services to children who may not normally receive healthcare as well as working with the wonderful school staff. In her free time, she enjoys spending time with her husband and daughter. Originally from the St. Louis area, Nicole is an avid St. Louis Cardinals fan." = "Nicole dice que su parte favorita de trabajar en la Unidad Móvil de Salud es ser capaz de proporcionar servicios de salud a los niños que normalmente no reciben la atención sanitaria, así como el trabajo con el maravilloso personal de la escuela. En su tiempo libre le gusta pasar tiempo con su esposo y su hija. Originalmente, desde el área de saint Louis, Nicole es un ávido Cardenales de San Luis ventilador.";
+
+/* Personal Hall */
+"Nicole Hall is committed to her patients and holistic care. She enjoys running, shopping, and serving her country in the Indiana Air National Guard." = "Nicole Ayuntamiento está comprometido con sus pacientes y la atención integral. Ella le gusta correr, ir de compras, y servir a su país en la Indiana de la Guardia Nacional Aérea.";
+
+/* Personal Norman */
+"In addition to practicing medicine, Renae enjoys reading and spending time with her husband and their three children. Renae’s children are very active in athletics, therefore she spends a lot of time supporting the North Vermillion Falcons." = "Además de practicar la medicina, Renae gusta leer y pasar tiempo con su esposo y sus tres hijos. Renae de los niños son muy activos en el atletismo, por lo que ella pasa mucho tiempo apoyando el Norte Bermellón de los Falcons.";
+
+/* Personal Ritter */
+"Sara has an LCSW as well as her LCAC (Licensed Clinical Addictions Counselor) and has been working in the field of mental health and addictions for over 30 years. She enjoys working with people of all ages and treatment concerns. During her time away from work, Sara enjoys reading, being outside, taking vacations, and spending time with friends and family." = "Sara tiene un LCSW así como su LCAC (con Licencia Clínica de Adicciones Consejero) y ha estado trabajando en el campo de la salud mental y adicciones durante más de 30 años. Le gusta trabajar con personas de todas las edades e inquietudes relacionadas con el tratamiento. Durante su tiempo fuera del trabajo, Sara disfruta de la lectura, de estar fuera, de vacaciones, y pasar tiempo con amigos y familia.";
+
+/* Personal Mundy */
+"In addition to practicing medicine, Tammy enjoys traveling, reading and visiting antique shops. Tammy is married with 2 children and one grandchild." = "Además de practicar la medicina, Tammy le gusta viajar, leer y visitar tiendas de antigüedades. Tammy es casado con 2 hijos y un nieto.";
+
+/* Personal Bennett */
+"Misha believes therapy works best when it is a collaborative process and she enjoys watching clients reach or exceed their personal goals. In her spare time, she enjoys travel, hiking, local festivals and spending time with friends and family, which includes her geriatric cat." = "Misha cree que la terapia funciona mejor cuando se trata de un proceso colaborativo y le gusta ver a los clientes alcanzar o superar sus metas personales. En su tiempo libre, disfruta de los viajes, el senderismo, los festivales locales y pasar tiempo con amigos y familiares, que incluye a su gato geriátrico.";
+
+/* Personal Foley */
+"Dr. Foley enjoys reading, biking, traveling, water sports and being outdoors. He chose to work at Valley Professionals because he believes in our mission of integrated care where the patient's needs come first." = "Al Dr. Foley le gusta leer, andar en bicicleta, viajar, practicar deportes acuáticos y estar al aire libre. Optó por trabajar en Valley Professionals porque cree en nuestra misión de atención integrada donde las necesidades del paciente son lo primero.";
+
+/* Credentials Psychiatrist */
+"Psychiatrist" = "Psiquiatra";
+
+/* Credentials Physician */
+"Physician" = "Médico";
+
+/* Credentials Psychologist */
+"Psychologist" = "Psicólogo";
+
+/* Credentials FNP-C */
+"Certified Family Nurse Practitioner" = "Enfermera Practicante de Familia Certificada";
+
+/* Credentials Counselor */
+"Mental Health Counselor" = "Consejero de salud mental";
+
+/* Credentials LCSW */
+"Licensed Clinical Social Worker" = "Trabajador Social Clínico Licenciado";
+
+/* Credentials LCAC */
+"Licensed Clinical Addictions Coordinator" = "Coordinador de Adicciones Clínicas Licenciado";
+
+/* Credentials LMHC */
+"Licensed Mental Health Coordinator" = "Coordinador de Salud Mental Licenciado";
+
+/* Credentials LMHCA */
+"Licensed Mental Health Coordinator Associates" = "Coordinador Asociado de Salud Mental Asociado";
+
+/* Credentials PMHNP */
+"Psychiatric-Mental Health Nurse Practitioner" = "Enfermero Practicante de Salud Mental Psiquiátrica";
+
+/* Credentials Dentist */
+"Dentist" = "Dentista";

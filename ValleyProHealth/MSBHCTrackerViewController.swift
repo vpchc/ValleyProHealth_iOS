@@ -61,7 +61,7 @@ class MSBHCTrackerViewController: UIViewController {
     }
     @IBAction func downloadButtonTap(_ sender: AnyObject) {
         // Download MSBHC schedule
-        let websiteUrl: URL = URL(string:"https://valleyprohealth.org/files/schedule/current_schedule.pdf")!
+        let websiteUrl: URL = URL(string:"https://calendar.google.com/calendar/embed?src=flc9fq7tt9nlo52qhlchoscu3s%40group.calendar.google.com&ctz=America/New_York")!
         self.view.makeToast(toastDownloadSchedule)
         UIApplication.shared.openURL(websiteUrl)
     }

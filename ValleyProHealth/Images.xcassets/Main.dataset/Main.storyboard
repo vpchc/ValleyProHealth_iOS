@@ -2324,12 +2324,6 @@ Community Health Center</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6P9-Rr-1sv" userLabel="Download Container">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tx-AE-LFT">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="2gj-dx-Q82"/>
-                                                    <constraint firstAttribute="height" constant="70" id="TTY-sc-Wcx"/>
-                                                </constraints>
-                                                <state key="normal" image="tracker_view_off"/>
-                                                <state key="selected" image="tracker_view_on"/>
                                                 <state key="highlighted" image="tracker_view_on"/>
                                                 <connections>
                                                     <action selector="downloadButtonTap:" destination="dP1-3f-yan" eventType="touchUpInside" id="rRx-ix-u9e"/>
@@ -3733,7 +3727,6 @@ on the App Store.</string>
         <image name="services_on" width="170" height="170"/>
         <image name="tracker_off" width="170" height="170"/>
         <image name="tracker_on" width="170" height="170"/>
-        <image name="tracker_view_off" width="96" height="96"/>
         <image name="tracker_view_on" width="96" height="96"/>
         <image name="twitter_off" width="170" height="170"/>
         <image name="twitter_on" width="170" height="170"/>
